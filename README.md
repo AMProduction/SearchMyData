@@ -6,4 +6,5 @@ A search could be performed in any of the three languages: Russian, Ukrainian, a
 To avoid overwhelming screen output the first 10 results are shown. Whole results datasets are saving into HTML files.
 ## Software requirements
 * Python 3.7+
-* MongoDB 5.0+
+* MongoDB 5.0+  
+## See additional info into [the SearchMyData App wiki](https://github.com/AMProduction/SearchMyData/wiki)
