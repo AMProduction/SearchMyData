@@ -64,7 +64,7 @@ class DBTools:
         if ('full_text' in missingPersonsCol.index_information()):
             missingPersonsCol.drop_index('full_text')
             logging.warning('Missing persons Text index deleted')
-        missingPersonsCol.insert(json)
+        missingPersonsCol.insert_many(json)
         logging.info('Missing persons dataset was saved into the database')
         missingPersonsCol.create_index([('FIRST_NAME_U','text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text'), ('FIRST_NAME_R', 'text'), ('LAST_NAME_R', 'text'), ('MIDDLE_NAME_R', 'text'), ('FIRST_NAME_E', 'text'), ('LAST_NAME_E', 'text'), ('MIDDLE_NAME_E','text')], name = 'full_text')
         logging.info('Missing persons Text Index created')
@@ -76,7 +76,7 @@ class DBTools:
         if ('full_text' in wantedPersonsCol.index_information()):
             wantedPersonsCol.drop_index('full_text')
             logging.warning('WantedPersons Text index deleted')
-        wantedPersonsCol.insert(json)
+        wantedPersonsCol.insert_many(json)
         logging.info('Wanted persons dataset was saved into the database')
         wantedPersonsCol.create_index([('FIRST_NAME_U','text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text'), ('FIRST_NAME_R', 'text'), ('LAST_NAME_R', 'text'), ('MIDDLE_NAME_R', 'text'), ('FIRST_NAME_E', 'text'), ('LAST_NAME_E', 'text'), ('MIDDLE_NAME_E','text')], name = 'full_text')
         logging.info('WantedPersons Text Index created')
@@ -110,11 +110,11 @@ class DBTools:
                     #convert xml to json
                     legalEntitiesJson = xmltodict.parse(legalEntitiesXml, encoding='windows-1251')
                     #save to the collection
-                    legalEntitiesCol.insert(legalEntitiesJson)
+                    legalEntitiesCol.insert_many(legalEntitiesJson)
                 if xmlFile.find('_FOP_') != -1:
                     #read the entrepreneurs Xml file
                     entrepreneursXml = entrepreneursZip.open(xmlFile)
                     #convert xml to json
                     entrepreneursJson = xmltodict.parse(entrepreneursXml, encoding='windows-1251')
                     #save to the collection
-                    entrepreneursCol.insert(entrepreneursJson)
+                    entrepreneursCol.insert_many(entrepreneursJson)

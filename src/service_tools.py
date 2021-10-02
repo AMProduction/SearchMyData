@@ -63,6 +63,7 @@ class ServiceTools:
         print(registersInfoTable.get_string(title = 'Registers info'))
 
     def refreshMetadata(self):
+        print('Updating metadata...')
         collectionsList = self.__db.list_collection_names()
         #update or create MissingPersonsRegisterServiceJson 
         if ('ServiceCollection' in collectionsList) and (self.__serviceCol.count_documents({'_id': 1}, limit = 1) !=0):
@@ -77,7 +78,8 @@ class ServiceTools:
             logging.info('WantedPersonsRegisterServiceJson updated')
         else:
             self.__createWantedPersonsRegisterServiceJson()
-            logging.info('WantedPersonsRegisterServiceJson created')    
+            logging.info('WantedPersonsRegisterServiceJson created')
+        print('Metadata updated')    
     
     def __createMissingPersonsRegisterServiceJson(self):
         createdDate = datetime.now()
