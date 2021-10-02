@@ -95,7 +95,7 @@ class DBTools:
             logging.error('Error during EntrepreneursRegister ZIP receiving occured')
             print('Error during ZIP file receiving occured!')
         else:
-            logging.info('A EntrepreneursRegister dataset received') 
+            logging.info('A EntrepreneursRegister dataset received')
             #get lists of file
             entrepreneursZip = zipfile.ZipFile(BytesIO(entrepreneursDatasetZIP), 'r' )
             #go inside ZIP
@@ -108,12 +108,13 @@ class DBTools:
                     #read the legal Entities Xml file
                     legalEntitiesXml = entrepreneursZip.open(xmlFile)
                     #convert xml to json
-                    legalEntitiesObj = xmltodict.parse(legalEntitiesXml, encoding='windows-1251')
-                    #legalEntitiesJson = json.dumps(legalEntitiesObj)
-                    legalEntitiesCol.insert_many(legalEntitiesObj)
-                #if xmlFile.find('_FOP_') != -1:
+                    legalEntitiesJson = xmltodict.parse(legalEntitiesXml, encoding='windows-1251')
+                    #save to the collection
+                    legalEntitiesCol.insert(legalEntitiesJson)
+                if xmlFile.find('_FOP_') != -1:
                     #read the entrepreneurs Xml file
-                    #entrepreneursXml = entrepreneursZip.open(xmlFile)
+                    entrepreneursXml = entrepreneursZip.open(xmlFile)
                     #convert xml to json
-                    #entrepreneursObj = xmltodict.parse(entrepreneursXml, encoding='windows-1251')
-                    #entrepreneursJson = json.dumps(entrepreneursObj)
+                    entrepreneursJson = xmltodict.parse(entrepreneursXml, encoding='windows-1251')
+                    #save to the collection
+                    entrepreneursCol.insert(entrepreneursJson)
