@@ -12,12 +12,13 @@ def search():
     
 def getDataSets():
     eltinstance = src.elt.GetDatasets()
-    #dbTools = src.dbtools.DBTools()
+    dbTools = src.dbtools.DBTools()
     #json = eltinstance.getMissingPersonsRegister()
     #dbTools.saveMissingPersonsRegister(json)
     #json = eltinstance.getWantedPersonsRegister()
     #dbTools.saveWantedPersonsRegister(json)
-    eltinstance.getEntrepreneursRegister()
+    zipUrl = eltinstance.getEntrepreneursRegister()
+    dbTools.saveEntrepreneursRegister(zipUrl)
     #service.refreshMetadata()
     
 def clearConsole():

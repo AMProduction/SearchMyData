@@ -1,8 +1,6 @@
-from io import BytesIO
 import requests
 import json
 import logging
-import zipfile
 
 class GetDatasets:
     def __init__(self):
@@ -89,7 +87,7 @@ class GetDatasets:
             generalDatasetJson = json.loads(generalDataset)
             logging.info('A general EntrepreneursRegister dataset JSON received')
         #get dataset id
-        entrepreneursGeneralDatasetId = generalDatasetJson['result']['resources'][1]['id']
+        entrepreneursGeneralDatasetId = generalDatasetJson['result']['resources'][0]['id']
         try:
             #get resources JSON id
             entrepreneursGeneralDatasetIdJson = requests.get('https://data.gov.ua/api/3/action/resource_show?id=' + entrepreneursGeneralDatasetId).text
@@ -101,22 +99,4 @@ class GetDatasets:
             logging.info('A EntrepreneursRegister resources JSON id received')
         #get ZIP url
         entrepreneursDatasetZIPUrl = entrepreneursGeneralDatasetJson['result']['url']
-        try:
-            #get ZIP file
-            entrepreneursDatasetZIP = requests.get(entrepreneursDatasetZIPUrl).content
-        except:
-            logging.error('Error during EntrepreneursRegister ZIP receiving occured')
-            print('Error during ZIP file receiving occured!')
-        else:
-            #get lists of file
-            entrepreneursZip = zipfile.ZipFile(BytesIO(entrepreneursDatasetZIP), 'r' )
-            logging.warning('Files in zip:')
-            #go inside ZIP
-            for dataset in entrepreneursZip.namelist():
-                #skip root folder
-                if dataset.endswith('/'):
-                    continue
-                logging.warning(str(dataset))
-                #parse XML
-                print("File in zip: "+ dataset)
-            logging.info('A EntrepreneursRegister dataset received')
+        return entrepreneursDatasetZIPUrl

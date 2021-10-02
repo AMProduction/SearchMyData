@@ -2,8 +2,12 @@ import json
 import pymongo
 import logging
 from pathlib import Path
+import zipfile
+from io import BytesIO
+import xmltodict
 
 from pymongo.errors import ServerSelectionTimeoutError
+import requests
 
 class DBTools:
     
@@ -75,4 +79,41 @@ class DBTools:
         wantedPersonsCol.insert(json)
         logging.info('Wanted persons dataset was saved into the database')
         wantedPersonsCol.create_index([('FIRST_NAME_U','text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text'), ('FIRST_NAME_R', 'text'), ('LAST_NAME_R', 'text'), ('MIDDLE_NAME_R', 'text'), ('FIRST_NAME_E', 'text'), ('LAST_NAME_E', 'text'), ('MIDDLE_NAME_E','text')], name = 'full_text')
-        logging.info('WantedPersons Text Index created')                 
+        logging.info('WantedPersons Text Index created')
+        
+    def saveEntrepreneursRegister(self, zipUrl):
+        entrepreneursCol = self.__db['Entrepreneurs']
+        countDeletedDocuments = entrepreneursCol.delete_many({})
+        #insert logging and index
+        legalEntitiesCol = self.__db['LegalEntities']
+        countDeletedDocuments = legalEntitiesCol.delete_many({})
+        #insert logging and index
+        try:
+            #get ZIP file
+            entrepreneursDatasetZIP = requests.get(zipUrl).content
+        except:
+            logging.error('Error during EntrepreneursRegister ZIP receiving occured')
+            print('Error during ZIP file receiving occured!')
+        else:
+            logging.info('A EntrepreneursRegister dataset received') 
+            #get lists of file
+            entrepreneursZip = zipfile.ZipFile(BytesIO(entrepreneursDatasetZIP), 'r' )
+            #go inside ZIP
+            for xmlFile in entrepreneursZip.namelist():
+                #skip root folder
+                if xmlFile.endswith('/'):
+                    continue
+                logging.warning('File in ZIP: ' + str(xmlFile))
+                if xmlFile.find('_UO_') != -1:
+                    #read the legal Entities Xml file
+                    legalEntitiesXml = entrepreneursZip.open(xmlFile)
+                    #convert xml to json
+                    legalEntitiesObj = xmltodict.parse(legalEntitiesXml, encoding='windows-1251')
+                    #legalEntitiesJson = json.dumps(legalEntitiesObj)
+                    legalEntitiesCol.insert_many(legalEntitiesObj)
+                #if xmlFile.find('_FOP_') != -1:
+                    #read the entrepreneurs Xml file
+                    #entrepreneursXml = entrepreneursZip.open(xmlFile)
+                    #convert xml to json
+                    #entrepreneursObj = xmltodict.parse(entrepreneursXml, encoding='windows-1251')
+                    #entrepreneursJson = json.dumps(entrepreneursObj)
