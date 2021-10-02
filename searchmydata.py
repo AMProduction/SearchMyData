@@ -17,6 +17,8 @@ def getDataSets():
     dbTools.saveMissingPersonsRegister(json)
     json = eltinstance.getWantedPersonsRegister()
     dbTools.saveWantedPersonsRegister(json)
+    zipUrlDebtors = eltinstance.getDebtorsRegister()
+    dbTools.saveDebtorsRegister(zipUrlDebtors)
     service.refreshMetadata()
     
 def clearConsole():

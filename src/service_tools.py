@@ -79,6 +79,13 @@ class ServiceTools:
         else:
             self.__createWantedPersonsRegisterServiceJson()
             logging.info('WantedPersonsRegisterServiceJson created')
+        #update or create DebtorsRegisterServiceJson 
+        if ('ServiceCollection' in collectionsList) and (self.__serviceCol.count_documents({'_id': 3}, limit = 1) !=0):
+            self.__updateDebtorsRegisterServiceJson()
+            logging.info('DebtorsRegisterServiceJson updated')
+        else:
+            self.__createDebtorsRegisterServiceJson()
+            logging.info('DebtorsRegisterServiceJson created')
         print('Metadata updated')    
     
     def __createMissingPersonsRegisterServiceJson(self):
@@ -125,6 +132,30 @@ class ServiceTools:
         documentsCount = wantedPersonsCol.count_documents({})
         self.__serviceCol.update_one(
             {'_id': 2},
+            {'$set': {'LastModifiedDate': str(lastModifiedDate),
+                      'DocumentsCount': documentsCount}}
+        )
+        
+    def __createDebtorsRegisterServiceJson(self):
+        createdDate = datetime.now()
+        lastModifiedDate = datetime.now()
+        debtorsCol = self.__db['Debtors']
+        documentsCount = debtorsCol.count_documents({})
+        debtorsRegisterServiceJson = {
+            '_id': 3,
+            'Description': 'Єдиний реєстр боржників',
+            'DocumentsCount': documentsCount,
+            'CreatedDate': str(createdDate),
+            'LastModifiedDate': str(lastModifiedDate)
+        }
+        self.__serviceCol.insert_one(debtorsRegisterServiceJson)
+        
+    def __updateDebtorsRegisterServiceJson(self):
+        lastModifiedDate = datetime.now()
+        debtorsCol = self.__db['Debtors']
+        documentsCount = debtorsCol.count_documents({})
+        self.__serviceCol.update_one(
+            {'_id': 3},
             {'$set': {'LastModifiedDate': str(lastModifiedDate),
                       'DocumentsCount': documentsCount}}
         )

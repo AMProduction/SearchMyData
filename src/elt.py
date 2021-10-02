@@ -102,3 +102,29 @@ class GetDatasets:
         #get ZIP url
         entrepreneursDatasetZIPUrl = entrepreneursGeneralDatasetJson['result']['url']
         return entrepreneursDatasetZIPUrl
+    
+    #Єдиний реєстр боржників (CSV in ZIP)
+    def getDebtorsRegister(self):
+        print('The register "Єдиний реєстр боржників" is retrieving...')
+        try:
+            generalDataset = requests.get('https://data.gov.ua/api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e').text
+        except:
+            logging.error('Error during general DebtorsRegister dataset JSON receiving occured')
+            print('Error during dataset receiving occurred!')
+        else:
+            generalDatasetJson = json.loads(generalDataset)
+            logging.info('A general DebtorsRegister dataset JSON received')
+        #get dataset id
+        debtorsGeneralDatasetId = generalDatasetJson['result']['resources'][0]['id']
+        try:
+            #get resources JSON id
+            debtorsGeneralDatasetIdJson = requests.get('https://data.gov.ua/api/3/action/resource_show?id=' + debtorsGeneralDatasetId).text
+        except:
+            logging.error('Error during DebtorsRegisterr resources JSON id receiving occured')
+            print('Error during dataset receiving occurred!')
+        else:
+            debtorsGeneralDatasetJson = json.loads(debtorsGeneralDatasetIdJson)
+            logging.info('A DebtorsRegister resources JSON id received')
+        #get ZIP url
+        debtorsDatasetZIPUrl = debtorsGeneralDatasetJson['result']['url']
+        return debtorsDatasetZIPUrl
