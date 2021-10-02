@@ -8,6 +8,7 @@ class GetDatasets:
     
     #Інформація про безвісно зниклих громадян (JSON)    
     def getMissingPersonsRegister(self):
+        print('The register "Інформація про безвісно зниклих громадян" is retrieving...')
         try:
             generalDataset = requests.get('https://data.gov.ua/api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0').text
         except:
@@ -43,6 +44,7 @@ class GetDatasets:
     
     #Інформація про осіб, які переховуються від органів влади (JSON)
     def getWantedPersonsRegister(self):
+        print('The register "Інформація про осіб, які переховуються від органів влади" is retrieving...')
         try:
             generalDataset = requests.get('https://data.gov.ua/api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b').text
         except:
