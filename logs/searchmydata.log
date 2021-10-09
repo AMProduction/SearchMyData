@@ -1928,3 +1928,60 @@
 09/10/2021 12:17:57     INFO:service_tools.py:DebtorsRegisterServiceJson updated
 09/10/2021 12:30:44  WARNING: searchmydata.py:The "Exit" menu item chosen
 09/10/2021 12:30:44     INFO: searchmydata.py:The application closed
+09/10/2021 17:47:27     INFO: searchmydata.py:The application started
+09/10/2021 17:47:27  WARNING:service_tools.py:Config.json is found
+09/10/2021 17:47:34  WARNING: searchmydata.py:The "Search" menu item chosen
+09/10/2021 17:47:46  WARNING:search_engine.py:Config.json is found
+09/10/2021 17:47:46  WARNING:search_engine.py:Query string: "Іванов Іван"
+09/10/2021 17:47:46  WARNING:search_engine.py:The missing persons register: 175 records found
+09/10/2021 17:47:46  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+09/10/2021 17:47:46  WARNING:search_engine.py:The wanted persons register: 889 records found
+09/10/2021 17:47:46  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+09/10/2021 17:47:59  WARNING: searchmydata.py:The "Exit" menu item chosen
+09/10/2021 17:47:59     INFO: searchmydata.py:The application closed
+09/10/2021 17:48:43     INFO: searchmydata.py:The application started
+09/10/2021 17:48:43  WARNING:service_tools.py:Config.json is found
+09/10/2021 17:48:45  WARNING: searchmydata.py:The "Search" menu item chosen
+09/10/2021 17:48:52  WARNING:search_engine.py:Config.json is found
+09/10/2021 17:48:52  WARNING:search_engine.py:Query string: "Іванов Іван"
+09/10/2021 17:48:52  WARNING:search_engine.py:The missing persons register: 175 records found
+09/10/2021 17:48:52  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+09/10/2021 17:48:52  WARNING:search_engine.py:The wanted persons register: 889 records found
+09/10/2021 17:48:52  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+09/10/2021 17:49:44     INFO: searchmydata.py:The application started
+09/10/2021 17:49:44  WARNING:service_tools.py:Config.json is found
+09/10/2021 17:49:46  WARNING: searchmydata.py:The "Search" menu item chosen
+09/10/2021 17:49:51  WARNING:search_engine.py:Config.json is found
+09/10/2021 17:49:51  WARNING:search_engine.py:Query string: "Іванов Іван"
+09/10/2021 17:49:51  WARNING:search_engine.py:The missing persons register: 175 records found
+09/10/2021 17:49:51  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+09/10/2021 17:49:51  WARNING:search_engine.py:The wanted persons register: 889 records found
+09/10/2021 17:49:51  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+09/10/2021 17:49:54  WARNING:search_engine.py:The debtors register: 195135 records found
+09/10/2021 17:51:37     INFO: searchmydata.py:The application started
+09/10/2021 17:51:37  WARNING:service_tools.py:Config.json is found
+09/10/2021 17:51:40  WARNING: searchmydata.py:The "Search" menu item chosen
+09/10/2021 17:51:46  WARNING:search_engine.py:Config.json is found
+09/10/2021 17:51:46  WARNING:search_engine.py:Query string: "Голопупенко"
+09/10/2021 17:51:46  WARNING:search_engine.py:The missing persons register: No data found
+09/10/2021 17:51:46  WARNING:search_engine.py:The wanted persons register: No data found
+09/10/2021 17:51:46  WARNING:search_engine.py:The debtors register: No data found
+09/10/2021 17:52:15  WARNING: searchmydata.py:The "Search" menu item chosen
+09/10/2021 17:52:26  WARNING:search_engine.py:Config.json is found
+09/10/2021 17:52:26  WARNING:search_engine.py:Query string: "Федоришин"
+09/10/2021 17:52:26  WARNING:search_engine.py:The missing persons register: No data found
+09/10/2021 17:52:26  WARNING:search_engine.py:The wanted persons register: 1 records found
+09/10/2021 17:52:26  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+09/10/2021 17:52:26  WARNING:search_engine.py:The debtors register: 2738 records found
+09/10/2021 17:52:26  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+09/10/2021 17:53:05  WARNING: searchmydata.py:The "Search" menu item chosen
+09/10/2021 17:53:09  WARNING:search_engine.py:Config.json is found
+09/10/2021 17:53:09  WARNING:search_engine.py:Query string: "Дар"
+09/10/2021 17:53:09  WARNING:search_engine.py:The missing persons register: 6 records found
+09/10/2021 17:53:09  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+09/10/2021 17:53:09  WARNING:search_engine.py:The wanted persons register: 27 records found
+09/10/2021 17:53:09  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+09/10/2021 17:53:09  WARNING:search_engine.py:The debtors register: 2601 records found
+09/10/2021 17:53:10  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+09/10/2021 17:53:46  WARNING: searchmydata.py:The "Exit" menu item chosen
+09/10/2021 17:53:46     INFO: searchmydata.py:The application closed

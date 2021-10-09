@@ -58,6 +58,7 @@ class SearchEngine:
         logging.warning('Query string: "%s"', queryString)
         self.__searchMissingPersons(queryString)
         self.__searchWantedPersons(queryString)
+        self.__searchDebtors(queryString)
 
     def __searchMissingPersons(self, queryString):
         missingPersonsCol = self.__db['MissingPersons']
@@ -107,3 +108,28 @@ class SearchEngine:
             f.write(htmlResult)
             print('All result dataset was saved into WantedPersons.html')
             logging.warning('All result dataset was saved into WantedPersons.html')
+    
+    def __searchDebtors(self, queryString):
+        debtorsCol = self.__db['Debtors']
+        resultCount = debtorsCol.count_documents({'$text': {'$search': queryString}})
+        if resultCount == 0:
+            print('The debtors register: No data found')
+            logging.warning('The debtors register: No data found')
+        else:
+            resultTable = PrettyTable(['DEBTOR NAME', 'DEBTOR CODE', 'PUBLISHER', 'EXECUTIVE SERVICE', 'EXECUTIVE SERVICE EMPLOYEE', 'CATEGORY'])
+            resultTable.align = 'l'
+            resultTable._max_width = {'DEBTOR NAME': 25, 'PUBLISHER': 25, 'EXECUTIVE SERVICE': 15, 'EXECUTIVE SERVICE EMPLOYEE': 25, 'CATEGORY': 15}
+            #show only 10 first search results
+            for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]).limit(10):
+                resultTable.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'], result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
+            print(resultTable.get_string(title = 'The debtors register: ' + str(resultCount) + ' records found'))
+            logging.warning('The debtors register: %s records found', str(resultCount))
+            print('Only 10 first search results showed')
+            #save all search results into HTML
+            for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]):
+                resultTable.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'], result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
+            htmlResult = resultTable.get_html_string()
+            f = open('results/Debtors.html', 'w', encoding='utf-8')
+            f.write(htmlResult)
+            print('All result dataset was saved into Debtors.html')
+            logging.warning('All result dataset was saved into Debtors.html')
