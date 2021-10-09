@@ -11,6 +11,7 @@ import os
 from pymongo.errors import ServerSelectionTimeoutError
 import requests
 import shutil
+from datetime import datetime
 
 class DBTools:
     
@@ -61,6 +62,7 @@ class DBTools:
             exit()
 
     def saveMissingPersonsRegister(self, json):
+        start_time = datetime.now()
         missingPersonsCol = self.__db['MissingPersons']
         countDeletedDocuments = missingPersonsCol.delete_many({})
         logging.warning('%s documents deleted. The missing persons collection is empty.', str(countDeletedDocuments.deleted_count))
@@ -71,8 +73,11 @@ class DBTools:
         logging.info('Missing persons dataset was saved into the database')
         missingPersonsCol.create_index([('FIRST_NAME_U','text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text'), ('FIRST_NAME_R', 'text'), ('LAST_NAME_R', 'text'), ('MIDDLE_NAME_R', 'text'), ('FIRST_NAME_E', 'text'), ('LAST_NAME_E', 'text'), ('MIDDLE_NAME_E','text')], name = 'full_text')
         logging.info('Missing persons Text Index created')
+        end_time = datetime.now()
+        logging.info('Time to save into the missing person register: ' + str(end_time-start_time))
         
     def saveWantedPersonsRegister(self, json):
+        start_time = datetime.now()
         wantedPersonsCol = self.__db['WantedPersons']
         countDeletedDocuments = wantedPersonsCol.delete_many({})
         logging.warning('%s documents deleted. The wanted persons collection is empty.', str(countDeletedDocuments.deleted_count))
@@ -83,6 +88,8 @@ class DBTools:
         logging.info('Wanted persons dataset was saved into the database')
         wantedPersonsCol.create_index([('FIRST_NAME_U','text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text'), ('FIRST_NAME_R', 'text'), ('LAST_NAME_R', 'text'), ('MIDDLE_NAME_R', 'text'), ('FIRST_NAME_E', 'text'), ('LAST_NAME_E', 'text'), ('MIDDLE_NAME_E','text')], name = 'full_text')
         logging.info('WantedPersons Text Index created')
+        end_time = datetime.now()
+        logging.info('Time to save into the wanted person register: ' + str(end_time-start_time))
         
     #don't work
     def saveEntrepreneursRegister(self, zipUrl):
@@ -124,6 +131,7 @@ class DBTools:
                     entrepreneursCol.insert_many(entrepreneursJson)
                     
     def saveDebtorsRegister(self, zipUrl):
+        start_time = datetime.now()
         debtorsCol = self.__db['Debtors']
         countDeletedDocuments = debtorsCol.delete_many({})
         logging.warning('%s documents deleted. The wanted persons collection is empty.', str(countDeletedDocuments.deleted_count))
@@ -161,3 +169,5 @@ class DBTools:
             logging.info('Debtors Text Index created')
             os.remove(debtorsCsvFileName)
             shutil.rmtree('debtorsJson', ignore_errors=True)
+        end_time = datetime.now()
+        logging.info('Time to save into the debtors register: ' + str(end_time-start_time))

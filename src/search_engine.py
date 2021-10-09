@@ -4,6 +4,7 @@ import logging
 from pathlib import Path
 import json
 from pymongo.errors import ServerSelectionTimeoutError
+from datetime import datetime
 
 class SearchEngine:
         
@@ -61,6 +62,7 @@ class SearchEngine:
         self.__searchDebtors(queryString)
 
     def __searchMissingPersons(self, queryString):
+        start_time = datetime.now()
         missingPersonsCol = self.__db['MissingPersons']
         resultCount = missingPersonsCol.count_documents({'$text': {'$search': queryString}})
         if resultCount == 0:
@@ -83,8 +85,12 @@ class SearchEngine:
             f.write(htmlResult)
             print('All result dataset was saved into MissingPersons.html')
             logging.warning('All result dataset was saved into MissingPersons.html')
+        end_time = datetime.now()
+        logging.info('Search time into the missing person register: ' + str(end_time-start_time))
+        
             
     def __searchWantedPersons(self, queryString):
+        start_time = datetime.now()
         wantedPersonsCol = self.__db['WantedPersons']
         resultCount = wantedPersonsCol.count_documents({'$text': {'$search': queryString}})
         if resultCount == 0:
@@ -108,8 +114,11 @@ class SearchEngine:
             f.write(htmlResult)
             print('All result dataset was saved into WantedPersons.html')
             logging.warning('All result dataset was saved into WantedPersons.html')
+        end_time = datetime.now()
+        logging.info('Search time into the wanted person register: ' + str(end_time-start_time))
     
     def __searchDebtors(self, queryString):
+        start_time = datetime.now()
         debtorsCol = self.__db['Debtors']
         resultCount = debtorsCol.count_documents({'$text': {'$search': queryString}})
         if resultCount == 0:
@@ -133,3 +142,5 @@ class SearchEngine:
             f.write(htmlResult)
             print('All result dataset was saved into Debtors.html')
             logging.warning('All result dataset was saved into Debtors.html')
+        end_time = datetime.now()
+        logging.info('Search time into the debtors register: ' + str(end_time-start_time))
