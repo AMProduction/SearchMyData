@@ -6,9 +6,11 @@ import zipfile
 from io import BytesIO
 import xmltodict
 import pandas as pd
-
+from dask import dataframe as dd
+import os
 from pymongo.errors import ServerSelectionTimeoutError
 import requests
+import shutil
 
 class DBTools:
     
@@ -82,6 +84,7 @@ class DBTools:
         wantedPersonsCol.create_index([('FIRST_NAME_U','text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text'), ('FIRST_NAME_R', 'text'), ('LAST_NAME_R', 'text'), ('MIDDLE_NAME_R', 'text'), ('FIRST_NAME_E', 'text'), ('LAST_NAME_E', 'text'), ('MIDDLE_NAME_E','text')], name = 'full_text')
         logging.info('WantedPersons Text Index created')
         
+    #don't work
     def saveEntrepreneursRegister(self, zipUrl):
         entrepreneursCol = self.__db['Entrepreneurs']
         countDeletedDocuments = entrepreneursCol.delete_many({})
@@ -141,13 +144,20 @@ class DBTools:
             #go inside ZIP
             for csvFile in debtorsZip.namelist():
                 logging.warning('File in ZIP: ' + str(csvFile))
-                #read the CSV file
-                debtorsCsvFile = debtorsZip.open(csvFile)
-                #convert CSV to JSON using Panda
-                debtorsCsv = pd.concat([x for x in pd.read_csv(debtorsCsvFile, encoding='windows-1251', chunksize=1000, header=None, skiprows=[0], dtype = {1:'object'}, names=['DEBTOR_NAME', 'DEBTOR_CODE', 'PUBLISHER', 'EMP_FULL_FIO', 'EMP_ORG', 'ORG_PHONE', 'EMAIL_ADDR', 'VP_ORDERNUM', 'VD_CAT'])], ignore_index=True)
-                debtorsJson = json.loads(debtorsCsv.to_json(orient='records'))
+                debtorsCsvFileName = str(csvFile)
+            debtorsZip.extractall()
+            debtorsZip.close()
+            #read CSV using Dask
+            debtorsCsv = dd.read_csv(debtorsCsvFileName, encoding='windows-1251', header=None, skiprows=[0], dtype = {1:'object'}, names=['DEBTOR_NAME', 'DEBTOR_CODE', 'PUBLISHER', 'EMP_FULL_FIO', 'EMP_ORG', 'ORG_PHONE', 'EMAIL_ADDR', 'VP_ORDERNUM', 'VD_CAT'])
+            #convert CSV to JSON using Dask
+            debtorsCsv.to_json('debtorsJson')
+            for file in os.listdir('debtorsJson'):
                 #save to the collection
-                debtorsCol.insert_many(debtorsJson)
+                for line in open('debtorsJson/'+file, 'r'):
+                    debtorsJson = json.loads(line) 
+                    debtorsCol.insert_one(debtorsJson)
             logging.info('Debtors dataset was saved into the database')
-            debtorsCol.create_index([('DEBTOR_NAME','text'), ('DEBTOR_CODE', 'text'), ('MEMP_FULL_FIO', 'text')], name = 'full_text')
+            debtorsCol.create_index([('DEBTOR_NAME','text'), ('DEBTOR_CODE', 'text'), ('EMP_FULL_FIO', 'text')], name = 'full_text')
             logging.info('Debtors Text Index created')
+            os.remove(debtorsCsvFileName)
+            shutil.rmtree('debtorsJson', ignore_errors=True)

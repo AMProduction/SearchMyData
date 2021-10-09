@@ -1189,3 +1189,742 @@
 02/10/2021 19:54:44    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 395996927
 02/10/2021 19:55:20     INFO:      dbtools.py:A DebtorsRegister dataset received
 02/10/2021 19:55:20  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+02/10/2021 23:07:56     INFO: searchmydata.py:The application started
+02/10/2021 23:07:56  WARNING:service_tools.py:Config.json is found
+02/10/2021 23:07:58  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+02/10/2021 23:07:58  WARNING:      dbtools.py:Config.json is found
+02/10/2021 23:07:58    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:07:59    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+02/10/2021 23:07:59     INFO:          elt.py:A general MissingPersons dataset JSON received
+02/10/2021 23:07:59    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:08:02    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+02/10/2021 23:08:02     INFO:          elt.py:A MissingPersons resources JSON id received
+02/10/2021 23:08:02    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:08:02    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5039420
+02/10/2021 23:08:11     INFO:          elt.py:A MissingPersons dataset received
+02/10/2021 23:08:11  WARNING:      dbtools.py:6637 documents deleted. The missing persons collection is empty.
+02/10/2021 23:08:11  WARNING:      dbtools.py:Missing persons Text index deleted
+02/10/2021 23:08:12     INFO:      dbtools.py:Missing persons dataset was saved into the database
+02/10/2021 23:08:12     INFO:      dbtools.py:Missing persons Text Index created
+02/10/2021 23:08:12    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:08:12    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+02/10/2021 23:08:12     INFO:          elt.py:A general WantedPersons dataset JSON received
+02/10/2021 23:08:12    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:08:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+02/10/2021 23:08:16     INFO:          elt.py:A WantedPersons resources JSON id received
+02/10/2021 23:08:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:08:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41146697
+02/10/2021 23:09:12     INFO:          elt.py:A WantedPersons dataset received
+02/10/2021 23:09:18  WARNING:      dbtools.py:47689 documents deleted. The wanted persons collection is empty.
+02/10/2021 23:09:18  WARNING:      dbtools.py:WantedPersons Text index deleted
+02/10/2021 23:09:19     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+02/10/2021 23:09:22     INFO:      dbtools.py:WantedPersons Text Index created
+02/10/2021 23:09:22    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:09:22    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+02/10/2021 23:09:22     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+02/10/2021 23:09:22    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:09:22    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+02/10/2021 23:09:22     INFO:          elt.py:A DebtorsRegister resources JSON id received
+02/10/2021 23:09:22  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+02/10/2021 23:09:22    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:09:22    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 395996927
+02/10/2021 23:10:00     INFO:      dbtools.py:A DebtorsRegister dataset received
+02/10/2021 23:10:00  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+02/10/2021 23:23:40     INFO: searchmydata.py:The application started
+02/10/2021 23:23:40  WARNING:service_tools.py:Config.json is found
+02/10/2021 23:23:44  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+02/10/2021 23:23:44  WARNING:      dbtools.py:Config.json is found
+02/10/2021 23:23:44    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:23:45    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+02/10/2021 23:23:45     INFO:          elt.py:A general MissingPersons dataset JSON received
+02/10/2021 23:23:45    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:23:48    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+02/10/2021 23:23:48     INFO:          elt.py:A MissingPersons resources JSON id received
+02/10/2021 23:23:48    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:23:48    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5039420
+02/10/2021 23:23:55     INFO:          elt.py:A MissingPersons dataset received
+02/10/2021 23:23:56  WARNING:      dbtools.py:6637 documents deleted. The missing persons collection is empty.
+02/10/2021 23:23:56  WARNING:      dbtools.py:Missing persons Text index deleted
+02/10/2021 23:23:56     INFO:      dbtools.py:Missing persons dataset was saved into the database
+02/10/2021 23:23:57     INFO:      dbtools.py:Missing persons Text Index created
+02/10/2021 23:23:57    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:23:58    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+02/10/2021 23:23:58     INFO:          elt.py:A general WantedPersons dataset JSON received
+02/10/2021 23:23:58    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:24:00    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+02/10/2021 23:24:00     INFO:          elt.py:A WantedPersons resources JSON id received
+02/10/2021 23:24:00    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:24:00    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41146697
+02/10/2021 23:24:53     INFO:          elt.py:A WantedPersons dataset received
+02/10/2021 23:24:58  WARNING:      dbtools.py:47689 documents deleted. The wanted persons collection is empty.
+02/10/2021 23:24:58  WARNING:      dbtools.py:WantedPersons Text index deleted
+02/10/2021 23:25:00     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+02/10/2021 23:25:02     INFO:      dbtools.py:WantedPersons Text Index created
+02/10/2021 23:25:02    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:25:02    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+02/10/2021 23:25:02     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+02/10/2021 23:25:02    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:25:02    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+02/10/2021 23:25:02     INFO:          elt.py:A DebtorsRegister resources JSON id received
+02/10/2021 23:25:03  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+02/10/2021 23:25:03    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:25:03    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 395996927
+02/10/2021 23:25:40     INFO:      dbtools.py:A DebtorsRegister dataset received
+02/10/2021 23:25:40  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+02/10/2021 23:28:40     INFO: searchmydata.py:The application started
+02/10/2021 23:28:40  WARNING:service_tools.py:Config.json is found
+02/10/2021 23:28:44  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+02/10/2021 23:28:44  WARNING:      dbtools.py:Config.json is found
+02/10/2021 23:28:44    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:28:45    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+02/10/2021 23:28:45     INFO:          elt.py:A general MissingPersons dataset JSON received
+02/10/2021 23:28:45    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:28:47    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+02/10/2021 23:28:47     INFO:          elt.py:A MissingPersons resources JSON id received
+02/10/2021 23:28:47    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:28:47    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5039420
+02/10/2021 23:28:55     INFO:          elt.py:A MissingPersons dataset received
+02/10/2021 23:28:56  WARNING:      dbtools.py:6637 documents deleted. The missing persons collection is empty.
+02/10/2021 23:28:56  WARNING:      dbtools.py:Missing persons Text index deleted
+02/10/2021 23:28:56     INFO:      dbtools.py:Missing persons dataset was saved into the database
+02/10/2021 23:28:57     INFO:      dbtools.py:Missing persons Text Index created
+02/10/2021 23:28:57    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:28:57    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+02/10/2021 23:28:57     INFO:          elt.py:A general WantedPersons dataset JSON received
+02/10/2021 23:28:57    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:28:59    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+02/10/2021 23:28:59     INFO:          elt.py:A WantedPersons resources JSON id received
+02/10/2021 23:28:59    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:28:59    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41146697
+02/10/2021 23:29:54     INFO:          elt.py:A WantedPersons dataset received
+02/10/2021 23:29:58  WARNING:      dbtools.py:47689 documents deleted. The wanted persons collection is empty.
+02/10/2021 23:29:58  WARNING:      dbtools.py:WantedPersons Text index deleted
+02/10/2021 23:30:00     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+02/10/2021 23:30:02     INFO:      dbtools.py:WantedPersons Text Index created
+02/10/2021 23:30:02    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:30:02    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+02/10/2021 23:30:02     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+02/10/2021 23:30:02    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:30:03    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+02/10/2021 23:30:03     INFO:          elt.py:A DebtorsRegister resources JSON id received
+02/10/2021 23:30:03  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+02/10/2021 23:30:03    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:30:03    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 395996927
+02/10/2021 23:30:43     INFO:      dbtools.py:A DebtorsRegister dataset received
+02/10/2021 23:30:43  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+02/10/2021 23:30:58     INFO:      dbtools.py:Debtors dataset was saved into the database
+02/10/2021 23:30:58     INFO:service_tools.py:MissingPersonsRegisterServiceJson updated
+02/10/2021 23:30:59     INFO:service_tools.py:WantedPersonsRegisterServiceJson updated
+02/10/2021 23:30:59     INFO:service_tools.py:DebtorsRegisterServiceJson created
+02/10/2021 23:31:16  WARNING: searchmydata.py:The "Exit" menu item chosen
+02/10/2021 23:31:16     INFO: searchmydata.py:The application closed
+02/10/2021 23:32:14     INFO: searchmydata.py:The application started
+02/10/2021 23:32:14  WARNING:service_tools.py:Config.json is found
+02/10/2021 23:32:18  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+02/10/2021 23:32:18  WARNING:      dbtools.py:Config.json is found
+02/10/2021 23:32:18    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:32:19    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+02/10/2021 23:32:19     INFO:          elt.py:A general MissingPersons dataset JSON received
+02/10/2021 23:32:19    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:32:22    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+02/10/2021 23:32:22     INFO:          elt.py:A MissingPersons resources JSON id received
+02/10/2021 23:32:22    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:32:22    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5039420
+02/10/2021 23:32:29     INFO:          elt.py:A MissingPersons dataset received
+02/10/2021 23:32:30  WARNING:      dbtools.py:6637 documents deleted. The missing persons collection is empty.
+02/10/2021 23:32:30  WARNING:      dbtools.py:Missing persons Text index deleted
+02/10/2021 23:32:30     INFO:      dbtools.py:Missing persons dataset was saved into the database
+02/10/2021 23:32:30     INFO:      dbtools.py:Missing persons Text Index created
+02/10/2021 23:32:30    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:32:31    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+02/10/2021 23:32:31     INFO:          elt.py:A general WantedPersons dataset JSON received
+02/10/2021 23:32:31    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:32:33    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+02/10/2021 23:32:33     INFO:          elt.py:A WantedPersons resources JSON id received
+02/10/2021 23:32:33    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:32:33    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41146697
+02/10/2021 23:33:29     INFO:          elt.py:A WantedPersons dataset received
+02/10/2021 23:33:34  WARNING:      dbtools.py:47689 documents deleted. The wanted persons collection is empty.
+02/10/2021 23:33:34  WARNING:      dbtools.py:WantedPersons Text index deleted
+02/10/2021 23:33:36     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+02/10/2021 23:33:38     INFO:      dbtools.py:WantedPersons Text Index created
+02/10/2021 23:33:38    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:33:38    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+02/10/2021 23:33:38     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+02/10/2021 23:33:38    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:33:38    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+02/10/2021 23:33:38     INFO:          elt.py:A DebtorsRegister resources JSON id received
+02/10/2021 23:33:38  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+02/10/2021 23:33:38    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:33:38    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 395996927
+02/10/2021 23:34:15     INFO:      dbtools.py:A DebtorsRegister dataset received
+02/10/2021 23:34:15  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+02/10/2021 23:34:31     INFO:      dbtools.py:Debtors dataset was saved into the database
+02/10/2021 23:34:31     INFO:service_tools.py:MissingPersonsRegisterServiceJson updated
+02/10/2021 23:34:31     INFO:service_tools.py:WantedPersonsRegisterServiceJson updated
+02/10/2021 23:34:31     INFO:service_tools.py:DebtorsRegisterServiceJson updated
+02/10/2021 23:34:47  WARNING: searchmydata.py:The "Exit" menu item chosen
+02/10/2021 23:34:47     INFO: searchmydata.py:The application closed
+02/10/2021 23:36:46     INFO: searchmydata.py:The application started
+02/10/2021 23:36:46  WARNING:service_tools.py:Config.json is found
+02/10/2021 23:36:49  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+02/10/2021 23:36:49  WARNING:      dbtools.py:Config.json is found
+02/10/2021 23:36:49    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:36:50    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+02/10/2021 23:36:50     INFO:          elt.py:A general MissingPersons dataset JSON received
+02/10/2021 23:36:50    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:36:53    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+02/10/2021 23:36:53     INFO:          elt.py:A MissingPersons resources JSON id received
+02/10/2021 23:36:53    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:36:53    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5039420
+02/10/2021 23:37:00     INFO:          elt.py:A MissingPersons dataset received
+02/10/2021 23:37:01  WARNING:      dbtools.py:6637 documents deleted. The missing persons collection is empty.
+02/10/2021 23:37:01  WARNING:      dbtools.py:Missing persons Text index deleted
+02/10/2021 23:37:01     INFO:      dbtools.py:Missing persons dataset was saved into the database
+02/10/2021 23:37:01     INFO:      dbtools.py:Missing persons Text Index created
+02/10/2021 23:37:01    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:37:01    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+02/10/2021 23:37:01     INFO:          elt.py:A general WantedPersons dataset JSON received
+02/10/2021 23:37:01    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:37:04    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+02/10/2021 23:37:05     INFO:          elt.py:A WantedPersons resources JSON id received
+02/10/2021 23:37:05    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:37:05    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41146697
+02/10/2021 23:38:01     INFO:          elt.py:A WantedPersons dataset received
+02/10/2021 23:38:06  WARNING:      dbtools.py:47689 documents deleted. The wanted persons collection is empty.
+02/10/2021 23:38:06  WARNING:      dbtools.py:WantedPersons Text index deleted
+02/10/2021 23:38:08     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+02/10/2021 23:38:13     INFO:      dbtools.py:WantedPersons Text Index created
+02/10/2021 23:38:13    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:38:13    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+02/10/2021 23:38:13     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+02/10/2021 23:38:13    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:38:13    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+02/10/2021 23:38:13     INFO:          elt.py:A DebtorsRegister resources JSON id received
+02/10/2021 23:38:13  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+02/10/2021 23:38:13    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:38:14    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 395996927
+02/10/2021 23:38:52     INFO:      dbtools.py:A DebtorsRegister dataset received
+02/10/2021 23:38:52  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+02/10/2021 23:45:18     INFO: searchmydata.py:The application started
+02/10/2021 23:45:18  WARNING:service_tools.py:Config.json is found
+02/10/2021 23:45:20  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+02/10/2021 23:45:20  WARNING:      dbtools.py:Config.json is found
+02/10/2021 23:45:20    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:45:21    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+02/10/2021 23:45:21     INFO:          elt.py:A general MissingPersons dataset JSON received
+02/10/2021 23:45:21    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:45:24    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+02/10/2021 23:45:24     INFO:          elt.py:A MissingPersons resources JSON id received
+02/10/2021 23:45:24    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:45:24    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5039420
+02/10/2021 23:45:30     INFO:          elt.py:A MissingPersons dataset received
+02/10/2021 23:45:31  WARNING:      dbtools.py:6637 documents deleted. The missing persons collection is empty.
+02/10/2021 23:45:31  WARNING:      dbtools.py:Missing persons Text index deleted
+02/10/2021 23:45:31     INFO:      dbtools.py:Missing persons dataset was saved into the database
+02/10/2021 23:45:32     INFO:      dbtools.py:Missing persons Text Index created
+02/10/2021 23:45:32    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:45:32    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+02/10/2021 23:45:32     INFO:          elt.py:A general WantedPersons dataset JSON received
+02/10/2021 23:45:32    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:45:34    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+02/10/2021 23:45:34     INFO:          elt.py:A WantedPersons resources JSON id received
+02/10/2021 23:45:34    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:45:34    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41146697
+02/10/2021 23:46:29     INFO:          elt.py:A WantedPersons dataset received
+02/10/2021 23:46:34  WARNING:      dbtools.py:47689 documents deleted. The wanted persons collection is empty.
+02/10/2021 23:46:34  WARNING:      dbtools.py:WantedPersons Text index deleted
+02/10/2021 23:46:35     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+02/10/2021 23:46:38     INFO:      dbtools.py:WantedPersons Text Index created
+02/10/2021 23:46:38    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:46:38    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+02/10/2021 23:46:38     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+02/10/2021 23:46:38    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:46:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+02/10/2021 23:46:41     INFO:          elt.py:A DebtorsRegister resources JSON id received
+02/10/2021 23:46:41  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+02/10/2021 23:46:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:46:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 395996927
+02/10/2021 23:47:18     INFO:      dbtools.py:A DebtorsRegister dataset received
+02/10/2021 23:47:18  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+02/10/2021 23:52:35     INFO: searchmydata.py:The application started
+02/10/2021 23:52:35  WARNING:service_tools.py:Config.json is found
+02/10/2021 23:52:38  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+02/10/2021 23:52:38  WARNING:      dbtools.py:Config.json is found
+02/10/2021 23:52:38    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:52:39    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+02/10/2021 23:52:39     INFO:          elt.py:A general MissingPersons dataset JSON received
+02/10/2021 23:52:39    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:52:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+02/10/2021 23:52:41     INFO:          elt.py:A MissingPersons resources JSON id received
+02/10/2021 23:52:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:52:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5039420
+02/10/2021 23:52:50     INFO:          elt.py:A MissingPersons dataset received
+02/10/2021 23:52:51  WARNING:      dbtools.py:6637 documents deleted. The missing persons collection is empty.
+02/10/2021 23:52:51  WARNING:      dbtools.py:Missing persons Text index deleted
+02/10/2021 23:52:52     INFO:      dbtools.py:Missing persons dataset was saved into the database
+02/10/2021 23:52:52     INFO:      dbtools.py:Missing persons Text Index created
+02/10/2021 23:52:52    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:52:52    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+02/10/2021 23:52:52     INFO:          elt.py:A general WantedPersons dataset JSON received
+02/10/2021 23:52:52    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:52:54    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+02/10/2021 23:52:54     INFO:          elt.py:A WantedPersons resources JSON id received
+02/10/2021 23:52:54    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:52:55    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41146697
+02/10/2021 23:53:50     INFO:          elt.py:A WantedPersons dataset received
+02/10/2021 23:53:55  WARNING:      dbtools.py:47689 documents deleted. The wanted persons collection is empty.
+02/10/2021 23:53:55  WARNING:      dbtools.py:WantedPersons Text index deleted
+02/10/2021 23:53:56     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+02/10/2021 23:53:59     INFO:      dbtools.py:WantedPersons Text Index created
+02/10/2021 23:53:59    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:53:59    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+02/10/2021 23:53:59     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+02/10/2021 23:53:59    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:53:59    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+02/10/2021 23:53:59     INFO:          elt.py:A DebtorsRegister resources JSON id received
+02/10/2021 23:53:59  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+02/10/2021 23:53:59    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+02/10/2021 23:53:59    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 395996927
+02/10/2021 23:54:33     INFO:      dbtools.py:A DebtorsRegister dataset received
+02/10/2021 23:54:33  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+02/10/2021 23:58:52     INFO:service_tools.py:MissingPersonsRegisterServiceJson updated
+02/10/2021 23:58:52     INFO:service_tools.py:WantedPersonsRegisterServiceJson updated
+02/10/2021 23:58:52     INFO:service_tools.py:DebtorsRegisterServiceJson updated
+02/10/2021 23:59:06  WARNING: searchmydata.py:The "Exit" menu item chosen
+02/10/2021 23:59:06     INFO: searchmydata.py:The application closed
+08/10/2021 22:40:01     INFO: searchmydata.py:The application started
+08/10/2021 22:40:01  WARNING:service_tools.py:Config.json is found
+08/10/2021 22:40:07  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+08/10/2021 22:40:07  WARNING:      dbtools.py:Config.json is found
+08/10/2021 22:40:07    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 22:40:07    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+08/10/2021 22:40:07     INFO:          elt.py:A general MissingPersons dataset JSON received
+08/10/2021 22:40:07    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 22:40:10    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+08/10/2021 22:40:10     INFO:          elt.py:A MissingPersons resources JSON id received
+08/10/2021 22:40:10    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 22:40:10    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5065192
+08/10/2021 22:40:17     INFO:          elt.py:A MissingPersons dataset received
+08/10/2021 22:40:18  WARNING:      dbtools.py:6637 documents deleted. The missing persons collection is empty.
+08/10/2021 22:40:18  WARNING:      dbtools.py:Missing persons Text index deleted
+08/10/2021 22:40:18     INFO:      dbtools.py:Missing persons dataset was saved into the database
+08/10/2021 22:40:18     INFO:      dbtools.py:Missing persons Text Index created
+08/10/2021 22:40:18    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 22:40:19    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+08/10/2021 22:40:19     INFO:          elt.py:A general WantedPersons dataset JSON received
+08/10/2021 22:40:19    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 22:40:21    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+08/10/2021 22:40:21     INFO:          elt.py:A WantedPersons resources JSON id received
+08/10/2021 22:40:21    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 22:40:21    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41309396
+08/10/2021 22:41:19     INFO:          elt.py:A WantedPersons dataset received
+08/10/2021 22:41:23  WARNING:      dbtools.py:47689 documents deleted. The wanted persons collection is empty.
+08/10/2021 22:41:23  WARNING:      dbtools.py:WantedPersons Text index deleted
+08/10/2021 22:41:25     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+08/10/2021 22:41:28     INFO:      dbtools.py:WantedPersons Text Index created
+08/10/2021 22:41:28    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 22:41:32    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+08/10/2021 22:41:32     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+08/10/2021 22:41:32    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 22:41:35    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+08/10/2021 22:41:35     INFO:          elt.py:A DebtorsRegister resources JSON id received
+08/10/2021 22:41:35  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+08/10/2021 22:41:35    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 22:41:36    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 398298019
+08/10/2021 22:42:16     INFO:      dbtools.py:A DebtorsRegister dataset received
+08/10/2021 22:42:16  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+08/10/2021 23:00:23     INFO: searchmydata.py:The application started
+08/10/2021 23:00:23  WARNING:service_tools.py:Config.json is found
+08/10/2021 23:00:25  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+08/10/2021 23:00:25  WARNING:      dbtools.py:Config.json is found
+08/10/2021 23:00:25    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:00:25    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+08/10/2021 23:00:25     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+08/10/2021 23:00:25    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:00:26    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+08/10/2021 23:00:26     INFO:          elt.py:A DebtorsRegister resources JSON id received
+08/10/2021 23:00:26  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+08/10/2021 23:00:26    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:00:26    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 398298019
+08/10/2021 23:01:08     INFO:      dbtools.py:A DebtorsRegister dataset received
+08/10/2021 23:01:08  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+08/10/2021 23:01:23     INFO:service_tools.py:MissingPersonsRegisterServiceJson updated
+08/10/2021 23:01:23     INFO:service_tools.py:WantedPersonsRegisterServiceJson updated
+08/10/2021 23:01:23     INFO:service_tools.py:DebtorsRegisterServiceJson updated
+08/10/2021 23:01:34  WARNING: searchmydata.py:The "Exit" menu item chosen
+08/10/2021 23:01:34     INFO: searchmydata.py:The application closed
+08/10/2021 23:04:57     INFO: searchmydata.py:The application started
+08/10/2021 23:04:57  WARNING:service_tools.py:Config.json is found
+08/10/2021 23:05:02  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+08/10/2021 23:05:02  WARNING:      dbtools.py:Config.json is found
+08/10/2021 23:05:02    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:05:02    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+08/10/2021 23:05:02     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+08/10/2021 23:05:02    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:05:02    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+08/10/2021 23:05:02     INFO:          elt.py:A DebtorsRegister resources JSON id received
+08/10/2021 23:05:02  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+08/10/2021 23:05:02    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:05:02    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 398298019
+08/10/2021 23:05:45     INFO:      dbtools.py:A DebtorsRegister dataset received
+08/10/2021 23:05:45  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+08/10/2021 23:06:01     INFO:service_tools.py:MissingPersonsRegisterServiceJson updated
+08/10/2021 23:06:02     INFO:service_tools.py:WantedPersonsRegisterServiceJson updated
+08/10/2021 23:06:02     INFO:service_tools.py:DebtorsRegisterServiceJson updated
+08/10/2021 23:10:25  WARNING: searchmydata.py:The "Exit" menu item chosen
+08/10/2021 23:10:25     INFO: searchmydata.py:The application closed
+08/10/2021 23:11:35     INFO: searchmydata.py:The application started
+08/10/2021 23:11:35  WARNING:service_tools.py:Config.json is found
+08/10/2021 23:11:38  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+08/10/2021 23:11:38  WARNING:      dbtools.py:Config.json is found
+08/10/2021 23:11:38    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:12:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+08/10/2021 23:12:41     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+08/10/2021 23:12:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:13:07    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+08/10/2021 23:13:07     INFO:          elt.py:A DebtorsRegister resources JSON id received
+08/10/2021 23:13:07  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+08/10/2021 23:13:07    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:13:08    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 398298019
+08/10/2021 23:13:46     INFO:      dbtools.py:A DebtorsRegister dataset received
+08/10/2021 23:13:46  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+08/10/2021 23:17:48     INFO:service_tools.py:MissingPersonsRegisterServiceJson updated
+08/10/2021 23:17:48     INFO:service_tools.py:WantedPersonsRegisterServiceJson updated
+08/10/2021 23:17:48     INFO:service_tools.py:DebtorsRegisterServiceJson updated
+08/10/2021 23:17:54  WARNING: searchmydata.py:The "Exit" menu item chosen
+08/10/2021 23:17:54     INFO: searchmydata.py:The application closed
+08/10/2021 23:25:49     INFO: searchmydata.py:The application started
+08/10/2021 23:25:49  WARNING:service_tools.py:Config.json is found
+08/10/2021 23:25:54  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+08/10/2021 23:25:54  WARNING:      dbtools.py:Config.json is found
+08/10/2021 23:25:54    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:26:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+08/10/2021 23:26:16     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+08/10/2021 23:26:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:27:13    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+08/10/2021 23:27:13     INFO:          elt.py:A DebtorsRegister resources JSON id received
+08/10/2021 23:27:13  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+08/10/2021 23:27:13    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:27:13    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 398298019
+08/10/2021 23:27:51     INFO:      dbtools.py:A DebtorsRegister dataset received
+08/10/2021 23:27:51  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+08/10/2021 23:35:24     INFO: searchmydata.py:The application started
+08/10/2021 23:35:24  WARNING:service_tools.py:Config.json is found
+08/10/2021 23:35:28  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+08/10/2021 23:35:28  WARNING:      dbtools.py:Config.json is found
+08/10/2021 23:35:28    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:35:29    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+08/10/2021 23:35:29     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+08/10/2021 23:35:29    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:35:29    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+08/10/2021 23:35:29     INFO:          elt.py:A DebtorsRegister resources JSON id received
+08/10/2021 23:35:29  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+08/10/2021 23:35:29    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:35:29    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 398298019
+08/10/2021 23:36:07     INFO:      dbtools.py:A DebtorsRegister dataset received
+08/10/2021 23:36:07  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+08/10/2021 23:47:01     INFO: searchmydata.py:The application started
+08/10/2021 23:47:01  WARNING:service_tools.py:Config.json is found
+08/10/2021 23:47:04  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+08/10/2021 23:47:04  WARNING:      dbtools.py:Config.json is found
+08/10/2021 23:47:04    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:47:04    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+08/10/2021 23:47:04     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+08/10/2021 23:47:04    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:47:36    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+08/10/2021 23:47:36     INFO:          elt.py:A DebtorsRegister resources JSON id received
+08/10/2021 23:47:36  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+08/10/2021 23:47:36     INFO:service_tools.py:MissingPersonsRegisterServiceJson updated
+08/10/2021 23:47:36     INFO:service_tools.py:WantedPersonsRegisterServiceJson updated
+08/10/2021 23:47:36     INFO:service_tools.py:DebtorsRegisterServiceJson updated
+08/10/2021 23:48:48  WARNING: searchmydata.py:The "Exit" menu item chosen
+08/10/2021 23:48:48     INFO: searchmydata.py:The application closed
+08/10/2021 23:50:43     INFO: searchmydata.py:The application started
+08/10/2021 23:50:43  WARNING:service_tools.py:Config.json is found
+08/10/2021 23:50:47  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+08/10/2021 23:50:47  WARNING:      dbtools.py:Config.json is found
+08/10/2021 23:50:48    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:51:32    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+08/10/2021 23:51:32     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+08/10/2021 23:51:32    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:51:32    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+08/10/2021 23:51:32     INFO:          elt.py:A DebtorsRegister resources JSON id received
+08/10/2021 23:51:32  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+08/10/2021 23:51:32     INFO:service_tools.py:MissingPersonsRegisterServiceJson updated
+08/10/2021 23:51:32     INFO:service_tools.py:WantedPersonsRegisterServiceJson updated
+08/10/2021 23:51:32     INFO:service_tools.py:DebtorsRegisterServiceJson updated
+08/10/2021 23:52:44  WARNING: searchmydata.py:The "Exit" menu item chosen
+08/10/2021 23:52:44     INFO: searchmydata.py:The application closed
+08/10/2021 23:53:56     INFO: searchmydata.py:The application started
+08/10/2021 23:53:56  WARNING:service_tools.py:Config.json is found
+08/10/2021 23:53:58  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+08/10/2021 23:53:58  WARNING:      dbtools.py:Config.json is found
+08/10/2021 23:53:58    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:55:04    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+08/10/2021 23:55:04     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+08/10/2021 23:55:04    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:55:04    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+08/10/2021 23:55:04     INFO:          elt.py:A DebtorsRegister resources JSON id received
+08/10/2021 23:55:04  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+08/10/2021 23:55:18  WARNING: searchmydata.py:The "Exit" menu item chosen
+08/10/2021 23:55:18     INFO: searchmydata.py:The application closed
+08/10/2021 23:57:57     INFO: searchmydata.py:The application started
+08/10/2021 23:57:57  WARNING:service_tools.py:Config.json is found
+08/10/2021 23:58:02  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+08/10/2021 23:58:02  WARNING:      dbtools.py:Config.json is found
+08/10/2021 23:58:02    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:58:58    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+08/10/2021 23:58:58     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+08/10/2021 23:58:58    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:58:58    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+08/10/2021 23:58:58     INFO:          elt.py:A DebtorsRegister resources JSON id received
+08/10/2021 23:58:58  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+08/10/2021 23:58:58    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+08/10/2021 23:58:58    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 398298019
+08/10/2021 23:59:37     INFO:      dbtools.py:A DebtorsRegister dataset received
+09/10/2021 00:01:39     INFO: searchmydata.py:The application started
+09/10/2021 00:01:39  WARNING:service_tools.py:Config.json is found
+09/10/2021 00:01:41  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+09/10/2021 00:01:41  WARNING:      dbtools.py:Config.json is found
+09/10/2021 00:01:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 00:02:46    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+09/10/2021 00:02:46     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+09/10/2021 00:02:46    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 00:02:46    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+09/10/2021 00:02:46     INFO:          elt.py:A DebtorsRegister resources JSON id received
+09/10/2021 00:02:46  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+09/10/2021 00:02:46    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 00:02:47    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 398298019
+09/10/2021 00:03:26     INFO:      dbtools.py:A DebtorsRegister dataset received
+09/10/2021 00:04:13     INFO: searchmydata.py:The application started
+09/10/2021 00:04:13  WARNING:service_tools.py:Config.json is found
+09/10/2021 00:04:16  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+09/10/2021 00:04:16  WARNING:      dbtools.py:Config.json is found
+09/10/2021 00:04:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 00:04:37    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+09/10/2021 00:04:37     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+09/10/2021 00:04:37    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 00:04:37    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+09/10/2021 00:04:37     INFO:          elt.py:A DebtorsRegister resources JSON id received
+09/10/2021 00:04:37  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+09/10/2021 00:04:37    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 00:04:37    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 398298019
+09/10/2021 00:05:15     INFO:      dbtools.py:A DebtorsRegister dataset received
+09/10/2021 00:36:24     INFO: searchmydata.py:The application started
+09/10/2021 00:36:24  WARNING:service_tools.py:Config.json is found
+09/10/2021 00:36:27  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+09/10/2021 00:36:27  WARNING:      dbtools.py:Config.json is found
+09/10/2021 00:36:27    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 00:36:28    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+09/10/2021 00:36:28     INFO:          elt.py:A general MissingPersons dataset JSON received
+09/10/2021 00:36:28    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 00:37:00    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+09/10/2021 00:37:00     INFO:          elt.py:A MissingPersons resources JSON id received
+09/10/2021 00:37:00    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 00:37:00    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5065192
+09/10/2021 00:37:07     INFO:          elt.py:A MissingPersons dataset received
+09/10/2021 00:37:08  WARNING:      dbtools.py:6668 documents deleted. The missing persons collection is empty.
+09/10/2021 00:37:08  WARNING:      dbtools.py:Missing persons Text index deleted
+09/10/2021 00:37:08     INFO:      dbtools.py:Missing persons dataset was saved into the database
+09/10/2021 00:37:08     INFO:      dbtools.py:Missing persons Text Index created
+09/10/2021 00:37:08    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 00:37:51    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+09/10/2021 00:37:51     INFO:          elt.py:A general WantedPersons dataset JSON received
+09/10/2021 00:37:51    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 00:37:54    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+09/10/2021 00:37:54     INFO:          elt.py:A WantedPersons resources JSON id received
+09/10/2021 00:37:54    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 00:37:54    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41309396
+09/10/2021 00:38:51     INFO:          elt.py:A WantedPersons dataset received
+09/10/2021 00:38:56  WARNING:      dbtools.py:47876 documents deleted. The wanted persons collection is empty.
+09/10/2021 00:38:56  WARNING:      dbtools.py:WantedPersons Text index deleted
+09/10/2021 00:38:58     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+09/10/2021 00:39:01     INFO:      dbtools.py:WantedPersons Text Index created
+09/10/2021 00:39:01    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 00:39:48    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+09/10/2021 00:39:48     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+09/10/2021 00:39:48    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 00:39:48    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+09/10/2021 00:39:48     INFO:          elt.py:A DebtorsRegister resources JSON id received
+09/10/2021 00:40:46  WARNING:      dbtools.py:2223845 documents deleted. The wanted persons collection is empty.
+09/10/2021 00:40:46    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 00:40:46    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 398298019
+09/10/2021 00:41:20     INFO:      dbtools.py:A DebtorsRegister dataset received
+09/10/2021 00:41:20  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+09/10/2021 00:41:36     INFO:service_tools.py:MissingPersonsRegisterServiceJson updated
+09/10/2021 00:41:36     INFO:service_tools.py:WantedPersonsRegisterServiceJson updated
+09/10/2021 00:41:36     INFO:service_tools.py:DebtorsRegisterServiceJson updated
+09/10/2021 00:43:18  WARNING: searchmydata.py:The "Exit" menu item chosen
+09/10/2021 00:43:18     INFO: searchmydata.py:The application closed
+09/10/2021 10:20:39     INFO: searchmydata.py:The application started
+09/10/2021 10:20:39  WARNING:service_tools.py:Config.json is found
+09/10/2021 10:20:42  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+09/10/2021 10:20:42  WARNING:      dbtools.py:Config.json is found
+09/10/2021 10:20:42    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:20:43    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+09/10/2021 10:20:43     INFO:          elt.py:A general MissingPersons dataset JSON received
+09/10/2021 10:20:43    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:20:46    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+09/10/2021 10:20:46     INFO:          elt.py:A MissingPersons resources JSON id received
+09/10/2021 10:20:46    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:20:46    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5065192
+09/10/2021 10:20:54     INFO:          elt.py:A MissingPersons dataset received
+09/10/2021 10:20:55  WARNING:      dbtools.py:6668 documents deleted. The missing persons collection is empty.
+09/10/2021 10:20:55  WARNING:      dbtools.py:Missing persons Text index deleted
+09/10/2021 10:20:55     INFO:      dbtools.py:Missing persons dataset was saved into the database
+09/10/2021 10:20:56     INFO:      dbtools.py:Missing persons Text Index created
+09/10/2021 10:20:56    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:20:56    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+09/10/2021 10:20:56     INFO:          elt.py:A general WantedPersons dataset JSON received
+09/10/2021 10:20:56    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:20:59    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+09/10/2021 10:20:59     INFO:          elt.py:A WantedPersons resources JSON id received
+09/10/2021 10:20:59    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:20:59    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41309396
+09/10/2021 10:22:00     INFO:          elt.py:A WantedPersons dataset received
+09/10/2021 10:22:05  WARNING:      dbtools.py:47876 documents deleted. The wanted persons collection is empty.
+09/10/2021 10:22:05  WARNING:      dbtools.py:WantedPersons Text index deleted
+09/10/2021 10:22:07     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+09/10/2021 10:22:10     INFO:      dbtools.py:WantedPersons Text Index created
+09/10/2021 10:22:10    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:22:10    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+09/10/2021 10:22:10     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+09/10/2021 10:22:10    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:22:10    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+09/10/2021 10:22:10     INFO:          elt.py:A DebtorsRegister resources JSON id received
+09/10/2021 10:22:10  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+09/10/2021 10:22:10    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:22:10    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 398298019
+09/10/2021 10:22:44     INFO:      dbtools.py:A DebtorsRegister dataset received
+09/10/2021 10:22:44  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+09/10/2021 10:27:58     INFO: searchmydata.py:The application started
+09/10/2021 10:27:58  WARNING:service_tools.py:Config.json is found
+09/10/2021 10:28:03  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+09/10/2021 10:28:03  WARNING:      dbtools.py:Config.json is found
+09/10/2021 10:28:03    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:28:04    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+09/10/2021 10:28:04     INFO:          elt.py:A general MissingPersons dataset JSON received
+09/10/2021 10:28:04    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:28:06    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+09/10/2021 10:28:06     INFO:          elt.py:A MissingPersons resources JSON id received
+09/10/2021 10:28:06    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:28:06    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5065192
+09/10/2021 10:28:13     INFO:          elt.py:A MissingPersons dataset received
+09/10/2021 10:28:14  WARNING:      dbtools.py:6668 documents deleted. The missing persons collection is empty.
+09/10/2021 10:28:14  WARNING:      dbtools.py:Missing persons Text index deleted
+09/10/2021 10:28:14     INFO:      dbtools.py:Missing persons dataset was saved into the database
+09/10/2021 10:28:15     INFO:      dbtools.py:Missing persons Text Index created
+09/10/2021 10:28:15    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:28:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+09/10/2021 10:28:16     INFO:          elt.py:A general WantedPersons dataset JSON received
+09/10/2021 10:28:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:28:20    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+09/10/2021 10:28:20     INFO:          elt.py:A WantedPersons resources JSON id received
+09/10/2021 10:28:20    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:28:20    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41309396
+09/10/2021 10:29:21     INFO:          elt.py:A WantedPersons dataset received
+09/10/2021 10:29:27  WARNING:      dbtools.py:47876 documents deleted. The wanted persons collection is empty.
+09/10/2021 10:29:27  WARNING:      dbtools.py:WantedPersons Text index deleted
+09/10/2021 10:29:29     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+09/10/2021 10:29:32     INFO:      dbtools.py:WantedPersons Text Index created
+09/10/2021 10:29:32    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:29:32    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+09/10/2021 10:29:32     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+09/10/2021 10:29:32    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:29:32    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+09/10/2021 10:29:32     INFO:          elt.py:A DebtorsRegister resources JSON id received
+09/10/2021 10:29:32  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+09/10/2021 10:29:32    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:29:32    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 398298019
+09/10/2021 10:30:10     INFO:      dbtools.py:A DebtorsRegister dataset received
+09/10/2021 10:30:10  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+09/10/2021 10:33:59     INFO: searchmydata.py:The application started
+09/10/2021 10:33:59  WARNING:service_tools.py:Config.json is found
+09/10/2021 10:34:02  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+09/10/2021 10:34:02  WARNING:      dbtools.py:Config.json is found
+09/10/2021 10:34:02    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:34:03    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+09/10/2021 10:34:03     INFO:          elt.py:A general MissingPersons dataset JSON received
+09/10/2021 10:34:03    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:34:05    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+09/10/2021 10:34:05     INFO:          elt.py:A MissingPersons resources JSON id received
+09/10/2021 10:34:05    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:34:05    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5065192
+09/10/2021 10:34:16     INFO:          elt.py:A MissingPersons dataset received
+09/10/2021 10:34:17  WARNING:      dbtools.py:6668 documents deleted. The missing persons collection is empty.
+09/10/2021 10:34:17  WARNING:      dbtools.py:Missing persons Text index deleted
+09/10/2021 10:34:17     INFO:      dbtools.py:Missing persons dataset was saved into the database
+09/10/2021 10:34:18     INFO:      dbtools.py:Missing persons Text Index created
+09/10/2021 10:34:18    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:34:18    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+09/10/2021 10:34:18     INFO:          elt.py:A general WantedPersons dataset JSON received
+09/10/2021 10:34:18    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:34:21    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+09/10/2021 10:34:21     INFO:          elt.py:A WantedPersons resources JSON id received
+09/10/2021 10:34:21    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:34:21    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41309396
+09/10/2021 10:35:26     INFO:          elt.py:A WantedPersons dataset received
+09/10/2021 10:35:31  WARNING:      dbtools.py:47876 documents deleted. The wanted persons collection is empty.
+09/10/2021 10:35:31  WARNING:      dbtools.py:WantedPersons Text index deleted
+09/10/2021 10:35:33     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+09/10/2021 10:35:35     INFO:      dbtools.py:WantedPersons Text Index created
+09/10/2021 10:35:35    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:35:36    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+09/10/2021 10:35:36     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+09/10/2021 10:35:36    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:35:36    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+09/10/2021 10:35:36     INFO:          elt.py:A DebtorsRegister resources JSON id received
+09/10/2021 10:35:36  WARNING:      dbtools.py:0 documents deleted. The wanted persons collection is empty.
+09/10/2021 10:35:36    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:35:36    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 398298019
+09/10/2021 10:36:15     INFO:      dbtools.py:A DebtorsRegister dataset received
+09/10/2021 10:36:15  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+09/10/2021 10:43:35     INFO: searchmydata.py:The application started
+09/10/2021 10:43:35  WARNING:service_tools.py:Config.json is found
+09/10/2021 10:43:38  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+09/10/2021 10:43:38  WARNING:      dbtools.py:Config.json is found
+09/10/2021 10:43:38    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:43:39    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+09/10/2021 10:43:39     INFO:          elt.py:A general MissingPersons dataset JSON received
+09/10/2021 10:43:39    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:43:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+09/10/2021 10:43:41     INFO:          elt.py:A MissingPersons resources JSON id received
+09/10/2021 10:43:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:43:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5065192
+09/10/2021 10:43:56     INFO:          elt.py:A MissingPersons dataset received
+09/10/2021 10:43:57  WARNING:      dbtools.py:6668 documents deleted. The missing persons collection is empty.
+09/10/2021 10:43:57  WARNING:      dbtools.py:Missing persons Text index deleted
+09/10/2021 10:43:57     INFO:      dbtools.py:Missing persons dataset was saved into the database
+09/10/2021 10:43:58     INFO:      dbtools.py:Missing persons Text Index created
+09/10/2021 10:43:58    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:44:01    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+09/10/2021 10:44:01     INFO:          elt.py:A general WantedPersons dataset JSON received
+09/10/2021 10:44:01    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:44:08    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+09/10/2021 10:44:08     INFO:          elt.py:A WantedPersons resources JSON id received
+09/10/2021 10:44:08    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:44:08    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41309396
+09/10/2021 10:45:20     INFO:          elt.py:A WantedPersons dataset received
+09/10/2021 10:45:28  WARNING:      dbtools.py:47876 documents deleted. The wanted persons collection is empty.
+09/10/2021 10:45:28  WARNING:      dbtools.py:WantedPersons Text index deleted
+09/10/2021 10:45:32     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+09/10/2021 10:45:37     INFO:      dbtools.py:WantedPersons Text Index created
+09/10/2021 10:45:37    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:45:37    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+09/10/2021 10:45:37     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+09/10/2021 10:45:37    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:45:37    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+09/10/2021 10:45:37     INFO:          elt.py:A DebtorsRegister resources JSON id received
+09/10/2021 10:45:41  WARNING:      dbtools.py:92811 documents deleted. The wanted persons collection is empty.
+09/10/2021 10:45:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+09/10/2021 10:45:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 398298019
+09/10/2021 10:46:24     INFO:      dbtools.py:A DebtorsRegister dataset received
+09/10/2021 10:46:24  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+09/10/2021 12:13:57     INFO:      dbtools.py:Debtors dataset was saved into the database
+09/10/2021 12:17:42     INFO:      dbtools.py:Debtors Text Index created
+09/10/2021 12:17:43     INFO:service_tools.py:MissingPersonsRegisterServiceJson updated
+09/10/2021 12:17:43     INFO:service_tools.py:WantedPersonsRegisterServiceJson updated
+09/10/2021 12:17:57     INFO:service_tools.py:DebtorsRegisterServiceJson updated
+09/10/2021 12:30:44  WARNING: searchmydata.py:The "Exit" menu item chosen
+09/10/2021 12:30:44     INFO: searchmydata.py:The application closed
