@@ -5,9 +5,12 @@ from pathlib import Path
 import zipfile
 from io import BytesIO
 import xmltodict
-
+import pandas as pd
+from dask import dataframe as dd
+import os
 from pymongo.errors import ServerSelectionTimeoutError
 import requests
+import shutil
 
 class DBTools:
     
@@ -81,6 +84,7 @@ class DBTools:
         wantedPersonsCol.create_index([('FIRST_NAME_U','text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text'), ('FIRST_NAME_R', 'text'), ('LAST_NAME_R', 'text'), ('MIDDLE_NAME_R', 'text'), ('FIRST_NAME_E', 'text'), ('LAST_NAME_E', 'text'), ('MIDDLE_NAME_E','text')], name = 'full_text')
         logging.info('WantedPersons Text Index created')
         
+    #don't work
     def saveEntrepreneursRegister(self, zipUrl):
         entrepreneursCol = self.__db['Entrepreneurs']
         countDeletedDocuments = entrepreneursCol.delete_many({})
@@ -118,3 +122,42 @@ class DBTools:
                     entrepreneursJson = xmltodict.parse(entrepreneursXml, encoding='windows-1251')
                     #save to the collection
                     entrepreneursCol.insert_many(entrepreneursJson)
+                    
+    def saveDebtorsRegister(self, zipUrl):
+        debtorsCol = self.__db['Debtors']
+        countDeletedDocuments = debtorsCol.delete_many({})
+        logging.warning('%s documents deleted. The wanted persons collection is empty.', str(countDeletedDocuments.deleted_count))
+        if ('full_text' in debtorsCol.index_information()):
+            debtorsCol.drop_index('full_text')
+            logging.warning('WantedPersons Text index deleted')
+        try:
+            #get ZIP file
+            debtorsDatasetZIP = requests.get(zipUrl).content
+        except:
+            logging.error('Error during DebtorsRegisterZIP receiving occured')
+            print('Error during ZIP file receiving occured!')
+        else:
+            logging.info('A DebtorsRegister dataset received')
+            print('The Register "Єдиний реєстр боржників" refreshed')
+            #get lists of file
+            debtorsZip = zipfile.ZipFile(BytesIO(debtorsDatasetZIP), 'r' )
+            #go inside ZIP
+            for csvFile in debtorsZip.namelist():
+                logging.warning('File in ZIP: ' + str(csvFile))
+                debtorsCsvFileName = str(csvFile)
+            debtorsZip.extractall()
+            debtorsZip.close()
+            #read CSV using Dask
+            debtorsCsv = dd.read_csv(debtorsCsvFileName, encoding='windows-1251', header=None, skiprows=[0], dtype = {1:'object'}, names=['DEBTOR_NAME', 'DEBTOR_CODE', 'PUBLISHER', 'EMP_FULL_FIO', 'EMP_ORG', 'ORG_PHONE', 'EMAIL_ADDR', 'VP_ORDERNUM', 'VD_CAT'])
+            #convert CSV to JSON using Dask
+            debtorsCsv.to_json('debtorsJson')
+            for file in os.listdir('debtorsJson'):
+                #save to the collection
+                for line in open('debtorsJson/'+file, 'r'):
+                    debtorsJson = json.loads(line) 
+                    debtorsCol.insert_one(debtorsJson)
+            logging.info('Debtors dataset was saved into the database')
+            debtorsCol.create_index([('DEBTOR_NAME','text'), ('DEBTOR_CODE', 'text'), ('EMP_FULL_FIO', 'text')], name = 'full_text')
+            logging.info('Debtors Text Index created')
+            os.remove(debtorsCsvFileName)
+            shutil.rmtree('debtorsJson', ignore_errors=True)
