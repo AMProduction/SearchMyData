@@ -194,9 +194,11 @@ class DBTools:
             logging.info('LegalEntities Text Index created')
             entrepreneursCol.create_index([('fio','text')], name = 'full_text')
             logging.info('Entrepreneurs Text Index created')
+            print('The Register "Єдиний державний реєстр юридичних осіб, фізичних осіб – підприємців та громадських формувань" refreshed')
+        #delete temp files
         shutil.rmtree('Temp', ignore_errors=True)
         end_time = datetime.now()
-        logging.info('Time to save into the Entrepreneurs and LegalEntities register: ' + str(end_time-start_time))
+        logging.info('Time to save into the Entrepreneurs and LegalEntities registers: ' + str(end_time-start_time))
                     
     def saveDebtorsRegister(self, zipUrl):
         start_time = datetime.now()
@@ -214,7 +216,6 @@ class DBTools:
             print('Error during ZIP file receiving occured!')
         else:
             logging.info('A DebtorsRegister dataset received')
-            print('The Register "Єдиний реєстр боржників" refreshed')
             #get lists of file
             debtorsZip = zipfile.ZipFile(BytesIO(debtorsDatasetZIP), 'r' )
             #go inside ZIP
@@ -235,7 +236,9 @@ class DBTools:
             logging.info('Debtors dataset was saved into the database')
             debtorsCol.create_index([('DEBTOR_NAME','text'), ('DEBTOR_CODE', 'text'), ('EMP_FULL_FIO', 'text')], name = 'full_text')
             logging.info('Debtors Text Index created')
+            #delete temp files
             os.remove(debtorsCsvFileName)
             shutil.rmtree('debtorsJson', ignore_errors=True)
+            print('The Register "Єдиний реєстр боржників" refreshed')
         end_time = datetime.now()
         logging.info('Time to save into the debtors register: ' + str(end_time-start_time))

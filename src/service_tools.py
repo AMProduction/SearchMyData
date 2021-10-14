@@ -58,7 +58,7 @@ class ServiceTools:
         
     def getRegistersInfo(self):
         registersInfoTable = PrettyTable(['#', 'Description', 'Documents count', 'Last modified date'])
-        for info in self.__serviceCol.find({}, {'_id': 1, 'Description': 1, 'DocumentsCount': 1, 'LastModifiedDate': 1}):
+        for info in self.__serviceCol.find({}, {'_id': 1, 'Description': 1, 'DocumentsCount': 1, 'LastModifiedDate': 1}).sort([('_id', 1)]):
             registersInfoTable.add_row([str(info['_id']), info['Description'], str(info['DocumentsCount']), '{:.19}'.format(info['LastModifiedDate'])])
         print(registersInfoTable.get_string(title = 'Registers info'))
 
@@ -91,14 +91,14 @@ class ServiceTools:
             self.__updateLegalEntitiesRegisterServiceJson()
             logging.info('LegalEntitiesRegisterServiceJson updated')
         else:
-            self.__createEntrepreneursRegisterServiceJson()
+            self.__createLegalEntitiesRegisterServiceJson()
             logging.info('LegalEntitiesRegisterServiceJson created')
         #update or create EntrepreneursRegisterServiceJson 
         if ('ServiceCollection' in collectionsList) and (self.__serviceCol.count_documents({'_id': 5}, limit = 1) !=0):
             self.__updateEntrepreneursRegisterServiceJson()
             logging.info('EntrepreneursRegisterServiceJson updated')
         else:
-            self.__createLegalEntitiesRegisterServiceJson()
+            self.__createEntrepreneursRegisterServiceJson()
             logging.info('EntrepreneursRegisterServiceJson created')
         print('Metadata updated')    
     

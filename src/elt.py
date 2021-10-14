@@ -80,6 +80,7 @@ class GetDatasets:
     
     #Єдиний державний реєстр юридичних осіб, фізичних осіб-підприємців та громадських формувань (XMLs in ZIPped)
     def getEntrepreneursRegister(self):
+        print('The register "Єдиний державний реєстр юридичних осіб, фізичних осіб – підприємців та громадських формувань" is retrieving...')
         try:
             generalDataset = requests.get('https://data.gov.ua/api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10').text
         except:

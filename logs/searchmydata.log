@@ -2541,3 +2541,83 @@
 14/10/2021 15:12:02  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
 14/10/2021 15:38:41  WARNING: searchmydata.py:The "Exit" menu item chosen
 14/10/2021 15:38:41     INFO: searchmydata.py:The application closed
+14/10/2021 16:22:37     INFO: searchmydata.py:The application started
+14/10/2021 16:22:37  WARNING:service_tools.py:Config.json is found
+14/10/2021 16:22:42  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 16:22:42  WARNING:      dbtools.py:Config.json is found
+14/10/2021 16:22:42    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:22:42    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+14/10/2021 16:22:42     INFO:          elt.py:A general MissingPersons dataset JSON received
+14/10/2021 16:22:42    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:22:45    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+14/10/2021 16:22:45     INFO:          elt.py:A MissingPersons resources JSON id received
+14/10/2021 16:22:45    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:22:45    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5096224
+14/10/2021 16:22:52     INFO:          elt.py:A MissingPersons dataset received
+14/10/2021 16:22:53  WARNING:      dbtools.py:6668 documents deleted. The missing persons collection is empty.
+14/10/2021 16:22:53  WARNING:      dbtools.py:Missing persons Text index deleted
+14/10/2021 16:22:53     INFO:      dbtools.py:Missing persons dataset was saved into the database
+14/10/2021 16:22:53     INFO:      dbtools.py:Missing persons Text Index created
+14/10/2021 16:22:53     INFO:      dbtools.py:Time to save into the missing person register: 0:00:01.299879
+14/10/2021 16:22:53    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:22:53    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+14/10/2021 16:22:53     INFO:          elt.py:A general WantedPersons dataset JSON received
+14/10/2021 16:22:53    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:22:56    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+14/10/2021 16:22:56     INFO:          elt.py:A WantedPersons resources JSON id received
+14/10/2021 16:22:56    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:22:56    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41341343
+14/10/2021 16:24:04     INFO:          elt.py:A WantedPersons dataset received
+14/10/2021 16:24:11  WARNING:      dbtools.py:47876 documents deleted. The wanted persons collection is empty.
+14/10/2021 16:24:11  WARNING:      dbtools.py:WantedPersons Text index deleted
+14/10/2021 16:24:13     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+14/10/2021 16:24:16     INFO:      dbtools.py:WantedPersons Text Index created
+14/10/2021 16:24:16     INFO:      dbtools.py:Time to save into the wanted person register: 0:00:12.054515
+14/10/2021 16:24:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:24:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+14/10/2021 16:24:16     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+14/10/2021 16:24:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:24:17    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+14/10/2021 16:24:17     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+14/10/2021 16:24:17  WARNING:      dbtools.py:0 documents deleted. The entrepreneurs collection is empty.
+14/10/2021 16:25:09  WARNING:      dbtools.py:1832133 documents deleted. The legal entities collection is empty.
+14/10/2021 16:25:09    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:25:09    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+14/10/2021 16:25:54     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+14/10/2021 16:25:54  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+14/10/2021 16:25:54  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 18:15:42     INFO:      dbtools.py:LegalEntities dataset was saved into the database
+14/10/2021 18:15:42     INFO:      dbtools.py:Entrepreneurs dataset was saved into the database
+14/10/2021 18:17:05     INFO:      dbtools.py:LegalEntities Text Index created
+14/10/2021 18:19:07     INFO:      dbtools.py:Entrepreneurs Text Index created
+14/10/2021 18:19:07     INFO:      dbtools.py:Time to save into the Entrepreneurs and LegalEntities register: 1:54:50.357586
+14/10/2021 18:19:59     INFO:service_tools.py:MissingPersonsRegisterServiceJson updated
+14/10/2021 18:19:59     INFO:service_tools.py:WantedPersonsRegisterServiceJson updated
+14/10/2021 18:20:20     INFO:service_tools.py:DebtorsRegisterServiceJson updated
+14/10/2021 18:20:30     INFO:service_tools.py:LegalEntitiesRegisterServiceJson created
+14/10/2021 18:20:38     INFO:service_tools.py:EntrepreneursRegisterServiceJson updated
+14/10/2021 18:20:52  WARNING: searchmydata.py:The "Exit" menu item chosen
+14/10/2021 18:20:52     INFO: searchmydata.py:The application closed
+14/10/2021 18:23:05     INFO: searchmydata.py:The application started
+14/10/2021 18:23:05  WARNING:service_tools.py:Config.json is found
+14/10/2021 18:23:07  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 18:23:07  WARNING:      dbtools.py:Config.json is found
+14/10/2021 18:23:07     INFO:service_tools.py:MissingPersonsRegisterServiceJson updated
+14/10/2021 18:23:07     INFO:service_tools.py:WantedPersonsRegisterServiceJson updated
+14/10/2021 18:23:18     INFO:service_tools.py:DebtorsRegisterServiceJson updated
+14/10/2021 18:23:21     INFO:service_tools.py:LegalEntitiesRegisterServiceJson created
+14/10/2021 18:23:29     INFO:service_tools.py:EntrepreneursRegisterServiceJson updated
+14/10/2021 18:23:43  WARNING: searchmydata.py:The "Exit" menu item chosen
+14/10/2021 18:23:43     INFO: searchmydata.py:The application closed
+14/10/2021 18:25:55     INFO: searchmydata.py:The application started
+14/10/2021 18:25:55  WARNING:service_tools.py:Config.json is found
+14/10/2021 18:26:05  WARNING: searchmydata.py:The "Exit" menu item chosen
+14/10/2021 18:26:05     INFO: searchmydata.py:The application closed
+14/10/2021 18:30:58     INFO: searchmydata.py:The application started
+14/10/2021 18:30:58  WARNING:service_tools.py:Config.json is found
+14/10/2021 18:34:49     INFO: searchmydata.py:The application started
+14/10/2021 18:34:49  WARNING:service_tools.py:Config.json is found
+14/10/2021 18:37:28     INFO: searchmydata.py:The application started
+14/10/2021 18:37:28  WARNING:service_tools.py:Config.json is found
+14/10/2021 18:37:54  WARNING: searchmydata.py:The "Exit" menu item chosen
+14/10/2021 18:37:54     INFO: searchmydata.py:The application closed
