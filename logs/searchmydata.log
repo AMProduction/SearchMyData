@@ -3196,3 +3196,284 @@
 16/10/2021 15:22:27     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:00.015003
 16/10/2021 15:22:57  WARNING: searchmydata.py:The "Exit" menu item chosen
 16/10/2021 15:22:57     INFO: searchmydata.py:The application closed
+16/10/2021 16:29:01     INFO: searchmydata.py:The application started
+16/10/2021 16:29:01  WARNING:service_tools.py:Config.json is found
+16/10/2021 16:29:04  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 16:29:11  WARNING:search_engine.py:Config.json is found
+16/10/2021 16:30:58     INFO: searchmydata.py:The application started
+16/10/2021 16:30:58  WARNING:service_tools.py:Config.json is found
+16/10/2021 16:31:00  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 16:31:02  WARNING:search_engine.py:Config.json is found
+16/10/2021 16:31:02     INFO:search_engine.py:"Results" dir is empty
+16/10/2021 16:31:02  WARNING:search_engine.py:Query string: "yui"
+16/10/2021 16:31:02  WARNING:search_engine.py:The missing persons register: No data found
+16/10/2021 16:31:02     INFO:search_engine.py:Search time into the missing person register: 0:00:00.002998
+16/10/2021 16:31:02  WARNING:search_engine.py:The wanted persons register: No data found
+16/10/2021 16:31:02     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.003006
+16/10/2021 16:31:02  WARNING:search_engine.py:The debtors register: No data found
+16/10/2021 16:31:02     INFO:search_engine.py:Search time into the debtors register: 0:00:00.002982
+16/10/2021 16:31:02  WARNING:search_engine.py:The legal entities register: No data found
+16/10/2021 16:31:02     INFO:search_engine.py:Search time into the legal entities register: 0:00:00.003011
+16/10/2021 16:31:02  WARNING:search_engine.py:The Entrepreneurs register: No data found
+16/10/2021 16:31:02     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:00.003005
+16/10/2021 16:31:09  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 16:31:16  WARNING:search_engine.py:Config.json is found
+16/10/2021 16:31:16     INFO:search_engine.py:"Results" dir is empty
+16/10/2021 16:31:16  WARNING:search_engine.py:Query string: "Голопупенко Петро"
+16/10/2021 16:31:16  WARNING:search_engine.py:The missing persons register: 59 records found
+16/10/2021 16:31:16  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 16:31:16     INFO:search_engine.py:Search time into the missing person register: 0:00:00.038998
+16/10/2021 16:31:16  WARNING:search_engine.py:The wanted persons register: 250 records found
+16/10/2021 16:31:16  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 16:31:16     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.186000
+16/10/2021 16:31:26  WARNING:search_engine.py:The debtors register: 58163 records found
+16/10/2021 16:31:30  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 16:31:30     INFO:search_engine.py:Search time into the debtors register: 0:00:13.227945
+16/10/2021 16:31:31  WARNING:search_engine.py:The legal entities register: 13957 records found
+16/10/2021 16:31:32  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 16:31:32     INFO:search_engine.py:Search time into the legal entities register: 0:00:02.436162
+16/10/2021 16:31:36  WARNING:search_engine.py:The Entrepreneurs register: 33955 records found
+16/10/2021 16:31:38  WARNING:search_engine.py:All result dataset was saved into Entrepreneurs.html
+16/10/2021 16:31:38     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:06.301004
+16/10/2021 16:33:07  WARNING: searchmydata.py:The "Exit" menu item chosen
+16/10/2021 16:33:07     INFO: searchmydata.py:The application closed
+16/10/2021 16:38:44     INFO: searchmydata.py:The application started
+16/10/2021 16:38:44  WARNING:service_tools.py:Config.json is found
+16/10/2021 16:38:47  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 16:39:03  WARNING:search_engine.py:Config.json is found
+16/10/2021 16:39:03     INFO:search_engine.py:"Results" dir is cleared
+16/10/2021 16:39:03  WARNING:search_engine.py:Query string: "Пердоленко Василь Іванович"
+16/10/2021 16:39:03  WARNING:search_engine.py:The missing persons register: 560 records found
+16/10/2021 16:39:03  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 16:39:03     INFO:search_engine.py:Search time into the missing person register: 0:00:00.094773
+16/10/2021 16:39:03  WARNING:search_engine.py:The wanted persons register: 2233 records found
+16/10/2021 16:39:04  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 16:39:04     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.409011
+16/10/2021 16:39:22  WARNING:search_engine.py:The debtors register: 525470 records found
+16/10/2021 16:40:13     INFO: searchmydata.py:The application started
+16/10/2021 16:40:13  WARNING:service_tools.py:Config.json is found
+16/10/2021 16:40:17  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 16:40:39  WARNING:search_engine.py:Config.json is found
+16/10/2021 16:40:39     INFO:search_engine.py:"Results" dir is cleared
+16/10/2021 16:40:39  WARNING:search_engine.py:Query string: "Голопупенко Теодор Констянтинович"
+16/10/2021 16:40:39  WARNING:search_engine.py:The missing persons register: 1 records found
+16/10/2021 16:40:39  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 16:40:39     INFO:search_engine.py:Search time into the missing person register: 0:00:00.013004
+16/10/2021 16:40:39  WARNING:search_engine.py:The wanted persons register: 1 records found
+16/10/2021 16:40:39  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 16:40:39     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.020005
+16/10/2021 16:40:39  WARNING:search_engine.py:The debtors register: 917 records found
+16/10/2021 16:40:39  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 16:40:39     INFO:search_engine.py:Search time into the debtors register: 0:00:00.226001
+16/10/2021 16:40:40  WARNING:search_engine.py:The legal entities register: 130 records found
+16/10/2021 16:47:19     INFO: searchmydata.py:The application started
+16/10/2021 16:47:19  WARNING:service_tools.py:Config.json is found
+16/10/2021 16:47:22  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 16:47:39     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 16:47:39  WARNING:search_engine.py:Config.json is found
+16/10/2021 16:47:39  WARNING:search_engine.py:Query string: "Авраменко Мойсей Данилович"
+16/10/2021 16:47:39  WARNING:search_engine.py:The missing persons register: 10 records found
+16/10/2021 16:47:39  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 16:47:39     INFO:search_engine.py:Search time into the missing person register: 0:00:00.018995
+16/10/2021 16:47:39  WARNING:search_engine.py:The wanted persons register: 33 records found
+16/10/2021 16:47:39  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 16:47:39     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.039006
+16/10/2021 16:47:40  WARNING:search_engine.py:The debtors register: 9526 records found
+16/10/2021 16:47:41  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 16:47:41     INFO:search_engine.py:Search time into the debtors register: 0:00:01.582002
+16/10/2021 16:47:42  WARNING:search_engine.py:The legal entities register: 1770 records found
+16/10/2021 16:47:42  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 16:47:42     INFO:search_engine.py:Search time into the legal entities register: 0:00:00.922999
+16/10/2021 16:47:43  WARNING:search_engine.py:The Entrepreneurs register: 4779 records found
+16/10/2021 16:47:44  WARNING:search_engine.py:All result dataset was saved into Entrepreneurs.html
+16/10/2021 16:47:44     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:01.828996
+16/10/2021 16:49:02  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 16:49:09     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 16:49:09  WARNING:search_engine.py:Config.json is found
+16/10/2021 16:49:09  WARNING:search_engine.py:Query string: "Голопупенко Трандуїл"
+16/10/2021 16:49:09  WARNING:search_engine.py:The missing persons register: No data found
+16/10/2021 16:49:09     INFO:search_engine.py:Search time into the missing person register: 0:00:00.002043
+16/10/2021 16:49:09  WARNING:search_engine.py:The wanted persons register: No data found
+16/10/2021 16:49:09     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.003003
+16/10/2021 16:49:09  WARNING:search_engine.py:The debtors register: No data found
+16/10/2021 16:49:09     INFO:search_engine.py:Search time into the debtors register: 0:00:00.002994
+16/10/2021 16:49:09  WARNING:search_engine.py:The legal entities register: No data found
+16/10/2021 16:49:09     INFO:search_engine.py:Search time into the legal entities register: 0:00:00.003000
+16/10/2021 16:49:09  WARNING:search_engine.py:The Entrepreneurs register: No data found
+16/10/2021 16:49:09     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:00.003998
+16/10/2021 16:49:19  WARNING: searchmydata.py:The "Exit" menu item chosen
+16/10/2021 16:49:19     INFO: searchmydata.py:The application closed
+16/10/2021 17:13:49     INFO: searchmydata.py:The application started
+16/10/2021 17:13:49  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:14:06    ERROR: searchmydata.py:The wrong input type of menu item choice
+16/10/2021 17:14:06    ERROR: searchmydata.py:The wrong menu item choice
+16/10/2021 17:14:13  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:14:21     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:14:21  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:14:21  WARNING:search_engine.py:Query string: "Петров Теодор Ігорович"
+16/10/2021 17:14:21  WARNING:search_engine.py:The missing persons register: 46 records found
+16/10/2021 17:14:21  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:14:21     INFO:search_engine.py:Search time into the missing person register: 0:00:00.023002
+16/10/2021 17:14:21  WARNING:search_engine.py:The wanted persons register: 778 records found
+16/10/2021 17:14:21  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:14:21     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.172996
+16/10/2021 17:14:25  WARNING:search_engine.py:The debtors register: 146017 records found
+16/10/2021 17:14:54     INFO: searchmydata.py:The application started
+16/10/2021 17:14:54  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:14:56  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:15:35     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:15:35  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:15:35  WARNING:search_engine.py:Query string: "Запорожець Назарій Теодорович"
+16/10/2021 17:15:35  WARNING:search_engine.py:The missing persons register: 2 records found
+16/10/2021 17:15:35  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:15:35     INFO:search_engine.py:Search time into the missing person register: 0:00:00.011995
+16/10/2021 17:15:35  WARNING:search_engine.py:The wanted persons register: 27 records found
+16/10/2021 17:15:35  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:15:35     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.039999
+16/10/2021 17:15:36  WARNING:search_engine.py:The debtors register: 15252 records found
+16/10/2021 17:15:37  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 17:15:37     INFO:search_engine.py:Search time into the debtors register: 0:00:01.419005
+16/10/2021 17:15:37  WARNING:search_engine.py:The legal entities register: 1238 records found
+16/10/2021 17:15:37  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 17:15:37     INFO:search_engine.py:Search time into the legal entities register: 0:00:00.318004
+16/10/2021 17:15:38  WARNING:search_engine.py:The Entrepreneurs register: 4300 records found
+16/10/2021 17:15:38  WARNING:search_engine.py:All result dataset was saved into Entrepreneurs.html
+16/10/2021 17:15:38     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:00.928001
+16/10/2021 17:17:10  WARNING: searchmydata.py:The "Exit" menu item chosen
+16/10/2021 17:17:10     INFO: searchmydata.py:The application closed
+16/10/2021 17:18:42     INFO: searchmydata.py:The application started
+16/10/2021 17:18:42  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:18:47  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:18:52     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:18:52  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:18:52  WARNING:search_engine.py:Query string: "Іванов Іван Іванович"
+16/10/2021 17:18:52  WARNING:search_engine.py:The missing persons register: 545 records found
+16/10/2021 17:18:52  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:18:52     INFO:search_engine.py:Search time into the missing person register: 0:00:00.066999
+16/10/2021 17:18:52  WARNING:search_engine.py:The wanted persons register: 2451 records found
+16/10/2021 17:18:53  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:18:53     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.364999
+16/10/2021 17:19:04  WARNING:search_engine.py:The debtors register: 543572 records found
+16/10/2021 17:26:00     INFO: searchmydata.py:The application started
+16/10/2021 17:26:00  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:26:05  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:26:16     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:26:16  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:26:16  WARNING:search_engine.py:Query string: "Іванов Іван Іванович"
+16/10/2021 17:26:16  WARNING:search_engine.py:The missing persons register: 545 records found
+16/10/2021 17:26:16  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:26:16     INFO:search_engine.py:Search time into the missing person register: 0:00:00.066997
+16/10/2021 17:26:17  WARNING:search_engine.py:The wanted persons register: 2451 records found
+16/10/2021 17:26:17  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:26:17     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.488992
+16/10/2021 17:30:02     INFO: searchmydata.py:The application started
+16/10/2021 17:30:02  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:30:04  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:30:10     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:30:10  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:30:10  WARNING:search_engine.py:Query string: "Іванов Іван Іванович"
+16/10/2021 17:30:10  WARNING:search_engine.py:The missing persons register: 545 records found
+16/10/2021 17:30:10  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:30:10     INFO:search_engine.py:Search time into the missing person register: 0:00:00.072996
+16/10/2021 17:30:10  WARNING:search_engine.py:The wanted persons register: 2451 records found
+16/10/2021 17:30:11  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:30:11     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.372995
+16/10/2021 17:32:07     INFO: searchmydata.py:The application started
+16/10/2021 17:32:07  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:32:10  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:32:16     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:32:16  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:32:16  WARNING:search_engine.py:Query string: "Іванов Іван"
+16/10/2021 17:32:16  WARNING:search_engine.py:The missing persons register: 175 records found
+16/10/2021 17:32:16  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:32:16     INFO:search_engine.py:Search time into the missing person register: 0:00:00.038998
+16/10/2021 17:32:16  WARNING:search_engine.py:The wanted persons register: 887 records found
+16/10/2021 17:32:16  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:32:16     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.127011
+16/10/2021 17:32:19  WARNING:search_engine.py:The debtors register: 197348 records found
+16/10/2021 17:32:54     INFO: searchmydata.py:The application started
+16/10/2021 17:32:54  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:32:56  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:33:00     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:33:00  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:33:00  WARNING:search_engine.py:Query string: "іванов іван"
+16/10/2021 17:33:00  WARNING:search_engine.py:The missing persons register: 175 records found
+16/10/2021 17:33:00  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:33:00     INFO:search_engine.py:Search time into the missing person register: 0:00:00.042995
+16/10/2021 17:33:00  WARNING:search_engine.py:The wanted persons register: 887 records found
+16/10/2021 17:33:00  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:33:00     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.113004
+16/10/2021 17:33:03  WARNING:search_engine.py:The debtors register: 197348 records found
+16/10/2021 17:33:17  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 17:33:17     INFO:search_engine.py:Search time into the debtors register: 0:00:17.133961
+16/10/2021 17:33:21  WARNING:search_engine.py:The legal entities register: 29367 records found
+16/10/2021 17:33:23  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 17:33:23     INFO:search_engine.py:Search time into the legal entities register: 0:00:05.226569
+16/10/2021 17:33:30  WARNING:search_engine.py:The Entrepreneurs register: 79134 records found
+16/10/2021 17:33:33  WARNING:search_engine.py:All result dataset was saved into Entrepreneurs.html
+16/10/2021 17:33:33     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:09.864415
+16/10/2021 17:33:35  WARNING: searchmydata.py:The "Exit" menu item chosen
+16/10/2021 17:33:35     INFO: searchmydata.py:The application closed
+16/10/2021 17:35:02     INFO: searchmydata.py:The application started
+16/10/2021 17:35:02  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:35:04  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:35:13     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:35:13  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:35:13  WARNING:search_engine.py:Query string: "Петров Іван Васильович"
+16/10/2021 17:35:13  WARNING:search_engine.py:The missing persons register: 475 records found
+16/10/2021 17:35:13  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:35:13     INFO:search_engine.py:Search time into the missing person register: 0:00:00.066000
+16/10/2021 17:35:13  WARNING:search_engine.py:The wanted persons register: 2528 records found
+16/10/2021 17:35:14  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:35:14     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.408001
+16/10/2021 17:35:31  WARNING:search_engine.py:The debtors register: 596286 records found
+16/10/2021 17:36:19  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 17:36:19     INFO:search_engine.py:Search time into the debtors register: 0:01:04.868133
+16/10/2021 17:36:27  WARNING:search_engine.py:The legal entities register: 93087 records found
+16/10/2021 17:36:35  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 17:36:35     INFO:search_engine.py:Search time into the legal entities register: 0:00:15.120247
+16/10/2021 17:36:44  WARNING:search_engine.py:The Entrepreneurs register: 251411 records found
+16/10/2021 17:36:58  WARNING:search_engine.py:All result dataset was saved into Entrepreneurs.html
+16/10/2021 17:36:58     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:22.753859
+16/10/2021 17:37:06  WARNING: searchmydata.py:The "Exit" menu item chosen
+16/10/2021 17:37:06     INFO: searchmydata.py:The application closed
+16/10/2021 17:37:40     INFO: searchmydata.py:The application started
+16/10/2021 17:37:40  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:37:45  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:37:47     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:37:47  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:37:47  WARNING:search_engine.py:Query string: "Павлов Іван Васильович"
+16/10/2021 17:37:47  WARNING:search_engine.py:The missing persons register: 467 records found
+16/10/2021 17:37:47  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:37:47     INFO:search_engine.py:Search time into the missing person register: 0:00:00.090003
+16/10/2021 17:37:47  WARNING:search_engine.py:The wanted persons register: 2517 records found
+16/10/2021 17:37:48  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:37:48     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.465003
+16/10/2021 17:38:08  WARNING:search_engine.py:The debtors register: 594830 records found
+16/10/2021 17:38:57  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 17:38:57     INFO:search_engine.py:Search time into the debtors register: 0:01:09.651185
+16/10/2021 17:39:02  WARNING:search_engine.py:The legal entities register: 92649 records found
+16/10/2021 17:39:10  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 17:39:10     INFO:search_engine.py:Search time into the legal entities register: 0:00:11.422893
+16/10/2021 17:39:17  WARNING:search_engine.py:The Entrepreneurs register: 250722 records found
+16/10/2021 17:39:30  WARNING:search_engine.py:All result dataset was saved into Entrepreneurs.html
+16/10/2021 17:39:30     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:20.206897
+16/10/2021 17:40:31  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:40:45     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:40:45  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:40:45  WARNING:search_engine.py:Query string: "Тодоріко Марцел Гамадрилович"
+16/10/2021 17:40:45  WARNING:search_engine.py:The missing persons register: No data found
+16/10/2021 17:40:45     INFO:search_engine.py:Search time into the missing person register: 0:00:00.005002
+16/10/2021 17:40:45  WARNING:search_engine.py:The wanted persons register: No data found
+16/10/2021 17:40:45     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.003995
+16/10/2021 17:40:45  WARNING:search_engine.py:The debtors register: 31 records found
+16/10/2021 17:40:45  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 17:40:45     INFO:search_engine.py:Search time into the debtors register: 0:00:00.046001
+16/10/2021 17:40:45  WARNING:search_engine.py:The legal entities register: 7 records found
+16/10/2021 17:40:45  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 17:40:45     INFO:search_engine.py:Search time into the legal entities register: 0:00:00.039006
+16/10/2021 17:40:45  WARNING:search_engine.py:The Entrepreneurs register: 33 records found
+16/10/2021 17:40:45  WARNING:search_engine.py:All result dataset was saved into Entrepreneurs.html
+16/10/2021 17:40:45     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:00.032999
+16/10/2021 17:40:54  WARNING: searchmydata.py:The "Exit" menu item chosen
+16/10/2021 17:40:54     INFO: searchmydata.py:The application closed

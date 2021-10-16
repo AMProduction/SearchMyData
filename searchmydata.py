@@ -7,6 +7,7 @@ import logging
 
 def search():
     searchString = str(input('Search query: '))
+    service.clearResultsDir()
     searchEngine = src.search_engine.SearchEngine()        
     searchEngine.search(searchString)
     

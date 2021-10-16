@@ -55,7 +55,7 @@ class SearchEngine:
             print('Quitting...')
             exit()
         
-    def search(self, queryString):
+    def search(self, queryString):      
         print('Search results'.center(80, '#'))
         logging.warning('Query string: "%s"', queryString)
         self.__searchMissingPersons(queryString)
@@ -64,7 +64,7 @@ class SearchEngine:
         self.__searchLegalEntities(queryString)
         self.__searchEntrepreneurs(queryString)
         gc.collect()
-
+                
     def __searchMissingPersons(self, queryString):
         start_time = datetime.now()
         missingPersonsCol = self.__db['MissingPersons']
@@ -134,15 +134,15 @@ class SearchEngine:
         else:
             resultTable = PrettyTable(['DEBTOR NAME', 'DEBTOR CODE', 'PUBLISHER', 'EXECUTIVE SERVICE', 'EXECUTIVE SERVICE EMPLOYEE', 'CATEGORY'])
             resultTable.align = 'l'
-            resultTable._max_width = {'DEBTOR NAME': 25, 'PUBLISHER': 25, 'EXECUTIVE SERVICE': 15, 'EXECUTIVE SERVICE EMPLOYEE': 25, 'CATEGORY': 15}
+            resultTable._max_width = {'DEBTOR NAME': 25, 'PUBLISHER': 25, 'EXECUTIVE SERVICE': 35, 'EXECUTIVE SERVICE EMPLOYEE': 25, 'CATEGORY': 25}
             #show only 10 first search results
-            for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]).limit(10):
+            for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
                 resultTable.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'], result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
             print(resultTable.get_string(title = 'The debtors register: ' + str(resultCount) + ' records found'))
             logging.warning('The debtors register: %s records found', str(resultCount))
             print('Only 10 first search results showed')
             #save all search results into HTML
-            for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]):
+            for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
                 resultTable.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'], result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
             htmlResult = resultTable.get_html_string()
             f = open('results/Debtors.html', 'w', encoding='utf-8')
@@ -162,18 +162,18 @@ class SearchEngine:
             print('The legal entities register: No data found')
             logging.warning('The legal entities register: No data found')
         else:
-            resultTable = PrettyTable(['SHORT NAME', 'EDRPOU', 'ADDRESS', 'KVED', 'BOSS', 'STATE'])
+            resultTable = PrettyTable(['SHORT NAME', 'EDRPOU', 'ADDRESS', 'KVED', 'BOSS', 'FOUNDERS', 'STATE'])
             resultTable.align = 'l'
-            resultTable._max_width = {'SHORT NAME': 25, 'ADDRESS': 25, 'KVED': 30, 'BOSS': 25}
+            resultTable._max_width = {'SHORT NAME': 25, 'ADDRESS': 25, 'KVED': 30, 'BOSS': 25, 'FOUNDERS':25}
             #show only 10 first search results
-            for result in legalEntitiesCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]).limit(10):
-                resultTable.add_row([result['short_name'], result['edrpou'], result['address'], result['kved'], result['boss'], result['stan']])
+            for result in legalEntitiesCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
+                resultTable.add_row([result['short_name'], result['edrpou'], result['address'], result['kved'], result['boss'], result['founders'], result['stan']])
             print(resultTable.get_string(title = 'The legal entities register: ' + str(resultCount) + ' records found'))
             logging.warning('The legal entities register: %s records found', str(resultCount))
             print('Only 10 first search results showed')
             #save all search results into HTML
-            for result in legalEntitiesCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]):
-                resultTable.add_row([result['short_name'], result['edrpou'], result['address'], result['kved'], result['boss'], result['stan']])
+            for result in legalEntitiesCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
+                resultTable.add_row([result['short_name'], result['edrpou'], result['address'], result['kved'], result['boss'], result['founders'], result['stan']])
             htmlResult = resultTable.get_html_string()
             f = open('results/LegalEntities.html', 'w', encoding='utf-8')
             f.write(htmlResult)
@@ -196,13 +196,13 @@ class SearchEngine:
             resultTable.align = 'l'
             resultTable._max_width = {'NAME': 25, 'ADDRESS': 25, 'KVED': 30}
             #show only 10 first search results
-            for result in entrepreneursCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]).limit(10):
+            for result in entrepreneursCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
                 resultTable.add_row([result['fio'], result['address'], result['kved'], result['stan']])
             print(resultTable.get_string(title = 'The Entrepreneurs register: ' + str(resultCount) + ' records found'))
             logging.warning('The Entrepreneurs register: %s records found', str(resultCount))
             print('Only 10 first search results showed')
             #save all search results into HTML
-            for result in entrepreneursCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]):
+            for result in entrepreneursCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
                 resultTable.add_row([result['fio'], result['address'], result['kved'], result['stan']])
             htmlResult = resultTable.get_html_string()
             f = open('results/Entrepreneurs.html', 'w', encoding='utf-8')

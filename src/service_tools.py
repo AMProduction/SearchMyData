@@ -1,5 +1,6 @@
 from datetime import datetime
 import json
+import os
 from prettytable import PrettyTable
 from pathlib import Path
 import pymongo
@@ -221,3 +222,8 @@ class ServiceTools:
             {'$set': {'LastModifiedDate': str(lastModifiedDate),
                       'DocumentsCount': documentsCount}}
         )
+        
+    def clearResultsDir(self):
+        for filename in os.listdir('results'):
+            os.remove('results/'+filename)
+        logging.info('"Results" dir is cleared')
