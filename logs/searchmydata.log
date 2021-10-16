@@ -2008,3 +2008,1472 @@
 09/10/2021 18:44:36     INFO:search_engine.py:Search time into the debtors register: 0:00:00.064999
 09/10/2021 18:45:02  WARNING: searchmydata.py:The "Exit" menu item chosen
 09/10/2021 18:45:02     INFO: searchmydata.py:The application closed
+10/10/2021 16:37:53     INFO: searchmydata.py:The application started
+10/10/2021 16:37:53  WARNING:service_tools.py:Config.json is found
+10/10/2021 16:37:55  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+10/10/2021 16:37:55  WARNING:      dbtools.py:Config.json is found
+10/10/2021 16:37:55    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 16:37:55    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+10/10/2021 16:37:55     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+10/10/2021 16:37:55    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 16:37:56    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+10/10/2021 16:37:56     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+10/10/2021 16:37:56    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 16:37:56    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_08-10-2021.zip HTTP/1.1" 200 448928460
+10/10/2021 16:38:36     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+10/10/2021 16:38:36  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.1-EX_XML_EDR_UO_08.10.2021.xml
+10/10/2021 16:38:36  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.2-EX_XML_EDR_FOP_08.10.2021.xml
+10/10/2021 16:38:39  WARNING: searchmydata.py:The "Exit" menu item chosen
+10/10/2021 16:38:39     INFO: searchmydata.py:The application closed
+10/10/2021 16:45:12     INFO: searchmydata.py:The application started
+10/10/2021 16:45:12  WARNING:service_tools.py:Config.json is found
+10/10/2021 16:45:18  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+10/10/2021 16:45:18  WARNING:      dbtools.py:Config.json is found
+10/10/2021 16:45:18    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 16:45:18    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+10/10/2021 16:45:18     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+10/10/2021 16:45:18    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 16:45:18    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+10/10/2021 16:45:18     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+10/10/2021 16:45:18    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 16:45:18    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_08-10-2021.zip HTTP/1.1" 200 448928460
+10/10/2021 16:45:57     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+10/10/2021 16:48:57     INFO: searchmydata.py:The application started
+10/10/2021 16:48:57  WARNING:service_tools.py:Config.json is found
+10/10/2021 16:48:59  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+10/10/2021 16:48:59  WARNING:      dbtools.py:Config.json is found
+10/10/2021 16:48:59    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 16:48:59    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+10/10/2021 16:48:59     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+10/10/2021 16:48:59    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 16:48:59    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+10/10/2021 16:48:59     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+10/10/2021 16:48:59    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 16:49:00    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_08-10-2021.zip HTTP/1.1" 200 448928460
+10/10/2021 16:49:39     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+10/10/2021 16:49:39  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.1-EX_XML_EDR_UO_08.10.2021.xml
+10/10/2021 16:54:46     INFO: searchmydata.py:The application started
+10/10/2021 16:54:46  WARNING:service_tools.py:Config.json is found
+10/10/2021 16:54:49  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+10/10/2021 16:54:49  WARNING:      dbtools.py:Config.json is found
+10/10/2021 16:54:49    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 16:54:49    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+10/10/2021 16:54:49     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+10/10/2021 16:54:49    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 16:54:49    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+10/10/2021 16:54:49     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+10/10/2021 16:54:49    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 16:54:49    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_08-10-2021.zip HTTP/1.1" 200 448928460
+10/10/2021 16:55:28     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+10/10/2021 16:55:28  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.1-EX_XML_EDR_UO_08.10.2021.xml
+10/10/2021 16:55:36  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.2-EX_XML_EDR_FOP_08.10.2021.xml
+10/10/2021 16:55:50  WARNING: searchmydata.py:The "Exit" menu item chosen
+10/10/2021 16:55:50     INFO: searchmydata.py:The application closed
+10/10/2021 16:59:17     INFO: searchmydata.py:The application started
+10/10/2021 16:59:17  WARNING:service_tools.py:Config.json is found
+10/10/2021 16:59:20  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+10/10/2021 16:59:20  WARNING:      dbtools.py:Config.json is found
+10/10/2021 16:59:20    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 16:59:20    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+10/10/2021 16:59:20     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+10/10/2021 16:59:20    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 16:59:20    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+10/10/2021 16:59:20     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+10/10/2021 16:59:20    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 16:59:20    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_08-10-2021.zip HTTP/1.1" 200 448928460
+10/10/2021 17:00:01     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+10/10/2021 17:00:01  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.1-EX_XML_EDR_UO_08.10.2021.xml
+10/10/2021 17:00:10  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.2-EX_XML_EDR_FOP_08.10.2021.xml
+10/10/2021 17:00:34  WARNING: searchmydata.py:The "Exit" menu item chosen
+10/10/2021 17:00:34     INFO: searchmydata.py:The application closed
+10/10/2021 17:03:52     INFO: searchmydata.py:The application started
+10/10/2021 17:03:52  WARNING:service_tools.py:Config.json is found
+10/10/2021 17:04:06  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+10/10/2021 17:04:06  WARNING:      dbtools.py:Config.json is found
+10/10/2021 17:04:06    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:04:06    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+10/10/2021 17:04:06     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+10/10/2021 17:04:06    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:04:06    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+10/10/2021 17:04:06     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+10/10/2021 17:04:06    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:04:06    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_08-10-2021.zip HTTP/1.1" 200 448928460
+10/10/2021 17:04:46     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+10/10/2021 17:04:46  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.1-EX_XML_EDR_UO_08.10.2021.xml
+10/10/2021 17:04:46  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.2-EX_XML_EDR_FOP_08.10.2021.xml
+10/10/2021 17:05:14  WARNING: searchmydata.py:The "Exit" menu item chosen
+10/10/2021 17:05:14     INFO: searchmydata.py:The application closed
+10/10/2021 17:11:08     INFO: searchmydata.py:The application started
+10/10/2021 17:11:08  WARNING:service_tools.py:Config.json is found
+10/10/2021 17:11:19  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+10/10/2021 17:11:19  WARNING:      dbtools.py:Config.json is found
+10/10/2021 17:11:19    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:11:19    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+10/10/2021 17:11:19     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+10/10/2021 17:11:19    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:11:19    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+10/10/2021 17:11:19     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+10/10/2021 17:11:19    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:11:19    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_08-10-2021.zip HTTP/1.1" 200 448928460
+10/10/2021 17:12:02     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+10/10/2021 17:13:15     INFO: searchmydata.py:The application started
+10/10/2021 17:13:15  WARNING:service_tools.py:Config.json is found
+10/10/2021 17:13:40  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+10/10/2021 17:13:40  WARNING:      dbtools.py:Config.json is found
+10/10/2021 17:13:40    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:13:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+10/10/2021 17:13:41     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+10/10/2021 17:13:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:13:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+10/10/2021 17:13:41     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+10/10/2021 17:13:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:13:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_08-10-2021.zip HTTP/1.1" 200 448928460
+10/10/2021 17:14:20     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+10/10/2021 17:14:20  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.1-EX_XML_EDR_UO_08.10.2021.xml
+10/10/2021 17:14:20  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.2-EX_XML_EDR_FOP_08.10.2021.xml
+10/10/2021 17:16:35     INFO: searchmydata.py:The application started
+10/10/2021 17:16:35  WARNING:service_tools.py:Config.json is found
+10/10/2021 17:16:50  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+10/10/2021 17:16:50  WARNING:      dbtools.py:Config.json is found
+10/10/2021 17:16:51    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:16:51    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+10/10/2021 17:16:51     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+10/10/2021 17:16:51    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:16:52    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+10/10/2021 17:16:52     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+10/10/2021 17:16:52    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:16:53    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_08-10-2021.zip HTTP/1.1" 200 448928460
+10/10/2021 17:17:36     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+10/10/2021 17:17:36  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.1-EX_XML_EDR_UO_08.10.2021.xml
+10/10/2021 17:17:36  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.2-EX_XML_EDR_FOP_08.10.2021.xml
+10/10/2021 17:19:48  WARNING: searchmydata.py:The "Exit" menu item chosen
+10/10/2021 17:19:48     INFO: searchmydata.py:The application closed
+10/10/2021 17:25:20     INFO: searchmydata.py:The application started
+10/10/2021 17:25:20  WARNING:service_tools.py:Config.json is found
+10/10/2021 17:25:23  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+10/10/2021 17:25:23  WARNING:      dbtools.py:Config.json is found
+10/10/2021 17:25:23    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:25:23    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+10/10/2021 17:25:23     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+10/10/2021 17:25:23    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:25:23    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+10/10/2021 17:25:23     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+10/10/2021 17:25:23    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:25:23    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_08-10-2021.zip HTTP/1.1" 200 448928460
+10/10/2021 17:26:04     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+10/10/2021 17:26:04  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.1-EX_XML_EDR_UO_08.10.2021.xml
+10/10/2021 17:26:04  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.2-EX_XML_EDR_FOP_08.10.2021.xml
+10/10/2021 17:28:24     INFO: searchmydata.py:The application started
+10/10/2021 17:28:24  WARNING:service_tools.py:Config.json is found
+10/10/2021 17:28:26  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+10/10/2021 17:28:26  WARNING:      dbtools.py:Config.json is found
+10/10/2021 17:28:26    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:28:26    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+10/10/2021 17:28:26     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+10/10/2021 17:28:26    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:28:26    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+10/10/2021 17:28:27     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+10/10/2021 17:28:27    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:28:27    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_08-10-2021.zip HTTP/1.1" 200 448928460
+10/10/2021 17:29:07     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+10/10/2021 17:29:07  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.1-EX_XML_EDR_UO_08.10.2021.xml
+10/10/2021 17:29:07  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.2-EX_XML_EDR_FOP_08.10.2021.xml
+10/10/2021 17:35:24     INFO: searchmydata.py:The application started
+10/10/2021 17:35:24  WARNING:service_tools.py:Config.json is found
+10/10/2021 17:35:27  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+10/10/2021 17:35:27  WARNING:      dbtools.py:Config.json is found
+10/10/2021 17:35:27    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:35:27    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+10/10/2021 17:35:27     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+10/10/2021 17:35:27    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:35:27    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+10/10/2021 17:35:27     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+10/10/2021 17:35:27    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:35:27    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_08-10-2021.zip HTTP/1.1" 200 448928460
+10/10/2021 17:36:08     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+10/10/2021 17:36:08  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.1-EX_XML_EDR_UO_08.10.2021.xml
+10/10/2021 17:36:08  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.2-EX_XML_EDR_FOP_08.10.2021.xml
+10/10/2021 17:46:04     INFO: searchmydata.py:The application started
+10/10/2021 17:46:04  WARNING:service_tools.py:Config.json is found
+10/10/2021 17:46:06  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+10/10/2021 17:46:06  WARNING:      dbtools.py:Config.json is found
+10/10/2021 17:46:06    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:46:06    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+10/10/2021 17:46:06     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+10/10/2021 17:46:06    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:46:06    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+10/10/2021 17:46:06     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+10/10/2021 17:46:06    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+10/10/2021 17:46:06    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_08-10-2021.zip HTTP/1.1" 200 448928460
+10/10/2021 17:46:45     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+10/10/2021 17:46:45  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.1-EX_XML_EDR_UO_08.10.2021.xml
+10/10/2021 17:46:45  WARNING:      dbtools.py:File in ZIP: 17-UFOP_08.10.2021/17.2-EX_XML_EDR_FOP_08.10.2021.xml
+13/10/2021 22:50:27     INFO: searchmydata.py:The application started
+13/10/2021 22:50:27  WARNING:service_tools.py:Config.json is found
+13/10/2021 22:50:35  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+13/10/2021 22:50:35  WARNING:      dbtools.py:Config.json is found
+13/10/2021 22:50:35    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 22:50:35    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+13/10/2021 22:50:35     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+13/10/2021 22:50:35    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 22:50:35    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+13/10/2021 22:50:35     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+13/10/2021 22:50:35    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 22:50:36    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+13/10/2021 22:51:20     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+13/10/2021 22:51:20  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+13/10/2021 22:51:20  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+13/10/2021 22:56:03     INFO: searchmydata.py:The application started
+13/10/2021 22:56:03  WARNING:service_tools.py:Config.json is found
+13/10/2021 22:56:07  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+13/10/2021 22:56:07  WARNING:      dbtools.py:Config.json is found
+13/10/2021 22:56:07    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 22:56:07    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+13/10/2021 22:56:07     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+13/10/2021 22:56:07    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 22:56:07    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+13/10/2021 22:56:07     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+13/10/2021 22:56:08    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 22:56:08    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+13/10/2021 22:56:52     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+13/10/2021 22:56:52  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+13/10/2021 22:56:52  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+13/10/2021 23:04:44  WARNING: searchmydata.py:The "Exit" menu item chosen
+13/10/2021 23:04:44     INFO: searchmydata.py:The application closed
+13/10/2021 23:06:01     INFO: searchmydata.py:The application started
+13/10/2021 23:06:01  WARNING:service_tools.py:Config.json is found
+13/10/2021 23:06:04  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+13/10/2021 23:06:04  WARNING:      dbtools.py:Config.json is found
+13/10/2021 23:06:04    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:06:04    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+13/10/2021 23:06:04     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+13/10/2021 23:06:04    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:06:05    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+13/10/2021 23:06:05     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+13/10/2021 23:06:05    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:06:05    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+13/10/2021 23:06:49     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+13/10/2021 23:06:49  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+13/10/2021 23:06:49  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+13/10/2021 23:17:56     INFO: searchmydata.py:The application started
+13/10/2021 23:17:56  WARNING:service_tools.py:Config.json is found
+13/10/2021 23:18:00  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+13/10/2021 23:18:00  WARNING:      dbtools.py:Config.json is found
+13/10/2021 23:18:00    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:18:00    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+13/10/2021 23:18:00     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+13/10/2021 23:18:00    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:18:01    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+13/10/2021 23:18:01     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+13/10/2021 23:18:01    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:18:01    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+13/10/2021 23:18:43     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+13/10/2021 23:18:43  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+13/10/2021 23:18:43  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+13/10/2021 23:25:23  WARNING: searchmydata.py:The "Exit" menu item chosen
+13/10/2021 23:25:23     INFO: searchmydata.py:The application closed
+13/10/2021 23:32:52     INFO: searchmydata.py:The application started
+13/10/2021 23:32:52  WARNING:service_tools.py:Config.json is found
+13/10/2021 23:32:54  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+13/10/2021 23:32:54  WARNING:      dbtools.py:Config.json is found
+13/10/2021 23:32:54    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:32:54    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+13/10/2021 23:32:54     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+13/10/2021 23:32:54    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:32:54    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+13/10/2021 23:32:54     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+13/10/2021 23:32:54    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:32:54    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+13/10/2021 23:33:35     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+13/10/2021 23:33:35  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+13/10/2021 23:33:35  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+13/10/2021 23:38:40  WARNING: searchmydata.py:The "Exit" menu item chosen
+13/10/2021 23:38:40     INFO: searchmydata.py:The application closed
+13/10/2021 23:41:17     INFO: searchmydata.py:The application started
+13/10/2021 23:41:17  WARNING:service_tools.py:Config.json is found
+13/10/2021 23:41:21  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+13/10/2021 23:41:21  WARNING:      dbtools.py:Config.json is found
+13/10/2021 23:41:21    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:41:22    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+13/10/2021 23:41:22     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+13/10/2021 23:41:22    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:41:23    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+13/10/2021 23:41:23     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+13/10/2021 23:41:23    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:41:23    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+13/10/2021 23:42:04     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+13/10/2021 23:42:04  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+13/10/2021 23:42:04  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+13/10/2021 23:48:06     INFO: searchmydata.py:The application started
+13/10/2021 23:48:06  WARNING:service_tools.py:Config.json is found
+13/10/2021 23:48:10  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+13/10/2021 23:48:10  WARNING:      dbtools.py:Config.json is found
+13/10/2021 23:48:10    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:48:11    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+13/10/2021 23:48:11     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+13/10/2021 23:48:11    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:48:14    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+13/10/2021 23:48:14     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+13/10/2021 23:48:14    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:48:14    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+13/10/2021 23:48:59     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+13/10/2021 23:48:59  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+13/10/2021 23:48:59  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+13/10/2021 23:53:44     INFO: searchmydata.py:The application started
+13/10/2021 23:53:44  WARNING:service_tools.py:Config.json is found
+13/10/2021 23:53:46  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+13/10/2021 23:53:46  WARNING:      dbtools.py:Config.json is found
+13/10/2021 23:53:46    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:53:46    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+13/10/2021 23:53:46     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+13/10/2021 23:53:46    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:53:47    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+13/10/2021 23:53:47     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+13/10/2021 23:53:47    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+13/10/2021 23:53:47    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+13/10/2021 23:54:30     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+13/10/2021 23:54:30  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+13/10/2021 23:54:30  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 11:35:28     INFO: searchmydata.py:The application started
+14/10/2021 11:35:28  WARNING:service_tools.py:Config.json is found
+14/10/2021 11:35:31  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 11:35:31  WARNING:      dbtools.py:Config.json is found
+14/10/2021 11:35:31    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 11:35:31    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+14/10/2021 11:35:31     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+14/10/2021 11:35:31    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 11:35:31    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+14/10/2021 11:35:31     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+14/10/2021 11:35:31    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 11:35:32    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+14/10/2021 11:36:12     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+14/10/2021 11:36:12  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+14/10/2021 11:36:12  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 11:40:47     INFO: searchmydata.py:The application started
+14/10/2021 11:40:47  WARNING:service_tools.py:Config.json is found
+14/10/2021 11:40:51  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 11:40:51  WARNING:      dbtools.py:Config.json is found
+14/10/2021 11:40:51    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 11:40:52    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+14/10/2021 11:40:52     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+14/10/2021 11:40:52    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 11:40:52    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+14/10/2021 11:40:52     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+14/10/2021 11:40:52    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 11:40:53    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+14/10/2021 11:41:33     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+14/10/2021 11:41:33  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+14/10/2021 11:41:33  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 11:46:22     INFO: searchmydata.py:The application started
+14/10/2021 11:46:22  WARNING:service_tools.py:Config.json is found
+14/10/2021 11:46:24  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 11:46:24  WARNING:      dbtools.py:Config.json is found
+14/10/2021 11:46:24    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 11:46:24    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+14/10/2021 11:46:24     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+14/10/2021 11:46:24    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 11:46:24    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+14/10/2021 11:46:24     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+14/10/2021 11:46:24    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 11:46:24    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+14/10/2021 11:47:07     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+14/10/2021 11:47:07  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+14/10/2021 11:47:07  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 13:11:26     INFO: searchmydata.py:The application started
+14/10/2021 13:11:26  WARNING:service_tools.py:Config.json is found
+14/10/2021 13:11:28  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 13:11:28  WARNING:      dbtools.py:Config.json is found
+14/10/2021 13:11:29    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 13:11:29    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+14/10/2021 13:11:29     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+14/10/2021 13:11:29    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 13:11:29    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+14/10/2021 13:11:29     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+14/10/2021 13:11:29    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 13:11:29    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+14/10/2021 13:12:09     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+14/10/2021 13:12:09  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+14/10/2021 13:12:09  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 13:14:06  WARNING: searchmydata.py:The "Exit" menu item chosen
+14/10/2021 13:14:06     INFO: searchmydata.py:The application closed
+14/10/2021 13:47:51     INFO: searchmydata.py:The application started
+14/10/2021 13:47:51  WARNING:service_tools.py:Config.json is found
+14/10/2021 13:47:53  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 13:47:53  WARNING:      dbtools.py:Config.json is found
+14/10/2021 13:47:53    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 13:47:53    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+14/10/2021 13:47:53     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+14/10/2021 13:47:53    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 13:47:54    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+14/10/2021 13:47:54     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+14/10/2021 13:47:54    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 13:47:54    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+14/10/2021 13:48:36     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+14/10/2021 13:48:36  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+14/10/2021 13:48:36  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 13:51:33  WARNING: searchmydata.py:The "Exit" menu item chosen
+14/10/2021 13:51:33     INFO: searchmydata.py:The application closed
+14/10/2021 13:53:25     INFO: searchmydata.py:The application started
+14/10/2021 13:53:25  WARNING:service_tools.py:Config.json is found
+14/10/2021 13:53:52  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 13:53:52  WARNING:      dbtools.py:Config.json is found
+14/10/2021 13:53:52    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 13:53:52    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+14/10/2021 13:53:52     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+14/10/2021 13:53:52    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 13:53:53    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+14/10/2021 13:53:53     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+14/10/2021 13:53:53    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 13:53:53    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+14/10/2021 13:54:34     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+14/10/2021 13:54:34  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+14/10/2021 13:54:34  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 13:57:54  WARNING: searchmydata.py:The "Exit" menu item chosen
+14/10/2021 13:57:54     INFO: searchmydata.py:The application closed
+14/10/2021 14:05:03     INFO: searchmydata.py:The application started
+14/10/2021 14:05:03  WARNING:service_tools.py:Config.json is found
+14/10/2021 14:05:06  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 14:05:06  WARNING:      dbtools.py:Config.json is found
+14/10/2021 14:05:06    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 14:05:06    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+14/10/2021 14:05:06     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+14/10/2021 14:05:06    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 14:05:06    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+14/10/2021 14:05:06     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+14/10/2021 14:05:06    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 14:05:06    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+14/10/2021 14:05:50     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+14/10/2021 14:05:50  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+14/10/2021 14:05:50  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 14:07:18  WARNING: searchmydata.py:The "Exit" menu item chosen
+14/10/2021 14:07:18     INFO: searchmydata.py:The application closed
+14/10/2021 14:23:13     INFO: searchmydata.py:The application started
+14/10/2021 14:23:13  WARNING:service_tools.py:Config.json is found
+14/10/2021 14:23:16  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 14:23:16  WARNING:      dbtools.py:Config.json is found
+14/10/2021 14:23:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 14:23:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+14/10/2021 14:23:16     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+14/10/2021 14:23:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 14:23:18    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+14/10/2021 14:23:18     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+14/10/2021 14:23:18    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 14:23:18    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+14/10/2021 14:24:00     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+14/10/2021 14:24:00  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+14/10/2021 14:24:00  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 14:36:25     INFO: searchmydata.py:The application started
+14/10/2021 14:36:25  WARNING:service_tools.py:Config.json is found
+14/10/2021 14:36:27  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 14:36:27  WARNING:      dbtools.py:Config.json is found
+14/10/2021 14:36:27    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 14:36:27    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+14/10/2021 14:36:27     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+14/10/2021 14:36:27    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 14:36:27    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+14/10/2021 14:36:28     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+14/10/2021 14:36:28    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 14:36:28    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+14/10/2021 14:37:08     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+14/10/2021 14:37:08  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+14/10/2021 14:37:08  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 14:43:57     INFO: searchmydata.py:The application started
+14/10/2021 14:43:57  WARNING:service_tools.py:Config.json is found
+14/10/2021 14:44:00  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 14:44:00  WARNING:      dbtools.py:Config.json is found
+14/10/2021 14:44:00    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 14:44:00    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+14/10/2021 14:44:00     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+14/10/2021 14:44:00    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 14:44:01    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+14/10/2021 14:44:01     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+14/10/2021 14:44:01    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 14:44:01    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+14/10/2021 14:44:44     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+14/10/2021 14:44:44  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+14/10/2021 14:44:44  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 14:46:18  WARNING: searchmydata.py:The "Exit" menu item chosen
+14/10/2021 14:46:18     INFO: searchmydata.py:The application closed
+14/10/2021 14:56:37     INFO: searchmydata.py:The application started
+14/10/2021 14:56:37  WARNING:service_tools.py:Config.json is found
+14/10/2021 14:56:40  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 14:56:40  WARNING:      dbtools.py:Config.json is found
+14/10/2021 14:56:40    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 14:56:40    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+14/10/2021 14:56:40     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+14/10/2021 14:56:40    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 14:56:40    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+14/10/2021 14:56:40     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+14/10/2021 14:56:40    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 14:56:40    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+14/10/2021 14:57:29     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+14/10/2021 14:57:29  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+14/10/2021 14:57:29  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 15:06:35     INFO: searchmydata.py:The application started
+14/10/2021 15:06:35  WARNING:service_tools.py:Config.json is found
+14/10/2021 15:06:38  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 15:06:38  WARNING:      dbtools.py:Config.json is found
+14/10/2021 15:06:38    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 15:06:38    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+14/10/2021 15:06:38     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+14/10/2021 15:06:38    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 15:06:38    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+14/10/2021 15:06:38     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+14/10/2021 15:06:38    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 15:06:38    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+14/10/2021 15:07:23     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+14/10/2021 15:07:23  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+14/10/2021 15:07:23  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 15:11:14     INFO: searchmydata.py:The application started
+14/10/2021 15:11:14  WARNING:service_tools.py:Config.json is found
+14/10/2021 15:11:16  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 15:11:16  WARNING:      dbtools.py:Config.json is found
+14/10/2021 15:11:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 15:11:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+14/10/2021 15:11:16     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+14/10/2021 15:11:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 15:11:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+14/10/2021 15:11:16     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+14/10/2021 15:11:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 15:11:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+14/10/2021 15:12:02     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+14/10/2021 15:12:02  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+14/10/2021 15:12:02  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 15:38:41  WARNING: searchmydata.py:The "Exit" menu item chosen
+14/10/2021 15:38:41     INFO: searchmydata.py:The application closed
+14/10/2021 16:22:37     INFO: searchmydata.py:The application started
+14/10/2021 16:22:37  WARNING:service_tools.py:Config.json is found
+14/10/2021 16:22:42  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 16:22:42  WARNING:      dbtools.py:Config.json is found
+14/10/2021 16:22:42    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:22:42    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+14/10/2021 16:22:42     INFO:          elt.py:A general MissingPersons dataset JSON received
+14/10/2021 16:22:42    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:22:45    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+14/10/2021 16:22:45     INFO:          elt.py:A MissingPersons resources JSON id received
+14/10/2021 16:22:45    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:22:45    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5096224
+14/10/2021 16:22:52     INFO:          elt.py:A MissingPersons dataset received
+14/10/2021 16:22:53  WARNING:      dbtools.py:6668 documents deleted. The missing persons collection is empty.
+14/10/2021 16:22:53  WARNING:      dbtools.py:Missing persons Text index deleted
+14/10/2021 16:22:53     INFO:      dbtools.py:Missing persons dataset was saved into the database
+14/10/2021 16:22:53     INFO:      dbtools.py:Missing persons Text Index created
+14/10/2021 16:22:53     INFO:      dbtools.py:Time to save into the missing person register: 0:00:01.299879
+14/10/2021 16:22:53    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:22:53    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+14/10/2021 16:22:53     INFO:          elt.py:A general WantedPersons dataset JSON received
+14/10/2021 16:22:53    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:22:56    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+14/10/2021 16:22:56     INFO:          elt.py:A WantedPersons resources JSON id received
+14/10/2021 16:22:56    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:22:56    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41341343
+14/10/2021 16:24:04     INFO:          elt.py:A WantedPersons dataset received
+14/10/2021 16:24:11  WARNING:      dbtools.py:47876 documents deleted. The wanted persons collection is empty.
+14/10/2021 16:24:11  WARNING:      dbtools.py:WantedPersons Text index deleted
+14/10/2021 16:24:13     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+14/10/2021 16:24:16     INFO:      dbtools.py:WantedPersons Text Index created
+14/10/2021 16:24:16     INFO:      dbtools.py:Time to save into the wanted person register: 0:00:12.054515
+14/10/2021 16:24:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:24:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+14/10/2021 16:24:16     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+14/10/2021 16:24:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:24:17    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+14/10/2021 16:24:17     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+14/10/2021 16:24:17  WARNING:      dbtools.py:0 documents deleted. The entrepreneurs collection is empty.
+14/10/2021 16:25:09  WARNING:      dbtools.py:1832133 documents deleted. The legal entities collection is empty.
+14/10/2021 16:25:09    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+14/10/2021 16:25:09    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+14/10/2021 16:25:54     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+14/10/2021 16:25:54  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+14/10/2021 16:25:54  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+14/10/2021 18:15:42     INFO:      dbtools.py:LegalEntities dataset was saved into the database
+14/10/2021 18:15:42     INFO:      dbtools.py:Entrepreneurs dataset was saved into the database
+14/10/2021 18:17:05     INFO:      dbtools.py:LegalEntities Text Index created
+14/10/2021 18:19:07     INFO:      dbtools.py:Entrepreneurs Text Index created
+14/10/2021 18:19:07     INFO:      dbtools.py:Time to save into the Entrepreneurs and LegalEntities register: 1:54:50.357586
+14/10/2021 18:19:59     INFO:service_tools.py:MissingPersonsRegisterServiceJson updated
+14/10/2021 18:19:59     INFO:service_tools.py:WantedPersonsRegisterServiceJson updated
+14/10/2021 18:20:20     INFO:service_tools.py:DebtorsRegisterServiceJson updated
+14/10/2021 18:20:30     INFO:service_tools.py:LegalEntitiesRegisterServiceJson created
+14/10/2021 18:20:38     INFO:service_tools.py:EntrepreneursRegisterServiceJson updated
+14/10/2021 18:20:52  WARNING: searchmydata.py:The "Exit" menu item chosen
+14/10/2021 18:20:52     INFO: searchmydata.py:The application closed
+14/10/2021 18:23:05     INFO: searchmydata.py:The application started
+14/10/2021 18:23:05  WARNING:service_tools.py:Config.json is found
+14/10/2021 18:23:07  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+14/10/2021 18:23:07  WARNING:      dbtools.py:Config.json is found
+14/10/2021 18:23:07     INFO:service_tools.py:MissingPersonsRegisterServiceJson updated
+14/10/2021 18:23:07     INFO:service_tools.py:WantedPersonsRegisterServiceJson updated
+14/10/2021 18:23:18     INFO:service_tools.py:DebtorsRegisterServiceJson updated
+14/10/2021 18:23:21     INFO:service_tools.py:LegalEntitiesRegisterServiceJson created
+14/10/2021 18:23:29     INFO:service_tools.py:EntrepreneursRegisterServiceJson updated
+14/10/2021 18:23:43  WARNING: searchmydata.py:The "Exit" menu item chosen
+14/10/2021 18:23:43     INFO: searchmydata.py:The application closed
+14/10/2021 18:25:55     INFO: searchmydata.py:The application started
+14/10/2021 18:25:55  WARNING:service_tools.py:Config.json is found
+14/10/2021 18:26:05  WARNING: searchmydata.py:The "Exit" menu item chosen
+14/10/2021 18:26:05     INFO: searchmydata.py:The application closed
+14/10/2021 18:30:58     INFO: searchmydata.py:The application started
+14/10/2021 18:30:58  WARNING:service_tools.py:Config.json is found
+14/10/2021 18:34:49     INFO: searchmydata.py:The application started
+14/10/2021 18:34:49  WARNING:service_tools.py:Config.json is found
+14/10/2021 18:37:28     INFO: searchmydata.py:The application started
+14/10/2021 18:37:28  WARNING:service_tools.py:Config.json is found
+14/10/2021 18:37:54  WARNING: searchmydata.py:The "Exit" menu item chosen
+14/10/2021 18:37:54     INFO: searchmydata.py:The application closed
+15/10/2021 22:23:37     INFO: searchmydata.py:The application started
+15/10/2021 22:23:37  WARNING:service_tools.py:Config.json is found
+15/10/2021 22:23:41  WARNING: searchmydata.py:The "Search" menu item chosen
+15/10/2021 22:23:47  WARNING:search_engine.py:Config.json is found
+15/10/2021 22:23:47  WARNING:search_engine.py:Query string: "тов зоря"
+15/10/2021 22:23:47  WARNING:search_engine.py:The missing persons register: 1 records found
+15/10/2021 22:23:47  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+15/10/2021 22:23:47     INFO:search_engine.py:Search time into the missing person register: 0:00:00.047881
+15/10/2021 22:23:47  WARNING:search_engine.py:The wanted persons register: 5 records found
+15/10/2021 22:23:47  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+15/10/2021 22:23:47     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.050999
+15/10/2021 22:23:50  WARNING:search_engine.py:The debtors register: 73937 records found
+15/10/2021 22:23:54  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+15/10/2021 22:23:54     INFO:search_engine.py:Search time into the debtors register: 0:00:07.632858
+15/10/2021 22:24:13  WARNING:search_engine.py:The legal entities register: 751635 records found
+15/10/2021 22:25:50     INFO: searchmydata.py:The application started
+15/10/2021 22:25:50  WARNING:service_tools.py:Config.json is found
+15/10/2021 22:25:53  WARNING: searchmydata.py:The "Search" menu item chosen
+15/10/2021 22:26:02  WARNING:search_engine.py:Config.json is found
+15/10/2021 22:26:02  WARNING:search_engine.py:Query string: "тов парус"
+15/10/2021 22:26:02  WARNING:search_engine.py:The missing persons register: No data found
+15/10/2021 22:26:02     INFO:search_engine.py:Search time into the missing person register: 0:00:00.002997
+15/10/2021 22:26:02  WARNING:search_engine.py:The wanted persons register: No data found
+15/10/2021 22:26:02     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.004039
+15/10/2021 22:26:03  WARNING:search_engine.py:The debtors register: 72123 records found
+15/10/2021 22:26:07  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+15/10/2021 22:26:07     INFO:search_engine.py:Search time into the debtors register: 0:00:04.952395
+15/10/2021 22:26:16  WARNING:search_engine.py:The legal entities register: 750875 records found
+15/10/2021 22:27:03     INFO: searchmydata.py:The application started
+15/10/2021 22:27:03  WARNING:service_tools.py:Config.json is found
+15/10/2021 22:27:07  WARNING: searchmydata.py:The "Search" menu item chosen
+15/10/2021 22:27:11  WARNING:search_engine.py:Config.json is found
+15/10/2021 22:27:11  WARNING:search_engine.py:Query string: "потуг"
+15/10/2021 22:27:11  WARNING:search_engine.py:The missing persons register: No data found
+15/10/2021 22:27:11     INFO:search_engine.py:Search time into the missing person register: 0:00:00.003017
+15/10/2021 22:27:11  WARNING:search_engine.py:The wanted persons register: No data found
+15/10/2021 22:27:11     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.003000
+15/10/2021 22:27:11  WARNING:search_engine.py:The debtors register: No data found
+15/10/2021 22:27:11     INFO:search_engine.py:Search time into the debtors register: 0:00:00.004117
+15/10/2021 22:27:11  WARNING:search_engine.py:The legal entities register: No data found
+15/10/2021 22:27:11     INFO:search_engine.py:Search time into the legal entities register: 0:00:00.002997
+15/10/2021 22:27:24    ERROR: searchmydata.py:The wrong input type of menu item choice
+15/10/2021 22:27:24    ERROR: searchmydata.py:The wrong menu item choice
+15/10/2021 22:27:28  WARNING: searchmydata.py:The "Search" menu item chosen
+15/10/2021 22:27:29  WARNING:search_engine.py:Config.json is found
+15/10/2021 22:27:29  WARNING:search_engine.py:Query string: "пап"
+15/10/2021 22:27:29  WARNING:search_engine.py:The missing persons register: 1 records found
+15/10/2021 22:27:29  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+15/10/2021 22:27:29     INFO:search_engine.py:Search time into the missing person register: 0:00:00.013997
+15/10/2021 22:27:29  WARNING:search_engine.py:The wanted persons register: 2 records found
+15/10/2021 22:27:29  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+15/10/2021 22:27:29     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.021025
+15/10/2021 22:27:30  WARNING:search_engine.py:The debtors register: 1680 records found
+15/10/2021 22:27:30  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+15/10/2021 22:27:30     INFO:search_engine.py:Search time into the debtors register: 0:00:00.611030
+15/10/2021 22:27:30  WARNING:search_engine.py:The legal entities register: 381 records found
+15/10/2021 22:27:30  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+15/10/2021 22:27:30     INFO:search_engine.py:Search time into the legal entities register: 0:00:00.098024
+15/10/2021 22:28:27  WARNING: searchmydata.py:The "Exit" menu item chosen
+15/10/2021 22:28:27     INFO: searchmydata.py:The application closed
+15/10/2021 22:35:21     INFO: searchmydata.py:The application started
+15/10/2021 22:35:21  WARNING:service_tools.py:Config.json is found
+15/10/2021 22:35:23  WARNING: searchmydata.py:The "Search" menu item chosen
+15/10/2021 22:35:29  WARNING:search_engine.py:Config.json is found
+15/10/2021 22:35:29  WARNING:search_engine.py:Query string: "Мальчик Андрій"
+15/10/2021 22:35:29  WARNING:search_engine.py:The missing persons register: 214 records found
+15/10/2021 22:35:29  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+15/10/2021 22:35:29     INFO:search_engine.py:Search time into the missing person register: 0:00:00.070049
+15/10/2021 22:35:30  WARNING:search_engine.py:The wanted persons register: 2159 records found
+15/10/2021 22:35:30  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+15/10/2021 22:35:30     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.389918
+15/10/2021 22:35:58  WARNING:search_engine.py:The debtors register: 393633 records found
+15/10/2021 22:37:12     INFO: searchmydata.py:The application started
+15/10/2021 22:37:12  WARNING:service_tools.py:Config.json is found
+15/10/2021 22:37:16  WARNING: searchmydata.py:The "Search" menu item chosen
+15/10/2021 22:37:23  WARNING:search_engine.py:Config.json is found
+15/10/2021 22:37:23  WARNING:search_engine.py:Query string: "Мальчик Андрій Володимирович"
+15/10/2021 22:37:23  WARNING:search_engine.py:The missing persons register: 635 records found
+15/10/2021 22:37:23  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+15/10/2021 22:37:23     INFO:search_engine.py:Search time into the missing person register: 0:00:00.093006
+15/10/2021 22:37:23  WARNING:search_engine.py:The wanted persons register: 5702 records found
+15/10/2021 22:37:24  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+15/10/2021 22:37:24     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.536998
+15/10/2021 22:37:37  WARNING:search_engine.py:The debtors register: 970285 records found
+15/10/2021 22:38:00     INFO: searchmydata.py:The application started
+15/10/2021 22:38:00  WARNING:service_tools.py:Config.json is found
+15/10/2021 22:38:05  WARNING: searchmydata.py:The "Search" menu item chosen
+15/10/2021 22:38:15  WARNING:search_engine.py:Config.json is found
+15/10/2021 22:38:15  WARNING:search_engine.py:Query string: "Голопупенко Зіновій"
+15/10/2021 22:38:15  WARNING:search_engine.py:The missing persons register: 1 records found
+15/10/2021 22:38:15  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+15/10/2021 22:38:15     INFO:search_engine.py:Search time into the missing person register: 0:00:00.012010
+15/10/2021 22:38:15  WARNING:search_engine.py:The wanted persons register: 4 records found
+15/10/2021 22:38:15  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+15/10/2021 22:38:15     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.023990
+15/10/2021 22:38:15  WARNING:search_engine.py:The debtors register: 865 records found
+15/10/2021 22:38:15  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+15/10/2021 22:38:15     INFO:search_engine.py:Search time into the debtors register: 0:00:00.209975
+15/10/2021 22:38:15  WARNING:search_engine.py:The legal entities register: 689 records found
+15/10/2021 22:38:15  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+15/10/2021 22:38:15     INFO:search_engine.py:Search time into the legal entities register: 0:00:00.147997
+15/10/2021 22:38:16  WARNING:search_engine.py:The Entrepreneurs register: 1291 records found
+15/10/2021 22:38:16  WARNING:search_engine.py:All result dataset was saved into Entrepreneurs.html
+15/10/2021 22:38:16     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:01.182420
+15/10/2021 22:39:06  WARNING: searchmydata.py:The "Exit" menu item chosen
+15/10/2021 22:39:06     INFO: searchmydata.py:The application closed
+15/10/2021 22:56:08     INFO: searchmydata.py:The application started
+15/10/2021 22:56:08  WARNING:service_tools.py:Config.json is found
+15/10/2021 22:56:10  WARNING: searchmydata.py:The "Search" menu item chosen
+15/10/2021 22:56:18  WARNING:search_engine.py:Config.json is found
+15/10/2021 22:56:18  WARNING:search_engine.py:Query string: "Мальчик Андрій Володимирович"
+15/10/2021 22:56:18  WARNING:search_engine.py:The missing persons register: 635 records found
+15/10/2021 22:56:18  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+15/10/2021 22:56:18     INFO:search_engine.py:Search time into the missing person register: 0:00:00.079998
+15/10/2021 22:56:19  WARNING:search_engine.py:The wanted persons register: 5702 records found
+15/10/2021 22:56:19  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+15/10/2021 22:56:19     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.595004
+15/10/2021 22:56:33  WARNING:search_engine.py:The debtors register: 970285 records found
+15/10/2021 22:57:03     INFO: searchmydata.py:The application started
+15/10/2021 22:57:03  WARNING:service_tools.py:Config.json is found
+15/10/2021 22:57:05  WARNING: searchmydata.py:The "Search" menu item chosen
+15/10/2021 22:57:11  WARNING:search_engine.py:Config.json is found
+15/10/2021 22:57:11  WARNING:search_engine.py:Query string: "Зажопов Ніно"
+15/10/2021 22:57:11  WARNING:search_engine.py:The missing persons register: No data found
+15/10/2021 22:57:11     INFO:search_engine.py:Search time into the missing person register: 0:00:00.002812
+15/10/2021 22:57:51     INFO: searchmydata.py:The application started
+15/10/2021 22:57:51  WARNING:service_tools.py:Config.json is found
+15/10/2021 22:57:53  WARNING: searchmydata.py:The "Search" menu item chosen
+15/10/2021 22:57:56  WARNING:search_engine.py:Config.json is found
+15/10/2021 22:57:56  WARNING:search_engine.py:Query string: "апр"
+15/10/2021 22:57:56  WARNING:search_engine.py:The missing persons register: No data found
+15/10/2021 22:57:56     INFO:search_engine.py:Search time into the missing person register: 0:00:00.002003
+15/10/2021 22:59:13     INFO: searchmydata.py:The application started
+15/10/2021 22:59:13  WARNING:service_tools.py:Config.json is found
+15/10/2021 22:59:17  WARNING: searchmydata.py:The "Search" menu item chosen
+15/10/2021 22:59:19  WARNING:search_engine.py:Config.json is found
+15/10/2021 22:59:19  WARNING:search_engine.py:Query string: "про"
+15/10/2021 22:59:19  WARNING:search_engine.py:The missing persons register: No data found
+15/10/2021 22:59:19     INFO:search_engine.py:Search time into the missing person register: 0:00:00.002006
+15/10/2021 22:59:19  WARNING:search_engine.py:The wanted persons register: No data found
+15/10/2021 22:59:19     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.001979
+15/10/2021 22:59:19  WARNING:search_engine.py:The debtors register: 320 records found
+15/10/2021 22:59:19  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+15/10/2021 22:59:19     INFO:search_engine.py:Search time into the debtors register: 0:00:00.092999
+15/10/2021 22:59:19  WARNING:search_engine.py:The legal entities register: 2508 records found
+15/10/2021 22:59:19  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+15/10/2021 22:59:19     INFO:search_engine.py:Search time into the legal entities register: 0:00:00.389997
+15/10/2021 22:59:20  WARNING:search_engine.py:The Entrepreneurs register: No data found
+15/10/2021 22:59:20     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:00.003001
+15/10/2021 22:59:44  WARNING: searchmydata.py:The "Exit" menu item chosen
+15/10/2021 22:59:44     INFO: searchmydata.py:The application closed
+15/10/2021 23:07:51     INFO: searchmydata.py:The application started
+15/10/2021 23:07:51  WARNING:service_tools.py:Config.json is found
+15/10/2021 23:07:57  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+15/10/2021 23:07:57  WARNING:      dbtools.py:Config.json is found
+15/10/2021 23:07:57    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+15/10/2021 23:07:58    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+15/10/2021 23:07:58     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+15/10/2021 23:07:58    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+15/10/2021 23:07:58    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+15/10/2021 23:07:58     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+15/10/2021 23:07:58    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+15/10/2021 23:07:58    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+15/10/2021 23:08:41     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+15/10/2021 23:08:41  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+15/10/2021 23:08:41  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+15/10/2021 23:21:26  WARNING: searchmydata.py:The "Exit" menu item chosen
+15/10/2021 23:21:26     INFO: searchmydata.py:The application closed
+15/10/2021 23:21:39     INFO: searchmydata.py:The application started
+15/10/2021 23:21:39  WARNING:service_tools.py:Config.json is found
+15/10/2021 23:21:42  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+15/10/2021 23:21:42  WARNING:      dbtools.py:Config.json is found
+15/10/2021 23:21:42    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+15/10/2021 23:21:42    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+15/10/2021 23:21:42     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+15/10/2021 23:21:42    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+15/10/2021 23:21:43    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+15/10/2021 23:21:43     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+15/10/2021 23:21:43    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+15/10/2021 23:21:43    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+15/10/2021 23:22:27     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+15/10/2021 23:22:27  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+15/10/2021 23:22:27  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+15/10/2021 23:29:14     INFO: searchmydata.py:The application started
+15/10/2021 23:29:14  WARNING:service_tools.py:Config.json is found
+15/10/2021 23:29:17  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+15/10/2021 23:29:17  WARNING:      dbtools.py:Config.json is found
+15/10/2021 23:29:17    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+15/10/2021 23:29:17    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+15/10/2021 23:29:17     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+15/10/2021 23:29:17    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+15/10/2021 23:29:17    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+15/10/2021 23:29:17     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+15/10/2021 23:29:17    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+15/10/2021 23:29:18    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+15/10/2021 23:30:01     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+15/10/2021 23:30:01  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+15/10/2021 23:30:01  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+15/10/2021 23:33:23     INFO: searchmydata.py:The application started
+15/10/2021 23:33:23  WARNING:service_tools.py:Config.json is found
+15/10/2021 23:33:26  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+15/10/2021 23:33:26  WARNING:      dbtools.py:Config.json is found
+15/10/2021 23:33:26    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+15/10/2021 23:33:26    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+15/10/2021 23:33:26     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+15/10/2021 23:33:26    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+15/10/2021 23:33:26    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+15/10/2021 23:33:26     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+15/10/2021 23:33:26    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+15/10/2021 23:33:26    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+15/10/2021 23:34:09     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+15/10/2021 23:34:09  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+15/10/2021 23:34:09  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+15/10/2021 23:37:59     INFO: searchmydata.py:The application started
+15/10/2021 23:37:59  WARNING:service_tools.py:Config.json is found
+15/10/2021 23:38:13  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+15/10/2021 23:38:13  WARNING:      dbtools.py:Config.json is found
+15/10/2021 23:38:13    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+15/10/2021 23:38:13    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+15/10/2021 23:38:13     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+15/10/2021 23:38:13    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+15/10/2021 23:38:14    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+15/10/2021 23:38:14     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+15/10/2021 23:38:14    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+15/10/2021 23:38:14    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+15/10/2021 23:39:03     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+15/10/2021 23:39:03  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+15/10/2021 23:39:03  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 10:00:35     INFO: searchmydata.py:The application started
+16/10/2021 10:00:35  WARNING:service_tools.py:Config.json is found
+16/10/2021 10:00:39  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 10:00:46  WARNING:search_engine.py:Config.json is found
+16/10/2021 10:00:46  WARNING:search_engine.py:Query string: "3"
+16/10/2021 10:00:46  WARNING:search_engine.py:The missing persons register: No data found
+16/10/2021 10:00:46     INFO:search_engine.py:Search time into the missing person register: 0:00:00.027352
+16/10/2021 10:00:46  WARNING:search_engine.py:The wanted persons register: No data found
+16/10/2021 10:00:46     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.012516
+16/10/2021 10:00:47  WARNING:search_engine.py:The debtors register: 841 records found
+16/10/2021 10:00:47  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 10:00:47     INFO:search_engine.py:Search time into the debtors register: 0:00:00.671094
+16/10/2021 10:00:49  WARNING:search_engine.py:The legal entities register: 3498 records found
+16/10/2021 10:00:50  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 10:00:50     INFO:search_engine.py:Search time into the legal entities register: 0:00:02.603567
+16/10/2021 10:00:50  WARNING:search_engine.py:The Entrepreneurs register: No data found
+16/10/2021 10:00:50     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:00.014001
+16/10/2021 10:00:57  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 10:00:57  WARNING:      dbtools.py:Config.json is found
+16/10/2021 10:00:57    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:00:58    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 10:00:58     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 10:00:58    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:00:58    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 10:00:58     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 10:00:58    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:00:58    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 10:01:37     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 10:01:37  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 10:01:37  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 10:08:45     INFO: searchmydata.py:The application started
+16/10/2021 10:08:45  WARNING:service_tools.py:Config.json is found
+16/10/2021 10:09:06  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 10:09:06  WARNING:      dbtools.py:Config.json is found
+16/10/2021 10:09:06    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:09:06    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 10:09:06     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 10:09:06    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:09:06    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 10:09:06     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 10:09:06    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:09:06    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 10:09:45     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 10:09:45  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 10:09:45  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 10:14:52     INFO: searchmydata.py:The application started
+16/10/2021 10:14:52  WARNING:service_tools.py:Config.json is found
+16/10/2021 10:14:55  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 10:14:55  WARNING:      dbtools.py:Config.json is found
+16/10/2021 10:14:55    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:14:55    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 10:14:55     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 10:14:55    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:14:55    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 10:14:55     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 10:14:55    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:14:55    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 10:15:33     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 10:15:33  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 10:15:33  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 10:23:38     INFO: searchmydata.py:The application started
+16/10/2021 10:23:38  WARNING:service_tools.py:Config.json is found
+16/10/2021 10:23:41  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 10:23:41  WARNING:      dbtools.py:Config.json is found
+16/10/2021 10:23:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:23:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 10:23:41     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 10:23:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:23:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 10:23:41     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 10:23:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:23:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 10:24:20     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 10:24:20  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 10:24:20  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 10:26:36     INFO: searchmydata.py:The application started
+16/10/2021 10:26:36  WARNING:service_tools.py:Config.json is found
+16/10/2021 10:26:39  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 10:26:39  WARNING:      dbtools.py:Config.json is found
+16/10/2021 10:26:39    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:26:39    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 10:26:39     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 10:26:39    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:26:39    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 10:26:39     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 10:26:39    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:26:39    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 10:27:17     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 10:27:17  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 10:27:17  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 10:31:33     INFO: searchmydata.py:The application started
+16/10/2021 10:31:33  WARNING:service_tools.py:Config.json is found
+16/10/2021 10:31:35  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 10:31:35  WARNING:      dbtools.py:Config.json is found
+16/10/2021 10:31:35    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:31:35    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 10:31:35     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 10:31:35    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:31:36    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 10:31:36     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 10:31:36    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:31:36    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 10:32:14     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 10:32:14  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 10:32:14  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 10:36:43     INFO: searchmydata.py:The application started
+16/10/2021 10:36:43  WARNING:service_tools.py:Config.json is found
+16/10/2021 10:36:45  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 10:36:45  WARNING:      dbtools.py:Config.json is found
+16/10/2021 10:36:45    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:36:45    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 10:36:45     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 10:36:45    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:36:45    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 10:36:45     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 10:36:45    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:36:45    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 10:37:24     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 10:37:24  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 10:37:24  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 10:39:48     INFO: searchmydata.py:The application started
+16/10/2021 10:39:48  WARNING:service_tools.py:Config.json is found
+16/10/2021 10:39:50  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 10:39:50  WARNING:      dbtools.py:Config.json is found
+16/10/2021 10:39:50    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:39:50    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 10:39:50     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 10:39:50    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:39:53    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 10:39:53     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 10:39:53    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:39:53    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 10:40:32     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 10:40:32  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 10:40:32  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 10:47:22     INFO: searchmydata.py:The application started
+16/10/2021 10:47:22  WARNING:service_tools.py:Config.json is found
+16/10/2021 10:47:25  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 10:47:25  WARNING:      dbtools.py:Config.json is found
+16/10/2021 10:47:25    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:47:25    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 10:47:25     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 10:47:25    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:47:25    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 10:47:25     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 10:47:25    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:47:25    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 10:48:04     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 10:48:04  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 10:48:04  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 10:54:40     INFO: searchmydata.py:The application started
+16/10/2021 10:54:40  WARNING:service_tools.py:Config.json is found
+16/10/2021 10:54:41  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 10:54:41  WARNING:      dbtools.py:Config.json is found
+16/10/2021 10:54:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:54:42    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 10:54:42     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 10:54:42    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:54:42    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 10:54:42     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 10:54:42    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 10:54:42    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 10:55:21     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 10:55:21  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 10:55:21  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 11:02:38     INFO: searchmydata.py:The application started
+16/10/2021 11:02:38  WARNING:service_tools.py:Config.json is found
+16/10/2021 11:02:40  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 11:02:40  WARNING:      dbtools.py:Config.json is found
+16/10/2021 11:02:40    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:02:40    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 11:02:40     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 11:02:40    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:02:44    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 11:02:44     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 11:02:44    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:02:44    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 11:03:23     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 11:03:23  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 11:03:23  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 11:06:17     INFO: searchmydata.py:The application started
+16/10/2021 11:06:17  WARNING:service_tools.py:Config.json is found
+16/10/2021 11:06:20  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 11:06:20  WARNING:      dbtools.py:Config.json is found
+16/10/2021 11:06:20    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:06:20    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 11:06:20     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 11:06:20    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:06:20    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 11:06:20     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 11:06:20    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:06:20    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 11:06:59     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 11:06:59  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 11:06:59  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 11:12:14     INFO: searchmydata.py:The application started
+16/10/2021 11:12:14  WARNING:service_tools.py:Config.json is found
+16/10/2021 11:12:16  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 11:12:16  WARNING:      dbtools.py:Config.json is found
+16/10/2021 11:12:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:12:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 11:12:16     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 11:12:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:12:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 11:12:16     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 11:12:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:12:17    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 11:12:55     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 11:12:55  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 11:12:55  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 11:15:40     INFO: searchmydata.py:The application started
+16/10/2021 11:15:40  WARNING:service_tools.py:Config.json is found
+16/10/2021 11:15:45  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 11:15:45  WARNING:      dbtools.py:Config.json is found
+16/10/2021 11:15:45    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:15:45    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 11:15:45     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 11:15:45    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:15:45    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 11:15:45     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 11:15:45    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:15:45    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 11:16:24     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 11:16:24  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 11:16:24  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 11:18:56     INFO: searchmydata.py:The application started
+16/10/2021 11:18:56  WARNING:service_tools.py:Config.json is found
+16/10/2021 11:19:01  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 11:19:01  WARNING:      dbtools.py:Config.json is found
+16/10/2021 11:19:01    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:19:01    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 11:19:01     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 11:19:01    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:19:01    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 11:19:01     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 11:19:01    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:19:01    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 11:19:40     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 11:19:40  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 11:19:40  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 11:25:26     INFO: searchmydata.py:The application started
+16/10/2021 11:25:26  WARNING:service_tools.py:Config.json is found
+16/10/2021 11:25:29  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 11:25:29  WARNING:      dbtools.py:Config.json is found
+16/10/2021 11:25:29    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:25:29    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 11:25:29     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 11:25:29    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:25:29    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 11:25:29     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 11:25:29    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:25:29    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 11:26:08     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 11:26:08  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 11:26:08  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 11:33:04     INFO: searchmydata.py:The application started
+16/10/2021 11:33:04  WARNING:service_tools.py:Config.json is found
+16/10/2021 11:33:08  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+16/10/2021 11:33:08  WARNING:      dbtools.py:Config.json is found
+16/10/2021 11:33:08    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:33:09    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+16/10/2021 11:33:09     INFO:          elt.py:A general MissingPersons dataset JSON received
+16/10/2021 11:33:09    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:33:11    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+16/10/2021 11:33:11     INFO:          elt.py:A MissingPersons resources JSON id received
+16/10/2021 11:33:11    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:33:11    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5096224
+16/10/2021 11:33:23     INFO:          elt.py:A MissingPersons dataset received
+16/10/2021 11:33:24  WARNING:      dbtools.py:6711 documents deleted. The missing persons collection is empty.
+16/10/2021 11:33:24  WARNING:      dbtools.py:Missing persons Text index deleted
+16/10/2021 11:33:24     INFO:      dbtools.py:Missing persons dataset was saved into the database
+16/10/2021 11:33:24     INFO:      dbtools.py:Missing persons Text Index created
+16/10/2021 11:33:24     INFO:      dbtools.py:Time to save into the missing person register: 0:00:01.873004
+16/10/2021 11:33:25    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:33:25    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+16/10/2021 11:33:25     INFO:          elt.py:A general WantedPersons dataset JSON received
+16/10/2021 11:33:25    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:33:27    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+16/10/2021 11:33:27     INFO:          elt.py:A WantedPersons resources JSON id received
+16/10/2021 11:33:27    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:33:27    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41341343
+16/10/2021 11:34:30     INFO:          elt.py:A WantedPersons dataset received
+16/10/2021 11:34:35  WARNING:      dbtools.py:47908 documents deleted. The wanted persons collection is empty.
+16/10/2021 11:34:35  WARNING:      dbtools.py:WantedPersons Text index deleted
+16/10/2021 11:34:37     INFO:      dbtools.py:Wanted persons dataset was saved into the database
+16/10/2021 11:34:39     INFO:      dbtools.py:WantedPersons Text Index created
+16/10/2021 11:34:39     INFO:      dbtools.py:Time to save into the wanted person register: 0:00:08.833441
+16/10/2021 11:34:39    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:34:39    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+16/10/2021 11:34:39     INFO:          elt.py:A general DebtorsRegister dataset JSON received
+16/10/2021 11:34:39    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:34:39    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+16/10/2021 11:34:39     INFO:          elt.py:A DebtorsRegister resources JSON id received
+16/10/2021 11:45:41  WARNING:      dbtools.py:6777304 documents deleted. The wanted persons collection is empty.
+16/10/2021 11:45:41  WARNING:      dbtools.py:Debtors Text index deleted
+16/10/2021 11:45:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 11:45:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 401372631
+16/10/2021 11:46:16     INFO:      dbtools.py:A DebtorsRegister dataset received
+16/10/2021 11:46:16  WARNING:      dbtools.py:File in ZIP: 31-ex_csv_erb.csv
+16/10/2021 13:16:07     INFO:      dbtools.py:Debtors dataset was saved into the database
+16/10/2021 13:19:56     INFO:      dbtools.py:Debtors Text Index created
+16/10/2021 13:19:57     INFO:      dbtools.py:Time to save into the debtors register: 1:45:18.081138
+16/10/2021 13:19:58    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 13:19:58    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+16/10/2021 13:19:58     INFO:          elt.py:A general EntrepreneursRegister dataset JSON received
+16/10/2021 13:19:58    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 13:19:58    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+16/10/2021 13:19:58     INFO:          elt.py:A EntrepreneursRegister resources JSON id received
+16/10/2021 13:26:53  WARNING:      dbtools.py:5677731 documents deleted. The entrepreneurs collection is empty.
+16/10/2021 13:26:53  WARNING:      dbtools.py:Entrepreneurs Text index deleted
+16/10/2021 13:29:48  WARNING:      dbtools.py:1832133 documents deleted. The legal entities collection is empty.
+16/10/2021 13:29:48  WARNING:      dbtools.py:LegalEntities Text index deleted
+16/10/2021 13:29:48    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+16/10/2021 13:29:49    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_13-10-2021.zip HTTP/1.1" 200 449586182
+16/10/2021 13:30:31     INFO:      dbtools.py:A EntrepreneursRegister dataset received
+16/10/2021 13:30:31  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.1-EX_XML_EDR_UO_13.10.2021.xml
+16/10/2021 13:30:31  WARNING:      dbtools.py:File in ZIP: 17-UFOP_13.10.2021/17.2-EX_XML_EDR_FOP_13.10.2021.xml
+16/10/2021 15:10:14     INFO:      dbtools.py:LegalEntities dataset was saved into the database
+16/10/2021 15:10:14     INFO:      dbtools.py:Entrepreneurs dataset was saved into the database
+16/10/2021 15:11:27     INFO:      dbtools.py:LegalEntities Text Index created
+16/10/2021 15:13:23     INFO:      dbtools.py:Entrepreneurs Text Index created
+16/10/2021 15:13:23     INFO:      dbtools.py:Time to save into the Entrepreneurs and LegalEntities registers: 1:53:24.569724
+16/10/2021 15:15:02     INFO:service_tools.py:MissingPersonsRegisterServiceJson updated
+16/10/2021 15:15:03     INFO:service_tools.py:WantedPersonsRegisterServiceJson updated
+16/10/2021 15:15:17     INFO:service_tools.py:DebtorsRegisterServiceJson updated
+16/10/2021 15:15:22     INFO:service_tools.py:LegalEntitiesRegisterServiceJson updated
+16/10/2021 15:15:31     INFO:service_tools.py:EntrepreneursRegisterServiceJson updated
+16/10/2021 15:15:42  WARNING: searchmydata.py:The "Exit" menu item chosen
+16/10/2021 15:15:42     INFO: searchmydata.py:The application closed
+16/10/2021 15:22:20     INFO: searchmydata.py:The application started
+16/10/2021 15:22:20  WARNING:service_tools.py:Config.json is found
+16/10/2021 15:22:23  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 15:22:27  WARNING:search_engine.py:Config.json is found
+16/10/2021 15:22:27  WARNING:search_engine.py:Query string: "сеан"
+16/10/2021 15:22:27  WARNING:search_engine.py:The missing persons register: No data found
+16/10/2021 15:22:27     INFO:search_engine.py:Search time into the missing person register: 0:00:00.018090
+16/10/2021 15:22:27  WARNING:search_engine.py:The wanted persons register: No data found
+16/10/2021 15:22:27     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.003280
+16/10/2021 15:22:27  WARNING:search_engine.py:The debtors register: No data found
+16/10/2021 15:22:27     INFO:search_engine.py:Search time into the debtors register: 0:00:00.004004
+16/10/2021 15:22:27  WARNING:search_engine.py:The legal entities register: 12 records found
+16/10/2021 15:22:27  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 15:22:27     INFO:search_engine.py:Search time into the legal entities register: 0:00:00.040998
+16/10/2021 15:22:27  WARNING:search_engine.py:The Entrepreneurs register: No data found
+16/10/2021 15:22:27     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:00.015003
+16/10/2021 15:22:57  WARNING: searchmydata.py:The "Exit" menu item chosen
+16/10/2021 15:22:57     INFO: searchmydata.py:The application closed
+16/10/2021 16:29:01     INFO: searchmydata.py:The application started
+16/10/2021 16:29:01  WARNING:service_tools.py:Config.json is found
+16/10/2021 16:29:04  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 16:29:11  WARNING:search_engine.py:Config.json is found
+16/10/2021 16:30:58     INFO: searchmydata.py:The application started
+16/10/2021 16:30:58  WARNING:service_tools.py:Config.json is found
+16/10/2021 16:31:00  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 16:31:02  WARNING:search_engine.py:Config.json is found
+16/10/2021 16:31:02     INFO:search_engine.py:"Results" dir is empty
+16/10/2021 16:31:02  WARNING:search_engine.py:Query string: "yui"
+16/10/2021 16:31:02  WARNING:search_engine.py:The missing persons register: No data found
+16/10/2021 16:31:02     INFO:search_engine.py:Search time into the missing person register: 0:00:00.002998
+16/10/2021 16:31:02  WARNING:search_engine.py:The wanted persons register: No data found
+16/10/2021 16:31:02     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.003006
+16/10/2021 16:31:02  WARNING:search_engine.py:The debtors register: No data found
+16/10/2021 16:31:02     INFO:search_engine.py:Search time into the debtors register: 0:00:00.002982
+16/10/2021 16:31:02  WARNING:search_engine.py:The legal entities register: No data found
+16/10/2021 16:31:02     INFO:search_engine.py:Search time into the legal entities register: 0:00:00.003011
+16/10/2021 16:31:02  WARNING:search_engine.py:The Entrepreneurs register: No data found
+16/10/2021 16:31:02     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:00.003005
+16/10/2021 16:31:09  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 16:31:16  WARNING:search_engine.py:Config.json is found
+16/10/2021 16:31:16     INFO:search_engine.py:"Results" dir is empty
+16/10/2021 16:31:16  WARNING:search_engine.py:Query string: "Голопупенко Петро"
+16/10/2021 16:31:16  WARNING:search_engine.py:The missing persons register: 59 records found
+16/10/2021 16:31:16  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 16:31:16     INFO:search_engine.py:Search time into the missing person register: 0:00:00.038998
+16/10/2021 16:31:16  WARNING:search_engine.py:The wanted persons register: 250 records found
+16/10/2021 16:31:16  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 16:31:16     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.186000
+16/10/2021 16:31:26  WARNING:search_engine.py:The debtors register: 58163 records found
+16/10/2021 16:31:30  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 16:31:30     INFO:search_engine.py:Search time into the debtors register: 0:00:13.227945
+16/10/2021 16:31:31  WARNING:search_engine.py:The legal entities register: 13957 records found
+16/10/2021 16:31:32  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 16:31:32     INFO:search_engine.py:Search time into the legal entities register: 0:00:02.436162
+16/10/2021 16:31:36  WARNING:search_engine.py:The Entrepreneurs register: 33955 records found
+16/10/2021 16:31:38  WARNING:search_engine.py:All result dataset was saved into Entrepreneurs.html
+16/10/2021 16:31:38     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:06.301004
+16/10/2021 16:33:07  WARNING: searchmydata.py:The "Exit" menu item chosen
+16/10/2021 16:33:07     INFO: searchmydata.py:The application closed
+16/10/2021 16:38:44     INFO: searchmydata.py:The application started
+16/10/2021 16:38:44  WARNING:service_tools.py:Config.json is found
+16/10/2021 16:38:47  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 16:39:03  WARNING:search_engine.py:Config.json is found
+16/10/2021 16:39:03     INFO:search_engine.py:"Results" dir is cleared
+16/10/2021 16:39:03  WARNING:search_engine.py:Query string: "Пердоленко Василь Іванович"
+16/10/2021 16:39:03  WARNING:search_engine.py:The missing persons register: 560 records found
+16/10/2021 16:39:03  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 16:39:03     INFO:search_engine.py:Search time into the missing person register: 0:00:00.094773
+16/10/2021 16:39:03  WARNING:search_engine.py:The wanted persons register: 2233 records found
+16/10/2021 16:39:04  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 16:39:04     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.409011
+16/10/2021 16:39:22  WARNING:search_engine.py:The debtors register: 525470 records found
+16/10/2021 16:40:13     INFO: searchmydata.py:The application started
+16/10/2021 16:40:13  WARNING:service_tools.py:Config.json is found
+16/10/2021 16:40:17  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 16:40:39  WARNING:search_engine.py:Config.json is found
+16/10/2021 16:40:39     INFO:search_engine.py:"Results" dir is cleared
+16/10/2021 16:40:39  WARNING:search_engine.py:Query string: "Голопупенко Теодор Констянтинович"
+16/10/2021 16:40:39  WARNING:search_engine.py:The missing persons register: 1 records found
+16/10/2021 16:40:39  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 16:40:39     INFO:search_engine.py:Search time into the missing person register: 0:00:00.013004
+16/10/2021 16:40:39  WARNING:search_engine.py:The wanted persons register: 1 records found
+16/10/2021 16:40:39  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 16:40:39     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.020005
+16/10/2021 16:40:39  WARNING:search_engine.py:The debtors register: 917 records found
+16/10/2021 16:40:39  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 16:40:39     INFO:search_engine.py:Search time into the debtors register: 0:00:00.226001
+16/10/2021 16:40:40  WARNING:search_engine.py:The legal entities register: 130 records found
+16/10/2021 16:47:19     INFO: searchmydata.py:The application started
+16/10/2021 16:47:19  WARNING:service_tools.py:Config.json is found
+16/10/2021 16:47:22  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 16:47:39     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 16:47:39  WARNING:search_engine.py:Config.json is found
+16/10/2021 16:47:39  WARNING:search_engine.py:Query string: "Авраменко Мойсей Данилович"
+16/10/2021 16:47:39  WARNING:search_engine.py:The missing persons register: 10 records found
+16/10/2021 16:47:39  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 16:47:39     INFO:search_engine.py:Search time into the missing person register: 0:00:00.018995
+16/10/2021 16:47:39  WARNING:search_engine.py:The wanted persons register: 33 records found
+16/10/2021 16:47:39  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 16:47:39     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.039006
+16/10/2021 16:47:40  WARNING:search_engine.py:The debtors register: 9526 records found
+16/10/2021 16:47:41  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 16:47:41     INFO:search_engine.py:Search time into the debtors register: 0:00:01.582002
+16/10/2021 16:47:42  WARNING:search_engine.py:The legal entities register: 1770 records found
+16/10/2021 16:47:42  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 16:47:42     INFO:search_engine.py:Search time into the legal entities register: 0:00:00.922999
+16/10/2021 16:47:43  WARNING:search_engine.py:The Entrepreneurs register: 4779 records found
+16/10/2021 16:47:44  WARNING:search_engine.py:All result dataset was saved into Entrepreneurs.html
+16/10/2021 16:47:44     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:01.828996
+16/10/2021 16:49:02  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 16:49:09     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 16:49:09  WARNING:search_engine.py:Config.json is found
+16/10/2021 16:49:09  WARNING:search_engine.py:Query string: "Голопупенко Трандуїл"
+16/10/2021 16:49:09  WARNING:search_engine.py:The missing persons register: No data found
+16/10/2021 16:49:09     INFO:search_engine.py:Search time into the missing person register: 0:00:00.002043
+16/10/2021 16:49:09  WARNING:search_engine.py:The wanted persons register: No data found
+16/10/2021 16:49:09     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.003003
+16/10/2021 16:49:09  WARNING:search_engine.py:The debtors register: No data found
+16/10/2021 16:49:09     INFO:search_engine.py:Search time into the debtors register: 0:00:00.002994
+16/10/2021 16:49:09  WARNING:search_engine.py:The legal entities register: No data found
+16/10/2021 16:49:09     INFO:search_engine.py:Search time into the legal entities register: 0:00:00.003000
+16/10/2021 16:49:09  WARNING:search_engine.py:The Entrepreneurs register: No data found
+16/10/2021 16:49:09     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:00.003998
+16/10/2021 16:49:19  WARNING: searchmydata.py:The "Exit" menu item chosen
+16/10/2021 16:49:19     INFO: searchmydata.py:The application closed
+16/10/2021 17:13:49     INFO: searchmydata.py:The application started
+16/10/2021 17:13:49  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:14:06    ERROR: searchmydata.py:The wrong input type of menu item choice
+16/10/2021 17:14:06    ERROR: searchmydata.py:The wrong menu item choice
+16/10/2021 17:14:13  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:14:21     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:14:21  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:14:21  WARNING:search_engine.py:Query string: "Петров Теодор Ігорович"
+16/10/2021 17:14:21  WARNING:search_engine.py:The missing persons register: 46 records found
+16/10/2021 17:14:21  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:14:21     INFO:search_engine.py:Search time into the missing person register: 0:00:00.023002
+16/10/2021 17:14:21  WARNING:search_engine.py:The wanted persons register: 778 records found
+16/10/2021 17:14:21  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:14:21     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.172996
+16/10/2021 17:14:25  WARNING:search_engine.py:The debtors register: 146017 records found
+16/10/2021 17:14:54     INFO: searchmydata.py:The application started
+16/10/2021 17:14:54  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:14:56  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:15:35     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:15:35  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:15:35  WARNING:search_engine.py:Query string: "Запорожець Назарій Теодорович"
+16/10/2021 17:15:35  WARNING:search_engine.py:The missing persons register: 2 records found
+16/10/2021 17:15:35  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:15:35     INFO:search_engine.py:Search time into the missing person register: 0:00:00.011995
+16/10/2021 17:15:35  WARNING:search_engine.py:The wanted persons register: 27 records found
+16/10/2021 17:15:35  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:15:35     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.039999
+16/10/2021 17:15:36  WARNING:search_engine.py:The debtors register: 15252 records found
+16/10/2021 17:15:37  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 17:15:37     INFO:search_engine.py:Search time into the debtors register: 0:00:01.419005
+16/10/2021 17:15:37  WARNING:search_engine.py:The legal entities register: 1238 records found
+16/10/2021 17:15:37  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 17:15:37     INFO:search_engine.py:Search time into the legal entities register: 0:00:00.318004
+16/10/2021 17:15:38  WARNING:search_engine.py:The Entrepreneurs register: 4300 records found
+16/10/2021 17:15:38  WARNING:search_engine.py:All result dataset was saved into Entrepreneurs.html
+16/10/2021 17:15:38     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:00.928001
+16/10/2021 17:17:10  WARNING: searchmydata.py:The "Exit" menu item chosen
+16/10/2021 17:17:10     INFO: searchmydata.py:The application closed
+16/10/2021 17:18:42     INFO: searchmydata.py:The application started
+16/10/2021 17:18:42  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:18:47  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:18:52     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:18:52  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:18:52  WARNING:search_engine.py:Query string: "Іванов Іван Іванович"
+16/10/2021 17:18:52  WARNING:search_engine.py:The missing persons register: 545 records found
+16/10/2021 17:18:52  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:18:52     INFO:search_engine.py:Search time into the missing person register: 0:00:00.066999
+16/10/2021 17:18:52  WARNING:search_engine.py:The wanted persons register: 2451 records found
+16/10/2021 17:18:53  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:18:53     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.364999
+16/10/2021 17:19:04  WARNING:search_engine.py:The debtors register: 543572 records found
+16/10/2021 17:26:00     INFO: searchmydata.py:The application started
+16/10/2021 17:26:00  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:26:05  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:26:16     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:26:16  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:26:16  WARNING:search_engine.py:Query string: "Іванов Іван Іванович"
+16/10/2021 17:26:16  WARNING:search_engine.py:The missing persons register: 545 records found
+16/10/2021 17:26:16  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:26:16     INFO:search_engine.py:Search time into the missing person register: 0:00:00.066997
+16/10/2021 17:26:17  WARNING:search_engine.py:The wanted persons register: 2451 records found
+16/10/2021 17:26:17  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:26:17     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.488992
+16/10/2021 17:30:02     INFO: searchmydata.py:The application started
+16/10/2021 17:30:02  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:30:04  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:30:10     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:30:10  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:30:10  WARNING:search_engine.py:Query string: "Іванов Іван Іванович"
+16/10/2021 17:30:10  WARNING:search_engine.py:The missing persons register: 545 records found
+16/10/2021 17:30:10  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:30:10     INFO:search_engine.py:Search time into the missing person register: 0:00:00.072996
+16/10/2021 17:30:10  WARNING:search_engine.py:The wanted persons register: 2451 records found
+16/10/2021 17:30:11  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:30:11     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.372995
+16/10/2021 17:32:07     INFO: searchmydata.py:The application started
+16/10/2021 17:32:07  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:32:10  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:32:16     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:32:16  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:32:16  WARNING:search_engine.py:Query string: "Іванов Іван"
+16/10/2021 17:32:16  WARNING:search_engine.py:The missing persons register: 175 records found
+16/10/2021 17:32:16  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:32:16     INFO:search_engine.py:Search time into the missing person register: 0:00:00.038998
+16/10/2021 17:32:16  WARNING:search_engine.py:The wanted persons register: 887 records found
+16/10/2021 17:32:16  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:32:16     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.127011
+16/10/2021 17:32:19  WARNING:search_engine.py:The debtors register: 197348 records found
+16/10/2021 17:32:54     INFO: searchmydata.py:The application started
+16/10/2021 17:32:54  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:32:56  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:33:00     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:33:00  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:33:00  WARNING:search_engine.py:Query string: "іванов іван"
+16/10/2021 17:33:00  WARNING:search_engine.py:The missing persons register: 175 records found
+16/10/2021 17:33:00  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:33:00     INFO:search_engine.py:Search time into the missing person register: 0:00:00.042995
+16/10/2021 17:33:00  WARNING:search_engine.py:The wanted persons register: 887 records found
+16/10/2021 17:33:00  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:33:00     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.113004
+16/10/2021 17:33:03  WARNING:search_engine.py:The debtors register: 197348 records found
+16/10/2021 17:33:17  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 17:33:17     INFO:search_engine.py:Search time into the debtors register: 0:00:17.133961
+16/10/2021 17:33:21  WARNING:search_engine.py:The legal entities register: 29367 records found
+16/10/2021 17:33:23  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 17:33:23     INFO:search_engine.py:Search time into the legal entities register: 0:00:05.226569
+16/10/2021 17:33:30  WARNING:search_engine.py:The Entrepreneurs register: 79134 records found
+16/10/2021 17:33:33  WARNING:search_engine.py:All result dataset was saved into Entrepreneurs.html
+16/10/2021 17:33:33     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:09.864415
+16/10/2021 17:33:35  WARNING: searchmydata.py:The "Exit" menu item chosen
+16/10/2021 17:33:35     INFO: searchmydata.py:The application closed
+16/10/2021 17:35:02     INFO: searchmydata.py:The application started
+16/10/2021 17:35:02  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:35:04  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:35:13     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:35:13  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:35:13  WARNING:search_engine.py:Query string: "Петров Іван Васильович"
+16/10/2021 17:35:13  WARNING:search_engine.py:The missing persons register: 475 records found
+16/10/2021 17:35:13  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:35:13     INFO:search_engine.py:Search time into the missing person register: 0:00:00.066000
+16/10/2021 17:35:13  WARNING:search_engine.py:The wanted persons register: 2528 records found
+16/10/2021 17:35:14  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:35:14     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.408001
+16/10/2021 17:35:31  WARNING:search_engine.py:The debtors register: 596286 records found
+16/10/2021 17:36:19  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 17:36:19     INFO:search_engine.py:Search time into the debtors register: 0:01:04.868133
+16/10/2021 17:36:27  WARNING:search_engine.py:The legal entities register: 93087 records found
+16/10/2021 17:36:35  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 17:36:35     INFO:search_engine.py:Search time into the legal entities register: 0:00:15.120247
+16/10/2021 17:36:44  WARNING:search_engine.py:The Entrepreneurs register: 251411 records found
+16/10/2021 17:36:58  WARNING:search_engine.py:All result dataset was saved into Entrepreneurs.html
+16/10/2021 17:36:58     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:22.753859
+16/10/2021 17:37:06  WARNING: searchmydata.py:The "Exit" menu item chosen
+16/10/2021 17:37:06     INFO: searchmydata.py:The application closed
+16/10/2021 17:37:40     INFO: searchmydata.py:The application started
+16/10/2021 17:37:40  WARNING:service_tools.py:Config.json is found
+16/10/2021 17:37:45  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:37:47     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:37:47  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:37:47  WARNING:search_engine.py:Query string: "Павлов Іван Васильович"
+16/10/2021 17:37:47  WARNING:search_engine.py:The missing persons register: 467 records found
+16/10/2021 17:37:47  WARNING:search_engine.py:All result dataset was saved into MissingPersons.html
+16/10/2021 17:37:47     INFO:search_engine.py:Search time into the missing person register: 0:00:00.090003
+16/10/2021 17:37:47  WARNING:search_engine.py:The wanted persons register: 2517 records found
+16/10/2021 17:37:48  WARNING:search_engine.py:All result dataset was saved into WantedPersons.html
+16/10/2021 17:37:48     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.465003
+16/10/2021 17:38:08  WARNING:search_engine.py:The debtors register: 594830 records found
+16/10/2021 17:38:57  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 17:38:57     INFO:search_engine.py:Search time into the debtors register: 0:01:09.651185
+16/10/2021 17:39:02  WARNING:search_engine.py:The legal entities register: 92649 records found
+16/10/2021 17:39:10  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 17:39:10     INFO:search_engine.py:Search time into the legal entities register: 0:00:11.422893
+16/10/2021 17:39:17  WARNING:search_engine.py:The Entrepreneurs register: 250722 records found
+16/10/2021 17:39:30  WARNING:search_engine.py:All result dataset was saved into Entrepreneurs.html
+16/10/2021 17:39:30     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:20.206897
+16/10/2021 17:40:31  WARNING: searchmydata.py:The "Search" menu item chosen
+16/10/2021 17:40:45     INFO:service_tools.py:"Results" dir is cleared
+16/10/2021 17:40:45  WARNING:search_engine.py:Config.json is found
+16/10/2021 17:40:45  WARNING:search_engine.py:Query string: "Тодоріко Марцел Гамадрилович"
+16/10/2021 17:40:45  WARNING:search_engine.py:The missing persons register: No data found
+16/10/2021 17:40:45     INFO:search_engine.py:Search time into the missing person register: 0:00:00.005002
+16/10/2021 17:40:45  WARNING:search_engine.py:The wanted persons register: No data found
+16/10/2021 17:40:45     INFO:search_engine.py:Search time into the wanted person register: 0:00:00.003995
+16/10/2021 17:40:45  WARNING:search_engine.py:The debtors register: 31 records found
+16/10/2021 17:40:45  WARNING:search_engine.py:All result dataset was saved into Debtors.html
+16/10/2021 17:40:45     INFO:search_engine.py:Search time into the debtors register: 0:00:00.046001
+16/10/2021 17:40:45  WARNING:search_engine.py:The legal entities register: 7 records found
+16/10/2021 17:40:45  WARNING:search_engine.py:All result dataset was saved into LegalEntities.html
+16/10/2021 17:40:45     INFO:search_engine.py:Search time into the legal entities register: 0:00:00.039006
+16/10/2021 17:40:45  WARNING:search_engine.py:The Entrepreneurs register: 33 records found
+16/10/2021 17:40:45  WARNING:search_engine.py:All result dataset was saved into Entrepreneurs.html
+16/10/2021 17:40:45     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:00.032999
+16/10/2021 17:40:54  WARNING: searchmydata.py:The "Exit" menu item chosen
+16/10/2021 17:40:54     INFO: searchmydata.py:The application closed

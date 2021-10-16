@@ -4,14 +4,14 @@ import logging
 from pathlib import Path
 import zipfile
 from io import BytesIO
-import xmltodict
-import pandas as pd
 from dask import dataframe as dd
 import os
 from pymongo.errors import ServerSelectionTimeoutError
 import requests
 import shutil
 from datetime import datetime
+import xml.etree.ElementTree as ET
+import gc
 
 class DBTools:
     
@@ -75,6 +75,7 @@ class DBTools:
         logging.info('Missing persons Text Index created')
         end_time = datetime.now()
         logging.info('Time to save into the missing person register: ' + str(end_time-start_time))
+        gc.collect()
         
     def saveWantedPersonsRegister(self, json):
         start_time = datetime.now()
@@ -90,15 +91,22 @@ class DBTools:
         logging.info('WantedPersons Text Index created')
         end_time = datetime.now()
         logging.info('Time to save into the wanted person register: ' + str(end_time-start_time))
+        gc.collect()
         
-    #don't work
     def saveEntrepreneursRegister(self, zipUrl):
+        start_time = datetime.now()
         entrepreneursCol = self.__db['Entrepreneurs']
         countDeletedDocuments = entrepreneursCol.delete_many({})
-        #insert logging and index
+        logging.warning('%s documents deleted. The entrepreneurs collection is empty.', str(countDeletedDocuments.deleted_count))
+        if ('full_text' in entrepreneursCol.index_information()):
+            entrepreneursCol.drop_index('full_text')
+            logging.warning('Entrepreneurs Text index deleted')
         legalEntitiesCol = self.__db['LegalEntities']
         countDeletedDocuments = legalEntitiesCol.delete_many({})
-        #insert logging and index
+        logging.warning('%s documents deleted. The legal entities collection is empty.', str(countDeletedDocuments.deleted_count))
+        if ('full_text' in legalEntitiesCol.index_information()):
+            legalEntitiesCol.drop_index('full_text')
+            logging.warning('LegalEntities Text index deleted')
         try:
             #get ZIP file
             entrepreneursDatasetZIP = requests.get(zipUrl).content
@@ -113,22 +121,90 @@ class DBTools:
             for xmlFile in entrepreneursZip.namelist():
                 #skip root folder
                 if xmlFile.endswith('/'):
+                    rootFolderName = xmlFile
                     continue
                 logging.warning('File in ZIP: ' + str(xmlFile))
+            #unzip all files       
+            entrepreneursZip.extractall('Temp')
+            for xmlFile in os.listdir('Temp/'+rootFolderName):
                 if xmlFile.find('_UO_') != -1:
                     #read the legal Entities Xml file
-                    legalEntitiesXml = entrepreneursZip.open(xmlFile)
-                    #convert xml to json
-                    legalEntitiesJson = xmltodict.parse(legalEntitiesXml, encoding='windows-1251')
-                    #save to the collection
-                    legalEntitiesCol.insert_many(legalEntitiesJson)
+                    pathToFile = 'Temp/' + rootFolderName + xmlFile
+                    #parse xml
+                    legalEntitiesJson = {}
+                    tree = ET.parse(pathToFile)
+                    xml_data = tree.getroot()
+                    for record in xml_data:
+                        name = record.find('NAME').text
+                        shortName = record.find('SHORT_NAME').text
+                        edrpou = record.find('EDRPOU').text
+                        address = record.find('ADDRESS').text
+                        kved = record.find('KVED').text
+                        boss = record.find('BOSS').text
+                        beneficiariesDict = {}
+                        beneficiaryNumber = 1
+                        for beneficiaries in record.iter('BENEFICIARIES'):
+                            if beneficiaries.find('BENEFICIARY') is not None:
+                                for beneficiary in beneficiaries.iter('BENEFICIARY'):
+                                    beneficiaryToDict = beneficiary.text
+                                    key = 'beneficiary' + str(beneficiaryNumber)
+                                    beneficiariesDict[key] = beneficiaryToDict
+                                    beneficiaryNumber += 1
+                        foundersDict = {}
+                        foundersNumber = 1
+                        for founders in record.iter('FOUNDERS'):
+                            if founders.find('FOUNDER') is not None:
+                                for founder in founders.iter('FOUNDER'):
+                                    founderToDict = founder.text
+                                    key = 'founder' + str(foundersNumber)
+                                    foundersDict[key] = founderToDict
+                                    foundersNumber += 1
+                        stan = record.find('STAN').text                              
+                        legalEntitiesJson = {
+                            'name': name, 
+                            'short_name': shortName,
+                            'edrpou': edrpou,
+                            'address': address,
+                            'kved': kved,
+                            'boss': boss,
+                            'beneficiaries': beneficiariesDict,
+                            'founders': foundersDict,
+                            'stan': stan
+                        }
+                        #save to the collection
+                        legalEntitiesCol.insert_one(legalEntitiesJson)
                 if xmlFile.find('_FOP_') != -1:
                     #read the entrepreneurs Xml file
-                    entrepreneursXml = entrepreneursZip.open(xmlFile)
-                    #convert xml to json
-                    entrepreneursJson = xmltodict.parse(entrepreneursXml, encoding='windows-1251')
-                    #save to the collection
-                    entrepreneursCol.insert_many(entrepreneursJson)
+                    pathToFile = 'Temp/' + rootFolderName + xmlFile
+                    #parse xml
+                    entrepreneursJson = {}
+                    tree = ET.parse(pathToFile)
+                    xml_data = tree.getroot()
+                    for record in xml_data:
+                        fio = record.find('FIO').text
+                        address = record.find('ADDRESS').text
+                        kved = record.find('KVED').text
+                        stan = record.find('STAN').text                              
+                        entrepreneursJson = {
+                            'fio': fio,
+                            'address': address,
+                            'kved': kved,
+                            'stan': stan
+                        }
+                        #save to the collection
+                        entrepreneursCol.insert_one(entrepreneursJson)
+            logging.info('LegalEntities dataset was saved into the database')
+            logging.info('Entrepreneurs dataset was saved into the database')
+            legalEntitiesCol.create_index([('short_name','text'), ('edrpou', 'text'), ('boss', 'text'), ('beneficiaries', 'text'), ('founders', 'text')], name = 'full_text')
+            logging.info('LegalEntities Text Index created')
+            entrepreneursCol.create_index([('fio','text')], name = 'full_text')
+            logging.info('Entrepreneurs Text Index created')
+            print('The Register "Єдиний державний реєстр юридичних осіб, фізичних осіб – підприємців та громадських формувань" refreshed')
+        #delete temp files
+        shutil.rmtree('Temp', ignore_errors=True)
+        end_time = datetime.now()
+        logging.info('Time to save into the Entrepreneurs and LegalEntities registers: ' + str(end_time-start_time))
+        gc.collect()
                     
     def saveDebtorsRegister(self, zipUrl):
         start_time = datetime.now()
@@ -137,7 +213,7 @@ class DBTools:
         logging.warning('%s documents deleted. The wanted persons collection is empty.', str(countDeletedDocuments.deleted_count))
         if ('full_text' in debtorsCol.index_information()):
             debtorsCol.drop_index('full_text')
-            logging.warning('WantedPersons Text index deleted')
+            logging.warning('Debtors Text index deleted')
         try:
             #get ZIP file
             debtorsDatasetZIP = requests.get(zipUrl).content
@@ -146,7 +222,6 @@ class DBTools:
             print('Error during ZIP file receiving occured!')
         else:
             logging.info('A DebtorsRegister dataset received')
-            print('The Register "Єдиний реєстр боржників" refreshed')
             #get lists of file
             debtorsZip = zipfile.ZipFile(BytesIO(debtorsDatasetZIP), 'r' )
             #go inside ZIP
@@ -167,7 +242,10 @@ class DBTools:
             logging.info('Debtors dataset was saved into the database')
             debtorsCol.create_index([('DEBTOR_NAME','text'), ('DEBTOR_CODE', 'text'), ('EMP_FULL_FIO', 'text')], name = 'full_text')
             logging.info('Debtors Text Index created')
+            #delete temp files
             os.remove(debtorsCsvFileName)
             shutil.rmtree('debtorsJson', ignore_errors=True)
+            print('The Register "Єдиний реєстр боржників" refreshed')
         end_time = datetime.now()
         logging.info('Time to save into the debtors register: ' + str(end_time-start_time))
+        gc.collect()

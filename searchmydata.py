@@ -7,6 +7,7 @@ import logging
 
 def search():
     searchString = str(input('Search query: '))
+    service.clearResultsDir()
     searchEngine = src.search_engine.SearchEngine()        
     searchEngine.search(searchString)
     
@@ -19,6 +20,8 @@ def getDataSets():
     dbTools.saveWantedPersonsRegister(json)
     zipUrlDebtors = eltinstance.getDebtorsRegister()
     dbTools.saveDebtorsRegister(zipUrlDebtors)
+    zipUrlEntrepreneursRegister = eltinstance.getEntrepreneursRegister()
+    dbTools.saveEntrepreneursRegister(zipUrlEntrepreneursRegister)
     service.refreshMetadata()
     
 def clearConsole():

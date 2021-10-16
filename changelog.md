@@ -1,3 +1,11 @@
+### v1.4. Release. 16/10/2021
+* Integrated [Unified State Register of Legal Entities, Individual Entrepreneurs and Public Associations](https://data.gov.ua/dataset/1c7f3815-3259-45e0-bdf1-64dca07ddc10)
+* Full parsing XML (**finally!**)
+* Save parsed XML into MongoDB as a set of JSON
+* Clear the results' folder before the search
+* Try to use [Garbage Collection](https://docs.python.org/3/library/gc.html) to decrease RAM consumption
+* **Fixed**: the app was crashing when a search result can't fit RAM limitations due to by default aggregation in MongoDB occurs in memory and pipeline stages have a limit of 100 Mb RAM. Use "allowDiskUse" 
+
 ### v1.2. Release. 09/10/2021
 * Integrated [Unified register of debtors](https://data.gov.ua/dataset/506734bf-2480-448c-a2b4-90b6d06df11e) 
 * Get ZIP archive

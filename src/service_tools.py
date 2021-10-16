@@ -1,5 +1,6 @@
 from datetime import datetime
 import json
+import os
 from prettytable import PrettyTable
 from pathlib import Path
 import pymongo
@@ -58,7 +59,7 @@ class ServiceTools:
         
     def getRegistersInfo(self):
         registersInfoTable = PrettyTable(['#', 'Description', 'Documents count', 'Last modified date'])
-        for info in self.__serviceCol.find({}, {'_id': 1, 'Description': 1, 'DocumentsCount': 1, 'LastModifiedDate': 1}):
+        for info in self.__serviceCol.find({}, {'_id': 1, 'Description': 1, 'DocumentsCount': 1, 'LastModifiedDate': 1}).sort([('_id', 1)]):
             registersInfoTable.add_row([str(info['_id']), info['Description'], str(info['DocumentsCount']), '{:.19}'.format(info['LastModifiedDate'])])
         print(registersInfoTable.get_string(title = 'Registers info'))
 
@@ -86,6 +87,20 @@ class ServiceTools:
         else:
             self.__createDebtorsRegisterServiceJson()
             logging.info('DebtorsRegisterServiceJson created')
+        #update or create LegalEntitiesRegisterServiceJson 
+        if ('ServiceCollection' in collectionsList) and (self.__serviceCol.count_documents({'_id': 4}, limit = 1) !=0):
+            self.__updateLegalEntitiesRegisterServiceJson()
+            logging.info('LegalEntitiesRegisterServiceJson updated')
+        else:
+            self.__createLegalEntitiesRegisterServiceJson()
+            logging.info('LegalEntitiesRegisterServiceJson created')
+        #update or create EntrepreneursRegisterServiceJson 
+        if ('ServiceCollection' in collectionsList) and (self.__serviceCol.count_documents({'_id': 5}, limit = 1) !=0):
+            self.__updateEntrepreneursRegisterServiceJson()
+            logging.info('EntrepreneursRegisterServiceJson updated')
+        else:
+            self.__createEntrepreneursRegisterServiceJson()
+            logging.info('EntrepreneursRegisterServiceJson created')
         print('Metadata updated')    
     
     def __createMissingPersonsRegisterServiceJson(self):
@@ -159,3 +174,56 @@ class ServiceTools:
             {'$set': {'LastModifiedDate': str(lastModifiedDate),
                       'DocumentsCount': documentsCount}}
         )
+        
+    def __createLegalEntitiesRegisterServiceJson(self):
+        createdDate = datetime.now()
+        lastModifiedDate = datetime.now()
+        legalEntitiesCol = self.__db['LegalEntities']
+        documentsCount = legalEntitiesCol.count_documents({})
+        legalEntitiesRegisterServiceJson = {
+            '_id': 4,
+            'Description': 'Єдиний державний реєстр юридичних осіб та громадських формувань',
+            'DocumentsCount': documentsCount,
+            'CreatedDate': str(createdDate),
+            'LastModifiedDate': str(lastModifiedDate)
+        }
+        self.__serviceCol.insert_one(legalEntitiesRegisterServiceJson)
+        
+    def __updateLegalEntitiesRegisterServiceJson(self):
+        lastModifiedDate = datetime.now()
+        legalEntitiesCol = self.__db['LegalEntities']
+        documentsCount = legalEntitiesCol.count_documents({})
+        self.__serviceCol.update_one(
+            {'_id': 4},
+            {'$set': {'LastModifiedDate': str(lastModifiedDate),
+                      'DocumentsCount': documentsCount}}
+        )
+        
+    def __createEntrepreneursRegisterServiceJson(self):
+        createdDate = datetime.now()
+        lastModifiedDate = datetime.now()
+        entrepreneursCol = self.__db['Entrepreneurs']
+        documentsCount = entrepreneursCol.count_documents({})
+        entrepreneursRegisterServiceJson = {
+            '_id': 5,
+            'Description': 'Єдиний державний реєстр фізичних осіб – підприємців',
+            'DocumentsCount': documentsCount,
+            'CreatedDate': str(createdDate),
+            'LastModifiedDate': str(lastModifiedDate)
+        }
+        self.__serviceCol.insert_one(entrepreneursRegisterServiceJson)
+        
+    def __updateEntrepreneursRegisterServiceJson(self):
+        lastModifiedDate = datetime.now()
+        entrepreneursCol = self.__db['Entrepreneurs']
+        documentsCount = entrepreneursCol.count_documents({})
+        self.__serviceCol.update_one(
+            {'_id': 5},
+            {'$set': {'LastModifiedDate': str(lastModifiedDate),
+                      'DocumentsCount': documentsCount}}
+        )
+        
+    def clearResultsDir(self):
+        for filename in os.listdir('results'):
+            os.remove('results/'+filename)
+        logging.info('"Results" folder is cleaned')
