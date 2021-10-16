@@ -2,7 +2,7 @@
 * Integrated [Unified State Register of Legal Entities, Individual Entrepreneurs and Public Associations](https://data.gov.ua/dataset/1c7f3815-3259-45e0-bdf1-64dca07ddc10)
 * Full parsing XML (**finally!**)
 * Save parsed XML into MongoDB as a set of JSON
-* Clear the results' dir before the search
+* Clear the results' folder before the search
 * Try to use [Garbage Collection](https://docs.python.org/3/library/gc.html) to decrease RAM consumption
 * **Fixed**: the app was crashing when a search result can't fit RAM limitations due to by default aggregation in MongoDB occurs in memory and pipeline stages have a limit of 100 Mb RAM. Use "allowDiskUse" 
 

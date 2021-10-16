@@ -226,4 +226,4 @@ class ServiceTools:
     def clearResultsDir(self):
         for filename in os.listdir('results'):
             os.remove('results/'+filename)
-        logging.info('"Results" dir is cleared')
+        logging.info('"Results" folder is cleaned')
