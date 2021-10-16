@@ -11,6 +11,7 @@ import requests
 import shutil
 from datetime import datetime
 import xml.etree.ElementTree as ET
+import gc
 
 class DBTools:
     
@@ -74,6 +75,7 @@ class DBTools:
         logging.info('Missing persons Text Index created')
         end_time = datetime.now()
         logging.info('Time to save into the missing person register: ' + str(end_time-start_time))
+        gc.collect()
         
     def saveWantedPersonsRegister(self, json):
         start_time = datetime.now()
@@ -89,6 +91,7 @@ class DBTools:
         logging.info('WantedPersons Text Index created')
         end_time = datetime.now()
         logging.info('Time to save into the wanted person register: ' + str(end_time-start_time))
+        gc.collect()
         
     def saveEntrepreneursRegister(self, zipUrl):
         start_time = datetime.now()
@@ -142,18 +145,20 @@ class DBTools:
                         beneficiaryNumber = 1
                         for beneficiaries in record.iter('BENEFICIARIES'):
                             if beneficiaries.find('BENEFICIARY') is not None:
-                                beneficiary = beneficiaries.find('BENEFICIARY').text
-                                key = 'beneficiary' + str(beneficiaryNumber)
-                                beneficiariesDict[key] = beneficiary
-                                beneficiaryNumber += 1
+                                for beneficiary in beneficiaries.iter('BENEFICIARY'):
+                                    beneficiaryToDict = beneficiary.text
+                                    key = 'beneficiary' + str(beneficiaryNumber)
+                                    beneficiariesDict[key] = beneficiaryToDict
+                                    beneficiaryNumber += 1
                         foundersDict = {}
                         foundersNumber = 1
                         for founders in record.iter('FOUNDERS'):
                             if founders.find('FOUNDER') is not None:
-                                founder = founders.find('FOUNDER').text
-                                key = 'founder' + str(foundersNumber)
-                                foundersDict[key] = founder
-                                foundersNumber += 1
+                                for founder in founders.iter('FOUNDER'):
+                                    founderToDict = founder.text
+                                    key = 'founder' + str(foundersNumber)
+                                    foundersDict[key] = founderToDict
+                                    foundersNumber += 1
                         stan = record.find('STAN').text                              
                         legalEntitiesJson = {
                             'name': name, 
@@ -199,6 +204,7 @@ class DBTools:
         shutil.rmtree('Temp', ignore_errors=True)
         end_time = datetime.now()
         logging.info('Time to save into the Entrepreneurs and LegalEntities registers: ' + str(end_time-start_time))
+        gc.collect()
                     
     def saveDebtorsRegister(self, zipUrl):
         start_time = datetime.now()
@@ -207,7 +213,7 @@ class DBTools:
         logging.warning('%s documents deleted. The wanted persons collection is empty.', str(countDeletedDocuments.deleted_count))
         if ('full_text' in debtorsCol.index_information()):
             debtorsCol.drop_index('full_text')
-            logging.warning('WantedPersons Text index deleted')
+            logging.warning('Debtors Text index deleted')
         try:
             #get ZIP file
             debtorsDatasetZIP = requests.get(zipUrl).content
@@ -242,3 +248,4 @@ class DBTools:
             print('The Register "Єдиний реєстр боржників" refreshed')
         end_time = datetime.now()
         logging.info('Time to save into the debtors register: ' + str(end_time-start_time))
+        gc.collect()

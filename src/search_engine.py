@@ -5,6 +5,7 @@ from pathlib import Path
 import json
 from pymongo.errors import ServerSelectionTimeoutError
 from datetime import datetime
+import gc
 
 class SearchEngine:
         
@@ -60,6 +61,9 @@ class SearchEngine:
         self.__searchMissingPersons(queryString)
         self.__searchWantedPersons(queryString)
         self.__searchDebtors(queryString)
+        self.__searchLegalEntities(queryString)
+        self.__searchEntrepreneurs(queryString)
+        gc.collect()
 
     def __searchMissingPersons(self, queryString):
         start_time = datetime.now()
@@ -83,12 +87,13 @@ class SearchEngine:
             htmlResult = resultTable.get_html_string()
             f = open('results/MissingPersons.html', 'w', encoding='utf-8')
             f.write(htmlResult)
+            f.close()
             print('All result dataset was saved into MissingPersons.html')
             logging.warning('All result dataset was saved into MissingPersons.html')
         end_time = datetime.now()
         logging.info('Search time into the missing person register: ' + str(end_time-start_time))
-        
-            
+        gc.collect()
+                    
     def __searchWantedPersons(self, queryString):
         start_time = datetime.now()
         wantedPersonsCol = self.__db['WantedPersons']
@@ -112,10 +117,12 @@ class SearchEngine:
             htmlResult = resultTable.get_html_string()
             f = open('results/WantedPersons.html', 'w', encoding='utf-8')
             f.write(htmlResult)
+            f.close()
             print('All result dataset was saved into WantedPersons.html')
             logging.warning('All result dataset was saved into WantedPersons.html')
         end_time = datetime.now()
         logging.info('Search time into the wanted person register: ' + str(end_time-start_time))
+        gc.collect()
     
     def __searchDebtors(self, queryString):
         start_time = datetime.now()
@@ -140,7 +147,69 @@ class SearchEngine:
             htmlResult = resultTable.get_html_string()
             f = open('results/Debtors.html', 'w', encoding='utf-8')
             f.write(htmlResult)
+            f.close()
             print('All result dataset was saved into Debtors.html')
             logging.warning('All result dataset was saved into Debtors.html')
         end_time = datetime.now()
         logging.info('Search time into the debtors register: ' + str(end_time-start_time))
+        gc.collect()
+        
+    def __searchLegalEntities(self, queryString):
+        start_time = datetime.now()
+        legalEntitiesCol = self.__db['LegalEntities']
+        resultCount = legalEntitiesCol.count_documents({'$text': {'$search': queryString}})
+        if resultCount == 0:
+            print('The legal entities register: No data found')
+            logging.warning('The legal entities register: No data found')
+        else:
+            resultTable = PrettyTable(['SHORT NAME', 'EDRPOU', 'ADDRESS', 'KVED', 'BOSS', 'STATE'])
+            resultTable.align = 'l'
+            resultTable._max_width = {'SHORT NAME': 25, 'ADDRESS': 25, 'KVED': 30, 'BOSS': 25}
+            #show only 10 first search results
+            for result in legalEntitiesCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]).limit(10):
+                resultTable.add_row([result['short_name'], result['edrpou'], result['address'], result['kved'], result['boss'], result['stan']])
+            print(resultTable.get_string(title = 'The legal entities register: ' + str(resultCount) + ' records found'))
+            logging.warning('The legal entities register: %s records found', str(resultCount))
+            print('Only 10 first search results showed')
+            #save all search results into HTML
+            for result in legalEntitiesCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]):
+                resultTable.add_row([result['short_name'], result['edrpou'], result['address'], result['kved'], result['boss'], result['stan']])
+            htmlResult = resultTable.get_html_string()
+            f = open('results/LegalEntities.html', 'w', encoding='utf-8')
+            f.write(htmlResult)
+            f.close()
+            print('All result dataset was saved into LegalEntities.html')
+            logging.warning('All result dataset was saved into LegalEntities.html')
+        end_time = datetime.now()
+        logging.info('Search time into the legal entities register: ' + str(end_time-start_time))
+        gc.collect()
+        
+    def __searchEntrepreneurs(self, queryString):
+        start_time = datetime.now()
+        entrepreneursCol = self.__db['Entrepreneurs']
+        resultCount = entrepreneursCol.count_documents({'$text': {'$search': queryString}})
+        if resultCount == 0:
+            print('The Entrepreneurs register: No data found')
+            logging.warning('The Entrepreneurs register: No data found')
+        else:
+            resultTable = PrettyTable(['NAME', 'ADDRESS', 'KVED', 'STATE'])
+            resultTable.align = 'l'
+            resultTable._max_width = {'NAME': 25, 'ADDRESS': 25, 'KVED': 30}
+            #show only 10 first search results
+            for result in entrepreneursCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]).limit(10):
+                resultTable.add_row([result['fio'], result['address'], result['kved'], result['stan']])
+            print(resultTable.get_string(title = 'The Entrepreneurs register: ' + str(resultCount) + ' records found'))
+            logging.warning('The Entrepreneurs register: %s records found', str(resultCount))
+            print('Only 10 first search results showed')
+            #save all search results into HTML
+            for result in entrepreneursCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'} }).sort([('score', {'$meta': 'textScore'})]):
+                resultTable.add_row([result['fio'], result['address'], result['kved'], result['stan']])
+            htmlResult = resultTable.get_html_string()
+            f = open('results/Entrepreneurs.html', 'w', encoding='utf-8')
+            f.write(htmlResult)
+            f.close()
+            print('All result dataset was saved into Entrepreneurs.html')
+            logging.warning('All result dataset was saved into Entrepreneurs.html')
+        end_time = datetime.now()
+        logging.info('Search time into the Entrepreneurs register: ' + str(end_time-start_time))
+        gc.collect()
