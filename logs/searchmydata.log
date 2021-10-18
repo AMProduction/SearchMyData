@@ -3477,3 +3477,7 @@
 16/10/2021 17:40:45     INFO:search_engine.py:Search time into the Entrepreneurs register: 0:00:00.032999
 16/10/2021 17:40:54  WARNING: searchmydata.py:The "Exit" menu item chosen
 16/10/2021 17:40:54     INFO: searchmydata.py:The application closed
+18/10/2021 22:16:29     INFO: searchmydata.py:The application started
+18/10/2021 22:16:29  WARNING:service_tools.py:Config.json is found
+18/10/2021 22:16:36  WARNING: searchmydata.py:The "Exit" menu item chosen
+18/10/2021 22:16:36     INFO: searchmydata.py:The application closed

@@ -64,49 +64,41 @@ class DBTools:
     def saveMissingPersonsRegister(self, json):
         start_time = datetime.now()
         missingPersonsCol = self.__db['MissingPersons']
-        countDeletedDocuments = missingPersonsCol.delete_many({})
-        logging.warning('%s documents deleted. The missing persons collection is empty.', str(countDeletedDocuments.deleted_count))
-        if ('full_text' in missingPersonsCol.index_information()):
-            missingPersonsCol.drop_index('full_text')
-            logging.warning('Missing persons Text index deleted')
         missingPersonsCol.insert_many(json)
         logging.info('Missing persons dataset was saved into the database')
-        missingPersonsCol.create_index([('FIRST_NAME_U','text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text'), ('FIRST_NAME_R', 'text'), ('LAST_NAME_R', 'text'), ('MIDDLE_NAME_R', 'text'), ('FIRST_NAME_E', 'text'), ('LAST_NAME_E', 'text'), ('MIDDLE_NAME_E','text')], name = 'full_text')
-        logging.info('Missing persons Text Index created')
         end_time = datetime.now()
         logging.info('Time to save into the missing person register: ' + str(end_time-start_time))
         gc.collect()
         
+    def clearMissingPersonsRegisterCollection(self):
+        start_time = datetime.now()
+        missingPersonsCol = self.__db['MissingPersons']
+        countDeletedDocuments = missingPersonsCol.delete_many({})
+        logging.warning('%s documents deleted. The missing persons collection is empty.', str(countDeletedDocuments.deleted_count))
+        end_time = datetime.now()
+        logging.info('clearMissingPersonsRegisterCollection: ' + str(end_time-start_time))
+        
     def saveWantedPersonsRegister(self, json):
         start_time = datetime.now()
         wantedPersonsCol = self.__db['WantedPersons']
-        countDeletedDocuments = wantedPersonsCol.delete_many({})
-        logging.warning('%s documents deleted. The wanted persons collection is empty.', str(countDeletedDocuments.deleted_count))
-        if ('full_text' in wantedPersonsCol.index_information()):
-            wantedPersonsCol.drop_index('full_text')
-            logging.warning('WantedPersons Text index deleted')
         wantedPersonsCol.insert_many(json)
         logging.info('Wanted persons dataset was saved into the database')
-        wantedPersonsCol.create_index([('FIRST_NAME_U','text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text'), ('FIRST_NAME_R', 'text'), ('LAST_NAME_R', 'text'), ('MIDDLE_NAME_R', 'text'), ('FIRST_NAME_E', 'text'), ('LAST_NAME_E', 'text'), ('MIDDLE_NAME_E','text')], name = 'full_text')
-        logging.info('WantedPersons Text Index created')
         end_time = datetime.now()
         logging.info('Time to save into the wanted person register: ' + str(end_time-start_time))
         gc.collect()
         
+    def clearWantedPersonsRegisterCollection(self):
+        start_time = datetime.now()
+        wantedPersonsCol = self.__db['WantedPersons']
+        countDeletedDocuments = wantedPersonsCol.delete_many({})
+        logging.warning('%s documents deleted. The wanted persons collection is empty.', str(countDeletedDocuments.deleted_count))
+        end_time = datetime.now()
+        logging.info('clearWantedPersonsRegisterCollection: ' + str(end_time-start_time))
+        
     def saveEntrepreneursRegister(self, zipUrl):
         start_time = datetime.now()
         entrepreneursCol = self.__db['Entrepreneurs']
-        countDeletedDocuments = entrepreneursCol.delete_many({})
-        logging.warning('%s documents deleted. The entrepreneurs collection is empty.', str(countDeletedDocuments.deleted_count))
-        if ('full_text' in entrepreneursCol.index_information()):
-            entrepreneursCol.drop_index('full_text')
-            logging.warning('Entrepreneurs Text index deleted')
         legalEntitiesCol = self.__db['LegalEntities']
-        countDeletedDocuments = legalEntitiesCol.delete_many({})
-        logging.warning('%s documents deleted. The legal entities collection is empty.', str(countDeletedDocuments.deleted_count))
-        if ('full_text' in legalEntitiesCol.index_information()):
-            legalEntitiesCol.drop_index('full_text')
-            logging.warning('LegalEntities Text index deleted')
         try:
             #get ZIP file
             entrepreneursDatasetZIP = requests.get(zipUrl).content
@@ -173,6 +165,7 @@ class DBTools:
                         }
                         #save to the collection
                         legalEntitiesCol.insert_one(legalEntitiesJson)
+                    logging.info('LegalEntities dataset was saved into the database')
                 if xmlFile.find('_FOP_') != -1:
                     #read the entrepreneurs Xml file
                     pathToFile = 'Temp/' + rootFolderName + xmlFile
@@ -193,24 +186,33 @@ class DBTools:
                         }
                         #save to the collection
                         entrepreneursCol.insert_one(entrepreneursJson)
-            logging.info('LegalEntities dataset was saved into the database')
-            logging.info('Entrepreneurs dataset was saved into the database')
-            legalEntitiesCol.create_index([('short_name','text'), ('edrpou', 'text'), ('boss', 'text'), ('beneficiaries', 'text'), ('founders', 'text')], name = 'full_text')
-            logging.info('LegalEntities Text Index created')
-            entrepreneursCol.create_index([('fio','text')], name = 'full_text')
-            logging.info('Entrepreneurs Text Index created')
+                    logging.info('Entrepreneurs dataset was saved into the database')
             print('The Register "Єдиний державний реєстр юридичних осіб, фізичних осіб – підприємців та громадських формувань" refreshed')
         #delete temp files
         shutil.rmtree('Temp', ignore_errors=True)
         end_time = datetime.now()
         logging.info('Time to save into the Entrepreneurs and LegalEntities registers: ' + str(end_time-start_time))
         gc.collect()
-                    
+    
+    def clearEntrepreneursRegisterCollection(self):
+        start_time = datetime.now()
+        entrepreneursCol = self.__db['Entrepreneurs']
+        countDeletedDocuments = entrepreneursCol.delete_many({})
+        logging.warning('%s documents deleted. The entrepreneurs collection is empty.', str(countDeletedDocuments.deleted_count))
+        end_time = datetime.now()
+        logging.info('clearEntrepreneursRegisterCollection: ' + str(end_time-start_time))
+        
+    def clearLegalEntitiesRegisterCollection(self):
+        start_time = datetime.now()
+        legalEntitiesCol = self.__db['LegalEntities']
+        countDeletedDocuments = legalEntitiesCol.delete_many({})
+        logging.warning('%s documents deleted. The legal entities collection is empty.', str(countDeletedDocuments.deleted_count))
+        end_time = datetime.now()
+        logging.info('clearLegalEntitiesRegisterCollection: ' + str(end_time-start_time))
+        
     def saveDebtorsRegister(self, zipUrl):
         start_time = datetime.now()
         debtorsCol = self.__db['Debtors']
-        countDeletedDocuments = debtorsCol.delete_many({})
-        logging.warning('%s documents deleted. The wanted persons collection is empty.', str(countDeletedDocuments.deleted_count))
         if ('full_text' in debtorsCol.index_information()):
             debtorsCol.drop_index('full_text')
             logging.warning('Debtors Text index deleted')
@@ -249,3 +251,11 @@ class DBTools:
         end_time = datetime.now()
         logging.info('Time to save into the debtors register: ' + str(end_time-start_time))
         gc.collect()
+        
+    def clearDebtorsRegisterCollection(self):
+        start_time = datetime.now()
+        debtorsCol = self.__db['Debtors']
+        countDeletedDocuments = debtorsCol.delete_many({})
+        logging.warning('%s documents deleted. The wanted persons collection is empty.', str(countDeletedDocuments.deleted_count))
+        end_time = datetime.now()
+        logging.info('clearDebtorsRegisterCollection: ' + str(end_time-start_time))
