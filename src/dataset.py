@@ -36,9 +36,9 @@ class Dataset:
             try:
                 # Set server Selection Timeout in ms. The default value is 30s.
                 maxSevSelDelay = 3
-                self.__dbserver = pymongo.MongoClient(
+                self.dbserver = pymongo.MongoClient(
                     self.__dbstring, serverSelectionTimeoutMS=maxSevSelDelay)
-                self.__dbserver.server_info()  # force connection on a request
+                self.dbserver.server_info()  # force connection on a request
             except ServerSelectionTimeoutError:
                 logging.error('Connection error')
                 logging.info('The application closed')
@@ -46,8 +46,8 @@ class Dataset:
                 print('Quitting...')
                 exit()
             else:
-                self.__db = self.__dbserver['searchmydata']
-                self.__serviceCol = self.__db['ServiceCollection']
+                self.db = self.dbserver['searchmydata']
+                self.serviceCol = self.db['ServiceCollection']
         # if config.json does not exists
         else:
             logging.error('Config.json is not found')

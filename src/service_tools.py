@@ -346,3 +346,9 @@ class ServiceTools:
         logging.info('LegalEntities Text Index created')
         end_time = datetime.now()
         logging.info('createLegalEntitiesRegisterCollectionIndex: ' + str(end_time-start_time))
+        
+    def clearConsole():
+        command = 'clear'
+        if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
+            command = 'cls'
+        os.system(command)

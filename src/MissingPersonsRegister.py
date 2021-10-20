@@ -7,6 +7,7 @@ from datetime import datetime
 
 from src.dataset import Dataset
 
+
 class MissingPersonsRegister(Dataset):
     def __init__(self):
         super().__init__()
@@ -56,7 +57,7 @@ class MissingPersonsRegister(Dataset):
 
     def saveDataset(self, json):
         start_time = datetime.now()
-        missingPersonsCol = self.__db['MissingPersons']
+        missingPersonsCol = self.db['MissingPersons']
         missingPersonsCol.insert_many(json)
         logging.info('Missing persons dataset was saved into the database')
         end_time = datetime.now()
@@ -66,7 +67,7 @@ class MissingPersonsRegister(Dataset):
 
     def clearCollection(self):
         start_time = datetime.now()
-        missingPersonsCol = self.__db['MissingPersons']
+        missingPersonsCol = self.db['MissingPersons']
         countDeletedDocuments = missingPersonsCol.delete_many({})
         logging.warning('%s documents deleted. The missing persons collection is empty.', str(
             countDeletedDocuments.deleted_count))
@@ -77,7 +78,7 @@ class MissingPersonsRegister(Dataset):
     def __createServiceJson(self):
         createdDate = datetime.now()
         lastModifiedDate = datetime.now()
-        missingPersonsCol = self.__db['MissingPersons']
+        missingPersonsCol = self.db['MissingPersons']
         documentsCount = missingPersonsCol.count_documents({})
         missingPersonsRegisterServiceJson = {
             '_id': 1,
@@ -86,22 +87,22 @@ class MissingPersonsRegister(Dataset):
             'CreatedDate': str(createdDate),
             'LastModifiedDate': str(lastModifiedDate)
         }
-        self.__serviceCol.insert_one(missingPersonsRegisterServiceJson)
+        self.serviceCol.insert_one(missingPersonsRegisterServiceJson)
 
     def __updateServiceJson(self):
         lastModifiedDate = datetime.now()
-        missingPersonsCol = self.__db['MissingPersons']
+        missingPersonsCol = self.db['MissingPersons']
         documentsCount = missingPersonsCol.count_documents({})
-        self.__serviceCol.update_one(
+        self.serviceCol.update_one(
             {'_id': 1},
             {'$set': {'LastModifiedDate': str(lastModifiedDate),
                       'DocumentsCount': documentsCount}}
         )
 
     def updateMetadata(self):
-        collectionsList = self.__db.list_collection_names()
+        collectionsList = self.db.list_collection_names()
         # update or create MissingPersonsRegisterServiceJson
-        if ('ServiceCollection' in collectionsList) and (self.__serviceCol.count_documents({'_id': 1}, limit=1) != 0):
+        if ('ServiceCollection' in collectionsList) and (self.serviceCol.count_documents({'_id': 1}, limit=1) != 0):
             self.__updateServiceJson()
             logging.info('MissingPersonsRegisterServiceJson updated')
         else:
@@ -110,7 +111,7 @@ class MissingPersonsRegister(Dataset):
 
     def deleteCollectionIndex(self):
         start_time = datetime.now()
-        missingPersonsCol = self.__db['MissingPersons']
+        missingPersonsCol = self.db['MissingPersons']
         if ('full_text' in missingPersonsCol.index_information()):
             missingPersonsCol.drop_index('full_text')
             logging.warning('Missing persons Text index deleted')
@@ -120,7 +121,7 @@ class MissingPersonsRegister(Dataset):
 
     def createCollectionIndex(self):
         start_time = datetime.now()
-        missingPersonsCol = self.__db['MissingPersons']
+        missingPersonsCol = self.db['MissingPersons']
         missingPersonsCol.create_index([('FIRST_NAME_U', 'text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text'), ('FIRST_NAME_R', 'text'), (
             'LAST_NAME_R', 'text'), ('MIDDLE_NAME_R', 'text'), ('FIRST_NAME_E', 'text'), ('LAST_NAME_E', 'text'), ('MIDDLE_NAME_E', 'text')], name='full_text')
         logging.info('Missing persons Text Index created')
@@ -130,7 +131,7 @@ class MissingPersonsRegister(Dataset):
 
     def searchIntoCollection(self, queryString):
         start_time = datetime.now()
-        missingPersonsCol = self.__db['MissingPersons']
+        missingPersonsCol = self.db['MissingPersons']
         resultCount = missingPersonsCol.count_documents(
             {'$text': {'$search': queryString}})
         if resultCount == 0:

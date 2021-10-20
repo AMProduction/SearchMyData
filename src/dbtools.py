@@ -213,9 +213,6 @@ class DBTools:
     def saveDebtorsRegister(self, zipUrl):
         start_time = datetime.now()
         debtorsCol = self.__db['Debtors']
-        if ('full_text' in debtorsCol.index_information()):
-            debtorsCol.drop_index('full_text')
-            logging.warning('Debtors Text index deleted')
         try:
             #get ZIP file
             debtorsDatasetZIP = requests.get(zipUrl).content
@@ -241,9 +238,7 @@ class DBTools:
                 for line in open('debtorsJson/'+file, 'r'):
                     debtorsJson = json.loads(line) 
                     debtorsCol.insert_one(debtorsJson)
-            logging.info('Debtors dataset was saved into the database')
-            debtorsCol.create_index([('DEBTOR_NAME','text'), ('DEBTOR_CODE', 'text'), ('EMP_FULL_FIO', 'text')], name = 'full_text')
-            logging.info('Debtors Text Index created')
+            logging.info('Debtors dataset was saved into the database')            
             #delete temp files
             os.remove(debtorsCsvFileName)
             shutil.rmtree('debtorsJson', ignore_errors=True)

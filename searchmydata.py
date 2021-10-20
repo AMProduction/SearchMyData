@@ -1,35 +1,62 @@
-import src.dbtools
-import src.elt
 import src.service_tools
-import src.search_engine
-import os
 import logging
+from src.DebtorsRegister import DebtorsRegister
+from src.EntrepreneursRegister import EntrepreneursRegister
+from src.LegalEntitiesRegister import LegalEntitiesRegister
+from src.MissingPersonsRegister import MissingPersonsRegister
+from src.WantedPersonsRegister import WantedPersonsRegister
 
 def search():
     searchString = str(input('Search query: '))
     service.clearResultsDir()
-    searchEngine = src.search_engine.SearchEngine()        
-    searchEngine.search(searchString)
+    #call search method
+    missingPersons.searchIntoCollection(searchString)
+    wantedPersons.searchIntoCollection(searchString)
+    debtors.searchIntoCollection(searchString)
+    legalEntities.searchIntoCollection(searchString)
+    entrepreneurs.searchIntoCollection(searchString)
     
-def getDataSets():
-    eltinstance = src.elt.GetDatasets()
-    dbTools = src.dbtools.DBTools()
-    json = eltinstance.getMissingPersonsRegister()
-    dbTools.saveMissingPersonsRegister(json)
-    json = eltinstance.getWantedPersonsRegister()
-    dbTools.saveWantedPersonsRegister(json)
-    zipUrlDebtors = eltinstance.getDebtorsRegister()
-    dbTools.saveDebtorsRegister(zipUrlDebtors)
-    zipUrlEntrepreneursRegister = eltinstance.getEntrepreneursRegister()
-    dbTools.saveEntrepreneursRegister(zipUrlEntrepreneursRegister)
-    service.refreshMetadata()
+def setupDatasets():
+    #Інформація про безвісно зниклих громадян (JSON) 
+    missingPersons.deleteCollectionIndex()
+    missingPersons.clearCollection()
+    dataset = missingPersons.getDataset()
+    missingPersons.saveDataset(dataset)
+    missingPersons.updateMetadata()
+    missingPersons.createCollectionIndex()
     
-def clearConsole():
-    command = 'clear'
-    if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
-        command = 'cls'
-    os.system(command)
+    #Інформація про осіб, які переховуються від органів влади (JSON)
+    wantedPersons.deleteCollectionIndex()
+    wantedPersons.clearCollection()
+    dataset = wantedPersons.getDataset()
+    wantedPersons.saveDataset(dataset)
+    wantedPersons.updateMetadata()
+    wantedPersons.createCollectionIndex()
     
+    #Єдиний реєстр боржників (CSV in ZIP)
+    debtors.deleteCollectionIndex()
+    debtors.clearCollection()
+    debtorsDatasetZIPUrl = debtors.getDataset()
+    debtors.saveDataset(debtorsDatasetZIPUrl)
+    debtors.updateMetadata()
+    debtors.createCollectionIndex()
+    
+    #Єдиний державний реєстр юридичних осіб, фізичних осіб-підприємців та громадських формувань (XMLs in ZIPped)
+    legalEntities.deleteCollectionIndex()
+    legalEntities.clearCollection()
+    
+    entrepreneurs.deleteCollectionIndex()
+    entrepreneurs.clearCollection()
+    
+    entrepreneursDatasetZIPUrl = legalEntities.getDataset()
+    legalEntities.saveDataset(entrepreneursDatasetZIPUrl)
+    
+    legalEntities.updateMetadata()
+    entrepreneurs.updateMetadata()
+    
+    legalEntities.createCollectionIndex()
+    entrepreneurs.createCollectionIndex()
+            
 def main():
     service.getRegistersInfo()
 
@@ -46,9 +73,15 @@ def print_menu():
 if __name__=='__main__':
     #Set up logging
     logging.basicConfig(filename='logs/searchmydata.log', filemode='a', format='%(asctime)s %(levelname)8s:%(filename)16s:%(message)s', datefmt='%d/%m/%Y %H:%M:%S', encoding='utf-8', level=logging.DEBUG)
-    logging.info('The application started')    
+    logging.info('The application started')
+    #create instances
     service = src.service_tools.ServiceTools()
-    clearConsole()
+    missingPersons = MissingPersonsRegister()
+    wantedPersons = WantedPersonsRegister()
+    debtors = DebtorsRegister()
+    legalEntities = LegalEntitiesRegister()
+    entrepreneurs = EntrepreneursRegister()
+    service.clearConsole()
     #main loop
     while(True):
         main()
@@ -65,7 +98,7 @@ if __name__=='__main__':
             search()
         elif option == 2:
             logging.warning('The "Refresh datasets" menu item chosen')
-            getDataSets()
+            setupDatasets()
         elif option == 3:
             logging.warning('The "Exit" menu item chosen')
             logging.info('The application closed')
