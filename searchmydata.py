@@ -57,9 +57,6 @@ def setupDatasets():
     legalEntities.createCollectionIndex()
     entrepreneurs.createCollectionIndex()
             
-def main():
-    service.getRegistersInfo()
-
 menu_options = {
     1: 'Search',
     2: 'Refresh datasets',
@@ -84,7 +81,7 @@ if __name__=='__main__':
     service.clearConsole()
     #main loop
     while(True):
-        main()
+        service.getRegistersInfo()
         print_menu()
         option = ''
         try:
