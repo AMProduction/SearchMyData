@@ -1,3 +1,6 @@
+### v1.6. Release. 27/10/2021
+* Big refactoring and code optimization
+
 ### v1.4. Release. 16/10/2021
 * Integrated [Unified State Register of Legal Entities, Individual Entrepreneurs and Public Associations](https://data.gov.ua/dataset/1c7f3815-3259-45e0-bdf1-64dca07ddc10)
 * Full parsing XML (**finally!**)
