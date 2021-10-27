@@ -82,3 +82,6 @@ class Dataset:
 
     def searchIntoCollection(self):
         pass
+
+    def setupDataset(self):
+        pass

@@ -5,14 +5,14 @@ import gc
 from prettytable import PrettyTable
 from datetime import datetime
 
-from src.dataset import Dataset
+from src.Dataset import Dataset
 
 
 class MissingPersonsRegister(Dataset):
     def __init__(self):
         super().__init__()
 
-    def getDataset(self):
+    def __getDataset(self):
         print('The register "Інформація про безвісно зниклих громадян" is retrieving...')
         try:
             generalDataset = requests.get(
@@ -55,7 +55,7 @@ class MissingPersonsRegister(Dataset):
               generalDatasetJson['result']['title'] + '" refreshed')
         return missingPersonsDataset
 
-    def saveDataset(self, json):
+    def __saveDataset(self, json):
         start_time = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
         missingPersonsCol.insert_many(json)
@@ -65,7 +65,7 @@ class MissingPersonsRegister(Dataset):
             'Time to save into the missing person register: ' + str(end_time-start_time))
         gc.collect()
 
-    def clearCollection(self):
+    def __clearCollection(self):
         start_time = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
         countDeletedDocuments = missingPersonsCol.delete_many({})
@@ -99,7 +99,7 @@ class MissingPersonsRegister(Dataset):
                       'DocumentsCount': documentsCount}}
         )
 
-    def updateMetadata(self):
+    def __updateMetadata(self):
         collectionsList = self.db.list_collection_names()
         # update or create MissingPersonsRegisterServiceJson
         if ('ServiceCollection' in collectionsList) and (self.serviceCol.count_documents({'_id': 1}, limit=1) != 0):
@@ -109,7 +109,7 @@ class MissingPersonsRegister(Dataset):
             self.__createServiceJson()
             logging.info('MissingPersonsRegisterServiceJson created')
 
-    def deleteCollectionIndex(self):
+    def __deleteCollectionIndex(self):
         start_time = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
         if ('full_text' in missingPersonsCol.index_information()):
@@ -119,7 +119,7 @@ class MissingPersonsRegister(Dataset):
         logging.info(
             'deleteMissingPersonsRegisterCollectionIndex: ' + str(end_time-start_time))
 
-    def createCollectionIndex(self):
+    def __createCollectionIndex(self):
         start_time = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
         missingPersonsCol.create_index([('FIRST_NAME_U', 'text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text'), ('FIRST_NAME_R', 'text'), (
@@ -165,3 +165,11 @@ class MissingPersonsRegister(Dataset):
         logging.info(
             'Search time into the missing person register: ' + str(end_time-start_time))
         gc.collect()
+
+    def setupDataset(self):
+        self.__deleteCollectionIndex()
+        self.__clearCollection()
+        __dataset = self.__getDataset()
+        self.__saveDataset(__dataset)
+        self.__updateMetadata()
+        self.__createCollectionIndex()

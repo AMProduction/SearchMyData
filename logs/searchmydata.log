@@ -3528,3 +3528,53 @@
 20/10/2021 23:23:30     INFO:EntrepreneursRegister.py:Search time into the Entrepreneurs register: 0:00:13.435179
 20/10/2021 23:24:01  WARNING: searchmydata.py:The "Exit" menu item chosen
 20/10/2021 23:24:01     INFO: searchmydata.py:The application closed
+27/10/2021 18:04:18     INFO: searchmydata.py:The application started
+27/10/2021 18:04:18  WARNING:service_tools.py:Config.json is found
+27/10/2021 18:04:18  WARNING:      dataset.py:Config.json is found
+27/10/2021 18:04:18  WARNING:      dataset.py:Config.json is found
+27/10/2021 18:04:18  WARNING:      dataset.py:Config.json is found
+27/10/2021 18:04:18  WARNING:      dataset.py:Config.json is found
+27/10/2021 18:04:18  WARNING:      dataset.py:Config.json is found
+27/10/2021 18:05:30     INFO: searchmydata.py:The application started
+27/10/2021 18:05:30  WARNING:service_tools.py:Config.json is found
+27/10/2021 18:05:30  WARNING:      dataset.py:Config.json is found
+27/10/2021 18:05:30  WARNING:      dataset.py:Config.json is found
+27/10/2021 18:05:30  WARNING:      dataset.py:Config.json is found
+27/10/2021 18:05:30  WARNING:      dataset.py:Config.json is found
+27/10/2021 18:05:30  WARNING:      dataset.py:Config.json is found
+27/10/2021 18:06:03     INFO: searchmydata.py:The application started
+27/10/2021 18:06:03  WARNING:service_tools.py:Config.json is found
+27/10/2021 18:06:03  WARNING:      dataset.py:Config.json is found
+27/10/2021 18:06:03  WARNING:      dataset.py:Config.json is found
+27/10/2021 18:06:03  WARNING:      dataset.py:Config.json is found
+27/10/2021 18:06:03  WARNING:      dataset.py:Config.json is found
+27/10/2021 18:06:03  WARNING:      dataset.py:Config.json is found
+27/10/2021 18:06:16  WARNING: searchmydata.py:The "Search" menu item chosen
+27/10/2021 18:06:27     INFO:service_tools.py:"Results" folder is cleaned
+27/10/2021 18:06:28  WARNING:MissingPersonsRegister.py:The missing persons register: 94 records found
+27/10/2021 18:06:28  WARNING:MissingPersonsRegister.py:All result dataset was saved into MissingPersons.html
+27/10/2021 18:06:28     INFO:MissingPersonsRegister.py:Search time into the missing person register: 0:00:00.089887
+27/10/2021 18:06:28  WARNING:WantedPersonsRegister.py:The wanted persons register: 361 records found
+27/10/2021 18:06:28  WARNING:WantedPersonsRegister.py:All result dataset was saved into WantedPersons.html
+27/10/2021 18:06:28     INFO:WantedPersonsRegister.py:Search time into the wanted person register: 0:00:00.401002
+27/10/2021 18:06:49  WARNING:DebtorsRegister.py:The debtors register: 53195 records found
+27/10/2021 18:06:52  WARNING:DebtorsRegister.py:All result dataset was saved into Debtors.html
+27/10/2021 18:06:52     INFO:DebtorsRegister.py:Search time into the debtors register: 0:00:23.692835
+27/10/2021 18:06:59  WARNING:LegalEntitiesRegister.py:The legal entities register: 16619 records found
+27/10/2021 18:07:00  WARNING:LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+27/10/2021 18:07:00     INFO:LegalEntitiesRegister.py:Search time into the legal entities register: 0:00:08.501977
+27/10/2021 18:07:12  WARNING:EntrepreneursRegister.py:The Entrepreneurs register: 38324 records found
+27/10/2021 18:07:15  WARNING:EntrepreneursRegister.py:All result dataset was saved into Entrepreneurs.html
+27/10/2021 18:07:15     INFO:EntrepreneursRegister.py:Search time into the Entrepreneurs register: 0:00:14.311351
+27/10/2021 18:08:10  WARNING: searchmydata.py:The "Exit" menu item chosen
+27/10/2021 18:08:10     INFO: searchmydata.py:The application closed
+27/10/2021 18:18:35     INFO: searchmydata.py:The application started
+27/10/2021 18:19:19     INFO: searchmydata.py:The application started
+27/10/2021 18:19:19  WARNING: ServiceTools.py:Config.json is found
+27/10/2021 18:19:19  WARNING:      Dataset.py:Config.json is found
+27/10/2021 18:19:19  WARNING:      Dataset.py:Config.json is found
+27/10/2021 18:19:19  WARNING:      Dataset.py:Config.json is found
+27/10/2021 18:19:19  WARNING:      Dataset.py:Config.json is found
+27/10/2021 18:19:19  WARNING:      Dataset.py:Config.json is found
+27/10/2021 18:19:23  WARNING: searchmydata.py:The "Exit" menu item chosen
+27/10/2021 18:19:23     INFO: searchmydata.py:The application closed
