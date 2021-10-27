@@ -3578,3 +3578,59 @@
 27/10/2021 18:19:19  WARNING:      Dataset.py:Config.json is found
 27/10/2021 18:19:23  WARNING: searchmydata.py:The "Exit" menu item chosen
 27/10/2021 18:19:23     INFO: searchmydata.py:The application closed
+27/10/2021 18:37:52     INFO: searchmydata.py:The application started
+27/10/2021 18:37:52  WARNING: ServiceTools.py:Config.json is found
+27/10/2021 18:37:52  WARNING:      Dataset.py:Config.json is found
+27/10/2021 18:37:52  WARNING:      Dataset.py:Config.json is found
+27/10/2021 18:37:52  WARNING:      Dataset.py:Config.json is found
+27/10/2021 18:37:52  WARNING:      Dataset.py:Config.json is found
+27/10/2021 18:37:52  WARNING:      Dataset.py:Config.json is found
+27/10/2021 18:37:54  WARNING: searchmydata.py:The "Search" menu item chosen
+27/10/2021 18:38:03     INFO: searchmydata.py:The search string: Примак Галина Анатоліївна
+27/10/2021 18:38:03     INFO: ServiceTools.py:"Results" folder is cleaned
+27/10/2021 18:38:03  WARNING:MissingPersonsRegister.py:The missing persons register: 114 records found
+27/10/2021 18:38:03  WARNING:MissingPersonsRegister.py:All result dataset was saved into MissingPersons.html
+27/10/2021 18:38:03     INFO:MissingPersonsRegister.py:Search time into the missing person register: 0:00:00.036001
+27/10/2021 18:38:03  WARNING:WantedPersonsRegister.py:The wanted persons register: 545 records found
+27/10/2021 18:38:03  WARNING:WantedPersonsRegister.py:All result dataset was saved into WantedPersons.html
+27/10/2021 18:38:03     INFO:WantedPersonsRegister.py:Search time into the wanted person register: 0:00:00.184003
+27/10/2021 18:38:22  WARNING:DebtorsRegister.py:The debtors register: 446230 records found
+27/10/2021 18:38:59  WARNING:DebtorsRegister.py:All result dataset was saved into Debtors.html
+27/10/2021 18:38:59     INFO:DebtorsRegister.py:Search time into the debtors register: 0:00:56.082099
+27/10/2021 18:39:07  WARNING:LegalEntitiesRegister.py:The legal entities register: 39818 records found
+27/10/2021 18:39:11  WARNING:LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+27/10/2021 18:39:11     INFO:LegalEntitiesRegister.py:Search time into the legal entities register: 0:00:10.632633
+27/10/2021 18:39:23  WARNING:EntrepreneursRegister.py:The Entrepreneurs register: 214293 records found
+27/10/2021 18:39:35  WARNING:EntrepreneursRegister.py:All result dataset was saved into Entrepreneurs.html
+27/10/2021 18:39:35     INFO:EntrepreneursRegister.py:Search time into the Entrepreneurs register: 0:00:23.751687
+27/10/2021 18:39:39  WARNING: searchmydata.py:The "Exit" menu item chosen
+27/10/2021 18:39:39     INFO: searchmydata.py:The application closed
+27/10/2021 18:40:56     INFO: searchmydata.py:The application started
+27/10/2021 18:40:56  WARNING: ServiceTools.py:Config.json is found
+27/10/2021 18:40:56  WARNING:      Dataset.py:Config.json is found
+27/10/2021 18:40:56  WARNING:      Dataset.py:Config.json is found
+27/10/2021 18:40:56  WARNING:      Dataset.py:Config.json is found
+27/10/2021 18:40:56  WARNING:      Dataset.py:Config.json is found
+27/10/2021 18:40:56  WARNING:      Dataset.py:Config.json is found
+27/10/2021 18:41:22    ERROR: searchmydata.py:The wrong input type of menu item choice
+27/10/2021 18:41:22    ERROR: searchmydata.py:The wrong menu item choice
+27/10/2021 18:41:32  WARNING: searchmydata.py:The "Search" menu item chosen
+27/10/2021 18:41:33     INFO: searchmydata.py:The search string: Примаченко Підрахуй Протасович
+27/10/2021 18:41:33     INFO: ServiceTools.py:"Results" folder is cleaned
+27/10/2021 18:41:33  WARNING:MissingPersonsRegister.py:The missing persons register: 1 records found
+27/10/2021 18:41:33  WARNING:MissingPersonsRegister.py:All result dataset was saved into MissingPersons.html
+27/10/2021 18:41:33     INFO:MissingPersonsRegister.py:Search time into the missing person register: 0:00:00.014004
+27/10/2021 18:41:33  WARNING:WantedPersonsRegister.py:The wanted persons register: 3 records found
+27/10/2021 18:41:33  WARNING:WantedPersonsRegister.py:All result dataset was saved into WantedPersons.html
+27/10/2021 18:41:33     INFO:WantedPersonsRegister.py:Search time into the wanted person register: 0:00:00.024002
+27/10/2021 18:41:34  WARNING:DebtorsRegister.py:The debtors register: 397 records found
+27/10/2021 18:41:34  WARNING:DebtorsRegister.py:All result dataset was saved into Debtors.html
+27/10/2021 18:41:34     INFO:DebtorsRegister.py:Search time into the debtors register: 0:00:00.132000
+27/10/2021 18:41:34  WARNING:LegalEntitiesRegister.py:The legal entities register: 105 records found
+27/10/2021 18:41:34  WARNING:LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+27/10/2021 18:41:34     INFO:LegalEntitiesRegister.py:Search time into the legal entities register: 0:00:00.074001
+27/10/2021 18:41:34  WARNING:EntrepreneursRegister.py:The Entrepreneurs register: 289 records found
+27/10/2021 18:41:34  WARNING:EntrepreneursRegister.py:All result dataset was saved into Entrepreneurs.html
+27/10/2021 18:41:34     INFO:EntrepreneursRegister.py:Search time into the Entrepreneurs register: 0:00:00.069003
+27/10/2021 18:42:07  WARNING: searchmydata.py:The "Exit" menu item chosen
+27/10/2021 18:42:07     INFO: searchmydata.py:The application closed

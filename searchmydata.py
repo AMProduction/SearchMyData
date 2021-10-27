@@ -9,6 +9,7 @@ from src.WantedPersonsRegister import WantedPersonsRegister
 
 def search():
     searchString = str(input('Search query: '))
+    logging.info('The search string: ' + searchString)
     service.clearResultsDir()
     # call search method
     missingPersons.searchIntoCollection(searchString)
