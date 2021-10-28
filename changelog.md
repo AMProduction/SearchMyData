@@ -1,3 +1,8 @@
+### v1.7. Release. 28/10/2021
+* **Switched to Python 3.10.0**
+* Added the run script
+* Added requirements.txt
+
 ### v1.6. Release. 27/10/2021
 * Big refactoring and code optimization
 
