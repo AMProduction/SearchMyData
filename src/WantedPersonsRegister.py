@@ -1,9 +1,10 @@
+import gc
 import json
 import logging
-import requests
-import gc
-from prettytable import PrettyTable
 from datetime import datetime
+
+import requests
+from prettytable import PrettyTable
 
 from src.Dataset import Dataset
 

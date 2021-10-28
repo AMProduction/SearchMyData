@@ -1,14 +1,15 @@
+import gc
 import json
 import logging
-import requests
-import gc
-import zipfile
 import os
 import shutil
-from prettytable import PrettyTable
+import zipfile
 from datetime import datetime
-from dask import dataframe as dd
 from io import BytesIO
+
+import requests
+from dask import dataframe as dd
+from prettytable import PrettyTable
 
 from src.Dataset import Dataset
 

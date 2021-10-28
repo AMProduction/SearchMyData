@@ -1,8 +1,9 @@
 import json
 import logging
+from pathlib import Path
+
 import pymongo
 from pymongo.errors import ServerSelectionTimeoutError
-from pathlib import Path
 
 
 class Dataset:

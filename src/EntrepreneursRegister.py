@@ -1,8 +1,8 @@
-import logging
 import gc
-import xml.etree.ElementTree as ET
-from prettytable import PrettyTable
+import logging
 from datetime import datetime
+
+from prettytable import PrettyTable
 
 from src.Dataset import Dataset
 

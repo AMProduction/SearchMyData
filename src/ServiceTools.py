@@ -1,9 +1,10 @@
 import json
-import os
-import pymongo
 import logging
-from prettytable import PrettyTable
+import os
 from pathlib import Path
+
+import pymongo
+from prettytable import PrettyTable
 from pymongo.errors import ServerSelectionTimeoutError
 
 
