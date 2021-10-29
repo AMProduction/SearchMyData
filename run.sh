@@ -1,4 +1,5 @@
 #!/bin/bash
+#beautification
 border_title() {
     local str="$*" # Put all arguments into single string
     local len=${#str}
@@ -12,6 +13,7 @@ border_title() {
     done
     echo
 }
+#main loop
 while :; do
     clear
     border_title 'Welcome to the SearchMyData App'

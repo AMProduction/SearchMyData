@@ -3779,3 +3779,48 @@
 28/10/2021 18:30:29  WARNING:      Dataset.py:Config.json is found
 28/10/2021 18:30:35  WARNING: searchmydata.py:The "Exit" menu item chosen
 28/10/2021 18:30:35     INFO: searchmydata.py:The application closed
+29/10/2021 19:24:45     INFO: searchmydata.py:The application started
+29/10/2021 19:24:45  WARNING: ServiceTools.py:Config.json is found
+29/10/2021 19:24:45  WARNING:      Dataset.py:Config.json is found
+29/10/2021 19:24:45  WARNING:      Dataset.py:Config.json is found
+29/10/2021 19:24:45  WARNING:      Dataset.py:Config.json is found
+29/10/2021 19:24:45  WARNING:      Dataset.py:Config.json is found
+29/10/2021 19:24:45  WARNING:      Dataset.py:Config.json is found
+29/10/2021 19:24:50  WARNING: searchmydata.py:The "Search" menu item chosen
+29/10/2021 19:25:04     INFO: searchmydata.py:The search string: Антонов Юрій Теодорович
+29/10/2021 19:25:04     INFO: ServiceTools.py:"Results" folder is cleaned
+29/10/2021 19:25:04  WARNING:MissingPersonsRegister.py:The missing persons register: 197 records found
+29/10/2021 19:25:04  WARNING:MissingPersonsRegister.py:All result dataset was saved into MissingPersons.html
+29/10/2021 19:25:04     INFO:MissingPersonsRegister.py:Search time into the missing person register: 0:00:00.145481
+29/10/2021 19:25:04  WARNING:WantedPersonsRegister.py:The wanted persons register: 1287 records found
+29/10/2021 19:25:05  WARNING:WantedPersonsRegister.py:All result dataset was saved into WantedPersons.html
+29/10/2021 19:25:05     INFO:WantedPersonsRegister.py:Search time into the wanted person register: 0:00:00.481996
+29/10/2021 19:25:36  WARNING:DebtorsRegister.py:The debtors register: 282088 records found
+29/10/2021 19:26:16  WARNING:DebtorsRegister.py:All result dataset was saved into Debtors.html
+29/10/2021 19:26:16     INFO:DebtorsRegister.py:Search time into the debtors register: 0:01:11.526583
+29/10/2021 19:26:30  WARNING:LegalEntitiesRegister.py:The legal entities register: 50255 records found
+29/10/2021 19:26:38  WARNING:LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+29/10/2021 19:26:38     INFO:LegalEntitiesRegister.py:Search time into the legal entities register: 0:00:20.855958
+29/10/2021 19:26:57  WARNING:EntrepreneursRegister.py:The Entrepreneurs register: 124948 records found
+29/10/2021 19:27:07  WARNING:EntrepreneursRegister.py:All result dataset was saved into Entrepreneurs.html
+29/10/2021 19:27:07     INFO:EntrepreneursRegister.py:Search time into the Entrepreneurs register: 0:00:28.734930
+29/10/2021 19:27:10  WARNING: searchmydata.py:The "Search" menu item chosen
+29/10/2021 19:27:31     INFO: searchmydata.py:The search string: Воронін Сидор Назарійович
+29/10/2021 19:27:31     INFO: ServiceTools.py:"Results" folder is cleaned
+29/10/2021 19:27:31  WARNING:MissingPersonsRegister.py:The missing persons register: 2 records found
+29/10/2021 19:27:31  WARNING:MissingPersonsRegister.py:All result dataset was saved into MissingPersons.html
+29/10/2021 19:27:31     INFO:MissingPersonsRegister.py:Search time into the missing person register: 0:00:00.016805
+29/10/2021 19:27:31  WARNING:WantedPersonsRegister.py:The wanted persons register: 9 records found
+29/10/2021 19:27:31  WARNING:WantedPersonsRegister.py:All result dataset was saved into WantedPersons.html
+29/10/2021 19:27:31     INFO:WantedPersonsRegister.py:Search time into the wanted person register: 0:00:00.051001
+29/10/2021 19:27:32  WARNING:DebtorsRegister.py:The debtors register: 4048 records found
+29/10/2021 19:27:33  WARNING:DebtorsRegister.py:All result dataset was saved into Debtors.html
+29/10/2021 19:27:33     INFO:DebtorsRegister.py:Search time into the debtors register: 0:00:02.146914
+29/10/2021 19:27:33  WARNING:LegalEntitiesRegister.py:The legal entities register: 445 records found
+29/10/2021 19:27:33  WARNING:LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+29/10/2021 19:27:33     INFO:LegalEntitiesRegister.py:Search time into the legal entities register: 0:00:00.205999
+29/10/2021 19:27:33  WARNING:EntrepreneursRegister.py:The Entrepreneurs register: 1306 records found
+29/10/2021 19:27:33  WARNING:EntrepreneursRegister.py:All result dataset was saved into Entrepreneurs.html
+29/10/2021 19:27:33     INFO:EntrepreneursRegister.py:Search time into the Entrepreneurs register: 0:00:00.265003
+29/10/2021 19:28:03  WARNING: searchmydata.py:The "Exit" menu item chosen
+29/10/2021 19:28:03     INFO: searchmydata.py:The application closed
