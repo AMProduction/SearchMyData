@@ -19,6 +19,7 @@ class DebtorsRegister(Dataset):
     def __init__(self):
         super().__init__()
 
+    @Dataset.measureExecutionTime
     def __getDataset(self):
         print('The register "Єдиний реєстр боржників" is retrieving...')
         try:
@@ -48,8 +49,8 @@ class DebtorsRegister(Dataset):
         debtorsDatasetZIPUrl = debtorsGeneralDatasetJson['result']['url']
         return debtorsDatasetZIPUrl
 
+    @Dataset.measureExecutionTime
     def __saveDataset(self, zipUrl):
-        start_time = datetime.now()
         debtorsCol = self.db['Debtors']
         try:
             # get ZIP file
@@ -89,21 +90,16 @@ class DebtorsRegister(Dataset):
             os.remove(debtorsCsvFileName)
             shutil.rmtree('debtorsJson', ignore_errors=True)
             print('The Register "Єдиний реєстр боржників" refreshed')
-        end_time = datetime.now()
-        logging.info('Time to save into the debtors register: ' +
-                     str(end_time-start_time))
         gc.collect()
 
+    @Dataset.measureExecutionTime
     def __clearCollection(self):
-        start_time = datetime.now()
         debtorsCol = self.db['Debtors']
         countDeletedDocuments = debtorsCol.delete_many({})
         logging.warning('%s documents deleted. The wanted persons collection is empty.', str(
             countDeletedDocuments.deleted_count))
-        end_time = datetime.now()
-        logging.info('clearDebtorsRegisterCollection: ' +
-                     str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def __createServiceJson(self):
         createdDate = datetime.now()
         lastModifiedDate = datetime.now()
@@ -118,6 +114,7 @@ class DebtorsRegister(Dataset):
         }
         self.serviceCol.insert_one(debtorsRegisterServiceJson)
 
+    @Dataset.measureExecutionTime
     def __updateServiceJson(self):
         lastModifiedDate = datetime.now()
         debtorsCol = self.db['Debtors']
@@ -128,6 +125,7 @@ class DebtorsRegister(Dataset):
                       'DocumentsCount': documentsCount}}
         )
 
+    @Dataset.measureExecutionTime
     def __updateMetadata(self):
         collectionsList = self.db.list_collection_names()
         # update or create DebtorsRegisterServiceJson
@@ -138,28 +136,22 @@ class DebtorsRegister(Dataset):
             self.__createServiceJson()
             logging.info('DebtorsRegisterServiceJson created')
 
+    @Dataset.measureExecutionTime
     def __deleteCollectionIndex(self):
-        start_time = datetime.now()
         debtorsCol = self.db['Debtors']
         if ('full_text' in debtorsCol.index_information()):
             debtorsCol.drop_index('full_text')
             logging.warning('Debtors Text index deleted')
-        end_time = datetime.now()
-        logging.info('deleteDebtorsRegisterCollectionIndex: ' +
-                     str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def __createCollectionIndex(self):
-        start_time = datetime.now()
         debtorsCol = self.db['Debtors']
         debtorsCol.create_index(
             [('DEBTOR_NAME', 'text')], name='full_text')
         logging.info('Debtors Text Index created')
-        end_time = datetime.now()
-        logging.info('createDebtorsRegisterCollectionIndex: ' +
-                     str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def searchIntoCollection(self, queryString):
-        start_time = datetime.now()
         debtorsCol = self.db['Debtors']
         resultCount = debtorsCol.count_documents(
             {'$text': {'$search': queryString}})
@@ -191,11 +183,9 @@ class DebtorsRegister(Dataset):
             f.close()
             print('All result dataset was saved into Debtors.html')
             logging.warning('All result dataset was saved into Debtors.html')
-        end_time = datetime.now()
-        logging.info('Search time into the debtors register: ' +
-                     str(end_time-start_time))
         gc.collect()
 
+    @Dataset.measureExecutionTime
     def setupDataset(self):
         self.__deleteCollectionIndex()
         self.__clearCollection()

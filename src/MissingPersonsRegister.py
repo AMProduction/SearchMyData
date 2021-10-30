@@ -13,6 +13,7 @@ class MissingPersonsRegister(Dataset):
     def __init__(self):
         super().__init__()
 
+    @Dataset.measureExecutionTime
     def __getDataset(self):
         print('The register "Інформація про безвісно зниклих громадян" is retrieving...')
         try:
@@ -56,26 +57,21 @@ class MissingPersonsRegister(Dataset):
               generalDatasetJson['result']['title'] + '" refreshed')
         return missingPersonsDataset
 
+    @Dataset.measureExecutionTime
     def __saveDataset(self, json):
-        start_time = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
         missingPersonsCol.insert_many(json)
         logging.info('Missing persons dataset was saved into the database')
-        end_time = datetime.now()
-        logging.info(
-            'Time to save into the missing person register: ' + str(end_time-start_time))
         gc.collect()
 
+    @Dataset.measureExecutionTime
     def __clearCollection(self):
-        start_time = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
         countDeletedDocuments = missingPersonsCol.delete_many({})
         logging.warning('%s documents deleted. The missing persons collection is empty.', str(
             countDeletedDocuments.deleted_count))
-        end_time = datetime.now()
-        logging.info('clearMissingPersonsRegisterCollection: ' +
-                     str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def __createServiceJson(self):
         createdDate = datetime.now()
         lastModifiedDate = datetime.now()
@@ -90,6 +86,7 @@ class MissingPersonsRegister(Dataset):
         }
         self.serviceCol.insert_one(missingPersonsRegisterServiceJson)
 
+    @Dataset.measureExecutionTime
     def __updateServiceJson(self):
         lastModifiedDate = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
@@ -100,6 +97,7 @@ class MissingPersonsRegister(Dataset):
                       'DocumentsCount': documentsCount}}
         )
 
+    @Dataset.measureExecutionTime
     def __updateMetadata(self):
         collectionsList = self.db.list_collection_names()
         # update or create MissingPersonsRegisterServiceJson
@@ -110,27 +108,22 @@ class MissingPersonsRegister(Dataset):
             self.__createServiceJson()
             logging.info('MissingPersonsRegisterServiceJson created')
 
+    @Dataset.measureExecutionTime
     def __deleteCollectionIndex(self):
-        start_time = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
         if ('full_text' in missingPersonsCol.index_information()):
             missingPersonsCol.drop_index('full_text')
             logging.warning('Missing persons Text index deleted')
-        end_time = datetime.now()
-        logging.info(
-            'deleteMissingPersonsRegisterCollectionIndex: ' + str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def __createCollectionIndex(self):
-        start_time = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
-        missingPersonsCol.create_index([('FIRST_NAME_U', 'text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text')], name='full_text')
+        missingPersonsCol.create_index(
+            [('FIRST_NAME_U', 'text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text')], name='full_text')
         logging.info('Missing persons Text Index created')
-        end_time = datetime.now()
-        logging.info(
-            'createMissingPersonsRegisterCollectionIndex: ' + str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def searchIntoCollection(self, queryString):
-        start_time = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
         resultCount = missingPersonsCol.count_documents(
             {'$text': {'$search': queryString}})
@@ -161,11 +154,9 @@ class MissingPersonsRegister(Dataset):
             print('All result dataset was saved into MissingPersons.html')
             logging.warning(
                 'All result dataset was saved into MissingPersons.html')
-        end_time = datetime.now()
-        logging.info(
-            'Search time into the missing person register: ' + str(end_time-start_time))
         gc.collect()
 
+    @Dataset.measureExecutionTime
     def setupDataset(self):
         self.__deleteCollectionIndex()
         self.__clearCollection()

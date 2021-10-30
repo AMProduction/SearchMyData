@@ -4261,3 +4261,146 @@
 30/10/2021 15:49:57     INFO:EntrepreneursRegister.py:Search time into the Entrepreneurs register: 0:00:03.799249
 30/10/2021 15:50:00  WARNING: searchmydata.py:The "Exit" menu item chosen
 30/10/2021 15:50:00     INFO: searchmydata.py:The application closed
+30/10/2021 18:03:43     INFO: searchmydata.py:The application started
+30/10/2021 18:03:43  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 18:03:43  WARNING:      Dataset.py:Config.json is found
+30/10/2021 18:03:43  WARNING:      Dataset.py:Config.json is found
+30/10/2021 18:03:43  WARNING:      Dataset.py:Config.json is found
+30/10/2021 18:03:43  WARNING:      Dataset.py:Config.json is found
+30/10/2021 18:03:43  WARNING:      Dataset.py:Config.json is found
+30/10/2021 18:03:45  WARNING: searchmydata.py:The "Search" menu item chosen
+30/10/2021 18:03:53     INFO: searchmydata.py:The search string: Dfh Ijuy Pog
+30/10/2021 18:03:53     INFO: ServiceTools.py:"Results" folder is cleaned
+30/10/2021 18:03:53  WARNING:MissingPersonsRegister.py:The missing persons register: No data found
+30/10/2021 18:03:53     INFO:      Dataset.py:Total execution time searchIntoCollection: 0:00:00.038999 0:00:00.038999
+30/10/2021 18:03:53  WARNING:WantedPersonsRegister.py:The wanted persons register: No data found
+30/10/2021 18:03:53     INFO:WantedPersonsRegister.py:Search time into the wanted person register: 0:00:00.005047
+30/10/2021 18:03:53  WARNING:DebtorsRegister.py:The debtors register: No data found
+30/10/2021 18:03:53     INFO:DebtorsRegister.py:Search time into the debtors register: 0:00:00.005009
+30/10/2021 18:03:53  WARNING:LegalEntitiesRegister.py:The legal entities register: No data found
+30/10/2021 18:03:53     INFO:LegalEntitiesRegister.py:Search time into the legal entities register: 0:00:00.004000
+30/10/2021 18:03:53  WARNING:EntrepreneursRegister.py:The Entrepreneurs register: No data found
+30/10/2021 18:03:53     INFO:EntrepreneursRegister.py:Search time into the Entrepreneurs register: 0:00:00.003001
+30/10/2021 18:03:59  WARNING: searchmydata.py:The "Exit" menu item chosen
+30/10/2021 18:03:59     INFO: searchmydata.py:The application closed
+30/10/2021 18:10:15     INFO: searchmydata.py:The application started
+30/10/2021 18:10:15  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 18:10:15  WARNING:      Dataset.py:Config.json is found
+30/10/2021 18:10:15  WARNING:      Dataset.py:Config.json is found
+30/10/2021 18:10:15  WARNING:      Dataset.py:Config.json is found
+30/10/2021 18:10:15  WARNING:      Dataset.py:Config.json is found
+30/10/2021 18:10:15  WARNING:      Dataset.py:Config.json is found
+30/10/2021 18:10:17  WARNING: searchmydata.py:The "Search" menu item chosen
+30/10/2021 18:10:21     INFO: searchmydata.py:The search string: 345
+30/10/2021 18:10:21     INFO: ServiceTools.py:"Results" folder is cleaned
+30/10/2021 18:10:21  WARNING:MissingPersonsRegister.py:The missing persons register: No data found
+30/10/2021 18:10:21     INFO:      Dataset.py:Total execution time src.MissingPersonsRegister.searchIntoCollection: 0:00:00.038022 
+30/10/2021 18:10:21  WARNING:WantedPersonsRegister.py:The wanted persons register: No data found
+30/10/2021 18:10:21     INFO:WantedPersonsRegister.py:Search time into the wanted person register: 0:00:00.001687
+30/10/2021 18:10:21  WARNING:DebtorsRegister.py:The debtors register: No data found
+30/10/2021 18:10:21     INFO:DebtorsRegister.py:Search time into the debtors register: 0:00:00.002999
+30/10/2021 18:10:21  WARNING:LegalEntitiesRegister.py:The legal entities register: 6 records found
+30/10/2021 18:10:21  WARNING:LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+30/10/2021 18:10:21     INFO:LegalEntitiesRegister.py:Search time into the legal entities register: 0:00:00.037001
+30/10/2021 18:10:21  WARNING:EntrepreneursRegister.py:The Entrepreneurs register: No data found
+30/10/2021 18:10:21     INFO:EntrepreneursRegister.py:Search time into the Entrepreneurs register: 0:00:00.003999
+30/10/2021 18:10:29  WARNING: searchmydata.py:The "Exit" menu item chosen
+30/10/2021 18:10:29     INFO: searchmydata.py:The application closed
+30/10/2021 18:13:32     INFO: searchmydata.py:The application started
+30/10/2021 18:13:32  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 18:13:32  WARNING:      Dataset.py:Config.json is found
+30/10/2021 18:13:32  WARNING:      Dataset.py:Config.json is found
+30/10/2021 18:13:32  WARNING:      Dataset.py:Config.json is found
+30/10/2021 18:13:32  WARNING:      Dataset.py:Config.json is found
+30/10/2021 18:13:32  WARNING:      Dataset.py:Config.json is found
+30/10/2021 18:13:34  WARNING: searchmydata.py:The "Search" menu item chosen
+30/10/2021 18:13:38     INFO: searchmydata.py:The search string: 9876
+30/10/2021 18:13:38     INFO: ServiceTools.py:"Results" folder is cleaned
+30/10/2021 18:13:38  WARNING:MissingPersonsRegister.py:The missing persons register: No data found
+30/10/2021 18:13:38     INFO:      Dataset.py:Total execution time MissingPersonsRegister.searchIntoCollection: 0:00:00.041998
+30/10/2021 18:13:38  WARNING:WantedPersonsRegister.py:The wanted persons register: No data found
+30/10/2021 18:13:38     INFO:WantedPersonsRegister.py:Search time into the wanted person register: 0:00:00.003009
+30/10/2021 18:13:38  WARNING:DebtorsRegister.py:The debtors register: No data found
+30/10/2021 18:13:38     INFO:DebtorsRegister.py:Search time into the debtors register: 0:00:00.003004
+30/10/2021 18:13:38  WARNING:LegalEntitiesRegister.py:The legal entities register: No data found
+30/10/2021 18:13:38     INFO:LegalEntitiesRegister.py:Search time into the legal entities register: 0:00:00.002004
+30/10/2021 18:13:38  WARNING:EntrepreneursRegister.py:The Entrepreneurs register: No data found
+30/10/2021 18:13:38     INFO:EntrepreneursRegister.py:Search time into the Entrepreneurs register: 0:00:00.002999
+30/10/2021 18:13:44  WARNING: searchmydata.py:The "Exit" menu item chosen
+30/10/2021 18:13:44     INFO: searchmydata.py:The application closed
+30/10/2021 18:18:59     INFO: searchmydata.py:The application started
+30/10/2021 18:18:59  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 18:18:59  WARNING:      Dataset.py:MissingPersonsRegister: Config.json is found
+30/10/2021 18:18:59  WARNING:      Dataset.py:WantedPersonsRegister: Config.json is found
+30/10/2021 18:18:59  WARNING:      Dataset.py:DebtorsRegister: Config.json is found
+30/10/2021 18:18:59  WARNING:      Dataset.py:LegalEntitiesRegister: Config.json is found
+30/10/2021 18:18:59  WARNING:      Dataset.py:EntrepreneursRegister: Config.json is found
+30/10/2021 18:19:01  WARNING: searchmydata.py:The "Exit" menu item chosen
+30/10/2021 18:19:01     INFO: searchmydata.py:The application closed
+30/10/2021 18:37:24     INFO: searchmydata.py:The application started
+30/10/2021 18:37:24  WARNING: ServiceTools.py:ServiceTools: Config.json is found
+30/10/2021 18:37:24  WARNING:      Dataset.py:MissingPersonsRegister: Config.json is found
+30/10/2021 18:37:24  WARNING:      Dataset.py:WantedPersonsRegister: Config.json is found
+30/10/2021 18:37:24  WARNING:      Dataset.py:DebtorsRegister: Config.json is found
+30/10/2021 18:37:24  WARNING:      Dataset.py:LegalEntitiesRegister: Config.json is found
+30/10/2021 18:37:24  WARNING:      Dataset.py:EntrepreneursRegister: Config.json is found
+30/10/2021 18:37:27  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+30/10/2021 18:37:27  WARNING:MissingPersonsRegister.py:Missing persons Text index deleted
+30/10/2021 18:37:27     INFO:      Dataset.py:Total execution time MissingPersonsRegister.__deleteCollectionIndex: 0:00:00.002997
+30/10/2021 18:37:27  WARNING:MissingPersonsRegister.py:6672 documents deleted. The missing persons collection is empty.
+30/10/2021 18:37:27     INFO:      Dataset.py:Total execution time MissingPersonsRegister.__clearCollection: 0:00:00.201001
+30/10/2021 18:37:27    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 18:37:27    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+30/10/2021 18:37:27     INFO:MissingPersonsRegister.py:A general MissingPersons dataset JSON received
+30/10/2021 18:37:27    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 18:37:31    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+30/10/2021 18:37:31     INFO:MissingPersonsRegister.py:A MissingPersons resources JSON id received
+30/10/2021 18:37:31    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 18:37:31    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5068200
+30/10/2021 18:37:32     INFO:MissingPersonsRegister.py:A MissingPersons dataset received
+30/10/2021 18:37:32     INFO:      Dataset.py:Total execution time MissingPersonsRegister.__getDataset: 0:00:05.061696
+30/10/2021 18:37:33     INFO:MissingPersonsRegister.py:Missing persons dataset was saved into the database
+30/10/2021 18:37:33     INFO:      Dataset.py:Total execution time MissingPersonsRegister.__saveDataset: 0:00:00.564000
+30/10/2021 18:37:33     INFO:      Dataset.py:Total execution time MissingPersonsRegister.__updateServiceJson: 0:00:00.008022
+30/10/2021 18:37:33     INFO:MissingPersonsRegister.py:MissingPersonsRegisterServiceJson updated
+30/10/2021 18:37:33     INFO:      Dataset.py:Total execution time MissingPersonsRegister.__updateMetadata: 0:00:00.011995
+30/10/2021 18:37:33     INFO:MissingPersonsRegister.py:Missing persons Text Index created
+30/10/2021 18:37:33     INFO:      Dataset.py:Total execution time MissingPersonsRegister.__createCollectionIndex: 0:00:00.146210
+30/10/2021 18:37:33     INFO:      Dataset.py:Total execution time MissingPersonsRegister.setupDataset: 0:00:05.993921
+30/10/2021 18:37:33  WARNING:WantedPersonsRegister.py:WantedPersons Text index deleted
+30/10/2021 18:37:33     INFO:      Dataset.py:Total execution time WantedPersonsRegister.__deleteCollectionIndex: 0:00:00.002993
+30/10/2021 18:37:34  WARNING:WantedPersonsRegister.py:47987 documents deleted. The wanted persons collection is empty.
+30/10/2021 18:37:34     INFO:      Dataset.py:Total execution time WantedPersonsRegister.__clearCollection: 0:00:01.361123
+30/10/2021 18:37:34    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 18:37:34    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+30/10/2021 18:37:34     INFO:WantedPersonsRegister.py:A general WantedPersons dataset JSON received
+30/10/2021 18:37:34    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 18:37:38    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+30/10/2021 18:37:38     INFO:WantedPersonsRegister.py:A WantedPersons resources JSON id received
+30/10/2021 18:37:38    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 18:37:38    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41423932
+30/10/2021 18:37:43     INFO:WantedPersonsRegister.py:A WantedPersons dataset received
+30/10/2021 18:37:43     INFO:      Dataset.py:Total execution time WantedPersonsRegister.__getDataset: 0:00:08.881591
+30/10/2021 18:37:46     INFO:WantedPersonsRegister.py:Wanted persons dataset was saved into the database
+30/10/2021 18:37:47     INFO:      Dataset.py:Total execution time WantedPersonsRegister.__saveDataset: 0:00:03.598765
+30/10/2021 18:37:47     INFO:      Dataset.py:Total execution time WantedPersonsRegister.__updateServiceJson: 0:00:00.045000
+30/10/2021 18:37:47     INFO:WantedPersonsRegister.py:WantedPersonsRegisterServiceJson updated
+30/10/2021 18:37:47     INFO:      Dataset.py:Total execution time WantedPersonsRegister.__updateMetadata: 0:00:00.047000
+30/10/2021 18:37:48     INFO:WantedPersonsRegister.py:WantedPersons Text Index created
+30/10/2021 18:37:48     INFO:      Dataset.py:Total execution time WantedPersonsRegister.__createCollectionIndex: 0:00:00.963396
+30/10/2021 18:37:48     INFO:      Dataset.py:Total execution time WantedPersonsRegister.setupDataset: 0:00:14.905896
+30/10/2021 18:37:52  WARNING: searchmydata.py:The "Search" menu item chosen
+30/10/2021 18:37:55     INFO: searchmydata.py:The search string: tyui
+30/10/2021 18:37:55     INFO: ServiceTools.py:ServiceTools: "Results" folder is cleaned
+30/10/2021 18:37:55  WARNING:MissingPersonsRegister.py:The missing persons register: No data found
+30/10/2021 18:37:55     INFO:      Dataset.py:Total execution time MissingPersonsRegister.searchIntoCollection: 0:00:00.052998
+30/10/2021 18:37:55  WARNING:WantedPersonsRegister.py:The wanted persons register: No data found
+30/10/2021 18:37:55     INFO:      Dataset.py:Total execution time WantedPersonsRegister.searchIntoCollection: 0:00:00.050998
+30/10/2021 18:37:55  WARNING:DebtorsRegister.py:The debtors register: No data found
+30/10/2021 18:37:55     INFO:      Dataset.py:Total execution time DebtorsRegister.searchIntoCollection: 0:00:00.038999
+30/10/2021 18:37:55  WARNING:LegalEntitiesRegister.py:The legal entities register: No data found
+30/10/2021 18:37:55     INFO:      Dataset.py:Total execution time LegalEntitiesRegister.searchIntoCollection: 0:00:00.037001
+30/10/2021 18:37:55  WARNING:EntrepreneursRegister.py:The Entrepreneurs register: No data found
+30/10/2021 18:37:55     INFO:      Dataset.py:Total execution time EntrepreneursRegister.searchIntoCollection: 0:00:00.040003
+30/10/2021 18:37:57  WARNING: searchmydata.py:The "Exit" menu item chosen
+30/10/2021 18:37:57     INFO: searchmydata.py:The application closed

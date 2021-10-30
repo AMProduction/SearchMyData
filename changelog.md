@@ -1,4 +1,4 @@
-### v1.8. Release. 30/10/2021
+### v1.8. Release. 31/10/2021
 * Performance optimization
 * Refactoring
 

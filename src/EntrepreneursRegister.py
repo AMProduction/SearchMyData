@@ -11,22 +11,22 @@ class EntrepreneursRegister(Dataset):
     def __init__(self):
         super().__init__()
 
+    @Dataset.measureExecutionTime
     def getDataset(self):
         logging.info('EntrepreneursRegister getDataset call')
 
+    @Dataset.measureExecutionTime
     def saveDataset(self):
         logging.info('EntrepreneursRegister saveDataset call')
 
+    @Dataset.measureExecutionTime
     def clearCollection(self):
-        start_time = datetime.now()
         entrepreneursCol = self.db['Entrepreneurs']
         countDeletedDocuments = entrepreneursCol.delete_many({})
         logging.warning('%s documents deleted. The entrepreneurs collection is empty.', str(
             countDeletedDocuments.deleted_count))
-        end_time = datetime.now()
-        logging.info('clearEntrepreneursRegisterCollection: ' +
-                     str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def __createServiceJson(self):
         createdDate = datetime.now()
         lastModifiedDate = datetime.now()
@@ -41,6 +41,7 @@ class EntrepreneursRegister(Dataset):
         }
         self.serviceCol.insert_one(entrepreneursRegisterServiceJson)
 
+    @Dataset.measureExecutionTime
     def __updateServiceJson(self):
         lastModifiedDate = datetime.now()
         entrepreneursCol = self.db['Entrepreneurs']
@@ -51,6 +52,7 @@ class EntrepreneursRegister(Dataset):
                       'DocumentsCount': documentsCount}}
         )
 
+    @Dataset.measureExecutionTime
     def updateMetadata(self):
         collectionsList = self.db.list_collection_names()
         # update or create EntrepreneursRegisterServiceJson
@@ -61,27 +63,21 @@ class EntrepreneursRegister(Dataset):
             self.__createServiceJson()
             logging.info('EntrepreneursRegisterServiceJson created')
 
+    @Dataset.measureExecutionTime
     def deleteCollectionIndex(self):
-        start_time = datetime.now()
         entrepreneursCol = self.db['Entrepreneurs']
         if ('full_text' in entrepreneursCol.index_information()):
             entrepreneursCol.drop_index('full_text')
             logging.warning('Entrepreneurs Text index deleted')
-        end_time = datetime.now()
-        logging.info(
-            'deleteEntrepreneursRegisterCollectionIndex: ' + str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def createCollectionIndex(self):
-        start_time = datetime.now()
         entrepreneursCol = self.db['Entrepreneurs']
         entrepreneursCol.create_index([('fio', 'text')], name='full_text')
         logging.info('Entrepreneurs Text Index created')
-        end_time = datetime.now()
-        logging.info(
-            'createEntrepreneursRegisterCollectionIndex: ' + str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def searchIntoCollection(self, queryString):
-        start_time = datetime.now()
         entrepreneursCol = self.db['Entrepreneurs']
         resultCount = entrepreneursCol.count_documents(
             {'$text': {'$search': queryString}})
@@ -112,7 +108,4 @@ class EntrepreneursRegister(Dataset):
             print('All result dataset was saved into Entrepreneurs.html')
             logging.warning(
                 'All result dataset was saved into Entrepreneurs.html')
-        end_time = datetime.now()
-        logging.info(
-            'Search time into the Entrepreneurs register: ' + str(end_time-start_time))
         gc.collect()
