@@ -3824,3 +3824,440 @@
 29/10/2021 19:27:33     INFO:EntrepreneursRegister.py:Search time into the Entrepreneurs register: 0:00:00.265003
 29/10/2021 19:28:03  WARNING: searchmydata.py:The "Exit" menu item chosen
 29/10/2021 19:28:03     INFO: searchmydata.py:The application closed
+29/10/2021 23:31:15     INFO: searchmydata.py:The application started
+29/10/2021 23:31:15  WARNING: ServiceTools.py:Config.json is found
+29/10/2021 23:31:15  WARNING:      Dataset.py:Config.json is found
+29/10/2021 23:31:15  WARNING:      Dataset.py:Config.json is found
+29/10/2021 23:31:15  WARNING:      Dataset.py:Config.json is found
+29/10/2021 23:31:15  WARNING:      Dataset.py:Config.json is found
+29/10/2021 23:31:15  WARNING:      Dataset.py:Config.json is found
+29/10/2021 23:31:19  WARNING: searchmydata.py:The "Exit" menu item chosen
+29/10/2021 23:31:19     INFO: searchmydata.py:The application closed
+30/10/2021 08:58:06     INFO: searchmydata.py:The application started
+30/10/2021 08:58:06  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 08:58:06  WARNING:      Dataset.py:Config.json is found
+30/10/2021 08:58:06  WARNING:      Dataset.py:Config.json is found
+30/10/2021 08:58:06  WARNING:      Dataset.py:Config.json is found
+30/10/2021 08:58:06  WARNING:      Dataset.py:Config.json is found
+30/10/2021 08:58:06  WARNING:      Dataset.py:Config.json is found
+30/10/2021 08:58:27  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+30/10/2021 08:58:27  WARNING:DebtorsRegister.py:Debtors Text index deleted
+30/10/2021 08:58:27     INFO:DebtorsRegister.py:deleteDebtorsRegisterCollectionIndex: 0:00:00.007997
+30/10/2021 09:01:22  WARNING:DebtorsRegister.py:6829064 documents deleted. The wanted persons collection is empty.
+30/10/2021 09:01:22     INFO:DebtorsRegister.py:clearDebtorsRegisterCollection: 0:02:54.819138
+30/10/2021 09:01:22    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 09:01:22    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+30/10/2021 09:01:22     INFO:DebtorsRegister.py:A general DebtorsRegister dataset JSON received
+30/10/2021 09:01:22    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 09:01:22    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+30/10/2021 09:01:22     INFO:DebtorsRegister.py:A DebtorsRegister resources JSON id received
+30/10/2021 09:01:22    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 09:01:22    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 405220800
+30/10/2021 09:02:00     INFO:DebtorsRegister.py:A DebtorsRegister dataset received
+30/10/2021 09:02:00  WARNING:DebtorsRegister.py:File in ZIP: 31-ex_csv_erb.csv
+30/10/2021 09:14:57     INFO: searchmydata.py:The application started
+30/10/2021 09:14:57  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 09:14:57  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:14:57  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:14:57  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:14:57  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:14:57  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:15:02  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+30/10/2021 09:15:02     INFO:DebtorsRegister.py:deleteDebtorsRegisterCollectionIndex: 0:00:00.001993
+30/10/2021 09:15:02  WARNING:DebtorsRegister.py:0 documents deleted. The wanted persons collection is empty.
+30/10/2021 09:15:02     INFO:DebtorsRegister.py:clearDebtorsRegisterCollection: 0:00:00.013002
+30/10/2021 09:15:02    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 09:15:02    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+30/10/2021 09:15:02     INFO:DebtorsRegister.py:A general DebtorsRegister dataset JSON received
+30/10/2021 09:15:02    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 09:15:02    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+30/10/2021 09:15:02     INFO:DebtorsRegister.py:A DebtorsRegister resources JSON id received
+30/10/2021 09:15:02    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 09:15:02    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 405220800
+30/10/2021 09:15:38     INFO:DebtorsRegister.py:A DebtorsRegister dataset received
+30/10/2021 09:16:51     INFO: searchmydata.py:The application started
+30/10/2021 09:16:51  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 09:16:51  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:16:51  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:16:51  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:16:51  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:16:51  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:16:54  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+30/10/2021 09:16:54     INFO:DebtorsRegister.py:deleteDebtorsRegisterCollectionIndex: 0:00:00.002000
+30/10/2021 09:16:54  WARNING:DebtorsRegister.py:0 documents deleted. The wanted persons collection is empty.
+30/10/2021 09:16:54     INFO:DebtorsRegister.py:clearDebtorsRegisterCollection: 0:00:00.014009
+30/10/2021 09:16:54    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 09:16:54    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+30/10/2021 09:16:54     INFO:DebtorsRegister.py:A general DebtorsRegister dataset JSON received
+30/10/2021 09:16:54    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 09:16:54    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+30/10/2021 09:16:54     INFO:DebtorsRegister.py:A DebtorsRegister resources JSON id received
+30/10/2021 09:16:54    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 09:16:54    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 405220800
+30/10/2021 09:17:30     INFO:DebtorsRegister.py:A DebtorsRegister dataset received
+30/10/2021 09:23:11     INFO: searchmydata.py:The application started
+30/10/2021 09:23:11  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 09:23:11  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:23:11  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:23:11  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:23:11  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:23:11  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:23:16  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+30/10/2021 09:23:16     INFO:DebtorsRegister.py:deleteDebtorsRegisterCollectionIndex: 0:00:00.001996
+30/10/2021 09:23:16  WARNING:DebtorsRegister.py:0 documents deleted. The wanted persons collection is empty.
+30/10/2021 09:23:16     INFO:DebtorsRegister.py:clearDebtorsRegisterCollection: 0:00:00.013000
+30/10/2021 09:23:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 09:23:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+30/10/2021 09:23:16     INFO:DebtorsRegister.py:A general DebtorsRegister dataset JSON received
+30/10/2021 09:23:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 09:23:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+30/10/2021 09:23:16     INFO:DebtorsRegister.py:A DebtorsRegister resources JSON id received
+30/10/2021 09:23:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 09:23:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 405220800
+30/10/2021 09:23:53     INFO:DebtorsRegister.py:A DebtorsRegister dataset received
+30/10/2021 09:34:12     INFO: searchmydata.py:The application started
+30/10/2021 09:34:12  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 09:34:12  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:34:12  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:34:12  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:34:12  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:34:12  WARNING:      Dataset.py:Config.json is found
+30/10/2021 09:34:15  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+30/10/2021 09:34:15    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 09:34:15    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+30/10/2021 09:34:15     INFO:LegalEntitiesRegister.py:A general EntrepreneursRegister dataset JSON received
+30/10/2021 09:34:15    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 09:34:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+30/10/2021 09:34:16     INFO:LegalEntitiesRegister.py:A EntrepreneursRegister resources JSON id received
+30/10/2021 09:34:16    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 09:34:16    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_29-10-2021.zip HTTP/1.1" 200 450737053
+30/10/2021 09:34:56     INFO:LegalEntitiesRegister.py:A EntrepreneursRegister dataset received
+30/10/2021 09:34:56  WARNING:LegalEntitiesRegister.py:File in ZIP: 17-UFOP_29.10.2021/17.1-EX_XML_EDR_UO_29.10.2021.xml
+30/10/2021 09:34:56  WARNING:LegalEntitiesRegister.py:File in ZIP: 17-UFOP_29.10.2021/17.2-EX_XML_EDR_FOP_29.10.2021.xml
+30/10/2021 10:34:21     INFO: searchmydata.py:The application started
+30/10/2021 10:34:21  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 10:34:21  WARNING:      Dataset.py:Config.json is found
+30/10/2021 10:34:21  WARNING:      Dataset.py:Config.json is found
+30/10/2021 10:34:21  WARNING:      Dataset.py:Config.json is found
+30/10/2021 10:34:21  WARNING:      Dataset.py:Config.json is found
+30/10/2021 10:34:21  WARNING:      Dataset.py:Config.json is found
+30/10/2021 10:34:26  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+30/10/2021 10:34:26  WARNING:MissingPersonsRegister.py:Missing persons Text index deleted
+30/10/2021 10:34:26     INFO:MissingPersonsRegister.py:deleteMissingPersonsRegisterCollectionIndex: 0:00:00.003007
+30/10/2021 10:34:26  WARNING:MissingPersonsRegister.py:6716 documents deleted. The missing persons collection is empty.
+30/10/2021 10:34:26     INFO:MissingPersonsRegister.py:clearMissingPersonsRegisterCollection: 0:00:00.184411
+30/10/2021 10:34:26    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 10:34:26    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+30/10/2021 10:34:26     INFO:MissingPersonsRegister.py:A general MissingPersons dataset JSON received
+30/10/2021 10:34:26    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 10:34:30    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+30/10/2021 10:34:30     INFO:MissingPersonsRegister.py:A MissingPersons resources JSON id received
+30/10/2021 10:34:30    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 10:34:30    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5072324
+30/10/2021 10:34:30     INFO:MissingPersonsRegister.py:A MissingPersons dataset received
+30/10/2021 10:34:31     INFO:MissingPersonsRegister.py:Missing persons dataset was saved into the database
+30/10/2021 10:34:31     INFO:MissingPersonsRegister.py:Time to save into the missing person register: 0:00:00.891995
+30/10/2021 10:34:31     INFO:MissingPersonsRegister.py:MissingPersonsRegisterServiceJson updated
+30/10/2021 10:34:32     INFO:MissingPersonsRegister.py:Missing persons Text Index created
+30/10/2021 10:34:32     INFO:MissingPersonsRegister.py:createMissingPersonsRegisterCollectionIndex: 0:00:00.483792
+30/10/2021 10:34:32  WARNING:WantedPersonsRegister.py:WantedPersons Text index deleted
+30/10/2021 10:34:32     INFO:WantedPersonsRegister.py:deleteWantedPersonsRegisterCollectionIndex: 0:00:00.003997
+30/10/2021 10:34:33  WARNING:WantedPersonsRegister.py:48035 documents deleted. The wanted persons collection is empty.
+30/10/2021 10:34:33     INFO:WantedPersonsRegister.py:clearWantedPersonsRegisterCollection: 0:00:01.760058
+30/10/2021 10:34:34    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 10:34:34    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+30/10/2021 10:34:34     INFO:WantedPersonsRegister.py:A general WantedPersons dataset JSON received
+30/10/2021 10:34:34    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 10:34:39    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+30/10/2021 10:34:39     INFO:WantedPersonsRegister.py:A WantedPersons resources JSON id received
+30/10/2021 10:34:39    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 10:34:39    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41431220
+30/10/2021 10:34:44     INFO:WantedPersonsRegister.py:A WantedPersons dataset received
+30/10/2021 10:34:47     INFO:WantedPersonsRegister.py:Wanted persons dataset was saved into the database
+30/10/2021 10:34:47     INFO:WantedPersonsRegister.py:Time to save into the wanted person register: 0:00:03.384269
+30/10/2021 10:34:47     INFO:WantedPersonsRegister.py:WantedPersonsRegisterServiceJson updated
+30/10/2021 10:34:50     INFO:WantedPersonsRegister.py:WantedPersons Text Index created
+30/10/2021 10:34:50     INFO:WantedPersonsRegister.py:createWantedPersonsRegisterCollectionIndex: 0:00:02.743098
+30/10/2021 10:34:50     INFO:DebtorsRegister.py:deleteDebtorsRegisterCollectionIndex: 0:00:00.000984
+30/10/2021 10:34:50  WARNING:DebtorsRegister.py:0 documents deleted. The wanted persons collection is empty.
+30/10/2021 10:34:50     INFO:DebtorsRegister.py:clearDebtorsRegisterCollection: 0:00:00.009986
+30/10/2021 10:34:50    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 10:34:50    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+30/10/2021 10:34:50     INFO:DebtorsRegister.py:A general DebtorsRegister dataset JSON received
+30/10/2021 10:34:50    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 10:34:51    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+30/10/2021 10:34:51     INFO:DebtorsRegister.py:A DebtorsRegister resources JSON id received
+30/10/2021 10:34:51    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 10:34:52    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 405220800
+30/10/2021 10:35:28     INFO:DebtorsRegister.py:A DebtorsRegister dataset received
+30/10/2021 10:35:28  WARNING:DebtorsRegister.py:File in ZIP: 31-ex_csv_erb.csv
+30/10/2021 12:16:30     INFO:DebtorsRegister.py:Debtors dataset was saved into the database
+30/10/2021 12:16:31     INFO:DebtorsRegister.py:Time to save into the debtors register: 1:41:39.968728
+30/10/2021 12:16:45     INFO:DebtorsRegister.py:DebtorsRegisterServiceJson updated
+30/10/2021 12:20:38     INFO:DebtorsRegister.py:Debtors Text Index created
+30/10/2021 12:20:38     INFO:DebtorsRegister.py:createDebtorsRegisterCollectionIndex: 0:03:53.083776
+30/10/2021 12:20:38  WARNING:LegalEntitiesRegister.py:LegalEntities Text index deleted
+30/10/2021 12:20:38     INFO:LegalEntitiesRegister.py:deleteLegalEntitiesRegisterCollectionIndex: 0:00:00.003997
+30/10/2021 12:21:27  WARNING:LegalEntitiesRegister.py:1832133 documents deleted. The legal entities collection is empty.
+30/10/2021 12:21:27     INFO:LegalEntitiesRegister.py:clearLegalEntitiesRegisterCollection: 0:00:49.116099
+30/10/2021 12:21:27  WARNING:EntrepreneursRegister.py:Entrepreneurs Text index deleted
+30/10/2021 12:21:27     INFO:EntrepreneursRegister.py:deleteEntrepreneursRegisterCollectionIndex: 0:00:00.002999
+30/10/2021 12:23:50  WARNING:EntrepreneursRegister.py:5677731 documents deleted. The entrepreneurs collection is empty.
+30/10/2021 12:23:50     INFO:EntrepreneursRegister.py:clearEntrepreneursRegisterCollection: 0:02:23.085452
+30/10/2021 12:23:50    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 12:24:11    ERROR:LegalEntitiesRegister.py:Error during general EntrepreneursRegister dataset JSON receiving occured
+30/10/2021 13:00:26     INFO: searchmydata.py:The application started
+30/10/2021 13:00:26  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 13:00:26  WARNING:      Dataset.py:Config.json is found
+30/10/2021 13:00:26  WARNING:      Dataset.py:Config.json is found
+30/10/2021 13:00:26  WARNING:      Dataset.py:Config.json is found
+30/10/2021 13:00:26  WARNING:      Dataset.py:Config.json is found
+30/10/2021 13:00:26  WARNING:      Dataset.py:Config.json is found
+30/10/2021 13:00:34  WARNING: searchmydata.py:The "Exit" menu item chosen
+30/10/2021 13:00:34     INFO: searchmydata.py:The application closed
+30/10/2021 13:09:39     INFO: searchmydata.py:The application started
+30/10/2021 13:09:39  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 13:09:39  WARNING:      Dataset.py:Config.json is found
+30/10/2021 13:09:39  WARNING:      Dataset.py:Config.json is found
+30/10/2021 13:09:39  WARNING:      Dataset.py:Config.json is found
+30/10/2021 13:09:39  WARNING:      Dataset.py:Config.json is found
+30/10/2021 13:09:39  WARNING:      Dataset.py:Config.json is found
+30/10/2021 13:09:41  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+30/10/2021 13:09:41     INFO:LegalEntitiesRegister.py:deleteLegalEntitiesRegisterCollectionIndex: 0:00:00.001004
+30/10/2021 13:09:41  WARNING:LegalEntitiesRegister.py:0 documents deleted. The legal entities collection is empty.
+30/10/2021 13:09:41     INFO:LegalEntitiesRegister.py:clearLegalEntitiesRegisterCollection: 0:00:00.001997
+30/10/2021 13:09:41     INFO:EntrepreneursRegister.py:deleteEntrepreneursRegisterCollectionIndex: 0:00:00.001999
+30/10/2021 13:09:41  WARNING:EntrepreneursRegister.py:0 documents deleted. The entrepreneurs collection is empty.
+30/10/2021 13:09:41     INFO:EntrepreneursRegister.py:clearEntrepreneursRegisterCollection: 0:00:00.008006
+30/10/2021 13:09:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 13:09:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+30/10/2021 13:09:41     INFO:LegalEntitiesRegister.py:A general EntrepreneursRegister dataset JSON received
+30/10/2021 13:09:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 13:09:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+30/10/2021 13:09:41     INFO:LegalEntitiesRegister.py:A EntrepreneursRegister resources JSON id received
+30/10/2021 13:09:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 13:09:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_29-10-2021.zip HTTP/1.1" 200 450737053
+30/10/2021 13:10:21     INFO:LegalEntitiesRegister.py:A EntrepreneursRegister dataset received
+30/10/2021 13:10:21  WARNING:LegalEntitiesRegister.py:File in ZIP: 17-UFOP_29.10.2021/17.1-EX_XML_EDR_UO_29.10.2021.xml
+30/10/2021 13:10:21  WARNING:LegalEntitiesRegister.py:File in ZIP: 17-UFOP_29.10.2021/17.2-EX_XML_EDR_FOP_29.10.2021.xml
+30/10/2021 13:44:18     INFO:LegalEntitiesRegister.py:LegalEntities dataset was saved into the database
+30/10/2021 15:18:03     INFO:LegalEntitiesRegister.py:Entrepreneurs dataset was saved into the database
+30/10/2021 15:18:03     INFO:LegalEntitiesRegister.py:Time to save into the Entrepreneurs and LegalEntities registers: 2:08:21.407112
+30/10/2021 15:20:27     INFO:LegalEntitiesRegister.py:LegalEntitiesRegisterServiceJson updated
+30/10/2021 15:20:42     INFO:EntrepreneursRegister.py:EntrepreneursRegisterServiceJson updated
+30/10/2021 15:22:00     INFO:LegalEntitiesRegister.py:LegalEntities Text Index created
+30/10/2021 15:22:00     INFO:LegalEntitiesRegister.py:createLegalEntitiesRegisterCollectionIndex: 0:01:17.533728
+30/10/2021 15:24:09     INFO:EntrepreneursRegister.py:Entrepreneurs Text Index created
+30/10/2021 15:24:09     INFO:EntrepreneursRegister.py:createEntrepreneursRegisterCollectionIndex: 0:02:08.816160
+30/10/2021 15:25:16  WARNING: searchmydata.py:The "Exit" menu item chosen
+30/10/2021 15:25:16     INFO: searchmydata.py:The application closed
+30/10/2021 15:30:35     INFO: searchmydata.py:The application started
+30/10/2021 15:30:35  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 15:30:35  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:30:35  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:30:35  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:30:35  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:30:35  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:30:37  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+30/10/2021 15:30:37  WARNING:MissingPersonsRegister.py:Missing persons Text index deleted
+30/10/2021 15:30:37     INFO:MissingPersonsRegister.py:deleteMissingPersonsRegisterCollectionIndex: 0:00:00.007001
+30/10/2021 15:30:37  WARNING:MissingPersonsRegister.py:6677 documents deleted. The missing persons collection is empty.
+30/10/2021 15:30:37     INFO:MissingPersonsRegister.py:clearMissingPersonsRegisterCollection: 0:00:00.171311
+30/10/2021 15:30:37    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 15:30:37    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+30/10/2021 15:30:37     INFO:MissingPersonsRegister.py:A general MissingPersons dataset JSON received
+30/10/2021 15:30:37    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 15:30:41    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+30/10/2021 15:30:41     INFO:MissingPersonsRegister.py:A MissingPersons resources JSON id received
+30/10/2021 15:30:41    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 15:30:42    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5068200
+30/10/2021 15:30:43     INFO:MissingPersonsRegister.py:A MissingPersons dataset received
+30/10/2021 15:30:43     INFO:MissingPersonsRegister.py:Missing persons dataset was saved into the database
+30/10/2021 15:30:43     INFO:MissingPersonsRegister.py:Time to save into the missing person register: 0:00:00.479112
+30/10/2021 15:30:43     INFO:MissingPersonsRegister.py:MissingPersonsRegisterServiceJson updated
+30/10/2021 15:32:21     INFO: searchmydata.py:The application started
+30/10/2021 15:32:21  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 15:32:21  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:32:21  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:32:21  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:32:21  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:32:21  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:32:26  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+30/10/2021 15:32:26     INFO:MissingPersonsRegister.py:deleteMissingPersonsRegisterCollectionIndex: 0:00:00.001999
+30/10/2021 15:32:26  WARNING:MissingPersonsRegister.py:6672 documents deleted. The missing persons collection is empty.
+30/10/2021 15:32:26     INFO:MissingPersonsRegister.py:clearMissingPersonsRegisterCollection: 0:00:00.163999
+30/10/2021 15:32:27    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 15:32:27    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+30/10/2021 15:32:27     INFO:MissingPersonsRegister.py:A general MissingPersons dataset JSON received
+30/10/2021 15:32:27    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 15:32:31    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+30/10/2021 15:32:31     INFO:MissingPersonsRegister.py:A MissingPersons resources JSON id received
+30/10/2021 15:32:31    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 15:32:31    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5068200
+30/10/2021 15:32:32     INFO:MissingPersonsRegister.py:A MissingPersons dataset received
+30/10/2021 15:32:32     INFO:MissingPersonsRegister.py:Missing persons dataset was saved into the database
+30/10/2021 15:32:32     INFO:MissingPersonsRegister.py:Time to save into the missing person register: 0:00:00.465227
+30/10/2021 15:32:32     INFO:MissingPersonsRegister.py:MissingPersonsRegisterServiceJson updated
+30/10/2021 15:32:33     INFO:MissingPersonsRegister.py:Missing persons Text Index created
+30/10/2021 15:32:33     INFO:MissingPersonsRegister.py:createMissingPersonsRegisterCollectionIndex: 0:00:00.156027
+30/10/2021 15:32:33  WARNING:WantedPersonsRegister.py:WantedPersons Text index deleted
+30/10/2021 15:32:33     INFO:WantedPersonsRegister.py:deleteWantedPersonsRegisterCollectionIndex: 0:00:00.002981
+30/10/2021 15:32:34  WARNING:WantedPersonsRegister.py:47995 documents deleted. The wanted persons collection is empty.
+30/10/2021 15:32:34     INFO:WantedPersonsRegister.py:clearWantedPersonsRegisterCollection: 0:00:01.174570
+30/10/2021 15:32:34    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 15:32:34    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+30/10/2021 15:32:34     INFO:WantedPersonsRegister.py:A general WantedPersons dataset JSON received
+30/10/2021 15:32:34    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 15:32:45    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+30/10/2021 15:32:45     INFO:WantedPersonsRegister.py:A WantedPersons resources JSON id received
+30/10/2021 15:32:45    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 15:32:45    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41423932
+30/10/2021 15:32:49     INFO:WantedPersonsRegister.py:A WantedPersons dataset received
+30/10/2021 15:32:52     INFO:WantedPersonsRegister.py:Wanted persons dataset was saved into the database
+30/10/2021 15:32:52     INFO:WantedPersonsRegister.py:Time to save into the wanted person register: 0:00:03.459055
+30/10/2021 15:32:52     INFO:WantedPersonsRegister.py:WantedPersonsRegisterServiceJson updated
+30/10/2021 15:32:53     INFO:WantedPersonsRegister.py:WantedPersons Text Index created
+30/10/2021 15:32:53     INFO:WantedPersonsRegister.py:createWantedPersonsRegisterCollectionIndex: 0:00:00.988807
+30/10/2021 15:32:59  WARNING: searchmydata.py:The "Search" menu item chosen
+30/10/2021 15:33:18     INFO: searchmydata.py:The search string: Голопупенко Генацвале Валеріанович
+30/10/2021 15:33:18     INFO: ServiceTools.py:"Results" folder is cleaned
+30/10/2021 15:33:18  WARNING:MissingPersonsRegister.py:The missing persons register: 1 records found
+30/10/2021 15:33:18  WARNING:MissingPersonsRegister.py:All result dataset was saved into MissingPersons.html
+30/10/2021 15:33:18     INFO:MissingPersonsRegister.py:Search time into the missing person register: 0:00:00.050681
+30/10/2021 15:33:18  WARNING:WantedPersonsRegister.py:The wanted persons register: 3 records found
+30/10/2021 15:33:18  WARNING:WantedPersonsRegister.py:All result dataset was saved into WantedPersons.html
+30/10/2021 15:33:18     INFO:WantedPersonsRegister.py:Search time into the wanted person register: 0:00:00.032043
+30/10/2021 15:33:19  WARNING:DebtorsRegister.py:The debtors register: 475 records found
+30/10/2021 15:33:19  WARNING:DebtorsRegister.py:All result dataset was saved into Debtors.html
+30/10/2021 15:33:19     INFO:DebtorsRegister.py:Search time into the debtors register: 0:00:00.470302
+30/10/2021 15:33:19  WARNING:LegalEntitiesRegister.py:The legal entities register: 99 records found
+30/10/2021 15:33:19  WARNING:LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+30/10/2021 15:33:19     INFO:LegalEntitiesRegister.py:Search time into the legal entities register: 0:00:00.114003
+30/10/2021 15:33:19  WARNING:EntrepreneursRegister.py:The Entrepreneurs register: 242 records found
+30/10/2021 15:33:19  WARNING:EntrepreneursRegister.py:All result dataset was saved into Entrepreneurs.html
+30/10/2021 15:33:19     INFO:EntrepreneursRegister.py:Search time into the Entrepreneurs register: 0:00:00.103014
+30/10/2021 15:34:21  WARNING: searchmydata.py:The "Exit" menu item chosen
+30/10/2021 15:34:21     INFO: searchmydata.py:The application closed
+30/10/2021 15:35:27     INFO: searchmydata.py:The application started
+30/10/2021 15:35:27  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 15:35:27  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:35:27  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:35:27  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:35:27  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:35:27  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:35:33  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+30/10/2021 15:35:33  WARNING:MissingPersonsRegister.py:Missing persons Text index deleted
+30/10/2021 15:35:33     INFO:MissingPersonsRegister.py:deleteMissingPersonsRegisterCollectionIndex: 0:00:00.003020
+30/10/2021 15:35:33  WARNING:MissingPersonsRegister.py:6672 documents deleted. The missing persons collection is empty.
+30/10/2021 15:35:33     INFO:MissingPersonsRegister.py:clearMissingPersonsRegisterCollection: 0:00:00.157635
+30/10/2021 15:35:33    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 15:35:34    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+30/10/2021 15:35:34     INFO:MissingPersonsRegister.py:A general MissingPersons dataset JSON received
+30/10/2021 15:35:34    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 15:35:36    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+30/10/2021 15:35:36     INFO:MissingPersonsRegister.py:A MissingPersons resources JSON id received
+30/10/2021 15:35:36    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 15:35:37    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5068200
+30/10/2021 15:35:37     INFO:MissingPersonsRegister.py:A MissingPersons dataset received
+30/10/2021 15:35:38     INFO:MissingPersonsRegister.py:Missing persons dataset was saved into the database
+30/10/2021 15:35:38     INFO:MissingPersonsRegister.py:Time to save into the missing person register: 0:00:00.664001
+30/10/2021 15:35:38     INFO:MissingPersonsRegister.py:MissingPersonsRegisterServiceJson updated
+30/10/2021 15:35:38     INFO:MissingPersonsRegister.py:Missing persons Text Index created
+30/10/2021 15:35:38     INFO:MissingPersonsRegister.py:createMissingPersonsRegisterCollectionIndex: 0:00:00.151018
+30/10/2021 15:35:38  WARNING:WantedPersonsRegister.py:WantedPersons Text index deleted
+30/10/2021 15:35:38     INFO:WantedPersonsRegister.py:deleteWantedPersonsRegisterCollectionIndex: 0:00:00.001992
+30/10/2021 15:35:39  WARNING:WantedPersonsRegister.py:47987 documents deleted. The wanted persons collection is empty.
+30/10/2021 15:35:39     INFO:WantedPersonsRegister.py:clearWantedPersonsRegisterCollection: 0:00:01.129487
+30/10/2021 15:35:39    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 15:35:39    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+30/10/2021 15:35:39     INFO:WantedPersonsRegister.py:A general WantedPersons dataset JSON received
+30/10/2021 15:35:39    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 15:35:44    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+30/10/2021 15:35:44     INFO:WantedPersonsRegister.py:A WantedPersons resources JSON id received
+30/10/2021 15:35:44    DEBUG:connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+30/10/2021 15:35:44    DEBUG:connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41423932
+30/10/2021 15:35:49     INFO:WantedPersonsRegister.py:A WantedPersons dataset received
+30/10/2021 15:35:52     INFO:WantedPersonsRegister.py:Wanted persons dataset was saved into the database
+30/10/2021 15:35:52     INFO:WantedPersonsRegister.py:Time to save into the wanted person register: 0:00:03.357033
+30/10/2021 15:35:52     INFO:WantedPersonsRegister.py:WantedPersonsRegisterServiceJson updated
+30/10/2021 15:35:53     INFO:WantedPersonsRegister.py:WantedPersons Text Index created
+30/10/2021 15:35:53     INFO:WantedPersonsRegister.py:createWantedPersonsRegisterCollectionIndex: 0:00:00.959946
+30/10/2021 15:35:57  WARNING: searchmydata.py:The "Search" menu item chosen
+30/10/2021 15:36:12     INFO: searchmydata.py:The search string: Генацвале Геннадій
+30/10/2021 15:36:12     INFO: ServiceTools.py:"Results" folder is cleaned
+30/10/2021 15:36:12  WARNING:MissingPersonsRegister.py:The missing persons register: 54 records found
+30/10/2021 15:36:12  WARNING:MissingPersonsRegister.py:All result dataset was saved into MissingPersons.html
+30/10/2021 15:36:12     INFO:MissingPersonsRegister.py:Search time into the missing person register: 0:00:00.042045
+30/10/2021 15:36:12  WARNING:WantedPersonsRegister.py:The wanted persons register: 241 records found
+30/10/2021 15:36:12  WARNING:WantedPersonsRegister.py:All result dataset was saved into WantedPersons.html
+30/10/2021 15:36:12     INFO:WantedPersonsRegister.py:Search time into the wanted person register: 0:00:00.101002
+30/10/2021 15:36:28  WARNING:DebtorsRegister.py:The debtors register: 40389 records found
+30/10/2021 15:36:33  WARNING:DebtorsRegister.py:All result dataset was saved into Debtors.html
+30/10/2021 15:36:33     INFO:DebtorsRegister.py:Search time into the debtors register: 0:00:21.057717
+30/10/2021 15:36:34  WARNING:LegalEntitiesRegister.py:The legal entities register: 10365 records found
+30/10/2021 15:36:36  WARNING:LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+30/10/2021 15:36:36     INFO:LegalEntitiesRegister.py:Search time into the legal entities register: 0:00:02.653822
+30/10/2021 15:36:38  WARNING:EntrepreneursRegister.py:The Entrepreneurs register: 22534 records found
+30/10/2021 15:36:40  WARNING:EntrepreneursRegister.py:All result dataset was saved into Entrepreneurs.html
+30/10/2021 15:36:40     INFO:EntrepreneursRegister.py:Search time into the Entrepreneurs register: 0:00:03.740943
+30/10/2021 15:37:14  WARNING: searchmydata.py:The "Exit" menu item chosen
+30/10/2021 15:37:14     INFO: searchmydata.py:The application closed
+30/10/2021 15:40:52     INFO: searchmydata.py:The application started
+30/10/2021 15:40:52  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 15:40:52  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:40:52  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:40:52  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:40:52  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:40:52  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:40:55  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+30/10/2021 15:40:55  WARNING:LegalEntitiesRegister.py:LegalEntities Text index deleted
+30/10/2021 15:40:55     INFO:LegalEntitiesRegister.py:deleteLegalEntitiesRegisterCollectionIndex: 0:00:00.004007
+30/10/2021 15:40:55  WARNING:EntrepreneursRegister.py:Entrepreneurs Text index deleted
+30/10/2021 15:40:55     INFO:EntrepreneursRegister.py:deleteEntrepreneursRegisterCollectionIndex: 0:00:00.003007
+30/10/2021 15:41:27     INFO: searchmydata.py:The application started
+30/10/2021 15:41:27  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 15:41:27  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:41:27  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:41:27  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:41:27  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:41:27  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:41:30  WARNING: searchmydata.py:The "Refresh datasets" menu item chosen
+30/10/2021 15:41:30     INFO:LegalEntitiesRegister.py:deleteLegalEntitiesRegisterCollectionIndex: 0:00:00.001000
+30/10/2021 15:41:30     INFO:EntrepreneursRegister.py:deleteEntrepreneursRegisterCollectionIndex: 0:00:00.000999
+30/10/2021 15:41:30  WARNING:DebtorsRegister.py:Debtors Text index deleted
+30/10/2021 15:41:30     INFO:DebtorsRegister.py:deleteDebtorsRegisterCollectionIndex: 0:00:00.003004
+30/10/2021 15:42:41     INFO:LegalEntitiesRegister.py:LegalEntities Text Index created
+30/10/2021 15:42:41     INFO:LegalEntitiesRegister.py:createLegalEntitiesRegisterCollectionIndex: 0:01:11.266754
+30/10/2021 15:44:36     INFO:EntrepreneursRegister.py:Entrepreneurs Text Index created
+30/10/2021 15:44:36     INFO:EntrepreneursRegister.py:createEntrepreneursRegisterCollectionIndex: 0:01:54.693751
+30/10/2021 15:47:04     INFO:DebtorsRegister.py:Debtors Text Index created
+30/10/2021 15:47:04     INFO:DebtorsRegister.py:createDebtorsRegisterCollectionIndex: 0:02:27.860463
+30/10/2021 15:47:11  WARNING: searchmydata.py:The "Exit" menu item chosen
+30/10/2021 15:47:11     INFO: searchmydata.py:The application closed
+30/10/2021 15:49:24     INFO: searchmydata.py:The application started
+30/10/2021 15:49:24  WARNING: ServiceTools.py:Config.json is found
+30/10/2021 15:49:24  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:49:24  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:49:24  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:49:24  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:49:24  WARNING:      Dataset.py:Config.json is found
+30/10/2021 15:49:26  WARNING: searchmydata.py:The "Search" menu item chosen
+30/10/2021 15:49:43     INFO: searchmydata.py:The search string: Голобородько Теодор Геннадійович
+30/10/2021 15:49:43     INFO: ServiceTools.py:"Results" folder is cleaned
+30/10/2021 15:49:43  WARNING:MissingPersonsRegister.py:The missing persons register: 42 records found
+30/10/2021 15:49:43  WARNING:MissingPersonsRegister.py:All result dataset was saved into MissingPersons.html
+30/10/2021 15:49:43     INFO:MissingPersonsRegister.py:Search time into the missing person register: 0:00:00.040935
+30/10/2021 15:49:43  WARNING:WantedPersonsRegister.py:The wanted persons register: 552 records found
+30/10/2021 15:49:43  WARNING:WantedPersonsRegister.py:All result dataset was saved into WantedPersons.html
+30/10/2021 15:49:43     INFO:WantedPersonsRegister.py:Search time into the wanted person register: 0:00:00.269999
+30/10/2021 15:49:47  WARNING:DebtorsRegister.py:The debtors register: 39144 records found
+30/10/2021 15:49:51  WARNING:DebtorsRegister.py:All result dataset was saved into Debtors.html
+30/10/2021 15:49:51     INFO:DebtorsRegister.py:Search time into the debtors register: 0:00:07.509526
+30/10/2021 15:49:52  WARNING:LegalEntitiesRegister.py:The legal entities register: 8598 records found
+30/10/2021 15:49:53  WARNING:LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+30/10/2021 15:49:53     INFO:LegalEntitiesRegister.py:Search time into the legal entities register: 0:00:02.369772
+30/10/2021 15:49:56  WARNING:EntrepreneursRegister.py:The Entrepreneurs register: 22991 records found
+30/10/2021 15:49:57  WARNING:EntrepreneursRegister.py:All result dataset was saved into Entrepreneurs.html
+30/10/2021 15:49:57     INFO:EntrepreneursRegister.py:Search time into the Entrepreneurs register: 0:00:03.799249
+30/10/2021 15:50:00  WARNING: searchmydata.py:The "Exit" menu item chosen
+30/10/2021 15:50:00     INFO: searchmydata.py:The application closed

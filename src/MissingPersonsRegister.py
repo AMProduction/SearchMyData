@@ -123,8 +123,7 @@ class MissingPersonsRegister(Dataset):
     def __createCollectionIndex(self):
         start_time = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
-        missingPersonsCol.create_index([('FIRST_NAME_U', 'text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text'), ('FIRST_NAME_R', 'text'), (
-            'LAST_NAME_R', 'text'), ('MIDDLE_NAME_R', 'text'), ('FIRST_NAME_E', 'text'), ('LAST_NAME_E', 'text'), ('MIDDLE_NAME_E', 'text')], name='full_text')
+        missingPersonsCol.create_index([('FIRST_NAME_U', 'text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text')], name='full_text')
         logging.info('Missing persons Text Index created')
         end_time = datetime.now()
         logging.info(
@@ -144,7 +143,7 @@ class MissingPersonsRegister(Dataset):
             resultTable.align = 'l'
             # show only 10 first search results
             for result in missingPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10):
-                resultTable.add_row([result['LAST_NAME_E'], result['FIRST_NAME_E'], result['MIDDLE_NAME_E'], '{:.10}'.format(
+                resultTable.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'], '{:.10}'.format(
                     result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE'])])
             print(resultTable.get_string(
                 title='The missing persons register: ' + str(resultCount) + ' records found'))
@@ -153,7 +152,7 @@ class MissingPersonsRegister(Dataset):
             print('Only 10 first search results showed')
             # save all search results into HTML
             for result in missingPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]):
-                resultTable.add_row([result['LAST_NAME_E'], result['FIRST_NAME_E'], result['MIDDLE_NAME_E'], '{:.10}'.format(
+                resultTable.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'], '{:.10}'.format(
                     result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE'])])
             htmlResult = resultTable.get_html_string()
             f = open('results/MissingPersons.html', 'w', encoding='utf-8')

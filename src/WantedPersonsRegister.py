@@ -123,8 +123,7 @@ class WantedPersonsRegister(Dataset):
     def __createCollectionIndex(self):
         start_time = datetime.now()
         wantedPersonsCol = self.db['WantedPersons']
-        wantedPersonsCol.create_index([('FIRST_NAME_U', 'text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text'), ('FIRST_NAME_R', 'text'), (
-            'LAST_NAME_R', 'text'), ('MIDDLE_NAME_R', 'text'), ('FIRST_NAME_E', 'text'), ('LAST_NAME_E', 'text'), ('MIDDLE_NAME_E', 'text')], name='full_text')
+        wantedPersonsCol.create_index([('FIRST_NAME_U', 'text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text')], name='full_text')
         logging.info('WantedPersons Text Index created')
         end_time = datetime.now()
         logging.info(
@@ -146,7 +145,7 @@ class WantedPersonsRegister(Dataset):
                 'LOST PLACE': 20, 'CATEGORY': 25, 'WHO IS SEARCHING': 25, 'CRIME': 15}
             # show only 10 first search results
             for result in wantedPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10):
-                resultTable.add_row([result['LAST_NAME_E'], result['FIRST_NAME_E'], result['MIDDLE_NAME_E'], '{:.10}'.format(
+                resultTable.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'], '{:.10}'.format(
                     result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE']), result['CATEGORY'], result['OVD'], result['ARTICLE_CRIM']])
             print(resultTable.get_string(
                 title='The wanted persons register: ' + str(resultCount) + ' records found'))
@@ -155,7 +154,7 @@ class WantedPersonsRegister(Dataset):
             print('Only 10 first search results showed')
             # save all search results into HTML
             for result in wantedPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]):
-                resultTable.add_row([result['LAST_NAME_E'], result['FIRST_NAME_E'], result['MIDDLE_NAME_E'], '{:.10}'.format(
+                resultTable.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'], '{:.10}'.format(
                     result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE']), result['CATEGORY'], result['OVD'], result['ARTICLE_CRIM']])
             htmlResult = resultTable.get_html_string()
             f = open('results/WantedPersons.html', 'w', encoding='utf-8')

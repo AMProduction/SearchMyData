@@ -4,6 +4,7 @@ import logging
 import os
 import shutil
 import zipfile
+import mmap
 from datetime import datetime
 from io import BytesIO
 
@@ -72,10 +73,17 @@ class DebtorsRegister(Dataset):
             # convert CSV to JSON using Dask
             debtorsCsv.to_json('debtorsJson')
             for file in os.listdir('debtorsJson'):
-                # save to the collection
-                for line in open('debtorsJson/'+file, 'r'):
+                file_object = open('debtorsJson/'+file, mode='r')
+                # map the entire file into memory, size 0 means whole file, normally much faster than buffered i/o
+                mm = mmap.mmap(file_object.fileno(), 0,
+                               access=mmap.ACCESS_READ)
+                # iterate over the block, until next newline
+                for line in iter(mm.readline, b''):
                     debtorsJson = json.loads(line)
+                    # save to the collection
                     debtorsCol.insert_one(debtorsJson)
+                mm.close()
+                file_object.close()
             logging.info('Debtors dataset was saved into the database')
             # delete temp files
             os.remove(debtorsCsvFileName)
@@ -144,7 +152,7 @@ class DebtorsRegister(Dataset):
         start_time = datetime.now()
         debtorsCol = self.db['Debtors']
         debtorsCol.create_index(
-            [('DEBTOR_NAME', 'text'), ('DEBTOR_CODE', 'text'), ('EMP_FULL_FIO', 'text')], name='full_text')
+            [('DEBTOR_NAME', 'text')], name='full_text')
         logging.info('Debtors Text Index created')
         end_time = datetime.now()
         logging.info('createDebtorsRegisterCollectionIndex: ' +

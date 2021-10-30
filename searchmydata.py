@@ -12,7 +12,7 @@ def search():
     searchString = str(input('Search query: '))
     logging.info('The search string: ' + searchString)
     service.clearResultsDir()
-    # call search method
+    # call search methods
     missingPersons.searchIntoCollection(searchString)
     wantedPersons.searchIntoCollection(searchString)
     debtors.searchIntoCollection(searchString)
