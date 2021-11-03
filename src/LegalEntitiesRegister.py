@@ -7,6 +7,7 @@ import xml.etree.ElementTree as ET
 import zipfile
 from datetime import datetime
 from io import BytesIO
+from pymongo.errors import PyMongoError
 
 import requests
 from prettytable import PrettyTable
@@ -121,8 +122,14 @@ class LegalEntitiesRegister(Dataset):
                             'founders': foundersDict,
                             'stan': stan
                         }
-                        # save to the collection
-                        legalEntitiesCol.insert_one(legalEntitiesJson)
+                        try:
+                            # save to the collection
+                            legalEntitiesCol.insert_one(legalEntitiesJson)
+                        except PyMongoError:
+                            logging.error(
+                                'Error during saving Legal Entities Register into Database')
+                            print(
+                                'Error during saving Legal Entities Register into Database')
                     logging.info(
                         'LegalEntities dataset was saved into the database')
                 if xmlFile.find('_FOP_') != -1:
@@ -143,13 +150,20 @@ class LegalEntitiesRegister(Dataset):
                             'kved': kved,
                             'stan': stan
                         }
-                        # save to the collection
-                        entrepreneursCol.insert_one(entrepreneursJson)
+                        try:
+                            # save to the collection
+                            entrepreneursCol.insert_one(entrepreneursJson)
+                        except PyMongoError:
+                            logging.error(
+                                'Error during saving Entrepreneurs Register into Database')
+                            print(
+                                'Error during saving Entrepreneurs Register into Database')
                     logging.info(
                         'Entrepreneurs dataset was saved into the database')
             print('The Register "Єдиний державний реєстр юридичних осіб, фізичних осіб – підприємців та громадських формувань" refreshed')
-        # delete temp files
-        shutil.rmtree('Temp', ignore_errors=True)
+        finally:
+            # delete temp files
+            shutil.rmtree('Temp', ignore_errors=True)
         gc.collect()
 
     @Dataset.measureExecutionTime

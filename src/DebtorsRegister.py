@@ -7,6 +7,7 @@ import zipfile
 import mmap
 from datetime import datetime
 from io import BytesIO
+from pymongo.errors import PyMongoError
 
 import requests
 from dask import dataframe as dd
@@ -81,15 +82,21 @@ class DebtorsRegister(Dataset):
                 # iterate over the block, until next newline
                 for line in iter(mm.readline, b''):
                     debtorsJson = json.loads(line)
-                    # save to the collection
-                    debtorsCol.insert_one(debtorsJson)
+                    try:
+                        # save to the collection
+                        debtorsCol.insert_one(debtorsJson)
+                    except PyMongoError:
+                        logging.error(
+                            'Error during saving Debtors Register into Database')
+                        print('Error during saving Debtors Register into Database')
                 mm.close()
                 file_object.close()
             logging.info('Debtors dataset was saved into the database')
+            print('The Register "Єдиний реєстр боржників" refreshed')
+        finally:
             # delete temp files
             os.remove(debtorsCsvFileName)
             shutil.rmtree('debtorsJson', ignore_errors=True)
-            print('The Register "Єдиний реєстр боржників" refreshed')
         gc.collect()
 
     @Dataset.measureExecutionTime

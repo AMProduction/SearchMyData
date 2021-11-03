@@ -2,6 +2,7 @@ import json
 import logging
 import os
 from pathlib import Path
+from datetime import datetime, timedelta
 
 import pymongo
 from prettytable import PrettyTable
@@ -83,3 +84,15 @@ class ServiceTools:
         if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
             command = 'cls'
         os.system(command)
+
+    def checkIsExpired(self):
+        isExpired = False
+        expiredTime = datetime.now() - timedelta(days=2)
+        for record in self.__serviceCol.find():
+            lastModifiedDate = datetime.strptime(
+                record['LastModifiedDate'], '%Y-%m-%d %H:%M:%S.%f')
+            if lastModifiedDate < expiredTime:
+                logging.warning(record['Description'] + ' is out of date')
+                isExpired = True
+        if (isExpired):
+            print('Warning! One or more datasets are out of date. Please, refresh!')

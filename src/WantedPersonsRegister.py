@@ -2,6 +2,7 @@ import gc
 import json
 import logging
 from datetime import datetime
+from pymongo.errors import PyMongoError
 
 import requests
 from prettytable import PrettyTable
@@ -60,8 +61,14 @@ class WantedPersonsRegister(Dataset):
     @Dataset.measureExecutionTime
     def __saveDataset(self, json):
         wantedPersonsCol = self.db['WantedPersons']
-        wantedPersonsCol.insert_many(json)
-        logging.info('Wanted persons dataset was saved into the database')
+        try:
+            wantedPersonsCol.insert_many(json)
+        except PyMongoError:
+            logging.error(
+                'Error during saving Wanted Persons Register into Database')
+            print('Error during saving Wanted Persons Register into Database')
+        else:
+            logging.info('Wanted persons dataset was saved into the database')
         gc.collect()
 
     @Dataset.measureExecutionTime

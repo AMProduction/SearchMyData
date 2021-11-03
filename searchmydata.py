@@ -61,7 +61,7 @@ def print_menu():
 
 if __name__ == '__main__':
     # Set up logging
-    logging.basicConfig(filename='logs/searchmydata.log', filemode='a', format='%(asctime)s %(levelname)10s:%(filename)30s:%(message)s',
+    logging.basicConfig(filename='logs/searchmydata.log', filemode='a', format='%(asctime)s %(levelname)10s:%(filename)26s:%(message)s',
                         datefmt='%d/%m/%Y %H:%M:%S', encoding='utf-8', level=logging.DEBUG)
     logging.info('The application started')
     # create instances
@@ -75,6 +75,7 @@ if __name__ == '__main__':
     # main loop
     while(True):
         service.getRegistersInfo()
+        service.checkIsExpired()
         print_menu()
         option = ''
         try:

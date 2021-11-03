@@ -1,6 +1,8 @@
-### v1.8. Release. 31/10/2021
+### v1.8. Release. 04/11/2021
 * Performance optimization
 * Refactoring
+* Added unit tests
+* Added check if a dataset is outdated
 
 ### v1.7. Release. 28/10/2021
 * **[Dockerizing](https://hub.docker.com/repository/docker/andruxa17/searchmydata)**
