@@ -132,35 +132,41 @@ class MissingPersonsRegister(Dataset):
     @Dataset.measureExecutionTime
     def searchIntoCollection(self, queryString):
         missingPersonsCol = self.db['MissingPersons']
-        resultCount = missingPersonsCol.count_documents(
-            {'$text': {'$search': queryString}})
-        if resultCount == 0:
-            print('The missing persons register: No data found')
-            logging.warning('The missing persons register: No data found')
+        try:
+            resultCount = missingPersonsCol.count_documents(
+                {'$text': {'$search': queryString}})
+        except PyMongoError:
+            logging.error(
+                'Error during search into Missing Persons Register')
+            print('Error during search into Missing Persons Register')
         else:
-            resultTable = PrettyTable(
-                ['LAST NAME', 'FIRST NAME', 'MIDDLE NAME', 'BIRTH DATE', 'LOST PLACE', 'LOST DATE'])
-            resultTable.align = 'l'
-            # show only 10 first search results
-            for result in missingPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10):
-                resultTable.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'], '{:.10}'.format(
-                    result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE'])])
-            print(resultTable.get_string(
-                title='The missing persons register: ' + str(resultCount) + ' records found'))
-            logging.warning(
-                'The missing persons register: %s records found', str(resultCount))
-            print('Only 10 first search results showed')
-            # save all search results into HTML
-            for result in missingPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]):
-                resultTable.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'], '{:.10}'.format(
-                    result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE'])])
-            htmlResult = resultTable.get_html_string()
-            f = open('results/MissingPersons.html', 'w', encoding='utf-8')
-            f.write(htmlResult)
-            f.close()
-            print('All result dataset was saved into MissingPersons.html')
-            logging.warning(
-                'All result dataset was saved into MissingPersons.html')
+            if resultCount == 0:
+                print('The missing persons register: No data found')
+                logging.warning('The missing persons register: No data found')
+            else:
+                resultTable = PrettyTable(
+                    ['LAST NAME', 'FIRST NAME', 'MIDDLE NAME', 'BIRTH DATE', 'LOST PLACE', 'LOST DATE'])
+                resultTable.align = 'l'
+                # show only 10 first search results
+                for result in missingPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10):
+                    resultTable.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'], '{:.10}'.format(
+                        result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE'])])
+                print(resultTable.get_string(
+                    title='The missing persons register: ' + str(resultCount) + ' records found'))
+                logging.warning(
+                    'The missing persons register: %s records found', str(resultCount))
+                print('Only 10 first search results showed')
+                # save all search results into HTML
+                for result in missingPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]):
+                    resultTable.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'], '{:.10}'.format(
+                        result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE'])])
+                htmlResult = resultTable.get_html_string()
+                f = open('results/MissingPersons.html', 'w', encoding='utf-8')
+                f.write(htmlResult)
+                f.close()
+                print('All result dataset was saved into MissingPersons.html')
+                logging.warning(
+                    'All result dataset was saved into MissingPersons.html')
         gc.collect()
 
     @Dataset.measureExecutionTime

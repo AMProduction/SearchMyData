@@ -160,36 +160,43 @@ class DebtorsRegister(Dataset):
     @Dataset.measureExecutionTime
     def searchIntoCollection(self, queryString):
         debtorsCol = self.db['Debtors']
-        resultCount = debtorsCol.count_documents(
-            {'$text': {'$search': queryString}})
-        if resultCount == 0:
-            print('The debtors register: No data found')
-            logging.warning('The debtors register: No data found')
+        try:
+            resultCount = debtorsCol.count_documents(
+                {'$text': {'$search': queryString}})
+        except PyMongoError:
+            logging.error(
+                'Error during search into Debtors Register')
+            print('Error during search into Debtors Register')
         else:
-            resultTable = PrettyTable(['DEBTOR NAME', 'DEBTOR CODE', 'PUBLISHER',
-                                       'EXECUTIVE SERVICE', 'EXECUTIVE SERVICE EMPLOYEE', 'CATEGORY'])
-            resultTable.align = 'l'
-            resultTable._max_width = {'DEBTOR NAME': 25, 'PUBLISHER': 25,
-                                      'EXECUTIVE SERVICE': 35, 'EXECUTIVE SERVICE EMPLOYEE': 25, 'CATEGORY': 25}
-            # show only 10 first search results
-            for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
-                resultTable.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'],
-                                     result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
-            print(resultTable.get_string(
-                title='The debtors register: ' + str(resultCount) + ' records found'))
-            logging.warning(
-                'The debtors register: %s records found', str(resultCount))
-            print('Only 10 first search results showed')
-            # save all search results into HTML
-            for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
-                resultTable.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'],
-                                     result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
-            htmlResult = resultTable.get_html_string()
-            f = open('results/Debtors.html', 'w', encoding='utf-8')
-            f.write(htmlResult)
-            f.close()
-            print('All result dataset was saved into Debtors.html')
-            logging.warning('All result dataset was saved into Debtors.html')
+            if resultCount == 0:
+                print('The debtors register: No data found')
+                logging.warning('The debtors register: No data found')
+            else:
+                resultTable = PrettyTable(['DEBTOR NAME', 'DEBTOR CODE', 'PUBLISHER',
+                                           'EXECUTIVE SERVICE', 'EXECUTIVE SERVICE EMPLOYEE', 'CATEGORY'])
+                resultTable.align = 'l'
+                resultTable._max_width = {'DEBTOR NAME': 25, 'PUBLISHER': 25,
+                                          'EXECUTIVE SERVICE': 35, 'EXECUTIVE SERVICE EMPLOYEE': 25, 'CATEGORY': 25}
+                # show only 10 first search results
+                for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
+                    resultTable.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'],
+                                        result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
+                print(resultTable.get_string(
+                    title='The debtors register: ' + str(resultCount) + ' records found'))
+                logging.warning(
+                    'The debtors register: %s records found', str(resultCount))
+                print('Only 10 first search results showed')
+                # save all search results into HTML
+                for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
+                    resultTable.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'],
+                                        result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
+                htmlResult = resultTable.get_html_string()
+                f = open('results/Debtors.html', 'w', encoding='utf-8')
+                f.write(htmlResult)
+                f.close()
+                print('All result dataset was saved into Debtors.html')
+                logging.warning(
+                    'All result dataset was saved into Debtors.html')
         gc.collect()
 
     @Dataset.measureExecutionTime

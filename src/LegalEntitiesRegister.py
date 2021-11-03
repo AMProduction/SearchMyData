@@ -227,35 +227,41 @@ class LegalEntitiesRegister(Dataset):
     @Dataset.measureExecutionTime
     def searchIntoCollection(self, queryString):
         legalEntitiesCol = self.db['LegalEntities']
-        resultCount = legalEntitiesCol.count_documents(
-            {'$text': {'$search': queryString}})
-        if resultCount == 0:
-            print('The legal entities register: No data found')
-            logging.warning('The legal entities register: No data found')
+        try:
+            resultCount = legalEntitiesCol.count_documents(
+                {'$text': {'$search': queryString}})
+        except PyMongoError:
+            logging.error(
+                'Error during search into Legal Entities Register')
+            print('Error during search into Legal Entities Register')
         else:
-            resultTable = PrettyTable(
-                ['SHORT NAME', 'EDRPOU', 'ADDRESS', 'KVED', 'BOSS', 'FOUNDERS', 'STATE'])
-            resultTable.align = 'l'
-            resultTable._max_width = {
-                'SHORT NAME': 25, 'ADDRESS': 25, 'KVED': 30, 'BOSS': 25, 'FOUNDERS': 25}
-            # show only 10 first search results
-            for result in legalEntitiesCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
-                resultTable.add_row([result['short_name'], result['edrpou'], result['address'],
-                                     result['kved'], result['boss'], result['founders'], result['stan']])
-            print(resultTable.get_string(
-                title='The legal entities register: ' + str(resultCount) + ' records found'))
-            logging.warning(
-                'The legal entities register: %s records found', str(resultCount))
-            print('Only 10 first search results showed')
-            # save all search results into HTML
-            for result in legalEntitiesCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
-                resultTable.add_row([result['short_name'], result['edrpou'], result['address'],
-                                     result['kved'], result['boss'], result['founders'], result['stan']])
-            htmlResult = resultTable.get_html_string()
-            f = open('results/LegalEntities.html', 'w', encoding='utf-8')
-            f.write(htmlResult)
-            f.close()
-            print('All result dataset was saved into LegalEntities.html')
-            logging.warning(
-                'All result dataset was saved into LegalEntities.html')
+            if resultCount == 0:
+                print('The legal entities register: No data found')
+                logging.warning('The legal entities register: No data found')
+            else:
+                resultTable = PrettyTable(
+                    ['SHORT NAME', 'EDRPOU', 'ADDRESS', 'KVED', 'BOSS', 'FOUNDERS', 'STATE'])
+                resultTable.align = 'l'
+                resultTable._max_width = {
+                    'SHORT NAME': 25, 'ADDRESS': 25, 'KVED': 30, 'BOSS': 25, 'FOUNDERS': 25}
+                # show only 10 first search results
+                for result in legalEntitiesCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
+                    resultTable.add_row([result['short_name'], result['edrpou'], result['address'],
+                                        result['kved'], result['boss'], result['founders'], result['stan']])
+                print(resultTable.get_string(
+                    title='The legal entities register: ' + str(resultCount) + ' records found'))
+                logging.warning(
+                    'The legal entities register: %s records found', str(resultCount))
+                print('Only 10 first search results showed')
+                # save all search results into HTML
+                for result in legalEntitiesCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
+                    resultTable.add_row([result['short_name'], result['edrpou'], result['address'],
+                                        result['kved'], result['boss'], result['founders'], result['stan']])
+                htmlResult = resultTable.get_html_string()
+                f = open('results/LegalEntities.html', 'w', encoding='utf-8')
+                f.write(htmlResult)
+                f.close()
+                print('All result dataset was saved into LegalEntities.html')
+                logging.warning(
+                    'All result dataset was saved into LegalEntities.html')
         gc.collect()

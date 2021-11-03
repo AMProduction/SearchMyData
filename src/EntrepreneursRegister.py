@@ -1,6 +1,7 @@
 import gc
 import logging
 from datetime import datetime
+from pymongo.errors import PyMongoError
 
 from prettytable import PrettyTable
 
@@ -79,33 +80,40 @@ class EntrepreneursRegister(Dataset):
     @Dataset.measureExecutionTime
     def searchIntoCollection(self, queryString):
         entrepreneursCol = self.db['Entrepreneurs']
-        resultCount = entrepreneursCol.count_documents(
-            {'$text': {'$search': queryString}})
-        if resultCount == 0:
-            print('The Entrepreneurs register: No data found')
-            logging.warning('The Entrepreneurs register: No data found')
+        try:
+            resultCount = entrepreneursCol.count_documents(
+                {'$text': {'$search': queryString}})
+        except PyMongoError:
+            logging.error(
+                'Error during search into Entrepreneurs Register')
+            print('Error during search into Entrepreneurs Register')
         else:
-            resultTable = PrettyTable(['NAME', 'ADDRESS', 'KVED', 'STATE'])
-            resultTable.align = 'l'
-            resultTable._max_width = {'NAME': 25, 'ADDRESS': 25, 'KVED': 30}
-            # show only 10 first search results
-            for result in entrepreneursCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
-                resultTable.add_row(
-                    [result['fio'], result['address'], result['kved'], result['stan']])
-            print(resultTable.get_string(
-                title='The Entrepreneurs register: ' + str(resultCount) + ' records found'))
-            logging.warning(
-                'The Entrepreneurs register: %s records found', str(resultCount))
-            print('Only 10 first search results showed')
-            # save all search results into HTML
-            for result in entrepreneursCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
-                resultTable.add_row(
-                    [result['fio'], result['address'], result['kved'], result['stan']])
-            htmlResult = resultTable.get_html_string()
-            f = open('results/Entrepreneurs.html', 'w', encoding='utf-8')
-            f.write(htmlResult)
-            f.close()
-            print('All result dataset was saved into Entrepreneurs.html')
-            logging.warning(
-                'All result dataset was saved into Entrepreneurs.html')
+            if resultCount == 0:
+                print('The Entrepreneurs register: No data found')
+                logging.warning('The Entrepreneurs register: No data found')
+            else:
+                resultTable = PrettyTable(['NAME', 'ADDRESS', 'KVED', 'STATE'])
+                resultTable.align = 'l'
+                resultTable._max_width = {
+                    'NAME': 25, 'ADDRESS': 25, 'KVED': 30}
+                # show only 10 first search results
+                for result in entrepreneursCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
+                    resultTable.add_row(
+                        [result['fio'], result['address'], result['kved'], result['stan']])
+                print(resultTable.get_string(
+                    title='The Entrepreneurs register: ' + str(resultCount) + ' records found'))
+                logging.warning(
+                    'The Entrepreneurs register: %s records found', str(resultCount))
+                print('Only 10 first search results showed')
+                # save all search results into HTML
+                for result in entrepreneursCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
+                    resultTable.add_row(
+                        [result['fio'], result['address'], result['kved'], result['stan']])
+                htmlResult = resultTable.get_html_string()
+                f = open('results/Entrepreneurs.html', 'w', encoding='utf-8')
+                f.write(htmlResult)
+                f.close()
+                print('All result dataset was saved into Entrepreneurs.html')
+                logging.warning(
+                    'All result dataset was saved into Entrepreneurs.html')
         gc.collect()

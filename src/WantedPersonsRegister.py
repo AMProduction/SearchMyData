@@ -132,37 +132,43 @@ class WantedPersonsRegister(Dataset):
     @Dataset.measureExecutionTime
     def searchIntoCollection(self, queryString):
         wantedPersonsCol = self.db['WantedPersons']
-        resultCount = wantedPersonsCol.count_documents(
-            {'$text': {'$search': queryString}})
-        if resultCount == 0:
-            print('The wanted persons register: No data found')
-            logging.warning('The wanted persons register: No data found')
+        try:
+            resultCount = wantedPersonsCol.count_documents(
+                {'$text': {'$search': queryString}})
+        except PyMongoError:
+            logging.error(
+                'Error during search into Wanted Persons Register')
+            print('Error during search into Wanted Persons Register')
         else:
-            resultTable = PrettyTable(['LAST NAME', 'FIRST NAME', 'MIDDLE NAME', 'BIRTH DATE',
-                                       'LOST PLACE', 'LOST DATE', 'CATEGORY', 'WHO IS SEARCHING', 'CRIME'])
-            resultTable.align = 'l'
-            resultTable._max_width = {
-                'LOST PLACE': 20, 'CATEGORY': 25, 'WHO IS SEARCHING': 25, 'CRIME': 15}
-            # show only 10 first search results
-            for result in wantedPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10):
-                resultTable.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'], '{:.10}'.format(
-                    result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE']), result['CATEGORY'], result['OVD'], result['ARTICLE_CRIM']])
-            print(resultTable.get_string(
-                title='The wanted persons register: ' + str(resultCount) + ' records found'))
-            logging.warning(
-                'The wanted persons register: %s records found', str(resultCount))
-            print('Only 10 first search results showed')
-            # save all search results into HTML
-            for result in wantedPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]):
-                resultTable.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'], '{:.10}'.format(
-                    result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE']), result['CATEGORY'], result['OVD'], result['ARTICLE_CRIM']])
-            htmlResult = resultTable.get_html_string()
-            f = open('results/WantedPersons.html', 'w', encoding='utf-8')
-            f.write(htmlResult)
-            f.close()
-            print('All result dataset was saved into WantedPersons.html')
-            logging.warning(
-                'All result dataset was saved into WantedPersons.html')
+            if resultCount == 0:
+                print('The wanted persons register: No data found')
+                logging.warning('The wanted persons register: No data found')
+            else:
+                resultTable = PrettyTable(['LAST NAME', 'FIRST NAME', 'MIDDLE NAME', 'BIRTH DATE',
+                                           'LOST PLACE', 'LOST DATE', 'CATEGORY', 'WHO IS SEARCHING', 'CRIME'])
+                resultTable.align = 'l'
+                resultTable._max_width = {
+                    'LOST PLACE': 20, 'CATEGORY': 25, 'WHO IS SEARCHING': 25, 'CRIME': 15}
+                # show only 10 first search results
+                for result in wantedPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10):
+                    resultTable.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'], '{:.10}'.format(
+                        result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE']), result['CATEGORY'], result['OVD'], result['ARTICLE_CRIM']])
+                print(resultTable.get_string(
+                    title='The wanted persons register: ' + str(resultCount) + ' records found'))
+                logging.warning(
+                    'The wanted persons register: %s records found', str(resultCount))
+                print('Only 10 first search results showed')
+                # save all search results into HTML
+                for result in wantedPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]):
+                    resultTable.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'], '{:.10}'.format(
+                        result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE']), result['CATEGORY'], result['OVD'], result['ARTICLE_CRIM']])
+                htmlResult = resultTable.get_html_string()
+                f = open('results/WantedPersons.html', 'w', encoding='utf-8')
+                f.write(htmlResult)
+                f.close()
+                print('All result dataset was saved into WantedPersons.html')
+                logging.warning(
+                    'All result dataset was saved into WantedPersons.html')
         gc.collect()
 
     @Dataset.measureExecutionTime
