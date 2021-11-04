@@ -2,6 +2,7 @@ import gc
 import json
 import logging
 from datetime import datetime
+from pymongo.errors import PyMongoError
 
 import requests
 from prettytable import PrettyTable
@@ -13,6 +14,7 @@ class MissingPersonsRegister(Dataset):
     def __init__(self):
         super().__init__()
 
+    @Dataset.measureExecutionTime
     def __getDataset(self):
         print('The register "Інформація про безвісно зниклих громадян" is retrieving...')
         try:
@@ -56,26 +58,27 @@ class MissingPersonsRegister(Dataset):
               generalDatasetJson['result']['title'] + '" refreshed')
         return missingPersonsDataset
 
+    @Dataset.measureExecutionTime
     def __saveDataset(self, json):
-        start_time = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
-        missingPersonsCol.insert_many(json)
-        logging.info('Missing persons dataset was saved into the database')
-        end_time = datetime.now()
-        logging.info(
-            'Time to save into the missing person register: ' + str(end_time-start_time))
+        try:
+            missingPersonsCol.insert_many(json)
+        except PyMongoError:
+            logging.error(
+                'Error during saving Missing Persons Register into Database')
+            print('Error during saving Missing Persons Register into Database')
+        else:
+            logging.info('Missing persons dataset was saved into the database')
         gc.collect()
 
+    @Dataset.measureExecutionTime
     def __clearCollection(self):
-        start_time = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
         countDeletedDocuments = missingPersonsCol.delete_many({})
         logging.warning('%s documents deleted. The missing persons collection is empty.', str(
             countDeletedDocuments.deleted_count))
-        end_time = datetime.now()
-        logging.info('clearMissingPersonsRegisterCollection: ' +
-                     str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def __createServiceJson(self):
         createdDate = datetime.now()
         lastModifiedDate = datetime.now()
@@ -90,6 +93,7 @@ class MissingPersonsRegister(Dataset):
         }
         self.serviceCol.insert_one(missingPersonsRegisterServiceJson)
 
+    @Dataset.measureExecutionTime
     def __updateServiceJson(self):
         lastModifiedDate = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
@@ -100,6 +104,7 @@ class MissingPersonsRegister(Dataset):
                       'DocumentsCount': documentsCount}}
         )
 
+    @Dataset.measureExecutionTime
     def __updateMetadata(self):
         collectionsList = self.db.list_collection_names()
         # update or create MissingPersonsRegisterServiceJson
@@ -110,63 +115,61 @@ class MissingPersonsRegister(Dataset):
             self.__createServiceJson()
             logging.info('MissingPersonsRegisterServiceJson created')
 
+    @Dataset.measureExecutionTime
     def __deleteCollectionIndex(self):
-        start_time = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
         if ('full_text' in missingPersonsCol.index_information()):
             missingPersonsCol.drop_index('full_text')
             logging.warning('Missing persons Text index deleted')
-        end_time = datetime.now()
-        logging.info(
-            'deleteMissingPersonsRegisterCollectionIndex: ' + str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def __createCollectionIndex(self):
-        start_time = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
-        missingPersonsCol.create_index([('FIRST_NAME_U', 'text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text'), ('FIRST_NAME_R', 'text'), (
-            'LAST_NAME_R', 'text'), ('MIDDLE_NAME_R', 'text'), ('FIRST_NAME_E', 'text'), ('LAST_NAME_E', 'text'), ('MIDDLE_NAME_E', 'text')], name='full_text')
+        missingPersonsCol.create_index(
+            [('FIRST_NAME_U', 'text'), ('LAST_NAME_U', 'text'), ('MIDDLE_NAME_U', 'text')], name='full_text')
         logging.info('Missing persons Text Index created')
-        end_time = datetime.now()
-        logging.info(
-            'createMissingPersonsRegisterCollectionIndex: ' + str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def searchIntoCollection(self, queryString):
-        start_time = datetime.now()
         missingPersonsCol = self.db['MissingPersons']
-        resultCount = missingPersonsCol.count_documents(
-            {'$text': {'$search': queryString}})
-        if resultCount == 0:
-            print('The missing persons register: No data found')
-            logging.warning('The missing persons register: No data found')
+        try:
+            resultCount = missingPersonsCol.count_documents(
+                {'$text': {'$search': queryString}})
+        except PyMongoError:
+            logging.error(
+                'Error during search into Missing Persons Register')
+            print('Error during search into Missing Persons Register')
         else:
-            resultTable = PrettyTable(
-                ['LAST NAME', 'FIRST NAME', 'MIDDLE NAME', 'BIRTH DATE', 'LOST PLACE', 'LOST DATE'])
-            resultTable.align = 'l'
-            # show only 10 first search results
-            for result in missingPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10):
-                resultTable.add_row([result['LAST_NAME_E'], result['FIRST_NAME_E'], result['MIDDLE_NAME_E'], '{:.10}'.format(
-                    result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE'])])
-            print(resultTable.get_string(
-                title='The missing persons register: ' + str(resultCount) + ' records found'))
-            logging.warning(
-                'The missing persons register: %s records found', str(resultCount))
-            print('Only 10 first search results showed')
-            # save all search results into HTML
-            for result in missingPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]):
-                resultTable.add_row([result['LAST_NAME_E'], result['FIRST_NAME_E'], result['MIDDLE_NAME_E'], '{:.10}'.format(
-                    result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE'])])
-            htmlResult = resultTable.get_html_string()
-            f = open('results/MissingPersons.html', 'w', encoding='utf-8')
-            f.write(htmlResult)
-            f.close()
-            print('All result dataset was saved into MissingPersons.html')
-            logging.warning(
-                'All result dataset was saved into MissingPersons.html')
-        end_time = datetime.now()
-        logging.info(
-            'Search time into the missing person register: ' + str(end_time-start_time))
+            if resultCount == 0:
+                print('The missing persons register: No data found')
+                logging.warning('The missing persons register: No data found')
+            else:
+                resultTable = PrettyTable(
+                    ['LAST NAME', 'FIRST NAME', 'MIDDLE NAME', 'BIRTH DATE', 'LOST PLACE', 'LOST DATE'])
+                resultTable.align = 'l'
+                # show only 10 first search results
+                for result in missingPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10):
+                    resultTable.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'], '{:.10}'.format(
+                        result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE'])])
+                print(resultTable.get_string(
+                    title='The missing persons register: ' + str(resultCount) + ' records found'))
+                logging.warning(
+                    'The missing persons register: %s records found', str(resultCount))
+                print('Only 10 first search results showed')
+                # save all search results into HTML
+                for result in missingPersonsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]):
+                    resultTable.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'], '{:.10}'.format(
+                        result['BIRTH_DATE']), result['LOST_PLACE'], '{:.10}'.format(result['LOST_DATE'])])
+                htmlResult = resultTable.get_html_string()
+                f = open('results/MissingPersons.html', 'w', encoding='utf-8')
+                f.write(htmlResult)
+                f.close()
+                print('All result dataset was saved into MissingPersons.html')
+                logging.warning(
+                    'All result dataset was saved into MissingPersons.html')
         gc.collect()
 
+    @Dataset.measureExecutionTime
     def setupDataset(self):
         self.__deleteCollectionIndex()
         self.__clearCollection()

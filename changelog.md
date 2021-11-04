@@ -1,5 +1,15 @@
+### v1.8. Release. 04/11/2021
+* Performance optimization
+* Refactoring
+* Added unit tests
+* Added check if a dataset is outdated
+* Error handling added into Search functions
+* Updated dependencies
+
 ### v1.7. Release. 28/10/2021
+* **[Dockerizing](https://hub.docker.com/repository/docker/andruxa17/searchmydata)**
 * **Switched to Python 3.10.0**
+* Added setup script for run in Docker
 * Added the run script
 * Added requirements.txt
 

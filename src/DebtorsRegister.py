@@ -4,8 +4,10 @@ import logging
 import os
 import shutil
 import zipfile
+import mmap
 from datetime import datetime
 from io import BytesIO
+from pymongo.errors import PyMongoError
 
 import requests
 from dask import dataframe as dd
@@ -18,6 +20,7 @@ class DebtorsRegister(Dataset):
     def __init__(self):
         super().__init__()
 
+    @Dataset.measureExecutionTime
     def __getDataset(self):
         print('The register "Єдиний реєстр боржників" is retrieving...')
         try:
@@ -47,8 +50,8 @@ class DebtorsRegister(Dataset):
         debtorsDatasetZIPUrl = debtorsGeneralDatasetJson['result']['url']
         return debtorsDatasetZIPUrl
 
+    @Dataset.measureExecutionTime
     def __saveDataset(self, zipUrl):
-        start_time = datetime.now()
         debtorsCol = self.db['Debtors']
         try:
             # get ZIP file
@@ -72,30 +75,38 @@ class DebtorsRegister(Dataset):
             # convert CSV to JSON using Dask
             debtorsCsv.to_json('debtorsJson')
             for file in os.listdir('debtorsJson'):
-                # save to the collection
-                for line in open('debtorsJson/'+file, 'r'):
+                file_object = open('debtorsJson/'+file, mode='r')
+                # map the entire file into memory, size 0 means whole file, normally much faster than buffered i/o
+                mm = mmap.mmap(file_object.fileno(), 0,
+                               access=mmap.ACCESS_READ)
+                # iterate over the block, until next newline
+                for line in iter(mm.readline, b''):
                     debtorsJson = json.loads(line)
-                    debtorsCol.insert_one(debtorsJson)
+                    try:
+                        # save to the collection
+                        debtorsCol.insert_one(debtorsJson)
+                    except PyMongoError:
+                        logging.error(
+                            'Error during saving Debtors Register into Database')
+                        print('Error during saving Debtors Register into Database')
+                mm.close()
+                file_object.close()
             logging.info('Debtors dataset was saved into the database')
+            print('The Register "Єдиний реєстр боржників" refreshed')
+        finally:
             # delete temp files
             os.remove(debtorsCsvFileName)
             shutil.rmtree('debtorsJson', ignore_errors=True)
-            print('The Register "Єдиний реєстр боржників" refreshed')
-        end_time = datetime.now()
-        logging.info('Time to save into the debtors register: ' +
-                     str(end_time-start_time))
         gc.collect()
 
+    @Dataset.measureExecutionTime
     def __clearCollection(self):
-        start_time = datetime.now()
         debtorsCol = self.db['Debtors']
         countDeletedDocuments = debtorsCol.delete_many({})
         logging.warning('%s documents deleted. The wanted persons collection is empty.', str(
             countDeletedDocuments.deleted_count))
-        end_time = datetime.now()
-        logging.info('clearDebtorsRegisterCollection: ' +
-                     str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def __createServiceJson(self):
         createdDate = datetime.now()
         lastModifiedDate = datetime.now()
@@ -110,6 +121,7 @@ class DebtorsRegister(Dataset):
         }
         self.serviceCol.insert_one(debtorsRegisterServiceJson)
 
+    @Dataset.measureExecutionTime
     def __updateServiceJson(self):
         lastModifiedDate = datetime.now()
         debtorsCol = self.db['Debtors']
@@ -120,6 +132,7 @@ class DebtorsRegister(Dataset):
                       'DocumentsCount': documentsCount}}
         )
 
+    @Dataset.measureExecutionTime
     def __updateMetadata(self):
         collectionsList = self.db.list_collection_names()
         # update or create DebtorsRegisterServiceJson
@@ -130,64 +143,63 @@ class DebtorsRegister(Dataset):
             self.__createServiceJson()
             logging.info('DebtorsRegisterServiceJson created')
 
+    @Dataset.measureExecutionTime
     def __deleteCollectionIndex(self):
-        start_time = datetime.now()
         debtorsCol = self.db['Debtors']
         if ('full_text' in debtorsCol.index_information()):
             debtorsCol.drop_index('full_text')
             logging.warning('Debtors Text index deleted')
-        end_time = datetime.now()
-        logging.info('deleteDebtorsRegisterCollectionIndex: ' +
-                     str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def __createCollectionIndex(self):
-        start_time = datetime.now()
         debtorsCol = self.db['Debtors']
         debtorsCol.create_index(
-            [('DEBTOR_NAME', 'text'), ('DEBTOR_CODE', 'text'), ('EMP_FULL_FIO', 'text')], name='full_text')
+            [('DEBTOR_NAME', 'text')], name='full_text')
         logging.info('Debtors Text Index created')
-        end_time = datetime.now()
-        logging.info('createDebtorsRegisterCollectionIndex: ' +
-                     str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def searchIntoCollection(self, queryString):
-        start_time = datetime.now()
         debtorsCol = self.db['Debtors']
-        resultCount = debtorsCol.count_documents(
-            {'$text': {'$search': queryString}})
-        if resultCount == 0:
-            print('The debtors register: No data found')
-            logging.warning('The debtors register: No data found')
+        try:
+            resultCount = debtorsCol.count_documents(
+                {'$text': {'$search': queryString}})
+        except PyMongoError:
+            logging.error(
+                'Error during search into Debtors Register')
+            print('Error during search into Debtors Register')
         else:
-            resultTable = PrettyTable(['DEBTOR NAME', 'DEBTOR CODE', 'PUBLISHER',
-                                       'EXECUTIVE SERVICE', 'EXECUTIVE SERVICE EMPLOYEE', 'CATEGORY'])
-            resultTable.align = 'l'
-            resultTable._max_width = {'DEBTOR NAME': 25, 'PUBLISHER': 25,
-                                      'EXECUTIVE SERVICE': 35, 'EXECUTIVE SERVICE EMPLOYEE': 25, 'CATEGORY': 25}
-            # show only 10 first search results
-            for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
-                resultTable.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'],
-                                     result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
-            print(resultTable.get_string(
-                title='The debtors register: ' + str(resultCount) + ' records found'))
-            logging.warning(
-                'The debtors register: %s records found', str(resultCount))
-            print('Only 10 first search results showed')
-            # save all search results into HTML
-            for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
-                resultTable.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'],
-                                     result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
-            htmlResult = resultTable.get_html_string()
-            f = open('results/Debtors.html', 'w', encoding='utf-8')
-            f.write(htmlResult)
-            f.close()
-            print('All result dataset was saved into Debtors.html')
-            logging.warning('All result dataset was saved into Debtors.html')
-        end_time = datetime.now()
-        logging.info('Search time into the debtors register: ' +
-                     str(end_time-start_time))
+            if resultCount == 0:
+                print('The debtors register: No data found')
+                logging.warning('The debtors register: No data found')
+            else:
+                resultTable = PrettyTable(['DEBTOR NAME', 'DEBTOR CODE', 'PUBLISHER',
+                                           'EXECUTIVE SERVICE', 'EXECUTIVE SERVICE EMPLOYEE', 'CATEGORY'])
+                resultTable.align = 'l'
+                resultTable._max_width = {'DEBTOR NAME': 25, 'PUBLISHER': 25,
+                                          'EXECUTIVE SERVICE': 35, 'EXECUTIVE SERVICE EMPLOYEE': 25, 'CATEGORY': 25}
+                # show only 10 first search results
+                for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
+                    resultTable.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'],
+                                        result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
+                print(resultTable.get_string(
+                    title='The debtors register: ' + str(resultCount) + ' records found'))
+                logging.warning(
+                    'The debtors register: %s records found', str(resultCount))
+                print('Only 10 first search results showed')
+                # save all search results into HTML
+                for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
+                    resultTable.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'],
+                                        result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
+                htmlResult = resultTable.get_html_string()
+                f = open('results/Debtors.html', 'w', encoding='utf-8')
+                f.write(htmlResult)
+                f.close()
+                print('All result dataset was saved into Debtors.html')
+                logging.warning(
+                    'All result dataset was saved into Debtors.html')
         gc.collect()
 
+    @Dataset.measureExecutionTime
     def setupDataset(self):
         self.__deleteCollectionIndex()
         self.__clearCollection()

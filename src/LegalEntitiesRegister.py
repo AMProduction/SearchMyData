@@ -7,6 +7,7 @@ import xml.etree.ElementTree as ET
 import zipfile
 from datetime import datetime
 from io import BytesIO
+from pymongo.errors import PyMongoError
 
 import requests
 from prettytable import PrettyTable
@@ -18,6 +19,7 @@ class LegalEntitiesRegister(Dataset):
     def __init__(self):
         super().__init__()
 
+    @Dataset.measureExecutionTime
     def getDataset(self):
         print('The register "Єдиний державний реєстр юридичних осіб, фізичних осіб – підприємців та громадських формувань" is retrieving...')
         try:
@@ -49,8 +51,8 @@ class LegalEntitiesRegister(Dataset):
         entrepreneursDatasetZIPUrl = entrepreneursGeneralDatasetJson['result']['url']
         return entrepreneursDatasetZIPUrl
 
+    @Dataset.measureExecutionTime
     def saveDataset(self, zipUrl):
-        start_time = datetime.now()
         entrepreneursCol = self.db['Entrepreneurs']
         legalEntitiesCol = self.db['LegalEntities']
         try:
@@ -120,8 +122,14 @@ class LegalEntitiesRegister(Dataset):
                             'founders': foundersDict,
                             'stan': stan
                         }
-                        # save to the collection
-                        legalEntitiesCol.insert_one(legalEntitiesJson)
+                        try:
+                            # save to the collection
+                            legalEntitiesCol.insert_one(legalEntitiesJson)
+                        except PyMongoError:
+                            logging.error(
+                                'Error during saving Legal Entities Register into Database')
+                            print(
+                                'Error during saving Legal Entities Register into Database')
                     logging.info(
                         'LegalEntities dataset was saved into the database')
                 if xmlFile.find('_FOP_') != -1:
@@ -142,28 +150,30 @@ class LegalEntitiesRegister(Dataset):
                             'kved': kved,
                             'stan': stan
                         }
-                        # save to the collection
-                        entrepreneursCol.insert_one(entrepreneursJson)
+                        try:
+                            # save to the collection
+                            entrepreneursCol.insert_one(entrepreneursJson)
+                        except PyMongoError:
+                            logging.error(
+                                'Error during saving Entrepreneurs Register into Database')
+                            print(
+                                'Error during saving Entrepreneurs Register into Database')
                     logging.info(
                         'Entrepreneurs dataset was saved into the database')
             print('The Register "Єдиний державний реєстр юридичних осіб, фізичних осіб – підприємців та громадських формувань" refreshed')
-        # delete temp files
-        shutil.rmtree('Temp', ignore_errors=True)
-        end_time = datetime.now()
-        logging.info(
-            'Time to save into the Entrepreneurs and LegalEntities registers: ' + str(end_time-start_time))
+        finally:
+            # delete temp files
+            shutil.rmtree('Temp', ignore_errors=True)
         gc.collect()
 
+    @Dataset.measureExecutionTime
     def clearCollection(self):
-        start_time = datetime.now()
         legalEntitiesCol = self.db['LegalEntities']
         countDeletedDocuments = legalEntitiesCol.delete_many({})
         logging.warning('%s documents deleted. The legal entities collection is empty.', str(
             countDeletedDocuments.deleted_count))
-        end_time = datetime.now()
-        logging.info('clearLegalEntitiesRegisterCollection: ' +
-                     str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def __createServiceJson(self):
         createdDate = datetime.now()
         lastModifiedDate = datetime.now()
@@ -178,6 +188,7 @@ class LegalEntitiesRegister(Dataset):
         }
         self.serviceCol.insert_one(legalEntitiesRegisterServiceJson)
 
+    @Dataset.measureExecutionTime
     def __updateServiceJson(self):
         lastModifiedDate = datetime.now()
         legalEntitiesCol = self.db['LegalEntities']
@@ -188,6 +199,7 @@ class LegalEntitiesRegister(Dataset):
                       'DocumentsCount': documentsCount}}
         )
 
+    @Dataset.measureExecutionTime
     def updateMetadata(self):
         collectionsList = self.db.list_collection_names()
         # update or create LegalEntitiesRegisterServiceJson
@@ -198,61 +210,58 @@ class LegalEntitiesRegister(Dataset):
             self.__createServiceJson()
             logging.info('LegalEntitiesRegisterServiceJson created')
 
+    @Dataset.measureExecutionTime
     def deleteCollectionIndex(self):
-        start_time = datetime.now()
         legalEntitiesCol = self.db['LegalEntities']
         if ('full_text' in legalEntitiesCol.index_information()):
             legalEntitiesCol.drop_index('full_text')
             logging.warning('LegalEntities Text index deleted')
-        end_time = datetime.now()
-        logging.info(
-            'deleteLegalEntitiesRegisterCollectionIndex: ' + str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def createCollectionIndex(self):
-        start_time = datetime.now()
         legalEntitiesCol = self.db['LegalEntities']
         legalEntitiesCol.create_index([('short_name', 'text'), ('edrpou', 'text'), (
             'boss', 'text'), ('beneficiaries', 'text'), ('founders', 'text')], name='full_text')
         logging.info('LegalEntities Text Index created')
-        end_time = datetime.now()
-        logging.info(
-            'createLegalEntitiesRegisterCollectionIndex: ' + str(end_time-start_time))
 
+    @Dataset.measureExecutionTime
     def searchIntoCollection(self, queryString):
-        start_time = datetime.now()
         legalEntitiesCol = self.db['LegalEntities']
-        resultCount = legalEntitiesCol.count_documents(
-            {'$text': {'$search': queryString}})
-        if resultCount == 0:
-            print('The legal entities register: No data found')
-            logging.warning('The legal entities register: No data found')
+        try:
+            resultCount = legalEntitiesCol.count_documents(
+                {'$text': {'$search': queryString}})
+        except PyMongoError:
+            logging.error(
+                'Error during search into Legal Entities Register')
+            print('Error during search into Legal Entities Register')
         else:
-            resultTable = PrettyTable(
-                ['SHORT NAME', 'EDRPOU', 'ADDRESS', 'KVED', 'BOSS', 'FOUNDERS', 'STATE'])
-            resultTable.align = 'l'
-            resultTable._max_width = {
-                'SHORT NAME': 25, 'ADDRESS': 25, 'KVED': 30, 'BOSS': 25, 'FOUNDERS': 25}
-            # show only 10 first search results
-            for result in legalEntitiesCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
-                resultTable.add_row([result['short_name'], result['edrpou'], result['address'],
-                                     result['kved'], result['boss'], result['founders'], result['stan']])
-            print(resultTable.get_string(
-                title='The legal entities register: ' + str(resultCount) + ' records found'))
-            logging.warning(
-                'The legal entities register: %s records found', str(resultCount))
-            print('Only 10 first search results showed')
-            # save all search results into HTML
-            for result in legalEntitiesCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
-                resultTable.add_row([result['short_name'], result['edrpou'], result['address'],
-                                     result['kved'], result['boss'], result['founders'], result['stan']])
-            htmlResult = resultTable.get_html_string()
-            f = open('results/LegalEntities.html', 'w', encoding='utf-8')
-            f.write(htmlResult)
-            f.close()
-            print('All result dataset was saved into LegalEntities.html')
-            logging.warning(
-                'All result dataset was saved into LegalEntities.html')
-        end_time = datetime.now()
-        logging.info(
-            'Search time into the legal entities register: ' + str(end_time-start_time))
+            if resultCount == 0:
+                print('The legal entities register: No data found')
+                logging.warning('The legal entities register: No data found')
+            else:
+                resultTable = PrettyTable(
+                    ['SHORT NAME', 'EDRPOU', 'ADDRESS', 'KVED', 'BOSS', 'FOUNDERS', 'STATE'])
+                resultTable.align = 'l'
+                resultTable._max_width = {
+                    'SHORT NAME': 25, 'ADDRESS': 25, 'KVED': 30, 'BOSS': 25, 'FOUNDERS': 25}
+                # show only 10 first search results
+                for result in legalEntitiesCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
+                    resultTable.add_row([result['short_name'], result['edrpou'], result['address'],
+                                        result['kved'], result['boss'], result['founders'], result['stan']])
+                print(resultTable.get_string(
+                    title='The legal entities register: ' + str(resultCount) + ' records found'))
+                logging.warning(
+                    'The legal entities register: %s records found', str(resultCount))
+                print('Only 10 first search results showed')
+                # save all search results into HTML
+                for result in legalEntitiesCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
+                    resultTable.add_row([result['short_name'], result['edrpou'], result['address'],
+                                        result['kved'], result['boss'], result['founders'], result['stan']])
+                htmlResult = resultTable.get_html_string()
+                f = open('results/LegalEntities.html', 'w', encoding='utf-8')
+                f.write(htmlResult)
+                f.close()
+                print('All result dataset was saved into LegalEntities.html')
+                logging.warning(
+                    'All result dataset was saved into LegalEntities.html')
         gc.collect()
