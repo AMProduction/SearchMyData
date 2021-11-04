@@ -4928,3 +4928,46 @@
 03/11/2021 19:15:43    WARNING:           ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
 03/11/2021 19:16:31    WARNING:           searchmydata.py:The "Exit" menu item chosen
 03/11/2021 19:16:31       INFO:           searchmydata.py:The application closed
+03/11/2021 19:52:35       INFO:           searchmydata.py:The application started
+03/11/2021 19:52:35    WARNING:           ServiceTools.py:ServiceTools: Config.json is found
+03/11/2021 19:52:35    WARNING:                Dataset.py:MissingPersonsRegister: Config.json is found
+03/11/2021 19:52:35    WARNING:                Dataset.py:WantedPersonsRegister: Config.json is found
+03/11/2021 19:52:35    WARNING:                Dataset.py:DebtorsRegister: Config.json is found
+03/11/2021 19:52:35    WARNING:                Dataset.py:LegalEntitiesRegister: Config.json is found
+03/11/2021 19:52:35    WARNING:                Dataset.py:EntrepreneursRegister: Config.json is found
+03/11/2021 19:52:35    WARNING:           ServiceTools.py:Єдиний реєстр боржників is out of date
+03/11/2021 19:52:35    WARNING:           ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+03/11/2021 19:52:35    WARNING:           ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+03/11/2021 19:52:40    WARNING:           searchmydata.py:The "Search" menu item chosen
+03/11/2021 19:52:44       INFO:           searchmydata.py:The search string: таня
+03/11/2021 19:52:44       INFO:           ServiceTools.py:ServiceTools: "Results" folder is cleaned
+03/11/2021 19:52:44    WARNING: MissingPersonsRegister.py:The missing persons register: No data found
+03/11/2021 19:52:44       INFO:                Dataset.py:Total execution time MissingPersonsRegister.searchIntoCollection: 0:00:00.036997
+03/11/2021 19:52:44    WARNING:  WantedPersonsRegister.py:The wanted persons register: No data found
+03/11/2021 19:52:44       INFO:                Dataset.py:Total execution time WantedPersonsRegister.searchIntoCollection: 0:00:00.033997
+03/11/2021 19:52:44    WARNING:        DebtorsRegister.py:The debtors register: 5 records found
+03/11/2021 19:52:44    WARNING:        DebtorsRegister.py:All result dataset was saved into Debtors.html
+03/11/2021 19:52:44       INFO:                Dataset.py:Total execution time DebtorsRegister.searchIntoCollection: 0:00:00.065000
+03/11/2021 19:52:44    WARNING:  LegalEntitiesRegister.py:The legal entities register: 12 records found
+03/11/2021 19:52:44    WARNING:  LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+03/11/2021 19:52:44       INFO:                Dataset.py:Total execution time LegalEntitiesRegister.searchIntoCollection: 0:00:00.085001
+03/11/2021 19:52:44    WARNING:  EntrepreneursRegister.py:The Entrepreneurs register: 23 records found
+03/11/2021 19:52:44    WARNING:  EntrepreneursRegister.py:All result dataset was saved into Entrepreneurs.html
+03/11/2021 19:52:44       INFO:                Dataset.py:Total execution time EntrepreneursRegister.searchIntoCollection: 0:00:00.084848
+03/11/2021 19:52:44    WARNING:           ServiceTools.py:Єдиний реєстр боржників is out of date
+03/11/2021 19:52:44    WARNING:           ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+03/11/2021 19:52:44    WARNING:           ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+03/11/2021 19:53:01    WARNING:           searchmydata.py:The "Exit" menu item chosen
+03/11/2021 19:53:01       INFO:           searchmydata.py:The application closed
+03/11/2021 23:07:31       INFO:           searchmydata.py:The application started
+03/11/2021 23:07:31    WARNING:           ServiceTools.py:ServiceTools: Config.json is found
+03/11/2021 23:07:31    WARNING:                Dataset.py:MissingPersonsRegister: Config.json is found
+03/11/2021 23:07:31    WARNING:                Dataset.py:WantedPersonsRegister: Config.json is found
+03/11/2021 23:07:31    WARNING:                Dataset.py:DebtorsRegister: Config.json is found
+03/11/2021 23:07:31    WARNING:                Dataset.py:LegalEntitiesRegister: Config.json is found
+03/11/2021 23:07:31    WARNING:                Dataset.py:EntrepreneursRegister: Config.json is found
+03/11/2021 23:07:31    WARNING:           ServiceTools.py:Єдиний реєстр боржників is out of date
+03/11/2021 23:07:31    WARNING:           ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+03/11/2021 23:07:31    WARNING:           ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+03/11/2021 23:07:40    WARNING:           searchmydata.py:The "Exit" menu item chosen
+03/11/2021 23:07:40       INFO:           searchmydata.py:The application closed
