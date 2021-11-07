@@ -1,4 +1,4 @@
-### v1.8. Release. 04/11/2021
+### [v1.8. Release.](https://github.com/AMProduction/SearchMyData/releases/tag/v1.8) 04/11/2021
 * Performance optimization
 * Refactoring
 * Added unit tests
@@ -6,7 +6,7 @@
 * Error handling added into Search functions
 * Updated dependencies
 
-### v1.7. Release. 28/10/2021
+### [v1.7. Release.](https://github.com/AMProduction/SearchMyData/releases/tag/v1.7) 28/10/2021
 * **[Dockerizing](https://hub.docker.com/repository/docker/andruxa17/searchmydata)**
 * **Switched to Python 3.10.0**
 * Added setup script for run in Docker
