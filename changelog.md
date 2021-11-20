@@ -1,4 +1,4 @@
-### v1.8.5. Release. 20/11/2021
+### [v1.8.5. Release.](https://github.com/AMProduction/SearchMyData/releases/tag/v1.8.5) 20/11/2021
 * Refactoring to implement [PEP 8](https://www.python.org/dev/peps/pep-0008/)
 
 ### [v1.8. Release.](https://github.com/AMProduction/SearchMyData/releases/tag/v1.8) 04/11/2021
