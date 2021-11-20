@@ -65,44 +65,44 @@ class Dataset:
             print('Quitting...')
             exit()
 
-    def getDataset(self):
+    def get_dataset(self):
         pass
 
-    def saveDataset(self):
+    def save_dataset(self):
         pass
 
-    def clearCollection(self):
+    def clear_collection(self):
         pass
 
-    def __createServiceJson(self):
+    def __create_service_json(self):
         pass
 
-    def __updateServiceJson(self):
+    def __update_service_json(self):
         pass
 
-    def updateMetadata(self):
+    def update_metadata(self):
         pass
 
-    def deleteCollectionIndex(self):
+    def delete_collection_index(self):
         pass
 
-    def createCollectionIndex(self):
+    def create_collection_index(self):
         pass
 
-    def searchIntoCollection(self):
+    def search_into_collection(self):
         pass
 
-    def setupDataset(self):
+    def setup_dataset(self):
         pass
 
-    def measureExecutionTime(func):
+    def measure_execution_time(func):
         @wraps(func)
-        def logTime(*args, **kwargs):
+        def log_time(*args, **kwargs):
             start_time = datetime.now()
             try:
                 return func(*args, **kwargs)
             finally:
                 end_time = datetime.now()
                 logging.info(
-                    f'Total execution time {args[0].__class__.__name__}.{func.__name__}: {end_time-start_time}')
-        return logTime
+                    f'Total execution time {args[0].__class__.__name__}.{func.__name__}: {end_time - start_time}')
+        return log_time

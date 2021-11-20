@@ -13,78 +13,78 @@ import requests
 from dask import dataframe as dd
 from prettytable import PrettyTable
 
-from src.Dataset import Dataset
+from src.dataset import Dataset
 
 
 class DebtorsRegister(Dataset):
     def __init__(self):
         super().__init__()
 
-    @Dataset.measureExecutionTime
-    def __getDataset(self):
+    @Dataset.measure_execution_time
+    def __get_dataset(self):
         print('The register "Єдиний реєстр боржників" is retrieving...')
         try:
-            generalDataset = requests.get(
+            general_dataset = requests.get(
                 'https://data.gov.ua/api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e').text
-        except:
-            logging.error(
-                'Error during general DebtorsRegister dataset JSON receiving occured')
+        except ConnectionError:
+            logging.error('Error during general DebtorsRegister dataset JSON receiving occured')
             print('Error during dataset receiving occurred!')
         else:
-            generalDatasetJson = json.loads(generalDataset)
+            general_dataset_json = json.loads(general_dataset)
             logging.info('A general DebtorsRegister dataset JSON received')
         # get dataset id
-        debtorsGeneralDatasetId = generalDatasetJson['result']['resources'][0]['id']
+        debtors_general_dataset_id = general_dataset_json['result']['resources'][0]['id']
         try:
             # get resources JSON id
-            debtorsGeneralDatasetIdJson = requests.get(
-                'https://data.gov.ua/api/3/action/resource_show?id=' + debtorsGeneralDatasetId).text
-        except:
-            logging.error(
-                'Error during DebtorsRegisterr resources JSON id receiving occured')
+            debtors_general_dataset_id_json = requests.get(
+                'https://data.gov.ua/api/3/action/resource_show?id=' + debtors_general_dataset_id).text
+        except ConnectionError:
+            logging.error('Error during DebtorsRegisterr resources JSON id receiving occured')
             print('Error during dataset receiving occurred!')
         else:
-            debtorsGeneralDatasetJson = json.loads(debtorsGeneralDatasetIdJson)
+            debtors_general_dataset_json = json.loads(debtors_general_dataset_id_json)
             logging.info('A DebtorsRegister resources JSON id received')
         # get ZIP url
-        debtorsDatasetZIPUrl = debtorsGeneralDatasetJson['result']['url']
-        return debtorsDatasetZIPUrl
+        debtors_dataset_zip_url = debtors_general_dataset_json['result']['url']
+        return debtors_dataset_zip_url
 
-    @Dataset.measureExecutionTime
-    def __saveDataset(self, zipUrl):
-        debtorsCol = self.db['Debtors']
+    @Dataset.measure_execution_time
+    def __save_dataset(self, zip_url):
+        debtors_col = self.db['Debtors']
         try:
             # get ZIP file
-            debtorsDatasetZIP = requests.get(zipUrl).content
-        except:
+            debtors_dataset_zip = requests.get(zip_url).content
+        except OSError:
             logging.error('Error during DebtorsRegisterZIP receiving occured')
             print('Error during ZIP file receiving occured!')
         else:
             logging.info('A DebtorsRegister dataset received')
             # get lists of file
-            debtorsZip = zipfile.ZipFile(BytesIO(debtorsDatasetZIP), 'r')
+            debtors_zip = zipfile.ZipFile(BytesIO(debtors_dataset_zip), 'r')
             # go inside ZIP
-            for csvFile in debtorsZip.namelist():
+            for csvFile in debtors_zip.namelist():
                 logging.warning('File in ZIP: ' + str(csvFile))
-                debtorsCsvFileName = str(csvFile)
-            debtorsZip.extractall()
-            debtorsZip.close()
+                debtors_csv_file_name = str(csvFile)
+            debtors_zip.extractall()
+            debtors_zip.close()
             # read CSV using Dask
-            debtorsCsv = dd.read_csv(debtorsCsvFileName, encoding='windows-1251', header=None, skiprows=[0], dtype={1: 'object'}, names=[
-                                     'DEBTOR_NAME', 'DEBTOR_CODE', 'PUBLISHER', 'EMP_FULL_FIO', 'EMP_ORG', 'ORG_PHONE', 'EMAIL_ADDR', 'VP_ORDERNUM', 'VD_CAT'])
+            debtors_csv = dd.read_csv(debtors_csv_file_name, encoding='windows-1251', header=None, skiprows=[0],
+                                      dtype={1: 'object'}, names=[
+                    'DEBTOR_NAME', 'DEBTOR_CODE', 'PUBLISHER', 'EMP_FULL_FIO', 'EMP_ORG', 'ORG_PHONE', 'EMAIL_ADDR',
+                    'VP_ORDERNUM', 'VD_CAT'])
             # convert CSV to JSON using Dask
-            debtorsCsv.to_json('debtorsJson')
+            debtors_csv.to_json('debtorsJson')
             for file in os.listdir('debtorsJson'):
-                file_object = open('debtorsJson/'+file, mode='r')
+                file_object = open('debtorsJson/' + file, mode='r')
                 # map the entire file into memory, size 0 means whole file, normally much faster than buffered i/o
                 mm = mmap.mmap(file_object.fileno(), 0,
                                access=mmap.ACCESS_READ)
                 # iterate over the block, until next newline
                 for line in iter(mm.readline, b''):
-                    debtorsJson = json.loads(line)
+                    debtors_json = json.loads(line)
                     try:
                         # save to the collection
-                        debtorsCol.insert_one(debtorsJson)
+                        debtors_col.insert_one(debtors_json)
                     except PyMongoError:
                         logging.error(
                             'Error during saving Debtors Register into Database')
@@ -95,115 +95,117 @@ class DebtorsRegister(Dataset):
             print('The Register "Єдиний реєстр боржників" refreshed')
         finally:
             # delete temp files
-            os.remove(debtorsCsvFileName)
+            os.remove(debtors_csv_file_name)
             shutil.rmtree('debtorsJson', ignore_errors=True)
         gc.collect()
 
-    @Dataset.measureExecutionTime
-    def __clearCollection(self):
-        debtorsCol = self.db['Debtors']
-        countDeletedDocuments = debtorsCol.delete_many({})
+    @Dataset.measure_execution_time
+    def __clear_collection(self):
+        debtors_col = self.db['Debtors']
+        count_deleted_documents = debtors_col.delete_many({})
         logging.warning('%s documents deleted. The wanted persons collection is empty.', str(
-            countDeletedDocuments.deleted_count))
+            count_deleted_documents.deleted_count))
 
-    @Dataset.measureExecutionTime
-    def __createServiceJson(self):
-        createdDate = datetime.now()
-        lastModifiedDate = datetime.now()
-        debtorsCol = self.db['Debtors']
-        documentsCount = debtorsCol.count_documents({})
-        debtorsRegisterServiceJson = {
+    @Dataset.measure_execution_time
+    def __create_service_json(self):
+        created_date = datetime.now()
+        last_modified_date = datetime.now()
+        debtors_col = self.db['Debtors']
+        documents_count = debtors_col.count_documents({})
+        debtors_register_service_json = {
             '_id': 3,
             'Description': 'Єдиний реєстр боржників',
-            'DocumentsCount': documentsCount,
-            'CreatedDate': str(createdDate),
-            'LastModifiedDate': str(lastModifiedDate)
+            'DocumentsCount': documents_count,
+            'CreatedDate': str(created_date),
+            'LastModifiedDate': str(last_modified_date)
         }
-        self.serviceCol.insert_one(debtorsRegisterServiceJson)
+        self.serviceCol.insert_one(debtors_register_service_json)
 
-    @Dataset.measureExecutionTime
-    def __updateServiceJson(self):
-        lastModifiedDate = datetime.now()
-        debtorsCol = self.db['Debtors']
-        documentsCount = debtorsCol.count_documents({})
+    @Dataset.measure_execution_time
+    def __update_service_json(self):
+        last_modified_date = datetime.now()
+        debtors_col = self.db['Debtors']
+        documents_count = debtors_col.count_documents({})
         self.serviceCol.update_one(
             {'_id': 3},
-            {'$set': {'LastModifiedDate': str(lastModifiedDate),
-                      'DocumentsCount': documentsCount}}
+            {'$set': {'LastModifiedDate': str(last_modified_date),
+                      'DocumentsCount': documents_count}}
         )
 
-    @Dataset.measureExecutionTime
-    def __updateMetadata(self):
-        collectionsList = self.db.list_collection_names()
+    @Dataset.measure_execution_time
+    def __update_metadata(self):
+        collections_list = self.db.list_collection_names()
         # update or create DebtorsRegisterServiceJson
-        if ('ServiceCollection' in collectionsList) and (self.serviceCol.count_documents({'_id': 3}, limit=1) != 0):
-            self.__updateServiceJson()
+        if ('ServiceCollection' in collections_list) and (self.serviceCol.count_documents({'_id': 3}, limit=1) != 0):
+            self.__update_service_json()
             logging.info('DebtorsRegisterServiceJson updated')
         else:
-            self.__createServiceJson()
+            self.__create_service_json()
             logging.info('DebtorsRegisterServiceJson created')
 
-    @Dataset.measureExecutionTime
-    def __deleteCollectionIndex(self):
-        debtorsCol = self.db['Debtors']
-        if ('full_text' in debtorsCol.index_information()):
-            debtorsCol.drop_index('full_text')
+    @Dataset.measure_execution_time
+    def __delete_collection_index(self):
+        debtors_col = self.db['Debtors']
+        if 'full_text' in debtors_col.index_information():
+            debtors_col.drop_index('full_text')
             logging.warning('Debtors Text index deleted')
 
-    @Dataset.measureExecutionTime
-    def __createCollectionIndex(self):
-        debtorsCol = self.db['Debtors']
-        debtorsCol.create_index(
+    @Dataset.measure_execution_time
+    def __create_collection_index(self):
+        debtors_col = self.db['Debtors']
+        debtors_col.create_index(
             [('DEBTOR_NAME', 'text')], name='full_text')
         logging.info('Debtors Text Index created')
 
-    @Dataset.measureExecutionTime
-    def searchIntoCollection(self, queryString):
-        debtorsCol = self.db['Debtors']
+    @Dataset.measure_execution_time
+    def search_into_collection(self, query_string):
+        debtors_col = self.db['Debtors']
         try:
-            resultCount = debtorsCol.count_documents(
-                {'$text': {'$search': queryString}})
+            result_count = debtors_col.count_documents(
+                {'$text': {'$search': query_string}})
         except PyMongoError:
             logging.error(
                 'Error during search into Debtors Register')
             print('Error during search into Debtors Register')
         else:
-            if resultCount == 0:
+            if result_count == 0:
                 print('The debtors register: No data found')
                 logging.warning('The debtors register: No data found')
             else:
-                resultTable = PrettyTable(['DEBTOR NAME', 'DEBTOR CODE', 'PUBLISHER',
-                                           'EXECUTIVE SERVICE', 'EXECUTIVE SERVICE EMPLOYEE', 'CATEGORY'])
-                resultTable.align = 'l'
-                resultTable._max_width = {'DEBTOR NAME': 25, 'PUBLISHER': 25,
-                                          'EXECUTIVE SERVICE': 35, 'EXECUTIVE SERVICE EMPLOYEE': 25, 'CATEGORY': 25}
+                result_table = PrettyTable(['DEBTOR NAME', 'DEBTOR CODE', 'PUBLISHER',
+                                            'EXECUTIVE SERVICE', 'EXECUTIVE SERVICE EMPLOYEE', 'CATEGORY'])
+                result_table.align = 'l'
+                result_table._max_width = {'DEBTOR NAME': 25, 'PUBLISHER': 25, 'EXECUTIVE SERVICE': 35,
+                                           'EXECUTIVE SERVICE EMPLOYEE': 25, 'CATEGORY': 25}
                 # show only 10 first search results
-                for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
-                    resultTable.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'],
-                                        result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
-                print(resultTable.get_string(
-                    title='The debtors register: ' + str(resultCount) + ' records found'))
+                for result in debtors_col.find({'$text': {'$search': query_string}}, {'score': {'$meta': 'textScore'}})\
+                        .sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
+                    result_table.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'],
+                                          result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
+                print(result_table.get_string(
+                    title='The debtors register: ' + str(result_count) + ' records found'))
                 logging.warning(
-                    'The debtors register: %s records found', str(resultCount))
+                    'The debtors register: %s records found', str(result_count))
                 print('Only 10 first search results showed')
                 # save all search results into HTML
-                for result in debtorsCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
-                    resultTable.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'],
-                                        result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
-                htmlResult = resultTable.get_html_string()
+                for result in debtors_col.find({'$text': {'$search': query_string}}, {'score': {'$meta': 'textScore'}}).\
+                        sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
+                    result_table.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'],
+                                          result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
+                html_result = result_table.get_html_string()
                 f = open('results/Debtors.html', 'w', encoding='utf-8')
-                f.write(htmlResult)
+                f.write(html_result)
                 f.close()
                 print('All result dataset was saved into Debtors.html')
                 logging.warning(
                     'All result dataset was saved into Debtors.html')
         gc.collect()
 
-    @Dataset.measureExecutionTime
-    def setupDataset(self):
-        self.__deleteCollectionIndex()
-        self.__clearCollection()
-        __debtorsDatasetZIPUrl = self.__getDataset()
-        self.__saveDataset(__debtorsDatasetZIPUrl)
-        self.__updateMetadata()
-        self.__createCollectionIndex()
+    @Dataset.measure_execution_time
+    def setup_dataset(self):
+        self.__delete_collection_index()
+        self.__clear_collection()
+        __debtorsDatasetZIPUrl = self.__get_dataset()
+        self.__save_dataset(__debtorsDatasetZIPUrl)
+        self.__update_metadata()
+        self.__create_collection_index()

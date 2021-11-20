@@ -9,42 +9,42 @@ from src.WantedPersonsRegister import WantedPersonsRegister
 
 
 def search():
-    searchString = str(input('Search query: '))
-    logging.info('The search string: ' + searchString)
-    service.clearResultsDir()
+    search_string = str(input('Search query: '))
+    logging.info('The search string: ' + search_string)
+    service.clear_results_dir()
     # call search methods
-    missingPersons.searchIntoCollection(searchString)
-    wantedPersons.searchIntoCollection(searchString)
-    debtors.searchIntoCollection(searchString)
-    legalEntities.searchIntoCollection(searchString)
-    entrepreneurs.searchIntoCollection(searchString)
+    missingPersons.search_into_collection(search_string)
+    wantedPersons.search_into_collection(search_string)
+    debtors.search_into_collection(search_string)
+    legalEntities.search_into_collection(search_string)
+    entrepreneurs.search_into_collection(search_string)
 
 
-def setupDatasets():
+def setup_datasets():
     # Інформація про безвісно зниклих громадян (JSON)
-    missingPersons.setupDataset()
+    missingPersons.setup_dataset()
 
     # Інформація про осіб, які переховуються від органів влади (JSON)
-    wantedPersons.setupDataset()
+    wantedPersons.setup_dataset()
 
     # Єдиний реєстр боржників (CSV in ZIP)
-    debtors.setupDataset()
+    debtors.setup_dataset()
 
     # Єдиний державний реєстр юридичних осіб, фізичних осіб-підприємців та громадських формувань (XMLs in ZIPped)
-    legalEntities.deleteCollectionIndex()
-    legalEntities.clearCollection()
+    legalEntities.delete_collection_index()
+    legalEntities.clear_collection()
 
-    entrepreneurs.deleteCollectionIndex()
-    entrepreneurs.clearCollection()
+    entrepreneurs.delete_collection_index()
+    entrepreneurs.clear_collection()
 
-    entrepreneursDatasetZIPUrl = legalEntities.getDataset()
-    legalEntities.saveDataset(entrepreneursDatasetZIPUrl)
+    entrepreneurs_dataset_zip_url = legalEntities.get_dataset()
+    legalEntities.save_dataset(entrepreneurs_dataset_zip_url)
 
-    legalEntities.updateMetadata()
-    entrepreneurs.updateMetadata()
+    legalEntities.update_metadata()
+    entrepreneurs.update_metadata()
 
-    legalEntities.createCollectionIndex()
-    entrepreneurs.createCollectionIndex()
+    legalEntities.create_collection_index()
+    entrepreneurs.create_collection_index()
 
 
 menu_options = {
@@ -61,8 +61,9 @@ def print_menu():
 
 if __name__ == '__main__':
     # Set up logging
-    logging.basicConfig(filename='logs/searchmydata.log', filemode='a', format='%(asctime)s %(levelname)10s:%(filename)26s:%(message)s',
-                        datefmt='%d/%m/%Y %H:%M:%S', encoding='utf-8', level=logging.DEBUG)
+    logging.basicConfig(filename='logs/searchmydata.log', filemode='a',
+                        format='%(asctime)s %(levelname)10s:%(filename)26s:%(message)s', datefmt='%d/%m/%Y %H:%M:%S',
+                        encoding='utf-8', level=logging.DEBUG)
     logging.info('The application started')
     # create instances
     service = src.ServiceTools.ServiceTools()
@@ -71,16 +72,16 @@ if __name__ == '__main__':
     debtors = DebtorsRegister()
     legalEntities = LegalEntitiesRegister()
     entrepreneurs = EntrepreneursRegister()
-    service.clearConsole()
+    service.clear_console()
     # main loop
-    while(True):
-        service.getRegistersInfo()
-        service.checkIsExpired()
+    while True:
+        service.get_registers_info()
+        service.check_is_expired()
         print_menu()
         option = ''
         try:
             option = int(input('Enter your choice: '))
-        except:
+        except ValueError:
             logging.error('The wrong input type of menu item choice')
             print('Wrong input. Please enter a number ...')
         # Check what choice was entered and act accordingly
@@ -89,7 +90,7 @@ if __name__ == '__main__':
             search()
         elif option == 2:
             logging.warning('The "Refresh datasets" menu item chosen')
-            setupDatasets()
+            setup_datasets()
         elif option == 3:
             logging.warning('The "Exit" menu item chosen')
             logging.info('The application closed')

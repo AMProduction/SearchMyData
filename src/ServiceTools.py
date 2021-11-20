@@ -66,33 +66,34 @@ class ServiceTools:
             print('Quitting...')
             exit()
 
-    def getRegistersInfo(self):
-        registersInfoTable = PrettyTable(
+    def get_registers_info(self):
+        registers_info_table = PrettyTable(
             ['#', 'Description', 'Documents count', 'Last modified date'])
-        for info in self.__serviceCol.find({}, {'_id': 1, 'Description': 1, 'DocumentsCount': 1, 'LastModifiedDate': 1}).sort([('_id', 1)]):
-            registersInfoTable.add_row([str(info['_id']), info['Description'], str(
+        for info in self.__serviceCol.find({}, {'_id': 1, 'Description': 1, 'DocumentsCount': 1,
+                                                'LastModifiedDate': 1}).sort([('_id', 1)]):
+            registers_info_table.add_row([str(info['_id']), info['Description'], str(
                 info['DocumentsCount']), '{:.19}'.format(info['LastModifiedDate'])])
-        print(registersInfoTable.get_string(title='Registers info'))
+        print(registers_info_table.get_string(title='Registers info'))
 
-    def clearResultsDir(self):
+    def clear_results_dir(self):
         for filename in os.listdir('results'):
             os.remove('results/'+filename)
         logging.info(f'{self.__class__.__name__}: "Results" folder is cleaned')
 
-    def clearConsole(self):
+    def clear_console(self):
         command = 'clear'
         if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
             command = 'cls'
         os.system(command)
 
-    def checkIsExpired(self):
-        isExpired = False
-        expiredTime = datetime.now() - timedelta(days=2)
+    def check_is_expired(self):
+        is_expired = False
+        expired_time = datetime.now() - timedelta(days=2)
         for record in self.__serviceCol.find():
-            lastModifiedDate = datetime.strptime(
+            last_modified_date = datetime.strptime(
                 record['LastModifiedDate'], '%Y-%m-%d %H:%M:%S.%f')
-            if lastModifiedDate < expiredTime:
+            if last_modified_date < expired_time:
                 logging.warning(record['Description'] + ' is out of date')
-                isExpired = True
-        if (isExpired):
+                is_expired = True
+        if is_expired:
             print('Warning! One or more datasets are out of date. Please, refresh!')

@@ -5,113 +5,114 @@ from pymongo.errors import PyMongoError
 
 from prettytable import PrettyTable
 
-from src.Dataset import Dataset
+from src.dataset import Dataset
 
 
 class EntrepreneursRegister(Dataset):
     def __init__(self):
         super().__init__()
 
-    @Dataset.measureExecutionTime
-    def getDataset(self):
+    @Dataset.measure_execution_time
+    def get_dataset(self):
         logging.info('EntrepreneursRegister getDataset call')
 
-    @Dataset.measureExecutionTime
-    def saveDataset(self):
+    @Dataset.measure_execution_time
+    def save_dataset(self):
         logging.info('EntrepreneursRegister saveDataset call')
 
-    @Dataset.measureExecutionTime
-    def clearCollection(self):
-        entrepreneursCol = self.db['Entrepreneurs']
-        countDeletedDocuments = entrepreneursCol.delete_many({})
+    @Dataset.measure_execution_time
+    def clear_collection(self):
+        entrepreneurs_col = self.db['Entrepreneurs']
+        count_deleted_documents = entrepreneurs_col.delete_many({})
         logging.warning('%s documents deleted. The entrepreneurs collection is empty.', str(
-            countDeletedDocuments.deleted_count))
+            count_deleted_documents.deleted_count))
 
-    @Dataset.measureExecutionTime
-    def __createServiceJson(self):
-        createdDate = datetime.now()
-        lastModifiedDate = datetime.now()
-        entrepreneursCol = self.db['Entrepreneurs']
-        documentsCount = entrepreneursCol.count_documents({})
-        entrepreneursRegisterServiceJson = {
+    @Dataset.measure_execution_time
+    def __create_service_json(self):
+        created_date = datetime.now()
+        last_modified_date = datetime.now()
+        entrepreneurs_col = self.db['Entrepreneurs']
+        documents_count = entrepreneurs_col.count_documents({})
+        entrepreneurs_register_service_json = {
             '_id': 5,
             'Description': 'Єдиний державний реєстр фізичних осіб – підприємців',
-            'DocumentsCount': documentsCount,
-            'CreatedDate': str(createdDate),
-            'LastModifiedDate': str(lastModifiedDate)
+            'DocumentsCount': documents_count,
+            'CreatedDate': str(created_date),
+            'LastModifiedDate': str(last_modified_date)
         }
-        self.serviceCol.insert_one(entrepreneursRegisterServiceJson)
+        self.serviceCol.insert_one(entrepreneurs_register_service_json)
 
-    @Dataset.measureExecutionTime
-    def __updateServiceJson(self):
-        lastModifiedDate = datetime.now()
-        entrepreneursCol = self.db['Entrepreneurs']
-        documentsCount = entrepreneursCol.count_documents({})
+    @Dataset.measure_execution_time
+    def __update_service_json(self):
+        last_modified_date = datetime.now()
+        entrepreneurs_col = self.db['Entrepreneurs']
+        documents_count = entrepreneurs_col.count_documents({})
         self.serviceCol.update_one(
             {'_id': 5},
-            {'$set': {'LastModifiedDate': str(lastModifiedDate),
-                      'DocumentsCount': documentsCount}}
+            {'$set': {'LastModifiedDate': str(last_modified_date),
+                      'DocumentsCount': documents_count}}
         )
 
-    @Dataset.measureExecutionTime
-    def updateMetadata(self):
-        collectionsList = self.db.list_collection_names()
+    @Dataset.measure_execution_time
+    def update_metadata(self):
+        collections_list = self.db.list_collection_names()
         # update or create EntrepreneursRegisterServiceJson
-        if ('ServiceCollection' in collectionsList) and (self.serviceCol.count_documents({'_id': 5}, limit=1) != 0):
-            self.__updateServiceJson()
+        if ('ServiceCollection' in collections_list) and (self.serviceCol.count_documents({'_id': 5}, limit=1) != 0):
+            self.__update_service_json()
             logging.info('EntrepreneursRegisterServiceJson updated')
         else:
-            self.__createServiceJson()
+            self.__create_service_json()
             logging.info('EntrepreneursRegisterServiceJson created')
 
-    @Dataset.measureExecutionTime
-    def deleteCollectionIndex(self):
-        entrepreneursCol = self.db['Entrepreneurs']
-        if ('full_text' in entrepreneursCol.index_information()):
-            entrepreneursCol.drop_index('full_text')
+    @Dataset.measure_execution_time
+    def delete_collection_index(self):
+        entrepreneurs_col = self.db['Entrepreneurs']
+        if 'full_text' in entrepreneurs_col.index_information():
+            entrepreneurs_col.drop_index('full_text')
             logging.warning('Entrepreneurs Text index deleted')
 
-    @Dataset.measureExecutionTime
-    def createCollectionIndex(self):
-        entrepreneursCol = self.db['Entrepreneurs']
-        entrepreneursCol.create_index([('fio', 'text')], name='full_text')
+    @Dataset.measure_execution_time
+    def create_collection_index(self):
+        entrepreneurs_col = self.db['Entrepreneurs']
+        entrepreneurs_col.create_index([('fio', 'text')], name='full_text')
         logging.info('Entrepreneurs Text Index created')
 
-    @Dataset.measureExecutionTime
-    def searchIntoCollection(self, queryString):
-        entrepreneursCol = self.db['Entrepreneurs']
+    @Dataset.measure_execution_time
+    def search_into_collection(self, query_string):
+        entrepreneurs_col = self.db['Entrepreneurs']
         try:
-            resultCount = entrepreneursCol.count_documents(
-                {'$text': {'$search': queryString}})
+            result_count = entrepreneurs_col.count_documents(
+                {'$text': {'$search': query_string}})
         except PyMongoError:
-            logging.error(
-                'Error during search into Entrepreneurs Register')
+            logging.error('Error during search into Entrepreneurs Register')
             print('Error during search into Entrepreneurs Register')
         else:
-            if resultCount == 0:
+            if result_count == 0:
                 print('The Entrepreneurs register: No data found')
                 logging.warning('The Entrepreneurs register: No data found')
             else:
-                resultTable = PrettyTable(['NAME', 'ADDRESS', 'KVED', 'STATE'])
-                resultTable.align = 'l'
-                resultTable._max_width = {
+                result_table = PrettyTable(['NAME', 'ADDRESS', 'KVED', 'STATE'])
+                result_table.align = 'l'
+                result_table._max_width = {
                     'NAME': 25, 'ADDRESS': 25, 'KVED': 30}
                 # show only 10 first search results
-                for result in entrepreneursCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
-                    resultTable.add_row(
-                        [result['fio'], result['address'], result['kved'], result['stan']])
-                print(resultTable.get_string(
-                    title='The Entrepreneurs register: ' + str(resultCount) + ' records found'))
+                for result in entrepreneurs_col.find({'$text': {'$search': query_string}},
+                                                     {'score': {'$meta': 'textScore'}})\
+                        .sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
+                    result_table.add_row([result['fio'], result['address'], result['kved'], result['stan']])
+                print(result_table.get_string(
+                    title='The Entrepreneurs register: ' + str(result_count) + ' records found'))
                 logging.warning(
-                    'The Entrepreneurs register: %s records found', str(resultCount))
+                    'The Entrepreneurs register: %s records found', str(result_count))
                 print('Only 10 first search results showed')
                 # save all search results into HTML
-                for result in entrepreneursCol.find({'$text': {'$search': queryString}}, {'score': {'$meta': 'textScore'}}).sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
-                    resultTable.add_row(
-                        [result['fio'], result['address'], result['kved'], result['stan']])
-                htmlResult = resultTable.get_html_string()
+                for result in entrepreneurs_col.find({'$text': {'$search': query_string}},
+                                                     {'score': {'$meta': 'textScore'}})\
+                        .sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
+                    result_table.add_row([result['fio'], result['address'], result['kved'], result['stan']])
+                html_result = result_table.get_html_string()
                 f = open('results/Entrepreneurs.html', 'w', encoding='utf-8')
-                f.write(htmlResult)
+                f.write(html_result)
                 f.close()
                 print('All result dataset was saved into Entrepreneurs.html')
                 logging.warning(
