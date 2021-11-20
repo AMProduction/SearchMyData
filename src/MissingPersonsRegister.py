@@ -21,7 +21,7 @@ class MissingPersonsRegister(Dataset):
             general_dataset = requests.get(
                 'https://data.gov.ua/api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0').text
         except ConnectionError:
-            logging.error('Error during general MissingPersons dataset JSON receiving occured')
+            logging.error('Error during general MissingPersons dataset JSON receiving occurred')
             print('Error during dataset receiving occurred!')
         else:
             general_dataset_json = json.loads(general_dataset)
@@ -33,7 +33,7 @@ class MissingPersonsRegister(Dataset):
             missing_persons_general_dataset_id_json = requests.get(
                 'https://data.gov.ua/api/3/action/resource_show?id=' + missing_persons_general_dataset_id).text
         except ConnectionError:
-            logging.error('Error during MissingPersons resources JSON id receiving occured')
+            logging.error('Error during MissingPersons resources JSON id receiving occurred')
             print('Error during dataset receiving occurred!')
         else:
             missing_persons_general_dataset_json = json.loads(missing_persons_general_dataset_id_json)
@@ -44,8 +44,8 @@ class MissingPersonsRegister(Dataset):
             # get dataset
             missing_persons_dataset_json = requests.get(missing_persons_dataset_json_url).text
         except ConnectionError:
-            logging.error('Error during MissingPersons dataset receiving occured')
-            print('Error during dataset receiving occured!')
+            logging.error('Error during MissingPersons dataset receiving occurred')
+            print('Error during dataset receiving occurred!')
         else:
             missing_persons_dataset = json.loads(missing_persons_dataset_json)
             logging.info('A MissingPersons dataset received')

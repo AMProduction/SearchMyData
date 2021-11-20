@@ -6,6 +6,7 @@ from src.EntrepreneursRegister import EntrepreneursRegister
 from src.LegalEntitiesRegister import LegalEntitiesRegister
 from src.MissingPersonsRegister import MissingPersonsRegister
 from src.WantedPersonsRegister import WantedPersonsRegister
+from src.LustratedPersonsRegister import  LustratedPersonsRegister
 
 
 def search():
@@ -21,6 +22,8 @@ def search():
 
 
 def setup_datasets():
+    lustrated.get_dataset()
+'''
     # Інформація про безвісно зниклих громадян (JSON)
     missingPersons.setup_dataset()
 
@@ -45,7 +48,7 @@ def setup_datasets():
 
     legalEntities.create_collection_index()
     entrepreneurs.create_collection_index()
-
+'''
 
 menu_options = {
     1: 'Search',
@@ -72,6 +75,7 @@ if __name__ == '__main__':
     debtors = DebtorsRegister()
     legalEntities = LegalEntitiesRegister()
     entrepreneurs = EntrepreneursRegister()
+    lustrated = LustratedPersonsRegister()
     service.clear_console()
     # main loop
     while True:

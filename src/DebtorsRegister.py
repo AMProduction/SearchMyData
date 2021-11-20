@@ -27,7 +27,7 @@ class DebtorsRegister(Dataset):
             general_dataset = requests.get(
                 'https://data.gov.ua/api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e').text
         except ConnectionError:
-            logging.error('Error during general DebtorsRegister dataset JSON receiving occured')
+            logging.error('Error during general DebtorsRegister dataset JSON receiving occurred')
             print('Error during dataset receiving occurred!')
         else:
             general_dataset_json = json.loads(general_dataset)
@@ -39,7 +39,7 @@ class DebtorsRegister(Dataset):
             debtors_general_dataset_id_json = requests.get(
                 'https://data.gov.ua/api/3/action/resource_show?id=' + debtors_general_dataset_id).text
         except ConnectionError:
-            logging.error('Error during DebtorsRegisterr resources JSON id receiving occured')
+            logging.error('Error during DebtorsRegister resources JSON id receiving occurred')
             print('Error during dataset receiving occurred!')
         else:
             debtors_general_dataset_json = json.loads(debtors_general_dataset_id_json)
@@ -55,8 +55,8 @@ class DebtorsRegister(Dataset):
             # get ZIP file
             debtors_dataset_zip = requests.get(zip_url).content
         except OSError:
-            logging.error('Error during DebtorsRegisterZIP receiving occured')
-            print('Error during ZIP file receiving occured!')
+            logging.error('Error during DebtorsRegisterZIP receiving occurred')
+            print('Error during ZIP file receiving occurred!')
         else:
             logging.info('A DebtorsRegister dataset received')
             # get lists of file

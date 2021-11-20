@@ -26,7 +26,7 @@ class LegalEntitiesRegister(Dataset):
             general_dataset = requests.get(
                 'https://data.gov.ua/api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10').text
         except ConnectionError:
-            logging.error('Error during general EntrepreneursRegister dataset JSON receiving occured')
+            logging.error('Error during general EntrepreneursRegister dataset JSON receiving occurred')
             print('Error during dataset receiving occurred!')
         else:
             general_dataset_json = json.loads(general_dataset)
@@ -38,7 +38,7 @@ class LegalEntitiesRegister(Dataset):
             entrepreneurs_general_dataset_id_json = requests.get(
                 'https://data.gov.ua/api/3/action/resource_show?id=' + entrepreneurs_general_dataset_id).text
         except ConnectionError:
-            logging.error('Error during EntrepreneursRegister resources JSON id receiving occured')
+            logging.error('Error during EntrepreneursRegister resources JSON id receiving occurred')
             print('Error during dataset receiving occurred!')
         else:
             entrepreneurs_general_dataset_json = json.loads(entrepreneurs_general_dataset_id_json)
@@ -55,8 +55,8 @@ class LegalEntitiesRegister(Dataset):
             # get ZIP file
             entrepreneurs_dataset_zip = requests.get(zip_url).content
         except OSError:
-            logging.error('Error during EntrepreneursRegister ZIP receiving occured')
-            print('Error during ZIP file receiving occured!')
+            logging.error('Error during EntrepreneursRegister ZIP receiving occurred')
+            print('Error during ZIP file receiving occurred!')
         else:
             logging.info('A EntrepreneursRegister dataset received')
             # get lists of file
