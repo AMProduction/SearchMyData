@@ -66,10 +66,11 @@ class WantedPersonsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __clear_collection(self):
-        wanted_persons_col = self.db['WantedPersons']
-        count_deleted_documents = wanted_persons_col.delete_many({})
-        logging.warning('%s documents deleted. The wanted persons collection is empty.', str(
-            count_deleted_documents.deleted_count))
+        if Dataset.is_collection_exists('WantedPersons'):
+            wanted_persons_col = self.db['WantedPersons']
+            count_deleted_documents = wanted_persons_col.delete_many({})
+            logging.warning('%s documents deleted. The wanted persons collection is empty.', str(
+                count_deleted_documents.deleted_count))
 
     @Dataset.measure_execution_time
     def __create_service_json(self):
@@ -99,9 +100,8 @@ class WantedPersonsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __update_metadata(self):
-        collections_list = self.db.list_collection_names()
         # update or create WantedPersonsRegisterServiceJson
-        if ('ServiceCollection' in collections_list) and (self.serviceCol.count_documents({'_id': 2}, limit=1) != 0):
+        if (Dataset.is_collection_exists('ServiceCollection')) and (self.serviceCol.count_documents({'_id': 2}, limit=1) != 0):
             self.__update_service_json()
             logging.info('WantedPersonsRegisterServiceJson updated')
         else:
@@ -110,10 +110,11 @@ class WantedPersonsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __delete_collection_index(self):
-        wanted_persons_col = self.db['WantedPersons']
-        if 'full_text' in wanted_persons_col.index_information():
-            wanted_persons_col.drop_index('full_text')
-            logging.warning('WantedPersons Text index deleted')
+        if Dataset.is_collection_exists('WantedPersons'):
+            wanted_persons_col = self.db['WantedPersons']
+            if 'full_text' in wanted_persons_col.index_information():
+                wanted_persons_col.drop_index('full_text')
+                logging.warning('WantedPersons Text index deleted')
 
     @Dataset.measure_execution_time
     def __create_collection_index(self):
@@ -150,7 +151,7 @@ class WantedPersonsRegister(Dataset):
                                           '{:.10}'.format(result['LOST_DATE']), result['CATEGORY'], result['OVD'],
                                           result['ARTICLE_CRIM']])
                 print(result_table.get_string(
-                    title='The wanted persons register: ' + str(result_count) + ' records found'))
+                    title=f'The wanted persons register: {result_count} records found'))
                 logging.warning(
                     'The wanted persons register: %s records found', str(result_count))
                 print('Only 10 first search results showed')

@@ -6,7 +6,7 @@ from src.EntrepreneursRegister import EntrepreneursRegister
 from src.LegalEntitiesRegister import LegalEntitiesRegister
 from src.MissingPersonsRegister import MissingPersonsRegister
 from src.WantedPersonsRegister import WantedPersonsRegister
-from src.LustratedPersonsRegister import  LustratedPersonsRegister
+from src.LustratedPersonsRegister import LustratedPersonsRegister
 
 
 def search():
@@ -19,11 +19,10 @@ def search():
     debtors.search_into_collection(search_string)
     legalEntities.search_into_collection(search_string)
     entrepreneurs.search_into_collection(search_string)
+    lustrated.search_into_collection(search_string)
 
 
 def setup_datasets():
-    lustrated.get_dataset()
-'''
     # Інформація про безвісно зниклих громадян (JSON)
     missingPersons.setup_dataset()
 
@@ -48,7 +47,10 @@ def setup_datasets():
 
     legalEntities.create_collection_index()
     entrepreneurs.create_collection_index()
-'''
+
+    # Єдиний державний реєстр осіб, щодо яких застосовано положення Закону України «Про очищення влади» (XML in ZIP)
+    lustrated.setup_dataset()
+
 
 menu_options = {
     1: 'Search',
@@ -65,8 +67,8 @@ def print_menu():
 if __name__ == '__main__':
     # Set up logging
     logging.basicConfig(filename='logs/searchmydata.log', filemode='a',
-                        format='%(asctime)s %(levelname)10s:%(filename)26s:%(message)s', datefmt='%d/%m/%Y %H:%M:%S',
-                        encoding='utf-8', level=logging.DEBUG)
+                        format='%(asctime)s %(levelname)10s:%(filename)28s:%(message)s', datefmt='%d/%m/%Y %H:%M:%S',
+                        level=logging.DEBUG, encoding='utf-8')
     logging.info('The application started')
     # create instances
     service = src.ServiceTools.ServiceTools()

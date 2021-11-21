@@ -162,10 +162,11 @@ class LegalEntitiesRegister(Dataset):
 
     @Dataset.measure_execution_time
     def clear_collection(self):
-        legal_entities_col = self.db['LegalEntities']
-        count_deleted_documents = legal_entities_col.delete_many({})
-        logging.warning('%s documents deleted. The legal entities collection is empty.',
-                        str(count_deleted_documents.deleted_count))
+        if Dataset.is_collection_exists('LegalEntities'):
+            legal_entities_col = self.db['LegalEntities']
+            count_deleted_documents = legal_entities_col.delete_many({})
+            logging.warning('%s documents deleted. The legal entities collection is empty.',
+                            str(count_deleted_documents.deleted_count))
 
     @Dataset.measure_execution_time
     def __create_service_json(self):
@@ -195,9 +196,8 @@ class LegalEntitiesRegister(Dataset):
 
     @Dataset.measure_execution_time
     def update_metadata(self):
-        collections_list = self.db.list_collection_names()
         # update or create LegalEntitiesRegisterServiceJson
-        if ('ServiceCollection' in collections_list) and (self.serviceCol.count_documents({'_id': 4}, limit=1) != 0):
+        if (Dataset.is_collection_exists('ServiceCollection')) and (self.serviceCol.count_documents({'_id': 4}, limit=1) != 0):
             self.__update_service_json()
             logging.info('LegalEntitiesRegisterServiceJson updated')
         else:
@@ -206,10 +206,11 @@ class LegalEntitiesRegister(Dataset):
 
     @Dataset.measure_execution_time
     def delete_collection_index(self):
-        legal_entities_col = self.db['LegalEntities']
-        if 'full_text' in legal_entities_col.index_information():
-            legal_entities_col.drop_index('full_text')
-            logging.warning('LegalEntities Text index deleted')
+        if Dataset.is_collection_exists('LegalEntities'):
+            legal_entities_col = self.db['LegalEntities']
+            if 'full_text' in legal_entities_col.index_information():
+                legal_entities_col.drop_index('full_text')
+                logging.warning('LegalEntities Text index deleted')
 
     @Dataset.measure_execution_time
     def create_collection_index(self):
@@ -244,7 +245,7 @@ class LegalEntitiesRegister(Dataset):
                     result_table.add_row([result['short_name'], result['edrpou'], result['address'], result['kved'],
                                           result['boss'], result['founders'], result['stan']])
                 print(result_table.get_string(
-                    title='The legal entities register: ' + str(result_count) + ' records found'))
+                    title=f'The legal entities register: {result_count} records found'))
                 logging.warning(
                     'The legal entities register: %s records found', str(result_count))
                 print('Only 10 first search results showed')

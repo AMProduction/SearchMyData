@@ -101,10 +101,11 @@ class DebtorsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __clear_collection(self):
-        debtors_col = self.db['Debtors']
-        count_deleted_documents = debtors_col.delete_many({})
-        logging.warning('%s documents deleted. The wanted persons collection is empty.', str(
-            count_deleted_documents.deleted_count))
+        if Dataset.is_collection_exists('Debtors'):
+            debtors_col = self.db['Debtors']
+            count_deleted_documents = debtors_col.delete_many({})
+            logging.warning('%s documents deleted. The wanted persons collection is empty.', str(
+                count_deleted_documents.deleted_count))
 
     @Dataset.measure_execution_time
     def __create_service_json(self):
@@ -136,7 +137,7 @@ class DebtorsRegister(Dataset):
     def __update_metadata(self):
         collections_list = self.db.list_collection_names()
         # update or create DebtorsRegisterServiceJson
-        if ('ServiceCollection' in collections_list) and (self.serviceCol.count_documents({'_id': 3}, limit=1) != 0):
+        if (Dataset.is_collection_exists('ServiceCollection')) and (self.serviceCol.count_documents({'_id': 3}, limit=1) != 0):
             self.__update_service_json()
             logging.info('DebtorsRegisterServiceJson updated')
         else:
@@ -145,10 +146,11 @@ class DebtorsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __delete_collection_index(self):
-        debtors_col = self.db['Debtors']
-        if 'full_text' in debtors_col.index_information():
-            debtors_col.drop_index('full_text')
-            logging.warning('Debtors Text index deleted')
+        if Dataset.is_collection_exists('Debtors'):
+            debtors_col = self.db['Debtors']
+            if 'full_text' in debtors_col.index_information():
+                debtors_col.drop_index('full_text')
+                logging.warning('Debtors Text index deleted')
 
     @Dataset.measure_execution_time
     def __create_collection_index(self):
@@ -183,7 +185,7 @@ class DebtorsRegister(Dataset):
                     result_table.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'],
                                           result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
                 print(result_table.get_string(
-                    title='The debtors register: ' + str(result_count) + ' records found'))
+                    title=f'The debtors register: {result_count} records found'))
                 logging.warning(
                     'The debtors register: %s records found', str(result_count))
                 print('Only 10 first search results showed')
@@ -205,7 +207,7 @@ class DebtorsRegister(Dataset):
     def setup_dataset(self):
         self.__delete_collection_index()
         self.__clear_collection()
-        __debtorsDatasetZIPUrl = self.__get_dataset()
-        self.__save_dataset(__debtorsDatasetZIPUrl)
+        __debtors_dataset_zip_url = self.__get_dataset()
+        self.__save_dataset(__debtors_dataset_zip_url)
         self.__update_metadata()
         self.__create_collection_index()
