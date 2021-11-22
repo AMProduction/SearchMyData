@@ -4,9 +4,9 @@ import src.ServiceTools
 from src.DebtorsRegister import DebtorsRegister
 from src.EntrepreneursRegister import EntrepreneursRegister
 from src.LegalEntitiesRegister import LegalEntitiesRegister
+from src.LustratedPersonsRegister import LustratedPersonsRegister
 from src.MissingPersonsRegister import MissingPersonsRegister
 from src.WantedPersonsRegister import WantedPersonsRegister
-from src.LustratedPersonsRegister import LustratedPersonsRegister
 
 
 def search():

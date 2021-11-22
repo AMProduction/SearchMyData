@@ -2,10 +2,10 @@ import gc
 import json
 import logging
 from datetime import datetime
-from pymongo.errors import PyMongoError
 
 import requests
 from prettytable import PrettyTable
+from pymongo.errors import PyMongoError
 
 from src.dataset import Dataset
 
@@ -66,7 +66,7 @@ class WantedPersonsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __clear_collection(self):
-        if Dataset.is_collection_exists('WantedPersons'):
+        if self.is_collection_exists('WantedPersons'):
             wanted_persons_col = self.db['WantedPersons']
             count_deleted_documents = wanted_persons_col.delete_many({})
             logging.warning('%s documents deleted. The wanted persons collection is empty.', str(
@@ -101,7 +101,8 @@ class WantedPersonsRegister(Dataset):
     @Dataset.measure_execution_time
     def __update_metadata(self):
         # update or create WantedPersonsRegisterServiceJson
-        if (Dataset.is_collection_exists('ServiceCollection')) and (self.serviceCol.count_documents({'_id': 2}, limit=1) != 0):
+        if (self.is_collection_exists('ServiceCollection')) and (
+                self.serviceCol.count_documents({'_id': 2}, limit=1) != 0):
             self.__update_service_json()
             logging.info('WantedPersonsRegisterServiceJson updated')
         else:
@@ -110,7 +111,7 @@ class WantedPersonsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __delete_collection_index(self):
-        if Dataset.is_collection_exists('WantedPersons'):
+        if self.is_collection_exists('WantedPersons'):
             wanted_persons_col = self.db['WantedPersons']
             if 'full_text' in wanted_persons_col.index_information():
                 wanted_persons_col.drop_index('full_text')

@@ -1,17 +1,17 @@
 import gc
 import json
 import logging
+import mmap
 import os
 import shutil
 import zipfile
-import mmap
 from datetime import datetime
 from io import BytesIO
-from pymongo.errors import PyMongoError
 
 import requests
 from dask import dataframe as dd
 from prettytable import PrettyTable
+from pymongo.errors import PyMongoError
 
 from src.dataset import Dataset
 
@@ -101,7 +101,7 @@ class DebtorsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __clear_collection(self):
-        if Dataset.is_collection_exists('Debtors'):
+        if self.is_collection_exists('Debtors'):
             debtors_col = self.db['Debtors']
             count_deleted_documents = debtors_col.delete_many({})
             logging.warning('%s documents deleted. The wanted persons collection is empty.', str(
@@ -137,7 +137,8 @@ class DebtorsRegister(Dataset):
     def __update_metadata(self):
         collections_list = self.db.list_collection_names()
         # update or create DebtorsRegisterServiceJson
-        if (Dataset.is_collection_exists('ServiceCollection')) and (self.serviceCol.count_documents({'_id': 3}, limit=1) != 0):
+        if (self.is_collection_exists('ServiceCollection')) and (
+                self.serviceCol.count_documents({'_id': 3}, limit=1) != 0):
             self.__update_service_json()
             logging.info('DebtorsRegisterServiceJson updated')
         else:
@@ -146,7 +147,7 @@ class DebtorsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __delete_collection_index(self):
-        if Dataset.is_collection_exists('Debtors'):
+        if self.is_collection_exists('Debtors'):
             debtors_col = self.db['Debtors']
             if 'full_text' in debtors_col.index_information():
                 debtors_col.drop_index('full_text')
@@ -180,7 +181,7 @@ class DebtorsRegister(Dataset):
                 result_table._max_width = {'DEBTOR NAME': 25, 'PUBLISHER': 25, 'EXECUTIVE SERVICE': 35,
                                            'EXECUTIVE SERVICE EMPLOYEE': 25, 'CATEGORY': 25}
                 # show only 10 first search results
-                for result in debtors_col.find({'$text': {'$search': query_string}}, {'score': {'$meta': 'textScore'}})\
+                for result in debtors_col.find({'$text': {'$search': query_string}}, {'score': {'$meta': 'textScore'}}) \
                         .sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
                     result_table.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'],
                                           result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])
@@ -190,7 +191,7 @@ class DebtorsRegister(Dataset):
                     'The debtors register: %s records found', str(result_count))
                 print('Only 10 first search results showed')
                 # save all search results into HTML
-                for result in debtors_col.find({'$text': {'$search': query_string}}, {'score': {'$meta': 'textScore'}}).\
+                for result in debtors_col.find({'$text': {'$search': query_string}}, {'score': {'$meta': 'textScore'}}). \
                         sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
                     result_table.add_row([result['DEBTOR_NAME'], result['DEBTOR_CODE'], result['PUBLISHER'],
                                           result['EMP_ORG'], result['EMP_FULL_FIO'], result['VD_CAT']])

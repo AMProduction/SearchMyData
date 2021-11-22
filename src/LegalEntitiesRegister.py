@@ -7,10 +7,10 @@ import xml.etree.ElementTree as ET
 import zipfile
 from datetime import datetime
 from io import BytesIO
-from pymongo.errors import PyMongoError
 
 import requests
 from prettytable import PrettyTable
+from pymongo.errors import PyMongoError
 
 from src.dataset import Dataset
 
@@ -21,7 +21,8 @@ class LegalEntitiesRegister(Dataset):
 
     @Dataset.measure_execution_time
     def get_dataset(self):
-        print('The register "Єдиний державний реєстр юридичних осіб, фізичних осіб – підприємців та громадських формувань" is retrieving...')
+        print(
+            'The register "Єдиний державний реєстр юридичних осіб, фізичних осіб – підприємців та громадських формувань" is retrieving...')
         try:
             general_dataset = requests.get(
                 'https://data.gov.ua/api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10').text
@@ -71,7 +72,7 @@ class LegalEntitiesRegister(Dataset):
                 logging.warning('File in ZIP: ' + str(xmlFile))
             # unzip all files
             entrepreneurs_zip.extractall('Temp')
-            for xmlFile in os.listdir('Temp/'+root_folder_name):
+            for xmlFile in os.listdir('Temp/' + root_folder_name):
                 if xmlFile.find('_UO_') != -1:
                     # read the legal Entities Xml file
                     path_to_file = 'Temp/' + root_folder_name + xmlFile
@@ -154,7 +155,8 @@ class LegalEntitiesRegister(Dataset):
                                 'Error during saving Entrepreneurs Register into Database')
                     logging.info(
                         'Entrepreneurs dataset was saved into the database')
-            print('The Register "Єдиний державний реєстр юридичних осіб, фізичних осіб – підприємців та громадських формувань" refreshed')
+            print(
+                'The Register "Єдиний державний реєстр юридичних осіб, фізичних осіб – підприємців та громадських формувань" refreshed')
         finally:
             # delete temp files
             shutil.rmtree('Temp', ignore_errors=True)
@@ -162,7 +164,7 @@ class LegalEntitiesRegister(Dataset):
 
     @Dataset.measure_execution_time
     def clear_collection(self):
-        if Dataset.is_collection_exists('LegalEntities'):
+        if self.is_collection_exists('LegalEntities'):
             legal_entities_col = self.db['LegalEntities']
             count_deleted_documents = legal_entities_col.delete_many({})
             logging.warning('%s documents deleted. The legal entities collection is empty.',
@@ -197,7 +199,8 @@ class LegalEntitiesRegister(Dataset):
     @Dataset.measure_execution_time
     def update_metadata(self):
         # update or create LegalEntitiesRegisterServiceJson
-        if (Dataset.is_collection_exists('ServiceCollection')) and (self.serviceCol.count_documents({'_id': 4}, limit=1) != 0):
+        if (self.is_collection_exists('ServiceCollection')) and (
+                self.serviceCol.count_documents({'_id': 4}, limit=1) != 0):
             self.__update_service_json()
             logging.info('LegalEntitiesRegisterServiceJson updated')
         else:
@@ -206,7 +209,7 @@ class LegalEntitiesRegister(Dataset):
 
     @Dataset.measure_execution_time
     def delete_collection_index(self):
-        if Dataset.is_collection_exists('LegalEntities'):
+        if self.is_collection_exists('LegalEntities'):
             legal_entities_col = self.db['LegalEntities']
             if 'full_text' in legal_entities_col.index_information():
                 legal_entities_col.drop_index('full_text')
@@ -240,7 +243,7 @@ class LegalEntitiesRegister(Dataset):
                 result_table._max_width = {'SHORT NAME': 25, 'ADDRESS': 25, 'KVED': 30, 'BOSS': 25, 'FOUNDERS': 25}
                 # show only 10 first search results
                 for result in legal_entities_col.find({'$text': {'$search': query_string}},
-                                                      {'score': {'$meta': 'textScore'}})\
+                                                      {'score': {'$meta': 'textScore'}}) \
                         .sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
                     result_table.add_row([result['short_name'], result['edrpou'], result['address'], result['kved'],
                                           result['boss'], result['founders'], result['stan']])
@@ -251,7 +254,7 @@ class LegalEntitiesRegister(Dataset):
                 print('Only 10 first search results showed')
                 # save all search results into HTML
                 for result in legal_entities_col.find({'$text': {'$search': query_string}},
-                                                      {'score': {'$meta': 'textScore'}})\
+                                                      {'score': {'$meta': 'textScore'}}) \
                         .sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
                     result_table.add_row([result['short_name'], result['edrpou'], result['address'], result['kved'],
                                           result['boss'], result['founders'], result['stan']])

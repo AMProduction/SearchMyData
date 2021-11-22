@@ -1,8 +1,8 @@
 import json
 import logging
 import os
-from pathlib import Path
 from datetime import datetime, timedelta
+from pathlib import Path
 
 import pymongo
 from prettytable import PrettyTable

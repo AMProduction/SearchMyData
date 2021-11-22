@@ -2,10 +2,10 @@ import gc
 import json
 import logging
 from datetime import datetime
-from pymongo.errors import PyMongoError
 
 import requests
 from prettytable import PrettyTable
+from pymongo.errors import PyMongoError
 
 from src.dataset import Dataset
 
@@ -66,7 +66,7 @@ class MissingPersonsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __clear_collection(self):
-        if Dataset.is_collection_exists('MissingPersons'):
+        if self.is_collection_exists('MissingPersons'):
             missing_persons_col = self.db['MissingPersons']
             count_deleted_documents = missing_persons_col.delete_many({})
             logging.warning('%s documents deleted. The missing persons collection is empty.', str(
@@ -101,7 +101,8 @@ class MissingPersonsRegister(Dataset):
     @Dataset.measure_execution_time
     def __update_metadata(self):
         # update or create MissingPersonsRegisterServiceJson
-        if (Dataset.is_collection_exists('ServiceCollection')) and (self.serviceCol.count_documents({'_id': 1}, limit=1) != 0):
+        if (self.is_collection_exists('ServiceCollection')) and (
+                self.serviceCol.count_documents({'_id': 1}, limit=1) != 0):
             self.__update_service_json()
             logging.info('MissingPersonsRegisterServiceJson updated')
         else:
@@ -110,7 +111,7 @@ class MissingPersonsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __delete_collection_index(self):
-        if Dataset.is_collection_exists('MissingPersons'):
+        if self.is_collection_exists('MissingPersons'):
             missing_persons_col = self.db['MissingPersons']
             if 'full_text' in missing_persons_col.index_information():
                 missing_persons_col.drop_index('full_text')
@@ -143,7 +144,7 @@ class MissingPersonsRegister(Dataset):
                 result_table.align = 'l'
                 # show only 10 first search results
                 for result in missing_persons_col.find({'$text': {'$search': query_string}},
-                                                       {'score': {'$meta': 'textScore'}})\
+                                                       {'score': {'$meta': 'textScore'}}) \
                         .sort([('score', {'$meta': 'textScore'})]).limit(10):
                     result_table.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'],
                                           '{:.10}'.format(result['BIRTH_DATE']), result['LOST_PLACE'],
@@ -154,7 +155,7 @@ class MissingPersonsRegister(Dataset):
                 print('Only 10 first search results showed')
                 # save all search results into HTML
                 for result in missing_persons_col.find({'$text': {'$search': query_string}},
-                                                       {'score': {'$meta': 'textScore'}})\
+                                                       {'score': {'$meta': 'textScore'}}) \
                         .sort([('score', {'$meta': 'textScore'})]):
                     result_table.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'],
                                           '{:.10}'.format(result['BIRTH_DATE']), result['LOST_PLACE'],

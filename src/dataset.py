@@ -1,15 +1,15 @@
 import json
 import logging
-from pathlib import Path
-from functools import wraps
 from datetime import datetime
+from functools import wraps
+from pathlib import Path
 
 import pymongo
 from pymongo.errors import ServerSelectionTimeoutError
 
 
 class Dataset:
-    """"Base parent class for all datasets
+    """Base parent class for all datasets
 
     --------
     Methods:
@@ -150,6 +150,7 @@ class Dataset:
     def measure_execution_time(func):
         """A service function / a decorator to measure up execution time
         """
+
         @wraps(func)
         def log_time(*args, **kwargs):
             start_time = datetime.now()
@@ -169,7 +170,4 @@ class Dataset:
         :return: True - if a collection exists; False - if not
         """
         collections_list = self.db.list_collection_names()
-        if collection_name in collections_list:
-            return True
-        else:
-            return False
+        return collection_name in collections_list

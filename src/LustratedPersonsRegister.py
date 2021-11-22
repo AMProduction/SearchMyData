@@ -7,10 +7,10 @@ import xml.etree.ElementTree as ET
 import zipfile
 from datetime import datetime
 from io import BytesIO
-from pymongo.errors import PyMongoError
 
 import requests
 from prettytable import PrettyTable
+from pymongo.errors import PyMongoError
 
 from src.dataset import Dataset
 
@@ -110,7 +110,7 @@ class LustratedPersonsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __clear_collection(self):
-        if Dataset.is_collection_exists('Lustrated'):
+        if self.is_collection_exists('Lustrated'):
             lustrated_col = self.db['Lustrated']
             count_deleted_documents = lustrated_col.delete_many({})
             logging.warning('%s documents deleted. The Lustrated Persons collection is empty.',
@@ -145,7 +145,8 @@ class LustratedPersonsRegister(Dataset):
     @Dataset.measure_execution_time
     def __update_metadata(self):
         # update or create LustratedPersonsRegisterServiceJson
-        if (Dataset.is_collection_exists('ServiceCollection')) and (self.serviceCol.count_documents({'_id': 6}, limit=1) != 0):
+        if (self.is_collection_exists('ServiceCollection')) and (
+                self.serviceCol.count_documents({'_id': 6}, limit=1) != 0):
             self.__update_service_json()
             logging.info('LustratedPersonsRegisterServiceJson updated')
         else:
@@ -154,7 +155,7 @@ class LustratedPersonsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __delete_collection_index(self):
-        if Dataset.is_collection_exists('Lustrated'):
+        if self.is_collection_exists('Lustrated'):
             lustrated_col = self.db['Lustrated']
             if 'full_text' in lustrated_col.index_information():
                 lustrated_col.drop_index('full_text')
@@ -188,7 +189,8 @@ class LustratedPersonsRegister(Dataset):
                 for result in lustrated_col.find({'$text': {'$search': query_string}},
                                                  {'score': {'$meta': 'textScore'}}) \
                         .sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
-                    result_table.add_row([result['fio'], result['job'], result['judgment_composition'], result['period']])
+                    result_table.add_row(
+                        [result['fio'], result['job'], result['judgment_composition'], result['period']])
                 print(result_table.get_string(
                     title=f'The Lustrated Persons register: {result_count} records found'))
                 logging.warning(
@@ -198,7 +200,8 @@ class LustratedPersonsRegister(Dataset):
                 for result in lustrated_col.find({'$text': {'$search': query_string}},
                                                  {'score': {'$meta': 'textScore'}}) \
                         .sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
-                    result_table.add_row([result['fio'], result['job'], result['judgment_composition'], result['period']])
+                    result_table.add_row(
+                        [result['fio'], result['job'], result['judgment_composition'], result['period']])
                 html_result = result_table.get_html_string()
                 f = open('results/Lustrated.html', 'w', encoding='utf-8')
                 f.write(html_result)

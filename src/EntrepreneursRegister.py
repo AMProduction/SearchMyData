@@ -1,9 +1,9 @@
 import gc
 import logging
 from datetime import datetime
-from pymongo.errors import PyMongoError
 
 from prettytable import PrettyTable
+from pymongo.errors import PyMongoError
 
 from src.dataset import Dataset
 
@@ -22,7 +22,7 @@ class EntrepreneursRegister(Dataset):
 
     @Dataset.measure_execution_time
     def clear_collection(self):
-        if Dataset.is_collection_exists('Entrepreneurs'):
+        if self.is_collection_exists('Entrepreneurs'):
             entrepreneurs_col = self.db['Entrepreneurs']
             count_deleted_documents = entrepreneurs_col.delete_many({})
             logging.warning('%s documents deleted. The entrepreneurs collection is empty.', str(
@@ -57,7 +57,8 @@ class EntrepreneursRegister(Dataset):
     @Dataset.measure_execution_time
     def update_metadata(self):
         # update or create EntrepreneursRegisterServiceJson
-        if (Dataset.is_collection_exists('ServiceCollection')) and (self.serviceCol.count_documents({'_id': 5}, limit=1) != 0):
+        if (self.is_collection_exists('ServiceCollection')) and (
+                self.serviceCol.count_documents({'_id': 5}, limit=1) != 0):
             self.__update_service_json()
             logging.info('EntrepreneursRegisterServiceJson updated')
         else:
@@ -66,7 +67,7 @@ class EntrepreneursRegister(Dataset):
 
     @Dataset.measure_execution_time
     def delete_collection_index(self):
-        if Dataset.is_collection_exists('Entrepreneurs'):
+        if self.is_collection_exists('Entrepreneurs'):
             entrepreneurs_col = self.db['Entrepreneurs']
             if 'full_text' in entrepreneurs_col.index_information():
                 entrepreneurs_col.drop_index('full_text')
@@ -98,7 +99,7 @@ class EntrepreneursRegister(Dataset):
                     'NAME': 40, 'ADDRESS': 40, 'KVED': 35}
                 # show only 10 first search results
                 for result in entrepreneurs_col.find({'$text': {'$search': query_string}},
-                                                     {'score': {'$meta': 'textScore'}})\
+                                                     {'score': {'$meta': 'textScore'}}) \
                         .sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
                     result_table.add_row([result['fio'], result['address'], result['kved'], result['stan']])
                 print(result_table.get_string(
@@ -108,7 +109,7 @@ class EntrepreneursRegister(Dataset):
                 print('Only 10 first search results showed')
                 # save all search results into HTML
                 for result in entrepreneurs_col.find({'$text': {'$search': query_string}},
-                                                     {'score': {'$meta': 'textScore'}})\
+                                                     {'score': {'$meta': 'textScore'}}) \
                         .sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
                     result_table.add_row([result['fio'], result['address'], result['kved'], result['stan']])
                 html_result = result_table.get_html_string()
