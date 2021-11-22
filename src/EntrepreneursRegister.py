@@ -1,9 +1,9 @@
 import gc
 import logging
 from datetime import datetime
-from pymongo.errors import PyMongoError
 
 from prettytable import PrettyTable
+from pymongo.errors import PyMongoError
 
 from src.dataset import Dataset
 
@@ -22,10 +22,11 @@ class EntrepreneursRegister(Dataset):
 
     @Dataset.measure_execution_time
     def clear_collection(self):
-        entrepreneurs_col = self.db['Entrepreneurs']
-        count_deleted_documents = entrepreneurs_col.delete_many({})
-        logging.warning('%s documents deleted. The entrepreneurs collection is empty.', str(
-            count_deleted_documents.deleted_count))
+        if self.is_collection_exists('Entrepreneurs'):
+            entrepreneurs_col = self.db['Entrepreneurs']
+            count_deleted_documents = entrepreneurs_col.delete_many({})
+            logging.warning('%s documents deleted. The entrepreneurs collection is empty.', str(
+                count_deleted_documents.deleted_count))
 
     @Dataset.measure_execution_time
     def __create_service_json(self):
@@ -55,9 +56,9 @@ class EntrepreneursRegister(Dataset):
 
     @Dataset.measure_execution_time
     def update_metadata(self):
-        collections_list = self.db.list_collection_names()
         # update or create EntrepreneursRegisterServiceJson
-        if ('ServiceCollection' in collections_list) and (self.serviceCol.count_documents({'_id': 5}, limit=1) != 0):
+        if (self.is_collection_exists('ServiceCollection')) and (
+                self.serviceCol.count_documents({'_id': 5}, limit=1) != 0):
             self.__update_service_json()
             logging.info('EntrepreneursRegisterServiceJson updated')
         else:
@@ -66,10 +67,11 @@ class EntrepreneursRegister(Dataset):
 
     @Dataset.measure_execution_time
     def delete_collection_index(self):
-        entrepreneurs_col = self.db['Entrepreneurs']
-        if 'full_text' in entrepreneurs_col.index_information():
-            entrepreneurs_col.drop_index('full_text')
-            logging.warning('Entrepreneurs Text index deleted')
+        if self.is_collection_exists('Entrepreneurs'):
+            entrepreneurs_col = self.db['Entrepreneurs']
+            if 'full_text' in entrepreneurs_col.index_information():
+                entrepreneurs_col.drop_index('full_text')
+                logging.warning('Entrepreneurs Text index deleted')
 
     @Dataset.measure_execution_time
     def create_collection_index(self):
@@ -94,20 +96,20 @@ class EntrepreneursRegister(Dataset):
                 result_table = PrettyTable(['NAME', 'ADDRESS', 'KVED', 'STATE'])
                 result_table.align = 'l'
                 result_table._max_width = {
-                    'NAME': 25, 'ADDRESS': 25, 'KVED': 30}
+                    'NAME': 40, 'ADDRESS': 40, 'KVED': 35}
                 # show only 10 first search results
                 for result in entrepreneurs_col.find({'$text': {'$search': query_string}},
-                                                     {'score': {'$meta': 'textScore'}})\
+                                                     {'score': {'$meta': 'textScore'}}) \
                         .sort([('score', {'$meta': 'textScore'})]).limit(10).allow_disk_use(True):
                     result_table.add_row([result['fio'], result['address'], result['kved'], result['stan']])
                 print(result_table.get_string(
-                    title='The Entrepreneurs register: ' + str(result_count) + ' records found'))
+                    title=f'The Entrepreneurs register: {result_count} records found'))
                 logging.warning(
                     'The Entrepreneurs register: %s records found', str(result_count))
                 print('Only 10 first search results showed')
                 # save all search results into HTML
                 for result in entrepreneurs_col.find({'$text': {'$search': query_string}},
-                                                     {'score': {'$meta': 'textScore'}})\
+                                                     {'score': {'$meta': 'textScore'}}) \
                         .sort([('score', {'$meta': 'textScore'})]).allow_disk_use(True):
                     result_table.add_row([result['fio'], result['address'], result['kved'], result['stan']])
                 html_result = result_table.get_html_string()

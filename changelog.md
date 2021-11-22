@@ -1,3 +1,9 @@
+### v1.9 Release. XX/11/2021
+* Integrated [Unified State Register of Lustrated Persons](https://data.gov.ua/dataset/8faa71c1-3a54-45e8-8f6e-06c92b1ff8bc)
+* Docstrings added
+* Unit tests enhancements
+* Refactoring and optimization
+
 ### [v1.8.5. Release.](https://github.com/AMProduction/SearchMyData/releases/tag/v1.8.5) 20/11/2021
 * Refactoring to implement [PEP 8](https://www.python.org/dev/peps/pep-0008/)
 

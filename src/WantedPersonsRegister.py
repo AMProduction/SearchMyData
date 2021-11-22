@@ -2,10 +2,10 @@ import gc
 import json
 import logging
 from datetime import datetime
-from pymongo.errors import PyMongoError
 
 import requests
 from prettytable import PrettyTable
+from pymongo.errors import PyMongoError
 
 from src.dataset import Dataset
 
@@ -21,7 +21,7 @@ class WantedPersonsRegister(Dataset):
             general_dataset = requests.get(
                 'https://data.gov.ua/api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b').text
         except ConnectionError:
-            logging.error('Error during general WantedPersons dataset JSON receiving occured')
+            logging.error('Error during general WantedPersons dataset JSON receiving occurred')
             print('Error during dataset receiving occurred!')
         else:
             general_dataset_json = json.loads(general_dataset)
@@ -33,7 +33,7 @@ class WantedPersonsRegister(Dataset):
             wanted_persons_general_dataset_id_json = requests.get(
                 'https://data.gov.ua/api/3/action/resource_show?id=' + wanted_persons_general_dataset_id).text
         except ConnectionError:
-            logging.error('Error during WantedPersons resources JSON id receiving occured')
+            logging.error('Error during WantedPersons resources JSON id receiving occurred')
             print('Error during dataset receiving occurred!')
         else:
             wanted_persons_general_dataset_json = json.loads(wanted_persons_general_dataset_id_json)
@@ -44,8 +44,8 @@ class WantedPersonsRegister(Dataset):
             # get dataset
             wanted_persons_dataset_json = requests.get(wanted_persons_dataset_json_url).text
         except ConnectionError:
-            logging.error('Error during WantedPersons dataset receiving occured')
-            print('Error during dataset receiving occured!')
+            logging.error('Error during WantedPersons dataset receiving occurred')
+            print('Error during dataset receiving occurred!')
         else:
             wanted_persons_dataset = json.loads(wanted_persons_dataset_json)
             logging.info('A WantedPersons dataset received')
@@ -66,10 +66,11 @@ class WantedPersonsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __clear_collection(self):
-        wanted_persons_col = self.db['WantedPersons']
-        count_deleted_documents = wanted_persons_col.delete_many({})
-        logging.warning('%s documents deleted. The wanted persons collection is empty.', str(
-            count_deleted_documents.deleted_count))
+        if self.is_collection_exists('WantedPersons'):
+            wanted_persons_col = self.db['WantedPersons']
+            count_deleted_documents = wanted_persons_col.delete_many({})
+            logging.warning('%s documents deleted. The wanted persons collection is empty.', str(
+                count_deleted_documents.deleted_count))
 
     @Dataset.measure_execution_time
     def __create_service_json(self):
@@ -99,9 +100,9 @@ class WantedPersonsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __update_metadata(self):
-        collections_list = self.db.list_collection_names()
         # update or create WantedPersonsRegisterServiceJson
-        if ('ServiceCollection' in collections_list) and (self.serviceCol.count_documents({'_id': 2}, limit=1) != 0):
+        if (self.is_collection_exists('ServiceCollection')) and (
+                self.serviceCol.count_documents({'_id': 2}, limit=1) != 0):
             self.__update_service_json()
             logging.info('WantedPersonsRegisterServiceJson updated')
         else:
@@ -110,10 +111,11 @@ class WantedPersonsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __delete_collection_index(self):
-        wanted_persons_col = self.db['WantedPersons']
-        if 'full_text' in wanted_persons_col.index_information():
-            wanted_persons_col.drop_index('full_text')
-            logging.warning('WantedPersons Text index deleted')
+        if self.is_collection_exists('WantedPersons'):
+            wanted_persons_col = self.db['WantedPersons']
+            if 'full_text' in wanted_persons_col.index_information():
+                wanted_persons_col.drop_index('full_text')
+                logging.warning('WantedPersons Text index deleted')
 
     @Dataset.measure_execution_time
     def __create_collection_index(self):
@@ -150,7 +152,7 @@ class WantedPersonsRegister(Dataset):
                                           '{:.10}'.format(result['LOST_DATE']), result['CATEGORY'], result['OVD'],
                                           result['ARTICLE_CRIM']])
                 print(result_table.get_string(
-                    title='The wanted persons register: ' + str(result_count) + ' records found'))
+                    title=f'The wanted persons register: {result_count} records found'))
                 logging.warning(
                     'The wanted persons register: %s records found', str(result_count))
                 print('Only 10 first search results showed')

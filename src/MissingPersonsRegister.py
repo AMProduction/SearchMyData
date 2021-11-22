@@ -2,10 +2,10 @@ import gc
 import json
 import logging
 from datetime import datetime
-from pymongo.errors import PyMongoError
 
 import requests
 from prettytable import PrettyTable
+from pymongo.errors import PyMongoError
 
 from src.dataset import Dataset
 
@@ -21,7 +21,7 @@ class MissingPersonsRegister(Dataset):
             general_dataset = requests.get(
                 'https://data.gov.ua/api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0').text
         except ConnectionError:
-            logging.error('Error during general MissingPersons dataset JSON receiving occured')
+            logging.error('Error during general MissingPersons dataset JSON receiving occurred')
             print('Error during dataset receiving occurred!')
         else:
             general_dataset_json = json.loads(general_dataset)
@@ -33,7 +33,7 @@ class MissingPersonsRegister(Dataset):
             missing_persons_general_dataset_id_json = requests.get(
                 'https://data.gov.ua/api/3/action/resource_show?id=' + missing_persons_general_dataset_id).text
         except ConnectionError:
-            logging.error('Error during MissingPersons resources JSON id receiving occured')
+            logging.error('Error during MissingPersons resources JSON id receiving occurred')
             print('Error during dataset receiving occurred!')
         else:
             missing_persons_general_dataset_json = json.loads(missing_persons_general_dataset_id_json)
@@ -44,8 +44,8 @@ class MissingPersonsRegister(Dataset):
             # get dataset
             missing_persons_dataset_json = requests.get(missing_persons_dataset_json_url).text
         except ConnectionError:
-            logging.error('Error during MissingPersons dataset receiving occured')
-            print('Error during dataset receiving occured!')
+            logging.error('Error during MissingPersons dataset receiving occurred')
+            print('Error during dataset receiving occurred!')
         else:
             missing_persons_dataset = json.loads(missing_persons_dataset_json)
             logging.info('A MissingPersons dataset received')
@@ -66,10 +66,11 @@ class MissingPersonsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __clear_collection(self):
-        missing_persons_col = self.db['MissingPersons']
-        count_deleted_documents = missing_persons_col.delete_many({})
-        logging.warning('%s documents deleted. The missing persons collection is empty.', str(
-            count_deleted_documents.deleted_count))
+        if self.is_collection_exists('MissingPersons'):
+            missing_persons_col = self.db['MissingPersons']
+            count_deleted_documents = missing_persons_col.delete_many({})
+            logging.warning('%s documents deleted. The missing persons collection is empty.', str(
+                count_deleted_documents.deleted_count))
 
     @Dataset.measure_execution_time
     def __create_service_json(self):
@@ -99,9 +100,9 @@ class MissingPersonsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __update_metadata(self):
-        collections_list = self.db.list_collection_names()
         # update or create MissingPersonsRegisterServiceJson
-        if ('ServiceCollection' in collections_list) and (self.serviceCol.count_documents({'_id': 1}, limit=1) != 0):
+        if (self.is_collection_exists('ServiceCollection')) and (
+                self.serviceCol.count_documents({'_id': 1}, limit=1) != 0):
             self.__update_service_json()
             logging.info('MissingPersonsRegisterServiceJson updated')
         else:
@@ -110,10 +111,11 @@ class MissingPersonsRegister(Dataset):
 
     @Dataset.measure_execution_time
     def __delete_collection_index(self):
-        missing_persons_col = self.db['MissingPersons']
-        if 'full_text' in missing_persons_col.index_information():
-            missing_persons_col.drop_index('full_text')
-            logging.warning('Missing persons Text index deleted')
+        if self.is_collection_exists('MissingPersons'):
+            missing_persons_col = self.db['MissingPersons']
+            if 'full_text' in missing_persons_col.index_information():
+                missing_persons_col.drop_index('full_text')
+                logging.warning('Missing persons Text index deleted')
 
     @Dataset.measure_execution_time
     def __create_collection_index(self):
@@ -142,18 +144,18 @@ class MissingPersonsRegister(Dataset):
                 result_table.align = 'l'
                 # show only 10 first search results
                 for result in missing_persons_col.find({'$text': {'$search': query_string}},
-                                                       {'score': {'$meta': 'textScore'}})\
+                                                       {'score': {'$meta': 'textScore'}}) \
                         .sort([('score', {'$meta': 'textScore'})]).limit(10):
                     result_table.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'],
                                           '{:.10}'.format(result['BIRTH_DATE']), result['LOST_PLACE'],
                                           '{:.10}'.format(result['LOST_DATE'])])
                 print(result_table.get_string(
-                    title='The missing persons register: ' + str(result_count) + ' records found'))
+                    title=f'The missing persons register: {result_count} records found'))
                 logging.warning('The missing persons register: %s records found', str(result_count))
                 print('Only 10 first search results showed')
                 # save all search results into HTML
                 for result in missing_persons_col.find({'$text': {'$search': query_string}},
-                                                       {'score': {'$meta': 'textScore'}})\
+                                                       {'score': {'$meta': 'textScore'}}) \
                         .sort([('score', {'$meta': 'textScore'})]):
                     result_table.add_row([result['LAST_NAME_U'], result['FIRST_NAME_U'], result['MIDDLE_NAME_U'],
                                           '{:.10}'.format(result['BIRTH_DATE']), result['LOST_PLACE'],

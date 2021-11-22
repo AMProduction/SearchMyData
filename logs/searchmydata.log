@@ -5124,3 +5124,503 @@
 20/11/2021 12:42:14    WARNING:           ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
 20/11/2021 12:42:21    WARNING:           searchmydata.py:The "Exit" menu item chosen
 20/11/2021 12:42:21       INFO:           searchmydata.py:The application closed
+20/11/2021 23:20:52       INFO:           searchmydata.py:The application started
+20/11/2021 23:20:52    WARNING:           ServiceTools.py:ServiceTools: Config.json is found
+20/11/2021 23:20:52    WARNING:                dataset.py:MissingPersonsRegister: Config.json is found
+20/11/2021 23:20:52    WARNING:                dataset.py:WantedPersonsRegister: Config.json is found
+20/11/2021 23:20:52    WARNING:                dataset.py:DebtorsRegister: Config.json is found
+20/11/2021 23:20:53    WARNING:                dataset.py:LegalEntitiesRegister: Config.json is found
+20/11/2021 23:20:53    WARNING:                dataset.py:EntrepreneursRegister: Config.json is found
+20/11/2021 23:20:53    WARNING:                dataset.py:LustratedPersonsRegister: Config.json is found
+20/11/2021 23:20:53    WARNING:           ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+20/11/2021 23:20:53    WARNING:           ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+20/11/2021 23:20:53    WARNING:           ServiceTools.py:Єдиний реєстр боржників is out of date
+20/11/2021 23:20:53    WARNING:           ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+20/11/2021 23:20:53    WARNING:           ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+20/11/2021 23:20:58    WARNING:           searchmydata.py:The "Search" menu item chosen
+20/11/2021 23:21:01       INFO:           searchmydata.py:The search string: 2
+20/11/2021 23:21:01       INFO:           ServiceTools.py:ServiceTools: "Results" folder is cleaned
+20/11/2021 23:21:01    WARNING: MissingPersonsRegister.py:The missing persons register: No data found
+20/11/2021 23:21:01       INFO:                dataset.py:Total execution time MissingPersonsRegister.search_into_collection: 0:00:00.035998
+20/11/2021 23:21:01    WARNING:  WantedPersonsRegister.py:The wanted persons register: No data found
+20/11/2021 23:21:01       INFO:                dataset.py:Total execution time WantedPersonsRegister.search_into_collection: 0:00:00.028998
+20/11/2021 23:21:02    WARNING:        DebtorsRegister.py:The debtors register: 2632 records found
+20/11/2021 23:21:02    WARNING:        DebtorsRegister.py:All result dataset was saved into Debtors.html
+20/11/2021 23:21:02       INFO:                dataset.py:Total execution time DebtorsRegister.search_into_collection: 0:00:01.163331
+20/11/2021 23:21:05    WARNING:  LegalEntitiesRegister.py:The legal entities register: 7416 records found
+20/11/2021 23:21:06    WARNING:  LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+20/11/2021 23:21:06       INFO:                dataset.py:Total execution time LegalEntitiesRegister.search_into_collection: 0:00:04.170666
+20/11/2021 23:21:06    WARNING:  EntrepreneursRegister.py:The Entrepreneurs register: No data found
+20/11/2021 23:21:06       INFO:                dataset.py:Total execution time EntrepreneursRegister.search_into_collection: 0:00:00.028000
+20/11/2021 23:21:06    WARNING:           ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+20/11/2021 23:21:06    WARNING:           ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+20/11/2021 23:21:06    WARNING:           ServiceTools.py:Єдиний реєстр боржників is out of date
+20/11/2021 23:21:06    WARNING:           ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+20/11/2021 23:21:06    WARNING:           ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+20/11/2021 23:21:09    WARNING:           searchmydata.py:The "Refresh datasets" menu item chosen
+20/11/2021 23:21:09      DEBUG:         connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+20/11/2021 23:21:09      DEBUG:         connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=8faa71c1-3a54-45e8-8f6e-06c92b1ff8bc HTTP/1.1" 200 None
+20/11/2021 23:21:09       INFO:LustratedPersonsRegister.py:A general LustratedPersonsRegister dataset JSON received
+20/11/2021 23:21:09      DEBUG:         connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+20/11/2021 23:21:09      DEBUG:         connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=611d64c5-3fbb-41fc-919b-91cafdc0dbc4 HTTP/1.1" 200 None
+20/11/2021 23:21:09       INFO:LustratedPersonsRegister.py:A LustratedPersonsRegister resources JSON id received
+20/11/2021 23:21:09       INFO:                dataset.py:Total execution time LustratedPersonsRegister.get_dataset: 0:00:00.310027
+20/11/2021 23:21:09    WARNING:           ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+20/11/2021 23:21:09    WARNING:           ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+20/11/2021 23:21:09    WARNING:           ServiceTools.py:Єдиний реєстр боржників is out of date
+20/11/2021 23:21:09    WARNING:           ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+20/11/2021 23:21:09    WARNING:           ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+20/11/2021 23:21:20    WARNING:           searchmydata.py:The "Exit" menu item chosen
+20/11/2021 23:21:20       INFO:           searchmydata.py:The application closed
+21/11/2021 15:25:51       INFO:             searchmydata.py:The application started
+21/11/2021 15:25:51    WARNING:             ServiceTools.py:ServiceTools: Config.json is found
+21/11/2021 15:25:51    WARNING:                  dataset.py:MissingPersonsRegister: Config.json is found
+21/11/2021 15:25:51    WARNING:                  dataset.py:WantedPersonsRegister: Config.json is found
+21/11/2021 15:25:51    WARNING:                  dataset.py:DebtorsRegister: Config.json is found
+21/11/2021 15:25:51    WARNING:                  dataset.py:LegalEntitiesRegister: Config.json is found
+21/11/2021 15:25:51    WARNING:                  dataset.py:EntrepreneursRegister: Config.json is found
+21/11/2021 15:25:51    WARNING:                  dataset.py:LustratedPersonsRegister: Config.json is found
+21/11/2021 15:25:51    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+21/11/2021 15:25:51    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+21/11/2021 15:25:51    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+21/11/2021 15:25:51    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+21/11/2021 15:25:51    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+21/11/2021 15:25:58    WARNING:             searchmydata.py:The "Refresh datasets" menu item chosen
+21/11/2021 15:25:58       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__delete_collection_index: 0:00:00.007057
+21/11/2021 15:25:58       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__clear_collection: 0:00:00
+21/11/2021 15:25:58      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+21/11/2021 15:26:00      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=8faa71c1-3a54-45e8-8f6e-06c92b1ff8bc HTTP/1.1" 200 None
+21/11/2021 15:26:00       INFO: LustratedPersonsRegister.py:A general LustratedPersonsRegister dataset JSON received
+21/11/2021 15:26:00      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+21/11/2021 15:26:01      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=611d64c5-3fbb-41fc-919b-91cafdc0dbc4 HTTP/1.1" 200 None
+21/11/2021 15:26:01       INFO: LustratedPersonsRegister.py:A LustratedPersonsRegister resources JSON id received
+21/11/2021 15:26:01       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__get_dataset: 0:00:02.456225
+21/11/2021 15:26:01      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+21/11/2021 15:26:01      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /dataset/18eab83b-a316-4e32-ab9d-ce85f3a4095a/resource/611d64c5-3fbb-41fc-919b-91cafdc0dbc4/download/29-ex_xml_lustr.zip HTTP/1.1" 200 30743
+21/11/2021 15:26:01       INFO: LustratedPersonsRegister.py:A LustratedPersonsRegister dataset received
+21/11/2021 15:26:01    WARNING: LustratedPersonsRegister.py:File in ZIP: 29-ex_xml_lustr.xml
+21/11/2021 15:26:01       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__save_dataset: 0:00:00.089356
+21/11/2021 15:26:01       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.setup_dataset: 0:00:02.554580
+21/11/2021 15:27:09       INFO:             searchmydata.py:The application started
+21/11/2021 15:27:09    WARNING:             ServiceTools.py:ServiceTools: Config.json is found
+21/11/2021 15:27:09    WARNING:                  dataset.py:MissingPersonsRegister: Config.json is found
+21/11/2021 15:27:09    WARNING:                  dataset.py:WantedPersonsRegister: Config.json is found
+21/11/2021 15:27:09    WARNING:                  dataset.py:DebtorsRegister: Config.json is found
+21/11/2021 15:27:09    WARNING:                  dataset.py:LegalEntitiesRegister: Config.json is found
+21/11/2021 15:27:09    WARNING:                  dataset.py:EntrepreneursRegister: Config.json is found
+21/11/2021 15:27:09    WARNING:                  dataset.py:LustratedPersonsRegister: Config.json is found
+21/11/2021 15:27:09    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+21/11/2021 15:27:09    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+21/11/2021 15:27:09    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+21/11/2021 15:27:09    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+21/11/2021 15:27:09    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+21/11/2021 15:27:12    WARNING:             searchmydata.py:The "Refresh datasets" menu item chosen
+21/11/2021 15:27:12       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__delete_collection_index: 0:00:00.001005
+21/11/2021 15:27:12       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__clear_collection: 0:00:00.001003
+21/11/2021 15:27:12      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+21/11/2021 15:27:12      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=8faa71c1-3a54-45e8-8f6e-06c92b1ff8bc HTTP/1.1" 200 None
+21/11/2021 15:27:12       INFO: LustratedPersonsRegister.py:A general LustratedPersonsRegister dataset JSON received
+21/11/2021 15:27:12      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+21/11/2021 15:27:12      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=611d64c5-3fbb-41fc-919b-91cafdc0dbc4 HTTP/1.1" 200 None
+21/11/2021 15:27:12       INFO: LustratedPersonsRegister.py:A LustratedPersonsRegister resources JSON id received
+21/11/2021 15:27:12       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__get_dataset: 0:00:00.271248
+21/11/2021 15:27:12      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+21/11/2021 15:27:12      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /dataset/18eab83b-a316-4e32-ab9d-ce85f3a4095a/resource/611d64c5-3fbb-41fc-919b-91cafdc0dbc4/download/29-ex_xml_lustr.zip HTTP/1.1" 200 30743
+21/11/2021 15:27:12       INFO: LustratedPersonsRegister.py:A LustratedPersonsRegister dataset received
+21/11/2021 15:27:12    WARNING: LustratedPersonsRegister.py:File in ZIP: 29-ex_xml_lustr.xml
+21/11/2021 15:27:13       INFO: LustratedPersonsRegister.py:Lustrated Persons dataset was saved into the database
+21/11/2021 15:27:13       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__save_dataset: 0:00:00.572791
+21/11/2021 15:27:13       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__create_service_json: 0:00:00.003023
+21/11/2021 15:27:13       INFO: LustratedPersonsRegister.py:LustratedPersonsRegisterServiceJson created
+21/11/2021 15:27:13       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__update_metadata: 0:00:00.012026
+21/11/2021 15:27:13       INFO: LustratedPersonsRegister.py:Lustrated Text Index created
+21/11/2021 15:27:13       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__create_collection_index: 0:00:00.038997
+21/11/2021 15:27:13       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.setup_dataset: 0:00:00.898067
+21/11/2021 15:27:13    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+21/11/2021 15:27:13    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+21/11/2021 15:27:13    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+21/11/2021 15:27:13    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+21/11/2021 15:27:13    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+21/11/2021 15:29:07    WARNING:             searchmydata.py:The "Exit" menu item chosen
+21/11/2021 15:29:07       INFO:             searchmydata.py:The application closed
+21/11/2021 15:32:39       INFO:             searchmydata.py:The application started
+21/11/2021 15:32:39    WARNING:             ServiceTools.py:ServiceTools: Config.json is found
+21/11/2021 15:32:40    WARNING:                  dataset.py:MissingPersonsRegister: Config.json is found
+21/11/2021 15:32:40    WARNING:                  dataset.py:WantedPersonsRegister: Config.json is found
+21/11/2021 15:32:40    WARNING:                  dataset.py:DebtorsRegister: Config.json is found
+21/11/2021 15:32:40    WARNING:                  dataset.py:LegalEntitiesRegister: Config.json is found
+21/11/2021 15:32:40    WARNING:                  dataset.py:EntrepreneursRegister: Config.json is found
+21/11/2021 15:32:40    WARNING:                  dataset.py:LustratedPersonsRegister: Config.json is found
+21/11/2021 15:32:40    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+21/11/2021 15:32:40    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+21/11/2021 15:32:40    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+21/11/2021 15:32:40    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+21/11/2021 15:32:40    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+21/11/2021 15:32:43    WARNING:             searchmydata.py:The "Search" menu item chosen
+21/11/2021 15:32:48       INFO:             searchmydata.py:The search string: Іванов Іван
+21/11/2021 15:32:48       INFO:             ServiceTools.py:ServiceTools: "Results" folder is cleaned
+21/11/2021 15:32:48    WARNING:   MissingPersonsRegister.py:The missing persons register: 175 records found
+21/11/2021 15:32:48    WARNING:   MissingPersonsRegister.py:All result dataset was saved into MissingPersons.html
+21/11/2021 15:32:48       INFO:                  dataset.py:Total execution time MissingPersonsRegister.search_into_collection: 0:00:00.090218
+21/11/2021 15:32:49    WARNING:    WantedPersonsRegister.py:The wanted persons register: 894 records found
+21/11/2021 15:32:49    WARNING:    WantedPersonsRegister.py:All result dataset was saved into WantedPersons.html
+21/11/2021 15:32:49       INFO:                  dataset.py:Total execution time WantedPersonsRegister.search_into_collection: 0:00:00.319556
+21/11/2021 15:33:10    WARNING:          DebtorsRegister.py:The debtors register: 135236 records found
+21/11/2021 15:33:21    WARNING:          DebtorsRegister.py:All result dataset was saved into Debtors.html
+21/11/2021 15:33:21       INFO:                  dataset.py:Total execution time DebtorsRegister.search_into_collection: 0:00:32.399708
+21/11/2021 15:33:32    WARNING:    LegalEntitiesRegister.py:The legal entities register: 29400 records found
+21/11/2021 15:33:35    WARNING:    LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+21/11/2021 15:33:35       INFO:                  dataset.py:Total execution time LegalEntitiesRegister.search_into_collection: 0:00:13.513365
+21/11/2021 15:33:53    WARNING:    EntrepreneursRegister.py:The Entrepreneurs register: 79274 records found
+21/11/2021 15:33:56    WARNING:    EntrepreneursRegister.py:All result dataset was saved into Entrepreneurs.html
+21/11/2021 15:33:57       INFO:                  dataset.py:Total execution time EntrepreneursRegister.search_into_collection: 0:00:21.887062
+21/11/2021 15:33:57    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+21/11/2021 15:33:57    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+21/11/2021 15:33:57    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+21/11/2021 15:33:57    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+21/11/2021 15:33:57    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+21/11/2021 15:34:16    WARNING:             searchmydata.py:The "Exit" menu item chosen
+21/11/2021 15:34:16       INFO:             searchmydata.py:The application closed
+21/11/2021 15:37:32       INFO:             searchmydata.py:The application started
+21/11/2021 15:37:32    WARNING:             ServiceTools.py:ServiceTools: Config.json is found
+21/11/2021 15:37:32    WARNING:                  dataset.py:MissingPersonsRegister: Config.json is found
+21/11/2021 15:37:32    WARNING:                  dataset.py:WantedPersonsRegister: Config.json is found
+21/11/2021 15:37:32    WARNING:                  dataset.py:DebtorsRegister: Config.json is found
+21/11/2021 15:37:32    WARNING:                  dataset.py:LegalEntitiesRegister: Config.json is found
+21/11/2021 15:37:32    WARNING:                  dataset.py:EntrepreneursRegister: Config.json is found
+21/11/2021 15:37:32    WARNING:                  dataset.py:LustratedPersonsRegister: Config.json is found
+21/11/2021 15:37:32    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+21/11/2021 15:37:32    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+21/11/2021 15:37:32    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+21/11/2021 15:37:32    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+21/11/2021 15:37:32    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+21/11/2021 15:37:36    WARNING:             searchmydata.py:The "Search" menu item chosen
+21/11/2021 15:37:45       INFO:             searchmydata.py:The search string: Петренко Теодор
+21/11/2021 15:37:45       INFO:             ServiceTools.py:ServiceTools: "Results" folder is cleaned
+21/11/2021 15:37:45    WARNING:   MissingPersonsRegister.py:The missing persons register: 9 records found
+21/11/2021 15:37:45    WARNING:   MissingPersonsRegister.py:All result dataset was saved into MissingPersons.html
+21/11/2021 15:37:45       INFO:                  dataset.py:Total execution time MissingPersonsRegister.search_into_collection: 0:00:00.062023
+21/11/2021 15:37:45    WARNING:    WantedPersonsRegister.py:The wanted persons register: 47 records found
+21/11/2021 15:37:45    WARNING:    WantedPersonsRegister.py:All result dataset was saved into WantedPersons.html
+21/11/2021 15:37:45       INFO:                  dataset.py:Total execution time WantedPersonsRegister.search_into_collection: 0:00:00.084093
+21/11/2021 15:37:48    WARNING:          DebtorsRegister.py:The debtors register: 8270 records found
+21/11/2021 15:37:48    WARNING:          DebtorsRegister.py:All result dataset was saved into Debtors.html
+21/11/2021 15:37:48       INFO:                  dataset.py:Total execution time DebtorsRegister.search_into_collection: 0:00:02.736989
+21/11/2021 15:37:49    WARNING:    LegalEntitiesRegister.py:The legal entities register: 2015 records found
+21/11/2021 15:37:49    WARNING:    LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+21/11/2021 15:37:49       INFO:                  dataset.py:Total execution time LegalEntitiesRegister.search_into_collection: 0:00:00.747795
+21/11/2021 15:37:50    WARNING:    EntrepreneursRegister.py:The Entrepreneurs register: 6790 records found
+21/11/2021 15:37:50    WARNING:    EntrepreneursRegister.py:All result dataset was saved into Entrepreneurs.html
+21/11/2021 15:37:50       INFO:                  dataset.py:Total execution time EntrepreneursRegister.search_into_collection: 0:00:00.965845
+21/11/2021 15:37:50    WARNING: LustratedPersonsRegister.py:The Lustrated Persons register: 1 records found
+21/11/2021 15:37:50    WARNING: LustratedPersonsRegister.py:All result dataset was saved into Lustrated.html
+21/11/2021 15:37:50       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.search_into_collection: 0:00:00.038995
+21/11/2021 15:37:50    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+21/11/2021 15:37:50    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+21/11/2021 15:37:50    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+21/11/2021 15:37:50    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+21/11/2021 15:37:50    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+21/11/2021 16:02:26    WARNING:             searchmydata.py:The "Exit" menu item chosen
+21/11/2021 16:02:26       INFO:             searchmydata.py:The application closed
+21/11/2021 16:02:33       INFO:             searchmydata.py:The application started
+21/11/2021 16:02:33    WARNING:             ServiceTools.py:ServiceTools: Config.json is found
+21/11/2021 16:02:33    WARNING:                  dataset.py:MissingPersonsRegister: Config.json is found
+21/11/2021 16:02:33    WARNING:                  dataset.py:WantedPersonsRegister: Config.json is found
+21/11/2021 16:02:33    WARNING:                  dataset.py:DebtorsRegister: Config.json is found
+21/11/2021 16:02:33    WARNING:                  dataset.py:LegalEntitiesRegister: Config.json is found
+21/11/2021 16:02:33    WARNING:                  dataset.py:EntrepreneursRegister: Config.json is found
+21/11/2021 16:02:33    WARNING:                  dataset.py:LustratedPersonsRegister: Config.json is found
+21/11/2021 16:02:33    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+21/11/2021 16:02:33    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+21/11/2021 16:02:33    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+21/11/2021 16:02:33    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+21/11/2021 16:02:33    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+21/11/2021 16:03:07    WARNING:             searchmydata.py:The "Search" menu item chosen
+21/11/2021 16:03:17       INFO:             searchmydata.py:The search string: Голопупенко Маріанна
+21/11/2021 16:03:17       INFO:             ServiceTools.py:ServiceTools: "Results" folder is cleaned
+21/11/2021 16:03:17    WARNING:   MissingPersonsRegister.py:The missing persons register: 1 records found
+21/11/2021 16:03:17    WARNING:   MissingPersonsRegister.py:All result dataset was saved into MissingPersons.html
+21/11/2021 16:03:17       INFO:                  dataset.py:Total execution time MissingPersonsRegister.search_into_collection: 0:00:00.040999
+21/11/2021 16:03:17    WARNING:    WantedPersonsRegister.py:The wanted persons register: 8 records found
+21/11/2021 16:03:17    WARNING:    WantedPersonsRegister.py:All result dataset was saved into WantedPersons.html
+21/11/2021 16:03:17       INFO:                  dataset.py:Total execution time WantedPersonsRegister.search_into_collection: 0:00:00.048525
+21/11/2021 16:03:17    WARNING:          DebtorsRegister.py:The debtors register: 1270 records found
+21/11/2021 16:03:17    WARNING:          DebtorsRegister.py:All result dataset was saved into Debtors.html
+21/11/2021 16:03:17       INFO:                  dataset.py:Total execution time DebtorsRegister.search_into_collection: 0:00:00.565975
+21/11/2021 16:03:17    WARNING:    LegalEntitiesRegister.py:The legal entities register: 468 records found
+21/11/2021 16:03:17    WARNING:    LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+21/11/2021 16:03:17       INFO:                  dataset.py:Total execution time LegalEntitiesRegister.search_into_collection: 0:00:00.214758
+21/11/2021 16:03:18    WARNING:    EntrepreneursRegister.py:The Entrepreneurs register: 2407 records found
+21/11/2021 16:03:18    WARNING:    EntrepreneursRegister.py:All result dataset was saved into Entrepreneurs.html
+21/11/2021 16:03:18       INFO:                  dataset.py:Total execution time EntrepreneursRegister.search_into_collection: 0:00:00.431022
+21/11/2021 16:03:18    WARNING: LustratedPersonsRegister.py:The Lustrated Persons register: No data found
+21/11/2021 16:03:18       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.search_into_collection: 0:00:00.029978
+21/11/2021 16:03:18    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+21/11/2021 16:03:18    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+21/11/2021 16:03:18    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+21/11/2021 16:03:18    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+21/11/2021 16:03:18    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+21/11/2021 16:04:01    WARNING:             searchmydata.py:The "Search" menu item chosen
+21/11/2021 16:04:05       INFO:             searchmydata.py:The search string: Теодора Марина
+21/11/2021 16:04:05       INFO:             ServiceTools.py:ServiceTools: "Results" folder is cleaned
+21/11/2021 16:04:05    WARNING:   MissingPersonsRegister.py:The missing persons register: 31 records found
+21/11/2021 16:04:05    WARNING:   MissingPersonsRegister.py:All result dataset was saved into MissingPersons.html
+21/11/2021 16:04:05       INFO:                  dataset.py:Total execution time MissingPersonsRegister.search_into_collection: 0:00:00.046391
+21/11/2021 16:04:05    WARNING:    WantedPersonsRegister.py:The wanted persons register: 193 records found
+21/11/2021 16:04:05    WARNING:    WantedPersonsRegister.py:All result dataset was saved into WantedPersons.html
+21/11/2021 16:04:05       INFO:                  dataset.py:Total execution time WantedPersonsRegister.search_into_collection: 0:00:00.123379
+21/11/2021 16:04:15    WARNING:          DebtorsRegister.py:The debtors register: 37247 records found
+21/11/2021 16:04:18    WARNING:          DebtorsRegister.py:All result dataset was saved into Debtors.html
+21/11/2021 16:04:18       INFO:                  dataset.py:Total execution time DebtorsRegister.search_into_collection: 0:00:13.220681
+21/11/2021 16:04:21    WARNING:    LegalEntitiesRegister.py:The legal entities register: 9398 records found
+21/11/2021 16:04:22    WARNING:    LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+21/11/2021 16:04:22       INFO:                  dataset.py:Total execution time LegalEntitiesRegister.search_into_collection: 0:00:03.531325
+21/11/2021 16:04:26    WARNING:    EntrepreneursRegister.py:The Entrepreneurs register: 52446 records found
+21/11/2021 16:04:29    WARNING:    EntrepreneursRegister.py:All result dataset was saved into Entrepreneurs.html
+21/11/2021 16:04:29       INFO:                  dataset.py:Total execution time EntrepreneursRegister.search_into_collection: 0:00:07.382352
+21/11/2021 16:04:29    WARNING: LustratedPersonsRegister.py:The Lustrated Persons register: 4 records found
+21/11/2021 16:04:29    WARNING: LustratedPersonsRegister.py:All result dataset was saved into Lustrated.html
+21/11/2021 16:04:29       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.search_into_collection: 0:00:00.054974
+21/11/2021 16:04:29    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+21/11/2021 16:04:29    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+21/11/2021 16:04:29    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+21/11/2021 16:04:29    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+21/11/2021 16:04:29    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+21/11/2021 16:05:18    WARNING:             searchmydata.py:The "Exit" menu item chosen
+21/11/2021 16:05:18       INFO:             searchmydata.py:The application closed
+21/11/2021 16:44:36       INFO:             searchmydata.py:The application started
+21/11/2021 16:44:36    WARNING:             ServiceTools.py:ServiceTools: Config.json is found
+21/11/2021 16:44:36    WARNING:                  dataset.py:MissingPersonsRegister: Config.json is found
+21/11/2021 16:44:36    WARNING:                  dataset.py:WantedPersonsRegister: Config.json is found
+21/11/2021 16:44:36    WARNING:                  dataset.py:DebtorsRegister: Config.json is found
+21/11/2021 16:44:36    WARNING:                  dataset.py:LegalEntitiesRegister: Config.json is found
+21/11/2021 16:44:36    WARNING:                  dataset.py:EntrepreneursRegister: Config.json is found
+21/11/2021 16:44:36    WARNING:                  dataset.py:LustratedPersonsRegister: Config.json is found
+21/11/2021 16:44:36    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+21/11/2021 16:44:36    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+21/11/2021 16:44:36    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+21/11/2021 16:44:36    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+21/11/2021 16:44:36    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+21/11/2021 16:44:38    WARNING:             searchmydata.py:The "Search" menu item chosen
+21/11/2021 16:44:50       INFO:             searchmydata.py:The search string: Гедеон Гедеон
+21/11/2021 16:44:50       INFO:             ServiceTools.py:ServiceTools: "Results" folder is cleaned
+21/11/2021 16:44:50    WARNING:   MissingPersonsRegister.py:The missing persons register: No data found
+21/11/2021 16:44:50       INFO:                  dataset.py:Total execution time MissingPersonsRegister.search_into_collection: 0:00:00.035990
+21/11/2021 16:44:50    WARNING:    WantedPersonsRegister.py:The wanted persons register: No data found
+21/11/2021 16:44:50       INFO:                  dataset.py:Total execution time WantedPersonsRegister.search_into_collection: 0:00:00.035998
+21/11/2021 16:44:50    WARNING:          DebtorsRegister.py:The debtors register: 8 records found
+21/11/2021 16:44:50    WARNING:          DebtorsRegister.py:All result dataset was saved into Debtors.html
+21/11/2021 16:44:50       INFO:                  dataset.py:Total execution time DebtorsRegister.search_into_collection: 0:00:00.061001
+21/11/2021 16:44:50    WARNING:    LegalEntitiesRegister.py:The legal entities register: 59 records found
+21/11/2021 16:44:50    WARNING:    LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+21/11/2021 16:44:50       INFO:                  dataset.py:Total execution time LegalEntitiesRegister.search_into_collection: 0:00:00.078994
+21/11/2021 16:44:50    WARNING:    EntrepreneursRegister.py:The Entrepreneurs register: 17 records found
+21/11/2021 16:44:50    WARNING:    EntrepreneursRegister.py:All result dataset was saved into Entrepreneurs.html
+21/11/2021 16:44:50       INFO:                  dataset.py:Total execution time EntrepreneursRegister.search_into_collection: 0:00:00.068005
+21/11/2021 16:44:50    WARNING: LustratedPersonsRegister.py:The Lustrated Persons register: No data found
+21/11/2021 16:44:50       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.search_into_collection: 0:00:00.031996
+21/11/2021 16:44:50    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+21/11/2021 16:44:50    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+21/11/2021 16:44:50    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+21/11/2021 16:44:50    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+21/11/2021 16:44:50    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+21/11/2021 16:44:55    WARNING:             searchmydata.py:The "Search" menu item chosen
+21/11/2021 16:44:59       INFO:             searchmydata.py:The search string: Петров Гедеон
+21/11/2021 16:44:59       INFO:             ServiceTools.py:ServiceTools: "Results" folder is cleaned
+21/11/2021 16:44:59    WARNING:   MissingPersonsRegister.py:The missing persons register: 7 records found
+21/11/2021 16:44:59    WARNING:   MissingPersonsRegister.py:All result dataset was saved into MissingPersons.html
+21/11/2021 16:44:59       INFO:                  dataset.py:Total execution time MissingPersonsRegister.search_into_collection: 0:00:00.043000
+21/11/2021 16:44:59    WARNING:    WantedPersonsRegister.py:The wanted persons register: 54 records found
+21/11/2021 16:44:59    WARNING:    WantedPersonsRegister.py:All result dataset was saved into WantedPersons.html
+21/11/2021 16:44:59       INFO:                  dataset.py:Total execution time WantedPersonsRegister.search_into_collection: 0:00:00.080231
+21/11/2021 16:45:01    WARNING:          DebtorsRegister.py:The debtors register: 4915 records found
+21/11/2021 16:45:01    WARNING:          DebtorsRegister.py:All result dataset was saved into Debtors.html
+21/11/2021 16:45:01       INFO:                  dataset.py:Total execution time DebtorsRegister.search_into_collection: 0:00:01.703697
+21/11/2021 16:45:02    WARNING:    LegalEntitiesRegister.py:The legal entities register: 1287 records found
+21/11/2021 16:45:02    WARNING:    LegalEntitiesRegister.py:All result dataset was saved into LegalEntities.html
+21/11/2021 16:45:02       INFO:                  dataset.py:Total execution time LegalEntitiesRegister.search_into_collection: 0:00:00.542033
+21/11/2021 16:45:02    WARNING:    EntrepreneursRegister.py:The Entrepreneurs register: 2869 records found
+21/11/2021 16:45:02    WARNING:    EntrepreneursRegister.py:All result dataset was saved into Entrepreneurs.html
+21/11/2021 16:45:02       INFO:                  dataset.py:Total execution time EntrepreneursRegister.search_into_collection: 0:00:00.472624
+21/11/2021 16:45:02    WARNING: LustratedPersonsRegister.py:The Lustrated Persons register: 1 records found
+21/11/2021 16:45:02    WARNING: LustratedPersonsRegister.py:All result dataset was saved into Lustrated.html
+21/11/2021 16:45:02       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.search_into_collection: 0:00:00.034000
+21/11/2021 16:45:02    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+21/11/2021 16:45:02    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+21/11/2021 16:45:02    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+21/11/2021 16:45:02    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+21/11/2021 16:45:02    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+21/11/2021 16:45:43    WARNING:             searchmydata.py:The "Exit" menu item chosen
+21/11/2021 16:45:43       INFO:             searchmydata.py:The application closed
+22/11/2021 10:05:38       INFO:             searchmydata.py:The application started
+22/11/2021 10:05:38    WARNING:             ServiceTools.py:ServiceTools: Config.json is found
+22/11/2021 10:05:38    WARNING:                  dataset.py:MissingPersonsRegister: Config.json is found
+22/11/2021 10:05:38    WARNING:                  dataset.py:WantedPersonsRegister: Config.json is found
+22/11/2021 10:05:38    WARNING:                  dataset.py:DebtorsRegister: Config.json is found
+22/11/2021 10:05:38    WARNING:                  dataset.py:LegalEntitiesRegister: Config.json is found
+22/11/2021 10:05:38    WARNING:                  dataset.py:EntrepreneursRegister: Config.json is found
+22/11/2021 10:05:38    WARNING:                  dataset.py:LustratedPersonsRegister: Config.json is found
+22/11/2021 10:05:38    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+22/11/2021 10:05:38    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+22/11/2021 10:05:38    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+22/11/2021 10:05:38    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+22/11/2021 10:05:38    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+22/11/2021 10:06:15    WARNING:             searchmydata.py:The "Refresh datasets" menu item chosen
+22/11/2021 10:06:15       INFO:                  dataset.py:Total execution time MissingPersonsRegister.__delete_collection_index: 0:00:00
+22/11/2021 10:06:15       INFO:                  dataset.py:Total execution time MissingPersonsRegister.setup_dataset: 0:00:00
+22/11/2021 10:08:15       INFO:             searchmydata.py:The application started
+22/11/2021 10:08:15    WARNING:             ServiceTools.py:ServiceTools: Config.json is found
+22/11/2021 10:08:15    WARNING:                  dataset.py:MissingPersonsRegister: Config.json is found
+22/11/2021 10:08:15    WARNING:                  dataset.py:WantedPersonsRegister: Config.json is found
+22/11/2021 10:08:15    WARNING:                  dataset.py:DebtorsRegister: Config.json is found
+22/11/2021 10:08:15    WARNING:                  dataset.py:LegalEntitiesRegister: Config.json is found
+22/11/2021 10:08:15    WARNING:                  dataset.py:EntrepreneursRegister: Config.json is found
+22/11/2021 10:08:15    WARNING:                  dataset.py:LustratedPersonsRegister: Config.json is found
+22/11/2021 10:08:15    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+22/11/2021 10:08:15    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+22/11/2021 10:08:15    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+22/11/2021 10:08:15    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+22/11/2021 10:08:15    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+22/11/2021 10:08:18    WARNING:             searchmydata.py:The "Refresh datasets" menu item chosen
+22/11/2021 10:08:18    WARNING:   MissingPersonsRegister.py:Missing persons Text index deleted
+22/11/2021 10:08:18       INFO:                  dataset.py:Total execution time MissingPersonsRegister.__delete_collection_index: 0:00:00.010002
+22/11/2021 10:08:18       INFO:                  dataset.py:Total execution time MissingPersonsRegister.__clear_collection: 0:00:00
+22/11/2021 10:08:18       INFO:                  dataset.py:Total execution time MissingPersonsRegister.setup_dataset: 0:00:00.010002
+22/11/2021 10:11:18       INFO:             searchmydata.py:The application started
+22/11/2021 10:11:18    WARNING:             ServiceTools.py:ServiceTools: Config.json is found
+22/11/2021 10:11:18    WARNING:                  dataset.py:MissingPersonsRegister: Config.json is found
+22/11/2021 10:11:18    WARNING:                  dataset.py:WantedPersonsRegister: Config.json is found
+22/11/2021 10:11:18    WARNING:                  dataset.py:DebtorsRegister: Config.json is found
+22/11/2021 10:11:18    WARNING:                  dataset.py:LegalEntitiesRegister: Config.json is found
+22/11/2021 10:11:18    WARNING:                  dataset.py:EntrepreneursRegister: Config.json is found
+22/11/2021 10:11:18    WARNING:                  dataset.py:LustratedPersonsRegister: Config.json is found
+22/11/2021 10:11:18    WARNING:             ServiceTools.py:Інформація про безвісно зниклих громадян is out of date
+22/11/2021 10:11:18    WARNING:             ServiceTools.py:Інформація про осіб, які переховуються від органів влади is out of date
+22/11/2021 10:11:18    WARNING:             ServiceTools.py:Єдиний реєстр боржників is out of date
+22/11/2021 10:11:18    WARNING:             ServiceTools.py:Єдиний державний реєстр фізичних осіб – підприємців is out of date
+22/11/2021 10:11:18    WARNING:             ServiceTools.py:Єдиний державний реєстр юридичних осіб та громадських формувань is out of date
+22/11/2021 10:11:29    WARNING:             searchmydata.py:The "Refresh datasets" menu item chosen
+22/11/2021 10:11:29       INFO:                  dataset.py:Total execution time MissingPersonsRegister.__delete_collection_index: 0:00:00.002995
+22/11/2021 10:11:29    WARNING:   MissingPersonsRegister.py:6695 documents deleted. The missing persons collection is empty.
+22/11/2021 10:11:29       INFO:                  dataset.py:Total execution time MissingPersonsRegister.__clear_collection: 0:00:00.219208
+22/11/2021 10:11:29      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+22/11/2021 10:11:31      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=470196d3-4e7a-46b0-8c0c-883b74ac65f0 HTTP/1.1" 200 None
+22/11/2021 10:11:31       INFO:   MissingPersonsRegister.py:A general MissingPersons dataset JSON received
+22/11/2021 10:11:31      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+22/11/2021 10:11:36      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=6cfff17e-84ac-4141-b0fd-89abb68e9f31 HTTP/1.1" 200 None
+22/11/2021 10:11:36       INFO:   MissingPersonsRegister.py:A MissingPersons resources JSON id received
+22/11/2021 10:11:36      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+22/11/2021 10:11:36      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /dataset/8851831d-b5ce-4ca8-8685-eafbc3f57eca/resource/6cfff17e-84ac-4141-b0fd-89abb68e9f31/download/mvswantedbezvesti_1.json HTTP/1.1" 200 5101930
+22/11/2021 10:11:37       INFO:   MissingPersonsRegister.py:A MissingPersons dataset received
+22/11/2021 10:11:37       INFO:                  dataset.py:Total execution time MissingPersonsRegister.__get_dataset: 0:00:07.309590
+22/11/2021 10:11:37       INFO:   MissingPersonsRegister.py:Missing persons dataset was saved into the database
+22/11/2021 10:11:37       INFO:                  dataset.py:Total execution time MissingPersonsRegister.__save_dataset: 0:00:00.331003
+22/11/2021 10:11:37       INFO:                  dataset.py:Total execution time MissingPersonsRegister.__update_service_json: 0:00:00.020998
+22/11/2021 10:11:37       INFO:   MissingPersonsRegister.py:MissingPersonsRegisterServiceJson updated
+22/11/2021 10:11:37       INFO:                  dataset.py:Total execution time MissingPersonsRegister.__update_metadata: 0:00:00.032025
+22/11/2021 10:11:37       INFO:   MissingPersonsRegister.py:Missing persons Text Index created
+22/11/2021 10:11:37       INFO:                  dataset.py:Total execution time MissingPersonsRegister.__create_collection_index: 0:00:00.173661
+22/11/2021 10:11:37       INFO:                  dataset.py:Total execution time MissingPersonsRegister.setup_dataset: 0:00:08.074474
+22/11/2021 10:11:37    WARNING:    WantedPersonsRegister.py:WantedPersons Text index deleted
+22/11/2021 10:11:37       INFO:                  dataset.py:Total execution time WantedPersonsRegister.__delete_collection_index: 0:00:00.004003
+22/11/2021 10:11:39    WARNING:    WantedPersonsRegister.py:48092 documents deleted. The wanted persons collection is empty.
+22/11/2021 10:11:39       INFO:                  dataset.py:Total execution time WantedPersonsRegister.__clear_collection: 0:00:01.252062
+22/11/2021 10:11:39      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+22/11/2021 10:11:39      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=7c51c4a0-104b-4540-a166-e9fc58485c1b HTTP/1.1" 200 None
+22/11/2021 10:11:39       INFO:    WantedPersonsRegister.py:A general WantedPersons dataset JSON received
+22/11/2021 10:11:39      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+22/11/2021 10:11:44      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=9694e34c-92a5-4839-91df-c32850db7ba9 HTTP/1.1" 200 None
+22/11/2021 10:11:44       INFO:    WantedPersonsRegister.py:A WantedPersons resources JSON id received
+22/11/2021 10:11:44      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+22/11/2021 10:11:44      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /dataset/59ecf2ab-47a1-4fae-a63c-fe5007d68130/resource/9694e34c-92a5-4839-91df-c32850db7ba9/download/mvswantedperson_1.json HTTP/1.1" 200 41718547
+22/11/2021 10:11:49       INFO:    WantedPersonsRegister.py:A WantedPersons dataset received
+22/11/2021 10:11:49       INFO:                  dataset.py:Total execution time WantedPersonsRegister.__get_dataset: 0:00:10.298721
+22/11/2021 10:11:51       INFO:    WantedPersonsRegister.py:Wanted persons dataset was saved into the database
+22/11/2021 10:11:51       INFO:                  dataset.py:Total execution time WantedPersonsRegister.__save_dataset: 0:00:02.209019
+22/11/2021 10:11:51       INFO:                  dataset.py:Total execution time WantedPersonsRegister.__update_service_json: 0:00:00.048002
+22/11/2021 10:11:51       INFO:    WantedPersonsRegister.py:WantedPersonsRegisterServiceJson updated
+22/11/2021 10:11:51       INFO:                  dataset.py:Total execution time WantedPersonsRegister.__update_metadata: 0:00:00.051005
+22/11/2021 10:11:52       INFO:    WantedPersonsRegister.py:WantedPersons Text Index created
+22/11/2021 10:11:52       INFO:                  dataset.py:Total execution time WantedPersonsRegister.__create_collection_index: 0:00:01.111366
+22/11/2021 10:11:52       INFO:                  dataset.py:Total execution time WantedPersonsRegister.setup_dataset: 0:00:14.980385
+22/11/2021 10:11:52    WARNING:          DebtorsRegister.py:Debtors Text index deleted
+22/11/2021 10:11:52       INFO:                  dataset.py:Total execution time DebtorsRegister.__delete_collection_index: 0:00:00.003003
+22/11/2021 10:15:16    WARNING:          DebtorsRegister.py:6898862 documents deleted. The wanted persons collection is empty.
+22/11/2021 10:15:16       INFO:                  dataset.py:Total execution time DebtorsRegister.__clear_collection: 0:03:23.416522
+22/11/2021 10:15:16      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+22/11/2021 10:15:17      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=506734bf-2480-448c-a2b4-90b6d06df11e HTTP/1.1" 200 None
+22/11/2021 10:15:17       INFO:          DebtorsRegister.py:A general DebtorsRegister dataset JSON received
+22/11/2021 10:15:17      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+22/11/2021 10:15:19      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1 HTTP/1.1" 200 None
+22/11/2021 10:15:19       INFO:          DebtorsRegister.py:A DebtorsRegister resources JSON id received
+22/11/2021 10:15:19       INFO:                  dataset.py:Total execution time DebtorsRegister.__get_dataset: 0:00:03.764486
+22/11/2021 10:15:19      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+22/11/2021 10:15:19      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /dataset/783b9b50-faba-4cc9-a393-60485e395b1d/resource/e6ea76c1-01f4-4bd0-a282-7d92d6ecc2a1/download/31-ex_csv_erb.zip HTTP/1.1" 200 412031687
+22/11/2021 10:15:55       INFO:          DebtorsRegister.py:A DebtorsRegister dataset received
+22/11/2021 10:15:55    WARNING:          DebtorsRegister.py:File in ZIP: 31-ex_csv_erb.csv
+22/11/2021 11:51:03       INFO:          DebtorsRegister.py:Debtors dataset was saved into the database
+22/11/2021 11:51:04       INFO:                  dataset.py:Total execution time DebtorsRegister.__save_dataset: 1:35:44.448765
+22/11/2021 11:51:18       INFO:                  dataset.py:Total execution time DebtorsRegister.__update_service_json: 0:00:14.338419
+22/11/2021 11:51:18       INFO:          DebtorsRegister.py:DebtorsRegisterServiceJson updated
+22/11/2021 11:51:18       INFO:                  dataset.py:Total execution time DebtorsRegister.__update_metadata: 0:00:14.347424
+22/11/2021 11:53:37       INFO:          DebtorsRegister.py:Debtors Text Index created
+22/11/2021 11:53:37       INFO:                  dataset.py:Total execution time DebtorsRegister.__create_collection_index: 0:02:19.145619
+22/11/2021 11:53:37       INFO:                  dataset.py:Total execution time DebtorsRegister.setup_dataset: 1:41:45.142813
+22/11/2021 11:53:37    WARNING:    LegalEntitiesRegister.py:LegalEntities Text index deleted
+22/11/2021 11:53:37       INFO:                  dataset.py:Total execution time LegalEntitiesRegister.delete_collection_index: 0:00:00.005989
+22/11/2021 11:54:31    WARNING:    LegalEntitiesRegister.py:1834761 documents deleted. The legal entities collection is empty.
+22/11/2021 11:54:31       INFO:                  dataset.py:Total execution time LegalEntitiesRegister.clear_collection: 0:00:53.939063
+22/11/2021 11:54:31    WARNING:    EntrepreneursRegister.py:Entrepreneurs Text index deleted
+22/11/2021 11:54:31       INFO:                  dataset.py:Total execution time EntrepreneursRegister.delete_collection_index: 0:00:00.004003
+22/11/2021 11:57:11    WARNING:    EntrepreneursRegister.py:5690667 documents deleted. The entrepreneurs collection is empty.
+22/11/2021 11:57:11       INFO:                  dataset.py:Total execution time EntrepreneursRegister.clear_collection: 0:02:39.350928
+22/11/2021 11:57:11      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+22/11/2021 11:57:18      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10 HTTP/1.1" 200 None
+22/11/2021 11:57:18       INFO:    LegalEntitiesRegister.py:A general EntrepreneursRegister dataset JSON received
+22/11/2021 11:57:18      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+22/11/2021 11:57:22      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=06bbccbd-e19c-40d5-9e18-447b110c0b4c HTTP/1.1" 200 None
+22/11/2021 11:57:22       INFO:    LegalEntitiesRegister.py:A EntrepreneursRegister resources JSON id received
+22/11/2021 11:57:22       INFO:                  dataset.py:Total execution time LegalEntitiesRegister.get_dataset: 0:00:11.551645
+22/11/2021 11:57:22      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+22/11/2021 11:57:22      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /dataset/b244f35a-e50a-4a80-b704-032c42ba8142/resource/06bbccbd-e19c-40d5-9e18-447b110c0b4c/download/17-ufop_18-11-2021.zip HTTP/1.1" 200 452049534
+22/11/2021 11:58:06       INFO:    LegalEntitiesRegister.py:A EntrepreneursRegister dataset received
+22/11/2021 11:58:06    WARNING:    LegalEntitiesRegister.py:File in ZIP: 17-UFOP_18.11.2021/17.1-EX_XML_EDR_UO_18.11.2021.xml
+22/11/2021 11:58:06    WARNING:    LegalEntitiesRegister.py:File in ZIP: 17-UFOP_18.11.2021/17.2-EX_XML_EDR_FOP_18.11.2021.xml
+22/11/2021 12:23:27       INFO:    LegalEntitiesRegister.py:LegalEntities dataset was saved into the database
+22/11/2021 13:36:40       INFO:    LegalEntitiesRegister.py:Entrepreneurs dataset was saved into the database
+22/11/2021 13:37:25       INFO:                  dataset.py:Total execution time LegalEntitiesRegister.save_dataset: 1:40:03.234596
+22/11/2021 13:37:35       INFO:                  dataset.py:Total execution time LegalEntitiesRegister.__update_service_json: 0:00:09.691679
+22/11/2021 13:37:35       INFO:    LegalEntitiesRegister.py:LegalEntitiesRegisterServiceJson updated
+22/11/2021 13:37:35       INFO:                  dataset.py:Total execution time LegalEntitiesRegister.update_metadata: 0:00:09.719680
+22/11/2021 13:37:49       INFO:                  dataset.py:Total execution time EntrepreneursRegister.__update_service_json: 0:00:13.629288
+22/11/2021 13:37:49       INFO:    EntrepreneursRegister.py:EntrepreneursRegisterServiceJson updated
+22/11/2021 13:37:49       INFO:                  dataset.py:Total execution time EntrepreneursRegister.update_metadata: 0:00:13.642288
+22/11/2021 13:39:01       INFO:    LegalEntitiesRegister.py:LegalEntities Text Index created
+22/11/2021 13:39:01       INFO:                  dataset.py:Total execution time LegalEntitiesRegister.create_collection_index: 0:01:12.613211
+22/11/2021 13:40:49       INFO:    EntrepreneursRegister.py:Entrepreneurs Text Index created
+22/11/2021 13:40:49       INFO:                  dataset.py:Total execution time EntrepreneursRegister.create_collection_index: 0:01:47.616731
+22/11/2021 13:40:49    WARNING: LustratedPersonsRegister.py:Lustrated Text index deleted
+22/11/2021 13:40:49       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__delete_collection_index: 0:00:00.020068
+22/11/2021 13:40:49    WARNING: LustratedPersonsRegister.py:660 documents deleted. The Lustrated Persons collection is empty.
+22/11/2021 13:40:49       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__clear_collection: 0:00:00.023004
+22/11/2021 13:40:49      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+22/11/2021 13:40:49      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/package_show?id=8faa71c1-3a54-45e8-8f6e-06c92b1ff8bc HTTP/1.1" 200 None
+22/11/2021 13:40:49       INFO: LustratedPersonsRegister.py:A general LustratedPersonsRegister dataset JSON received
+22/11/2021 13:40:49      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+22/11/2021 13:40:50      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /api/3/action/resource_show?id=611d64c5-3fbb-41fc-919b-91cafdc0dbc4 HTTP/1.1" 200 None
+22/11/2021 13:40:50       INFO: LustratedPersonsRegister.py:A LustratedPersonsRegister resources JSON id received
+22/11/2021 13:40:50       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__get_dataset: 0:00:00.461491
+22/11/2021 13:40:50      DEBUG:           connectionpool.py:Starting new HTTPS connection (1): data.gov.ua:443
+22/11/2021 13:40:51      DEBUG:           connectionpool.py:https://data.gov.ua:443 "GET /dataset/18eab83b-a316-4e32-ab9d-ce85f3a4095a/resource/611d64c5-3fbb-41fc-919b-91cafdc0dbc4/download/29-ex_xml_lustr.zip HTTP/1.1" 200 30743
+22/11/2021 13:40:51       INFO: LustratedPersonsRegister.py:A LustratedPersonsRegister dataset received
+22/11/2021 13:40:51    WARNING: LustratedPersonsRegister.py:File in ZIP: 29-ex_xml_lustr.xml
+22/11/2021 13:40:51       INFO: LustratedPersonsRegister.py:Lustrated Persons dataset was saved into the database
+22/11/2021 13:40:51       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__save_dataset: 0:00:01.670093
+22/11/2021 13:40:51       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__update_service_json: 0:00:00.003000
+22/11/2021 13:40:51       INFO: LustratedPersonsRegister.py:LustratedPersonsRegisterServiceJson updated
+22/11/2021 13:40:51       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__update_metadata: 0:00:00.004000
+22/11/2021 13:40:51       INFO: LustratedPersonsRegister.py:Lustrated Text Index created
+22/11/2021 13:40:51       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.__create_collection_index: 0:00:00.033002
+22/11/2021 13:40:51       INFO:                  dataset.py:Total execution time LustratedPersonsRegister.setup_dataset: 0:00:02.213594
+22/11/2021 13:45:39    WARNING:             searchmydata.py:The "Exit" menu item chosen
+22/11/2021 13:45:39       INFO:             searchmydata.py:The application closed

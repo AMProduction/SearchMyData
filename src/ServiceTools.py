@@ -1,8 +1,8 @@
 import json
 import logging
 import os
-from pathlib import Path
 from datetime import datetime, timedelta
+from pathlib import Path
 
 import pymongo
 from prettytable import PrettyTable
@@ -10,6 +10,20 @@ from pymongo.errors import ServerSelectionTimeoutError
 
 
 class ServiceTools:
+    """Class for service purpose
+
+    --------
+    Methods:
+    --------
+          get_registers_info():
+            Show the list of available registers, count of documents, and the last update date
+          clear_results_dir():
+            Clean up the folder with saved search results
+          clear_console():
+            Clear the console output
+          check_is_expired():
+            Check if a dataset last updated date is older than 2 days ago
+    """
 
     def __init__(self):
         self.logger = logging.getLogger(__name__)
@@ -67,6 +81,8 @@ class ServiceTools:
             exit()
 
     def get_registers_info(self):
+        """Show the list of available registers, count of documents, and the last update date
+        """
         registers_info_table = PrettyTable(
             ['#', 'Description', 'Documents count', 'Last modified date'])
         for info in self.__serviceCol.find({}, {'_id': 1, 'Description': 1, 'DocumentsCount': 1,
@@ -76,17 +92,23 @@ class ServiceTools:
         print(registers_info_table.get_string(title='Registers info'))
 
     def clear_results_dir(self):
+        """Clean up the folder with saved search results
+        """
         for filename in os.listdir('results'):
-            os.remove('results/'+filename)
+            os.remove('results/' + filename)
         logging.info(f'{self.__class__.__name__}: "Results" folder is cleaned')
 
     def clear_console(self):
+        """Clear the console output
+        """
         command = 'clear'
         if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
             command = 'cls'
         os.system(command)
 
     def check_is_expired(self):
+        """Check if a dataset last updated date is older than 2 days ago
+        """
         is_expired = False
         expired_time = datetime.now() - timedelta(days=2)
         for record in self.__serviceCol.find():
