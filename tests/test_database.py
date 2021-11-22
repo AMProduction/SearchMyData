@@ -1,7 +1,8 @@
 import json
 from pathlib import Path
-import pytest
+
 import pymongo
+import pytest
 
 
 class TestDatabase:
@@ -59,5 +60,12 @@ class TestDatabase:
     def test_legal_entities_collection(self, database_connect):
         db = database_connect
         legal_entities_col = db['LegalEntities']
+        documents_count = legal_entities_col.count_documents({})
+        assert documents_count > 0
+
+    @pytest.mark.lustrated
+    def test_lustrated_collection(self, database_connect):
+        db = database_connect
+        legal_entities_col = db['Lustrated']
         documents_count = legal_entities_col.count_documents({})
         assert documents_count > 0

@@ -1,8 +1,9 @@
+import json
+from pathlib import Path
+
+import pymongo
 import pytest
 import requests
-import json
-import pymongo
-from pathlib import Path
 
 
 class TestDataQuality:

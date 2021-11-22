@@ -54,4 +54,19 @@ class TestDataApi:
         response = requests.get(
             'https://data.gov.ua/api/3/action/package_show?id=1c7f3815-3259-45e0-bdf1-64dca07ddc10')
         response_body = response.json()
-        assert response_body['result']['title'] == 'Єдиний державний реєстр юридичних осіб, фізичних осіб-підприємців та громадських формувань'
+        assert response_body['result'][
+                   'title'] == 'Єдиний державний реєстр юридичних осіб, фізичних осіб-підприємців та громадських формувань'
+
+    @pytest.mark.lustrated
+    def test_get_lustrated_json_t1(self):
+        response = requests.get(
+            'https://data.gov.ua/api/3/action/package_show?id=8faa71c1-3a54-45e8-8f6e-06c92b1ff8bc')
+        assert response.status_code == 200
+
+    @pytest.mark.lustrated
+    def test_get_lustrated_json_t2(self):
+        response = requests.get(
+            'https://data.gov.ua/api/3/action/package_show?id=8faa71c1-3a54-45e8-8f6e-06c92b1ff8bc')
+        response_body = response.json()
+        assert response_body['result'][
+                   'title'] == 'Єдиний державний реєстр осіб, щодо яких застосовано положення Закону України «Про очищення влади»'
