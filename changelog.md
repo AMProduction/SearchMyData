@@ -1,4 +1,4 @@
-### v1.9 Release. 22/11/2021
+### v1.9 Release. 24/11/2021
 * Integrated [Unified State Register of Lustrated Persons](https://data.gov.ua/dataset/8faa71c1-3a54-45e8-8f6e-06c92b1ff8bc)
 * Docstrings added
 * Unit tests enhancements
